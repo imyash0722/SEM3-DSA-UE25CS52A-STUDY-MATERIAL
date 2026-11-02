@@ -1,5 +1,6 @@
 site_name: Data Structures & Applications Exam Prep — UE25CS52A
 site_description: Complete study guide for DSA covering Units 1-3 with code examples, algorithms, and exam patterns
+site_url: https://imyash0722.github.io/DSA-UE25CS52A-SEM3-STUDY-MATERIAL/
 theme:
   name: zensical
   custom_dir: overrides
@@ -35,7 +36,7 @@ nav:
   - "Unit 3: Trees, Heaps, Balanced Trees, Graphs":
     - "Theory": unit3_trees_heaps_avl_splay_graphs.md
     - "Example Programs": unit3_example_programs.md
-  - "Quick Reference": INDEX.md
+  - "Quick Reference": quick_reference.md
 markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true

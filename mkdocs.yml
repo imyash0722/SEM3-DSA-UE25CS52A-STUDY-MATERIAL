@@ -1,0 +1,54 @@
+site_name: Data Structures & Applications Exam Prep — UE25CS52A
+site_description: Complete study guide for DSA covering Units 1-3 with code examples, algorithms, and exam patterns
+site_url: https://imyash0722.github.io/DSA-UE25CS52A-SEM3-STUDY-MATERIAL/
+theme:
+  name: zensical
+  custom_dir: overrides
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+    - content.tabs.link
+    - color.mode
+extra_javascript:
+  - assets/javascripts/theme-toggle.js
+nav:
+  - Home: index.md
+  - "Unit 1: Foundations, Lists, Stacks, ADTs":
+    - "Unit 1 Overview": unit1_01_functions_and_pointers.md
+    - "Example Programs": unit1_02_example_programs.md
+  - "Unit 2: Circular Lists, Queues, Priority Queues":
+    - "Theory": unit2_circular_dll_queue_pq.md
+    - "Example Programs": unit2_example_programs.md
+  - "Unit 3: Trees, Heaps, Balanced Trees, Graphs":
+    - "Theory": unit3_trees_heaps_avl_splay_graphs.md
+    - "Example Programs": unit3_example_programs.md
+  - "Quick Reference": quick_reference.md
+markdown_extensions:
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - attr_list
+  - md_in_html

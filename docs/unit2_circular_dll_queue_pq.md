@@ -808,6 +808,7 @@ typedef struct queue queue_t;
 
 void enque(queue_t*, int);
 int deque(queue_t*);
+int is_empty(queue_t*);
 
 int main() {
     queue_t q = {NULL, NULL};
@@ -839,6 +840,7 @@ typedef struct pqueue pqueue_t;
 
 void enque(pqueue_t*, job_t*);
 job_t deque(pqueue_t*);
+int is_empty(pqueue_t*);
 
 int main() {
     pqueue_t q = {NULL, NULL};
@@ -865,6 +867,7 @@ typedef struct queue queue_t;
 
 void enque(queue_t*, int);
 int deque(queue_t*);
+int is_empty(queue_t*);
 
 int main() {
     queue_t q = {0};  // front=rear=0

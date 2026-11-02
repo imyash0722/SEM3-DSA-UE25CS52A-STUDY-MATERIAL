@@ -433,6 +433,7 @@ int main() {
 ```c
 // pq_ordered_array.c
 #include <stdio.h>
+#include <stdlib.h>
 #define MAXSIZE 10
 
 struct job { int job_no_, priority_; };
