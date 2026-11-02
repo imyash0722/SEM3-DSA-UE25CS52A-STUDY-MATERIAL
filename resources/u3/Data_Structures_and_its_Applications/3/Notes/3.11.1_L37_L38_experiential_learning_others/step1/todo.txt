@@ -1,0 +1,25 @@
+Playing with callback:
+understand mymap and the client code.
+
+1. use mymap :
+	a) given an array of n elements, make an array in which each element 
+	is the sum of the digits of the given element in the input array 
+    b) given an array of n numbers, reverse each and store in the second array 
+2. write myfilter :
+   pickup elements which satisfy the given criterion.
+   
+3. use myfilter :
+	a) input : array of int 
+      output : array of only odd numbers from the input 
+	b) input : array of int 
+	  output : array of only prime numbers 
+	  
+4. write myreduce 
+	int myreduce(int a[], int init, int (*op)(int, int));
+
+5. use myreduce
+	a) input : array of int 
+	   output : sum of all numbers in the input array 
+	b) input : array of int 
+	   output : product of all numbers in the input array 
+	   

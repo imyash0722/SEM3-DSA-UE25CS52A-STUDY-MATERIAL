@@ -1,0 +1,26 @@
+Assignments : Week 2 : list and stack
+1. In linked list implementations of the ordered list 
+   - simple linked list  and list with the header node,
+   implement the following functions.
+   - deinitialize
+   - delete based on the key 
+   
+2. Modify the above lists and add a new function 
+   Note : cannot modify the existing function signature 
+   but can always add a new function 
+   int find_length(list_t *ptr_list);
+   
+   a) Try on the simple linked list 
+   b) modify the list structure to have an integer field 
+      to keep track of the length; suitable modify the 
+	  implementations of all functions required 
+	  
+3. Write a client program to check whether a given string is 
+   a palindrome given that the char 'c' will be the central
+   character. Use any of our stack implementations.
+   
+4. Make the display function of list call a function on node 
+   which is recursive.
+   Note : list is either empty or has a node followed by a list 
+
+   

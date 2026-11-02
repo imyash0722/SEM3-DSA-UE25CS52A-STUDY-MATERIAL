@@ -1,0 +1,30 @@
+Week 5 Assignments :
+Assignment : L17-L20
+queue
+priority queue 
+
+------------
+1.Reverse a queue so that the front becomes the rear and 
+the rear becomes the front. Nodes do not change their position.
+
+2. The component of the queue has an entry time. It could be an integer 
+like the epoch time in Unix.
+There are two queues which have to be merged based on the entry time.
+Provide a function in queue.h and queue.c to support such a merger.
+
+3. There are jobs in the queue to be services which are temporarily 
+blocked (may be for IO completion). When their turns come, they will
+others to go ahead, but hold the position. When they get unblocked, 
+they get serviced.
+Can you implement such a variation?
+
+4. implement a priority queue as multilist of queues. There is a list of
+queues - one for each priority. Evert new entry will join at the back 
+of the queue with the particular priority. Always the first job in the 
+highest priority queue shall be serviced.
+[degree of difficulty : high; not part of the syllabus]
+[ for those who want to challenge themselves]
+
+  
+   
+   

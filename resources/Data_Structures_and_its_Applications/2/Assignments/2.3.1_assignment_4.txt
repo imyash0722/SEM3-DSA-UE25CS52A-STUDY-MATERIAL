@@ -1,0 +1,33 @@
+Assignment : L13-L16 
+1. Assignment on doubly linked list 
+provide the following functions.
+a) add after a key
+b) add before a key 
+c) remove the key 
+
+2. Assignment on circular list 
+a) remove a node with a given if it exists 
+
+
+3. Assignment on multilist(implementation not part of the syllabus
+you may try if you want to challenge yourself) 
+input :
+name_of_batsman score 
+gill 125
+jaiswal 55
+rahul 50
+gill 60
+rahul 100
+pant 40
+...
+
+Observe that the names repeat.
+1. create a list of names - each node contains a name and a pointer 
+to the node containing the next name 
+2. In each node, create a list of scores. The head of the list of 
+scores is stored in the node of list of names. Each node of scores 
+has a score and a pointer to the next containing the score.
+
+- create such a list 
+- display
+- find the total for each batsman

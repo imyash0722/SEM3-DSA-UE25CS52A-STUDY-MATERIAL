@@ -1,0 +1,16 @@
+Stack :
+1) Given the type of stack of int, develop the following functions.
+   These will not be efficient. What if the client wants?
+   // get the ith element from the top of stack 
+   int get_ith_element(stack_t *ptr_stack, int i);
+   // set th ith element
+   int set_ith_element(stack_t *ptr_stack, int i, int val);
+	Hint : use a local stack 
+	
+List:
+Polynomial :
+2) Given the polynomial (developed as part of the experiential learning)
+   develop a function to differentiate the polynomial.
+   void differentiate(poly_t *ptr_poly, poly_t* ptr_diff_poly);
+   
+   

@@ -1,0 +1,14 @@
+Week 6 Assignments:
+topics: priority queue : experiential learning
+a) In our implementations of priority queue, we used two pointers rear and front.
+Convert this an implementations with a singly pointer in the list.
+One of the operations dequeue or enqueue should be efficient.
+Try for both unordered and ordered list implementations.
+
+b) In the priority queue implementation, provide an option to boost the priority 
+of existing jobs by 1 because of aging.
+The job should provide an interface for boosting.
+The queue will traverse and call the function of the job to increase priority for existing
+jobs at that point.
+
+c) Complete the round robin scheduling task - which was part of our experiential learning.
