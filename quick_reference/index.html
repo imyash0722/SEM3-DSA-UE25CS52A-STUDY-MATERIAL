@@ -1,0 +1,1846 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete study guide for DSA covering Units 1-3 with code examples, algorithms, and exam patterns">
+      
+      
+      
+        <link rel="canonical" href="https://imyash0722.github.io/DSA-UE25CS52A-SEM3-STUDY-MATERIAL/quick_reference/">
+      
+      
+      
+        <link rel="prev" href="../unit3_example_programs/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.73">
+    
+    
+      
+        <title>Quick Reference - Data Structures & Applications Exam Prep — UE25CS52A</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Data Structures &amp; Applications Exam Prep — UE25CS52A" class="md-header__button md-logo" aria-label="Data Structures & Applications Exam Prep — UE25CS52A" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Data Structures & Applications Exam Prep — UE25CS52A
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quick Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../unit1_01_functions_and_pointers/" class="md-tabs__link">
+          
+  
+  Unit 1: Foundations, Lists, Stacks, ADTs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../unit2_circular_dll_queue_pq/" class="md-tabs__link">
+          
+  
+  Unit 2: Circular Lists, Queues, Priority Queues
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../unit3_trees_heaps_avl_splay_graphs/" class="md-tabs__link">
+          
+  
+  Unit 3: Trees, Heaps, Balanced Trees, Graphs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="././" class="md-tabs__link">
+        
+  
+  Quick Reference
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Data Structures &amp; Applications Exam Prep — UE25CS52A" class="md-nav__button md-logo" aria-label="Data Structures & Applications Exam Prep — UE25CS52A" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    Data Structures & Applications Exam Prep — UE25CS52A
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Home
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Unit 1: Foundations, Lists, Stacks, ADTs
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Unit 1: Foundations, Lists, Stacks, ADTs
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit1_01_functions_and_pointers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Unit 1 Overview
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit1_02_example_programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Example Programs
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Unit 2: Circular Lists, Queues, Priority Queues
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Unit 2: Circular Lists, Queues, Priority Queues
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit2_circular_dll_queue_pq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Theory
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit2_example_programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Example Programs
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Unit 3: Trees, Heaps, Balanced Trees, Graphs
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Unit 3: Trees, Heaps, Balanced Trees, Graphs
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit3_trees_heaps_avl_splay_graphs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Theory
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit3_example_programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Example Programs
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Quick Reference
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Quick Reference
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#course-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Course Information
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-1-foundations-lists-stacks-adts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Unit 1: Foundations, Lists, Stacks, ADTs
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit 1: Foundations, Lists, Stacks, ADTs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topics-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Topics Covered
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Key Concepts
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Example Programs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-2-advanced-lists-queues-priority-queues" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Unit 2: Advanced Lists, Queues, Priority Queues
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit 2: Advanced Lists, Queues, Priority Queues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topics-covered_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Topics Covered
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Implementation Comparison
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Key Concepts
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-programs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Example Programs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-3-trees-heaps-balanced-trees-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Unit 3: Trees, Heaps, Balanced Trees, Graphs
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit 3: Trees, Heaps, Balanced Trees, Graphs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topics-covered_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Topics Covered
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree-traversals" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tree Traversals
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bst-operations-recursive-on-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        BST Operations (Recursive on Nodes)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heap-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Heap Operations
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avl-rotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AVL Rotations
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Graph Algorithms
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textbook-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Textbook References
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Textbook References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tenenbaum-et-al-primary" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tenenbaum et al. (Primary)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kruse-et-al-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kruse et al. (Reference)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming-practices-emphasized" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Programming Practices Emphasized
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        File Organization
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Study Tips
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Study Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-exams-isaesa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        For Exams (ISA/ESA)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-programs-to-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Key Programs to Practice
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Common Pitfalls
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Contact
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#course-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Course Information
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-1-foundations-lists-stacks-adts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Unit 1: Foundations, Lists, Stacks, ADTs
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit 1: Foundations, Lists, Stacks, ADTs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topics-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Topics Covered
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Key Concepts
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Example Programs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-2-advanced-lists-queues-priority-queues" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Unit 2: Advanced Lists, Queues, Priority Queues
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit 2: Advanced Lists, Queues, Priority Queues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topics-covered_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Topics Covered
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Implementation Comparison
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Key Concepts
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-programs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Example Programs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-3-trees-heaps-balanced-trees-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Unit 3: Trees, Heaps, Balanced Trees, Graphs
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit 3: Trees, Heaps, Balanced Trees, Graphs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topics-covered_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Topics Covered
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree-traversals" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tree Traversals
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bst-operations-recursive-on-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        BST Operations (Recursive on Nodes)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heap-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Heap Operations
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avl-rotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AVL Rotations
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Graph Algorithms
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textbook-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Textbook References
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Textbook References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tenenbaum-et-al-primary" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tenenbaum et al. (Primary)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kruse-et-al-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kruse et al. (Reference)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming-practices-emphasized" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Programming Practices Emphasized
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        File Organization
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Study Tips
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Study Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-exams-isaesa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        For Exams (ISA/ESA)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-programs-to-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Key Programs to Practice
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Common Pitfalls
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Contact
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+
+<h1 id="dsa-course-complete-notes-index">DSA Course - Complete Notes Index<a class="headerlink" href="#dsa-course-complete-notes-index" title="Permanent link">&para;</a></h1>
+<h2 id="course-information">Course Information<a class="headerlink" href="#course-information" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Course</strong>: Data Structures and its Applications (UE25CS52A)</li>
+<li><strong>Instructor</strong>: Prof. N S Kumar (nskumar@pes.edu)</li>
+<li><strong>Textbook</strong>: "Data Structures using C/C++" by Langsum Yedidyah, Moshe J Augenstein, Aaron M Tenenbaum (Pearson, 2nd ed., 2015)</li>
+<li><strong>Reference</strong>: "Data Structures and Program Design in C" by Robert Kruse et al. (Pearson, 2nd ed., 2019)</li>
+</ul>
+<hr />
+<h2 id="unit-1-foundations-lists-stacks-adts">Unit 1: Foundations, Lists, Stacks, ADTs<a class="headerlink" href="#unit-1-foundations-lists-stacks-adts" title="Permanent link">&para;</a></h2>
+<h3 id="topics-covered">Topics Covered<a class="headerlink" href="#topics-covered" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Functions &amp; Pointers</strong> - Parameter passing, recursion, pointers, memory model</li>
+<li><strong>Arrays</strong> - 1D/2D arrays, pointer arithmetic, parameter passing</li>
+<li><strong>Structures</strong> - Definition, padding, initialization, parameter passing, typedef</li>
+<li><strong>Dynamic Memory</strong> - malloc/free/calloc/realloc, garbage, dangling pointers, memory leaks</li>
+<li><strong>Abstract Data Types</strong> - Interface vs implementation, inversion of dependency</li>
+<li><strong>Linked Lists</strong> - Self-referential structures, traversal, insertion, deletion</li>
+<li><strong>Ordered Lists</strong> - Sorted insertion with 4 boundary cases</li>
+<li><strong>Header Node</strong> - Dummy node simplifies insertion logic</li>
+<li><strong>Stacks</strong> - Array &amp; linked list implementations, LIFO</li>
+<li><strong>Stack Applications</strong> - Parentheses matching, postfix evaluation, infix→postfix</li>
+<li><strong>Skiplists &amp; Multilists</strong> - Multi-level lists, sparse matrices</li>
+</ol>
+<h3 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ADT</strong>: Specification of operations without implementation details</li>
+<li><strong>Interface is sacred</strong>: Changes to implementation don't affect clients</li>
+<li><strong>Self-referential structures</strong>: Basis for linked data structures</li>
+<li><strong>Header node</strong>: Eliminates special cases in list operations</li>
+<li><strong>Stack frames</strong>: Function call mechanism using stack</li>
+</ul>
+<h3 id="example-programs">Example Programs<a class="headerlink" href="#example-programs" title="Permanent link">&para;</a></h3>
+<p>See: <code>unit1_02_example_programs.md</code></p>
+<hr />
+<h2 id="unit-2-advanced-lists-queues-priority-queues">Unit 2: Advanced Lists, Queues, Priority Queues<a class="headerlink" href="#unit-2-advanced-lists-queues-priority-queues" title="Permanent link">&para;</a></h2>
+<h3 id="topics-covered_1">Topics Covered<a class="headerlink" href="#topics-covered_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Circular Linked Lists</strong> - Cycle detection, Josephus problem</li>
+<li><strong>Doubly Linked Lists</strong> - Bidirectional traversal, easier insert/delete</li>
+<li><strong>Queues (Linked List)</strong> - FIFO with front/rear pointers</li>
+<li><strong>Queues (Circular Array)</strong> - Modulo arithmetic, O(1) operations</li>
+<li><strong>Priority Queues</strong> - 5 implementations compared</li>
+<li><strong>Deques</strong> - Double-ended queues, stack/queue composition</li>
+<li><strong>Round Robin Scheduling</strong> - Experiential learning project</li>
+</ol>
+<h3 id="implementation-comparison">Implementation Comparison<a class="headerlink" href="#implementation-comparison" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Structure</th>
+<th>Insert</th>
+<th>Delete</th>
+<th>Search</th>
+<th>Space</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Singly LL</td>
+<td>O(1)*</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>1 ptr</td>
+</tr>
+<tr>
+<td>Doubly LL</td>
+<td>O(1)*</td>
+<td>O(1)*</td>
+<td>O(n)</td>
+<td>2 ptr</td>
+</tr>
+<tr>
+<td>Circular Array Queue</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>Array</td>
+</tr>
+<tr>
+<td>PQ Unordered List</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>-</td>
+<td>List</td>
+</tr>
+<tr>
+<td>PQ Ordered List</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>-</td>
+<td>List</td>
+</tr>
+<tr>
+<td>PQ Unordered Array</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>-</td>
+<td>Array</td>
+</tr>
+<tr>
+<td>PQ Ordered Array</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>-</td>
+<td>Array</td>
+</tr>
+<tr>
+<td>PQ Heap</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>-</td>
+<td>Array</td>
+</tr>
+</tbody>
+</table>
+<p>*At known position</p>
+<h3 id="key-concepts_1">Key Concepts<a class="headerlink" href="#key-concepts_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Circular list</strong>: Last node points to first; do-while for traversal</li>
+<li><strong>Doubly linked</strong>: Extra <code>prev_</code> pointer enables O(1) insert before/delete</li>
+<li><strong>Queue design</strong>: Front points to first, rear to last; nodes link forward</li>
+<li><strong>Priority queue</strong>: Same interface, different implementations</li>
+<li><strong>Deque</strong>: Generalization of both stack and queue</li>
+</ul>
+<h3 id="example-programs_1">Example Programs<a class="headerlink" href="#example-programs_1" title="Permanent link">&para;</a></h3>
+<p>See: <code>unit2_example_programs.md</code></p>
+<hr />
+<h2 id="unit-3-trees-heaps-balanced-trees-graphs">Unit 3: Trees, Heaps, Balanced Trees, Graphs<a class="headerlink" href="#unit-3-trees-heaps-balanced-trees-graphs" title="Permanent link">&para;</a></h2>
+<h3 id="topics-covered_2">Topics Covered<a class="headerlink" href="#topics-covered_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>General/Binary Trees</strong> - Terminology, properties, traversals</li>
+<li><strong>Binary Search Trees</strong> - Dynamic &amp; array implementations</li>
+<li><strong>Expression Trees</strong> - Postfix to tree conversion, evaluation</li>
+<li><strong>Threaded Binary Trees</strong> - Threads for O(1) successor/predecessor</li>
+<li><strong>Heaps</strong> - Complete trees, parental dominance, heapify, heapsort</li>
+<li><strong>AVL Trees</strong> - Height-balanced, 4 rotation cases</li>
+<li><strong>Splay Trees</strong> - Self-adjusting, amortized O(log n)</li>
+<li><strong>Graphs</strong> - Representations, BFS/DFS, Dijkstra, Prim</li>
+</ol>
+<h3 id="tree-traversals">Tree Traversals<a class="headerlink" href="#tree-traversals" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Inorder:   Left → Root → Right    (BST: sorted output)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Preorder:  Root → Left → Right    (Copy tree)
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Postorder: Left → Right → Root    (Delete tree)
+</code></pre></div>
+<h3 id="bst-operations-recursive-on-nodes">BST Operations (Recursive on Nodes)<a class="headerlink" href="#bst-operations-recursive-on-nodes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Insert: O(h), Search: O(h), Delete: O(h) with 4 cases</li>
+<li><strong>Delete Case 4</strong> (2 children): Use inorder successor</li>
+</ul>
+<h3 id="heap-operations">Heap Operations<a class="headerlink" href="#heap-operations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Build Heap</strong>: O(n) - heapify from n/2 down to 1</li>
+<li><strong>Insert</strong>: O(log n) - bubble up</li>
+<li><strong>Delete Max</strong>: O(log n) - move last to root, heapify down</li>
+<li><strong>Heapsort</strong>: O(n log n) - build + repeated delete max</li>
+</ul>
+<h3 id="avl-rotations">AVL Rotations<a class="headerlink" href="#avl-rotations" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Pattern</th>
+<th>Rotation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LL</td>
+<td>Left-Left</td>
+<td>Single Right</td>
+</tr>
+<tr>
+<td>RR</td>
+<td>Right-Right</td>
+<td>Single Left</td>
+</tr>
+<tr>
+<td>LR</td>
+<td>Left-Right</td>
+<td>Left then Right</td>
+</tr>
+<tr>
+<td>RL</td>
+<td>Right-Left</td>
+<td>Right then Left</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Memory aid</strong>: Same direction = single, Opposite = double</p>
+<h3 id="graph-algorithms">Graph Algorithms<a class="headerlink" href="#graph-algorithms" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>BFS</strong>: Queue, shortest path in unweighted</li>
+<li><strong>DFS</strong>: Stack, topological sort, cycle detection</li>
+<li><strong>Dijkstra</strong>: Min-heap, single-source shortest path (weighted)</li>
+<li><strong>Prim</strong>: Min-heap, Minimum Spanning Tree</li>
+</ul>
+<hr />
+<h2 id="textbook-references">Textbook References<a class="headerlink" href="#textbook-references" title="Permanent link">&para;</a></h2>
+<h3 id="tenenbaum-et-al-primary">Tenenbaum et al. (Primary)<a class="headerlink" href="#tenenbaum-et-al-primary" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ch 1: Introduction &amp; Overview</li>
+<li>Ch 2: Arrays &amp; Structures</li>
+<li>Ch 3: Stacks &amp; Queues</li>
+<li>Ch 4: Linked Lists</li>
+<li>Ch 5: Trees</li>
+<li>Ch 6: Graphs</li>
+<li>Ch 7: Sorting &amp; Searching</li>
+</ul>
+<h3 id="kruse-et-al-reference">Kruse et al. (Reference)<a class="headerlink" href="#kruse-et-al-reference" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ch 2: Arrays, Records, Pointers</li>
+<li>Ch 3: Linked Lists</li>
+<li>Ch 4: Stacks &amp; Queues</li>
+<li>Ch 5: Recursion</li>
+<li>Ch 6: Trees</li>
+<li>Ch 7: Graphs</li>
+<li>Ch 8: Sorting</li>
+</ul>
+<hr />
+<h2 id="programming-practices-emphasized">Programming Practices Emphasized<a class="headerlink" href="#programming-practices-emphasized" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Separate Interface from Implementation</strong></li>
+<li>Header files (.h) for declarations</li>
+<li>Source files (.c) for definitions</li>
+<li>
+<p>Client code includes only headers</p>
+</li>
+<li>
+<p><strong>Use Makefiles</strong></p>
+</li>
+<li>Track dependencies</li>
+<li>Incremental compilation</li>
+<li>
+<p><code>make -f makefile</code></p>
+</li>
+<li>
+<p><strong>Memory Management</strong></p>
+</li>
+<li>Always check malloc return</li>
+<li>Free in correct order (save next before free)</li>
+<li>
+<p>Avoid memory leaks and dangling pointers</p>
+</li>
+<li>
+<p><strong>Recursive Thinking</strong></p>
+</li>
+<li>Base case + recursive step</li>
+<li>Tree functions: recursive on nodes, not tree</li>
+<li>
+<p>Trust the recursion</p>
+</li>
+<li>
+<p><strong>ADT Design</strong></p>
+</li>
+<li>Opaque types where possible</li>
+<li>Consistent naming (init, deinit, insert, delete, etc.)</li>
+<li>Error handling via return values</li>
+</ol>
+<hr />
+<h2 id="file-organization">File Organization<a class="headerlink" href="#file-organization" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>notes/
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── INDEX.md                    # This file
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>├── unit1_01_functions_and_pointers.md
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>├── unit1_02_example_programs.md
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>├── unit2_circular_dll_queue_pq.md
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>├── unit2_example_programs.md
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>├── unit3_trees_heaps_avl_splay_graphs.md
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>└── unit3_example_programs.md
+</code></pre></div>
+<hr />
+<h2 id="study-tips">Study Tips<a class="headerlink" href="#study-tips" title="Permanent link">&para;</a></h2>
+<h3 id="for-exams-isaesa">For Exams (ISA/ESA)<a class="headerlink" href="#for-exams-isaesa" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ISA1</strong>: Units 1 &amp; 2 (MCQs - 10×1 + 5×2 marks)</li>
+<li><strong>ISA2</strong>: Units 3 &amp; 4 (MCQs - 10×1 + 5×2 marks)</li>
+<li><strong>ESA</strong>: All units (20 marks MCQ + 80 marks subjective)</li>
+</ul>
+<h3 id="key-programs-to-practice">Key Programs to Practice<a class="headerlink" href="#key-programs-to-practice" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Linked list with all operations</li>
+<li>Stack applications (parentheses, postfix, infix→postfix)</li>
+<li>Circular array queue</li>
+<li>Priority queue (all 4 basic implementations)</li>
+<li>BST insert/search/delete</li>
+<li>Heap insert/delete/heapsort</li>
+<li>AVL rotations</li>
+<li>Graph BFS/DFS/Dijkstra</li>
+</ol>
+<h3 id="common-pitfalls">Common Pitfalls<a class="headerlink" href="#common-pitfalls" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Forgetting <code>&amp;</code> in scanf</li>
+<li>Array decaying to pointer (losing size info)</li>
+<li>Not checking malloc return</li>
+<li>Freeing memory twice or not at all</li>
+<li>Off-by-one in circular array queue</li>
+<li>Wrong rotation in AVL</li>
+<li>Missing base case in recursion</li>
+</ul>
+<hr />
+<h2 id="contact">Contact<a class="headerlink" href="#contact" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Professor</strong>: N S Kumar</li>
+<li><strong>Email</strong>: nskumar@pes.edu</li>
+<li><strong>Phone</strong>: 98450 66845</li>
+</ul>
+<hr />
+<p><em>Generated from course materials: slides, notes, assignments, and textbook references</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["navigation.tabs","navigation.sections","navigation.expand","navigation.top","search.highlight","search.share","content.code.copy","content.code.annotate","toc.follow","content.tabs.link","color.mode"],"redirect":null,"search":"../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.77dd0ce9.min.js"></script>
+      
+        <script src="../assets/javascripts/theme-toggle.js"></script>
+      
+    
+  </body>
+</html>
