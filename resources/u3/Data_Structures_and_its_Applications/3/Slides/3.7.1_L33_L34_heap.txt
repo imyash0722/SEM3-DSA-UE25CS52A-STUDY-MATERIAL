@@ -1,0 +1,385 @@
+Introduction
+Tree
+Data Structures and its Applications
+(UE25CS52A)
+N S Kumar
+Professor
+Department of Computer Science &
+Engineering (AI & ML)
+
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 2 » INTRODUCTION
+AND REVISION » CLASS 11/11
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+1/6
+
+Heap
+Quiz : Heap
+1. Searching for a key in a maxheap in the worst case makes
+a) n comparisons
+b) n – 1 comparisons
+c) floor(n/2) comparisons
+d) ceil(n/2) comparisons
+
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Quiz : Heap
+1. Searching for a key in a maxheap in the worst case makes
+a) n comparisons
+b) n – 1 comparisons
+c) floor(n/2) comparisons
+d) ceil(n/2) comparisons
+
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Quiz : Heap
+2. adding a key in a maxheap in the worst case makes
+a) n operations
+b) n – 1 operations
+c) floor(n/2) operations
+d) ceil(n/2) operations
+
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Quiz : Heap
+2. adding a key in a maxheap in the worst case makes
+a) n operations
+b) n – 1 operations
+c) floor(n/2) operations
+d) ceil(n/2) operations
+
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Quiz : Heap
+3. Finding the maximum key in a maxheap in the worst case makes
+a) n operations
+b) n – 1 operations
+c) 1 operation
+d) n/2 operations
+
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Quiz : Heap
+3. Finding the maximum key in a maxheap in the worst case makes
+a) n operations
+b) n – 1 operations
+c) 1 operation
+d) n/2 operations
+
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Quiz : Heap
+4. What happens if the left subtree and the right subtree at each node are swapped?
+a) The tree is no more a heap
+b) The max heap becomes a heap tree
+c) The max heap remains to be a max heap
+d) Depends on the keys in the tree
+
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Quiz : Heap
+4. What happens if the left subtree and the right subtree at each node are swapped?
+a) The tree is no more a heap
+b) The max heap becomes a heap tree
+c) The max heap remains to be a max heap
+d) Depends on the keys in the tree
+
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Quiz : Heap
+5. A heap has n elements with its root at index 1. Which condition will tell us that the
+ith node does not have a right subtree?
+a) 2i + 1 > n
+b) 2i > n
+c) 2i + 1 >= n
+d) 2i >= n
+
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Quiz : Heap
+5. A heap has n elements with its root at index 1. Which condition will tell us that the
+ith node does not have a right subtree?
+a) 2i + 1 > n
+b) 2i > n
+c) 2i + 1 >= n
+d) 2i >= n
+
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+A heap(maxheap) is a tree with two special properties.
+1. Complete binary tree:
+The nodes are filled up at each level.
+At the bottom most level, leftmost nodes are filled up.
+2.
+
+Parental dominance:
+The key at the root is greater than the keys of its subtrees
+recursively.
+
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Heap Implementation:
+• Always as an array
+• Method 1:
+•Start from index 0
+• Leftchild(i) = 2i + 1
+• Rightchild(i) = 2i + 2
+• Parent(i) = floor((i-1)/2)
+• Method 2:
+• Start from index 1
+• Leftchild(i) = 2i
+• Rightchild(i) = 2i + 1
+• Parent(i) = floor(i/2)
+• We will use the method 2
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Advantages of heap:
+• No pointers
+• No extra storage
+• Easy way to determine empty or full
+• Simple way to traverse either as an array or as a tree
+• Does not waste memory as the tree is a complete binary tree
+
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+uses of heap:
+• Sorting : not commonly used
+•
+
+Finding max(or min) repeatedly
+• Example: priority queue
+• Example: n way merge
+
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Conversion of a given array to a heap
+•Refer heap1 folder; heap.h, heap.c and client.c
+•Heap structure:
+struct heap
+{
+int key_[MAXSIZE];
+int n_;
+};
+typedef struct heap heap_t;
+
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Conversion of a given array to a heap
+• Copy the given array to the heap
+• Leaves are always heaps
+• From the first internal node, till the root, move
+indices backwards
+•Make each subtree a heap(heapify)
+
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+while(j <= n && ! is_heap){
+Conversion of a given array to a heap
+if(j + 1 <= n && a[j+1] > a[j])
+• Heapify:
+++j;
+• Make the heap of n nodes
+if(a[j] > val) {
+heapify
+a[i] = a[j];
+about the ith node
+i = j;
+static void heapify(int a[], int n, int pos)
+j = 2 * i;
+{
+}
+int i = pos;
+else {
+int j = 2 * i;
+is_heap = 1;
+int val = a[i];
+}
+int is_heap = 0;
+}
+a[i] = val;
+}
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Implement insert a node at the end and remove the maximum
+• Refer the folder heap2 – heap.h heap.c
+• void insert(heap_t *ptr_heap, int key);
+• int delete_max(heap_t *ptr_heap);
+•
+
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Implement insert a node at the end and remove the maximum
+• Refer the folder heap2 – heap.h heap.c
+• Insert : add at the end; check whether the parent tree is a heap repeatedly
+until the root is reached
+void insert(heap_t *ptr_heap, int key)
+{
+int pos = ++ptr_heap->n_;
+ptr_heap->key_[pos] = key;
+while(pos > 1 && ptr_heap->key_[pos] > ptr_heap->key_[pos/2])
+{
+swap(&ptr_heap->key_[pos], &ptr_heap->key_[pos/2]);
+pos = pos / 2;
+}
+}
+•
+
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Implement insert a node at the end and remove the maximum
+• Refer the folder heap2 – heap.h heap.c
+• Delete max : replace the first node with the last and heapify about the root.
+int delete_max(heap_t *ptr_heap)
+{
+int res = ptr_heap->key_[1];
+ptr_heap->key_[1] = ptr_heap->key_[ptr_heap->n_];
+heapify(ptr_heap->key_, --ptr_heap->n_, 1);
+return res;
+}
+
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Implement a priority queue using heap
+• Refer the folder priority queue –queue.h queue.c heap.h heap.c
+• The queue data structure embeds the heap. The functions of the priority queue like
+enqueue and dequeue are forwarded to the embedded heap.
+struct node
+{
+int key_;
+struct node* next_;
+};
+typedef struct node node_t;
+struct queue
+{
+heap_t q_;
+};
+typedef struct queue queue_t;
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Implement a priority queue using heap
+
+void enqueue(queue_t *ptr_queue, int key)
+{
+insert(&ptr_queue->q_, key);
+}
+int dequeue(queue_t *ptr_queue)
+{
+return delete_max(&ptr_queue->q_);
+}
+
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+Heap
+Implement a priority queue using heap
+
+• In other implementations of priority queue, one of the operations(enqueue
+or dequeue) would not be that efficient – the number of operations would
+depend on the number of elements in the queue
+• In this implementation, both the operations are proportional to log(n, 2)
+where is the number of elements
+
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026
+
+2/9
+
+THANK YOU
+N S Kumar
+Professor
+Department of Computer Science & Engineering (AI & ML)
+
+
