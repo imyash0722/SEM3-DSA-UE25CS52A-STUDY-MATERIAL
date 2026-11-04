@@ -6,10 +6,36 @@ Welcome to the **Data Structures & Applications (UE25CS52A)** exam preparation s
 
 | Unit | Topics | Pages |
 |------|--------|-------|
-| **Unit 1** | Functions, Pointers, Arrays, Structures, Dynamic Memory, ADTs, Linked Lists, Stacks, Stack Applications, Skiplists, Multilists | [Theory](unit1_01_functions_and_pointers.md) · [Examples](unit1_02_example_programs.md) |
-| **Unit 2** | Circular Lists, Doubly Linked Lists, Queues (LL & Array), Priority Queues (5 impls), Deques, Round Robin | [Theory](unit2_circular_dll_queue_pq.md) · [Examples](unit2_example_programs.md) |
-| **Unit 3** | Trees (BST, Array), Expression Trees, Threaded Trees, Heaps, AVL, Splay, Graphs | [Theory](unit3_trees_heaps_avl_splay_graphs.md) · [Examples](unit3_example_programs.md) |
+| **Unit 1** | Functions, Pointers, Arrays, Structures, Dynamic Memory, ADTs, Linked Lists, Stacks, Stack Applications, Skiplists, Multilists | [Overview](unit1_01_functions_and_pointers.md) · [Examples](unit1_02_example_programs.md) · [12 Detailed Topics](#unit-1-detailed-topics) |
+| **Unit 2** | Circular Lists, Doubly Linked Lists, Queues (LL & Array), Priority Queues (5 impls), Deques, Round Robin | [Overview](unit2_circular_dll_queue_pq.md) · [Examples](unit2_example_programs.md) · [8 Detailed Topics](#unit-2-detailed-topics) |
+| **Unit 3** | Trees (BST, Array), Expression Trees, Threaded Trees, Heaps, AVL, Splay, Graphs | [Overview](unit3_trees_heaps_avl_splay_graphs.md) · [Examples](unit3_example_programs.md) |
 | **Reference** | Complete Index, Checklist, Textbook Refs, Exam Patterns | [Quick Reference](quick_reference.md) |
+
+### Unit 1 Detailed Topics
+
+- [1.1 Functions and Pointers](unit1/1.1_functions_and_pointers.md)
+- [1.2 Functions Continued](unit1/1.2_functions_continued.md)
+- [2.1 Arrays](unit1/2.1_arrays.md)
+- [2.2 Multidimensional Arrays](unit1/2.2_multidimensional_arrays.md)
+- [3.1 Structures](unit1/3.1_structures.md)
+- [4.1 Dynamic Memory Allocation](unit1/4.1_dynamic_memory.md)
+- [5.1 Abstract Data Types](unit1/5.1_abstract_data_type.md)
+- [6.1 Linked Lists](unit1/6.1_linked_lists.md)
+- [7.1 Header Node Lists](unit1/7.1_header_node.md)
+- [8.1 Multilists & Skiplists](unit1/8.1_multilists_skiplists.md)
+- [9.1 Stacks](unit1/9.1_stacks.md)
+- [10.1 Stack Applications](unit1/10.1_stack_applications.md)
+
+### Unit 2 Detailed Topics
+
+- [1.1 Circular Lists](unit2/1.1_circular_list.md)
+- [2.1 Doubly Linked Lists](unit2/2.1_doubly_linked_list.md)
+- [3.1 Queue Linked List Implementation](unit2/3.1_queue_linked_list.md)
+- [4.1 Circular Queue Array Implementation](unit2/4.1_circular_queue_array.md)
+- [5.1 Priority Queue ADT](unit2/5.1_priority_queue.md)
+- [6.1 Deque](unit2/6.1_deque.md)
+- [7.1 Binary Trees & BST](unit2/7.1_binary_trees_bst.md)
+- [8.1 Priority Queue Implementations](unit2/8.1_pq_implementations.md)
 
 ---
 
