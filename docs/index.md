@@ -61,3 +61,11 @@ Welcome to the **Data Structures & Applications (UE25CS52A)** exam preparation s
 - Use **search** (top-right) to find specific topics
 - **Copy code** blocks with the copy button (top-right of each block)
 - **Tasklists** have interactive checkboxes for tracking progress
+
+---
+
+## Site Links
+
+- **GitHub Pages (this site)**: https://imyash0722.github.io/SEM3-DSA-UE25CS52A-STUDY-MATERIAL/
+- **Interactive React App (Vercel)**: https://dsa-study-app.vercel.app/
+- **GitHub Repository**: https://github.com/imyash0722/SEM3-DSA-UE25CS52A-STUDY-MATERIAL/
