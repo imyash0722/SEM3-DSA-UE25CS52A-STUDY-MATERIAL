@@ -92,6 +92,15 @@ nav:
   - "Unit 3: Trees, Heaps, Balanced Trees, Graphs":
       - "Unit 3 Overview": unit3_trees_heaps_avl_splay_graphs.md
       - "Example Programs": unit3_example_programs.md
+      - "Detailed Topics":
+          - "3.1 Trees & BST": unit3/3.1_trees_bst.md
+          - "3.2 Array Trees": unit3/3.2_array_trees.md
+          - "3.3 Expression Trees": unit3/3.3_expression_trees.md
+          - "3.4 Threaded Trees": unit3/3.4_threaded_trees.md
+          - "3.5 Heaps & PQ": unit3/3.5_heaps.md
+          - "3.6 AVL Trees": unit3/3.6_avl_trees.md
+          - "3.7 Splay Trees": unit3/3.7_splay_trees.md
+          - "3.8 Graphs": unit3/3.8_graphs.md
   - "Quick Reference": quick_reference.md
 
 copyright: "Data Structures & Applications (UE25CS52A) Study Guide | Based on Tenenbaum & Kruse"
