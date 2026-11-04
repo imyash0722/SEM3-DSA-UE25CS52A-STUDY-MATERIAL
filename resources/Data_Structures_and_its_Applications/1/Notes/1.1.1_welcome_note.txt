@@ -1,0 +1,43 @@
+
+
+===== Page 1 =====
+
+Preface 
+Dear friends, 
+A warm welcome to this course “Data Structures and Applications”. I am N S Kumar. 
+I am the anchor for this course. We have a very good team delivering this course. 
+We will together assist you in learning this subject well. We will provide you with 
+slides, lecture notes, MCQs, short and long questions and answers. Most of these 
+shall be shared with you on a weekly basis. 
+ 
+We consider this course as one of the most important courses in Computer Science 
+curricula. We feel that mastering data structures and algorithms will not only help 
+you in learning other subjects, but also in getting placed in a good company. Most 
+companies as on today test your ability to think in terms of data structures and 
+algorithms. 
+ 
+You may be wondering whether it is required to learn Data Structures and 
+Algorithms in this era of Generative AI. Most of you would have used these tools in 
+your programming courses.  
+ 
+As on today, these tools are generating programs. But the companies are not yet 
+ready to put them into production before they are checked by human eyes. There 
+is a shortage of reviewers in the market. You should be able to read programs, 
+debug them, make them effective and efficient. You will enhance your reading skills 
+only if you also know how to write programs. 
+ 
+So, we strongly recommend that you avoid using these tools while developing 
+programs in this course. We will use the tools when appropriate. We will not only 
+encourage you to write programs, but also to read programs.
+
+----------------------------------------
+
+===== Page 2 =====
+
+You may contact me or any of us if you have any queries. 
+ 
+All the best. Enjoying learning. 
+ 
+On behalf of our team, 
+N S Kumar 
+nskumar@pes.edu

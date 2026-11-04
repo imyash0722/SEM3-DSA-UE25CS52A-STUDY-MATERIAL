@@ -1,236 +1,283 @@
+
+
+===== Page 1 =====
+
 Introduction
 Tree
-Data Structures and its Applications
+Data Structures and its Applications 
 (UE25CS52A)
 N S Kumar
 Professor
-Department of Computer Science &
+Department of Computer Science & 
 Engineering (AI & ML)
-
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 2 » INTRODUCTION
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 2 » INTRODUCTION 
 AND REVISION » CLASS 11/11
-© Confidential Information of PES University. All Rights Reserved - 2026
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 6
 
-1/6
+----------------------------------------
 
-Splay Tree
-Splay Tree:
-• A Splay Tree is a self-adjusting Binary Search Tree (BST)
-• Whenever a node is accessed, move that node to the root
-• This operation is called splaying
+===== Page 2 =====
 
+Splay Tree
+Splay Tree:  
+•
+A Splay Tree is a self-adjusting Binary Search Tree (BST)
+•
+Whenever a node is accessed, move that node to the root
+•
+This operation is called splaying
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Splay Tree
-Splay Tree: salient features
+===== Page 3 =====
+
+Splay Tree
+Splay Tree: salient features 
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 
-
-No Extra Metadata: They require no balance accounting data (like color
-bits in red-black trees or height numbers in AVL trees), saving memory.
-
+No Extra Metadata: They require no balance accounting data (like color 
+bits in red-black trees or height numbers in AVL trees), saving memory. 
 
-
-Locality of Reference: If we access a piece of data once, it moves to the
-top, making subsequent lookups of the same data instantaneous.
-
+Locality of Reference: If we access a piece of data once, it moves to the 
+top, making subsequent lookups of the same data instantaneous. 
 
-
-Efficiency: While a single worst-case operation can take time proportional
-to the number of elements, a sequence of m operations is guaranteed to
+Efficiency: While a single worst-case operation can take time proportional 
+to the number of elements, a sequence of m operations is guaranteed to 
 run in time proportional to m * log(n, 2).
-
 
-
-Dynamic Adaptation: The tree structure continuously morphs to fit the
+Dynamic Adaptation: The tree structure continuously morphs to fit the 
 actual access pattern of the workload rather than enforcing a rigid shape.
 
+----------------------------------------
+
+===== Page 4 =====
+
+Splay Tree
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+[Embedded Image / Diagram OCR Text]:
+Splay Example
+Apply Splay(2, S) to tree S:
+) 2
+(19 @ (&)
+O] (@ ©
+(6) ® ® ® ©®
+Splay(2)
+(4 @ ©) @
+2 ®
+®
 
-Splay Tree
+----------------------------------------
 
+===== Page 5 =====
+
+Splay Tree
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+[Embedded Image / Diagram OCR Text]:
+Visualizing the
+Splaying Cases
+a zig-zag G
+‘ ° A ) /1, ° // \ ’/. \ / \\ “‘/ \ "/ \
+‘ [ A R R, S\
+A A A - /-y
+| A Zig-zig A
+AR\ [Ei \ S, - S
+° \2) zig
+/& (v) /\
+& b 7 [
+i) » T\ —~
+A A 23\ N \ | [ (= B
+"1._“ \ J’v‘ \ A
+A /\ A ) AR A A A /\
+[\ “‘L \\ 8 / \\‘ J;.’ \ ""q \ /& ‘\‘ ‘/"" \
+Ao /&0 ) [ [T\/T\ /T5\ T
+L £ LR\ [\ A ) =
+© 2004 Goodrich, Tamassia, Dickerson Splay Trees 7
 
-Splay Tree
+----------------------------------------
 
-B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+===== Page 6 =====
 
-2/9
-
-Splay Tree
+Splay Tree
 Splay Tree: operations
-• Zig
-• Zig-Zig
-• Zig-Zag
-
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+•
+Zig 
+•
+Zig-Zig 
+•
+Zig-Zag
 
-2/9
+----------------------------------------
 
-Splay Tree
+===== Page 7 =====
+
+Splay Tree
 Splay Tree: ZIG
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 
-
 Node accessed is the child of the root
 Suppose we access 30:
-50
-/
-30
+       50
+      /
+     30
 Perform a right rotation:
-30
-\
-
+       30
+         \
+          50
 Suppose we access 70
-50
-\
-70
+       50
+         \
+          70
 perform a left rotation:
-70
-/
-50
-
+       70
+      /
+     50
 Zig rule
 Node is child of root
-↓
+        ↓
 Perform one rotation
-↓
+        ↓
 Node becomes root
 
-50
-B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+----------------------------------------
 
-2/9
+===== Page 8 =====
 
-Splay Tree
+Splay Tree
 Splay Tree: ZIG-ZIG (LL case)
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 
-
 node and its parent are both on the same side
-50
-
-/
-30
-/
-20
+         50
+       /
+      30
+     /
+    20
 We want to access 20.
 Here:
-20 is the left child of 30
-30 is the left child of 50
+20 is the left child of 30 
+30 is the left child of 50 
 So this is Left-Left (LL).
-
 First rotation
 Rotate 50 right:
-30
-/ \
-20 50
+        30
+       /  \
+      20   50
 Second rotation
 Rotate 30 right:
-20
-\
-30
-\
-50
-
+        20
+          \
+           30
+             \
+              50
 Zig-ZIG rule
 LL => two right rotations
 
-B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+----------------------------------------
 
-2/9
+===== Page 9 =====
 
-Splay Tree
+Splay Tree
 Splay Tree: ZIG-ZIG (RR case)
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 
-
 node and its parent are both on the same side
-
-20
-
-\
-30
-\
-50
+ 20
+      \
+       30
+         \
+          50
 Access 50.
-50 is the right child of 30
-30 is the right child of 20
+50 is the right child of 30 
+30 is the right child of 20 
 So this is RR case
-
 First rotation
 Rotate 30 left:
-30
-/ \
-20 50
+        30
+       /  \
+      20   50
 Second rotation
 Rotate 50 left:
-
+         50
+         /
+        30
+       /
+      20
 Zig-ZIG rule
 LL => two right rotations
 RR => two left rotations
 
-50
-/
-30
-/
-20
+----------------------------------------
 
+===== Page 10 =====
+
+Splay Tree
+Splay Tree: ZIG-ZAG  
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
-
-2/9
-
-Splay Tree
-Splay Tree: ZIG-ZAG
 
-
 node and its parent are both on the opposite side
-
-First rotation
-Consider:
-Rotate 20 left:
-50
-50
-/
-/
-30
-20
-/
-\
-20
-30
-Second rotation
-30 is the right child of 20
-Rotate 50 right:
-20 is the left child of 50
-30
+ Consider:
+        50
+       /
+      20
+        \
+         30
+30 is the right child of 20 
+20 is the left child of 50 
 Therefore:
-/ \
 Left-Right (LR) configuration.
-20 50
+First rotation
+Rotate 20 left:
+        50
+       /
+      30
+     /
+    20
+Second rotation
+Rotate 50 right:
+        30
+       /  \
+      20   50
 So 30 becomes the root.
-
 Zig-Zag rule
 LR => one left; one right
 
-B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+----------------------------------------
 
-2/9
+===== Page 11 =====
 
-THANK YOU
+THANK YOU
 N S Kumar
 Professor
 Department of Computer Science & Engineering (AI & ML)
-
-

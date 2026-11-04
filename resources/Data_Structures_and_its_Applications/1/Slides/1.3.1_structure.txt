@@ -1,0 +1,227 @@
+
+
+===== Page 1 =====
+
+Structures
+Structures
+Department of Computer Science & 
+Engineering (AI & ML)
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STRUCTURES » CLASS 4/12
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 8
+N S Kumar
+Professor
+
+----------------------------------------
+
+===== Page 2 =====
+
+Structures
+Quiz 1: Structure
+struct { int a; double b; } x;
+a) x is a variable having a and b as components
+b) x is a type having a and b as components
+c) x->a is an int variable
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 8
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STRUCTURES » CLASS 4/12
+
+----------------------------------------
+
+===== Page 3 =====
+
+Structures
+Quiz 1: Structure
+struct { int a; double b; } x;
+a) x is a variable having a and b as components
+b) x is a type having a and b as components
+c) x->a is an int variable
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 8
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STRUCTURES » CLASS 4/12
+
+----------------------------------------
+
+===== Page 4 =====
+
+Structures
+Quiz 2: Structure
+typedef struct { int a; double b; } x;
+a) x is a variable having a and b as components
+b) x is a type having a and b as components
+c) x->a is an int variable
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+3 / 8
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STRUCTURES » CLASS 4/12
+
+----------------------------------------
+
+===== Page 5 =====
+
+Structures
+Quiz 2: Structure
+typedef struct { int a; double b; } x;
+a) x is a variable having a and b as components
+b) x is a type having a and b as components
+c) x->a is an int variable
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+3 / 8
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STRUCTURES » CLASS 4/12
+
+----------------------------------------
+
+===== Page 6 =====
+
+Structures
+Quiz 3: Structure
+struct what { char ch; int n; } ;
+if sizeof int is 4 bytes and char is 1 byte,
+sizeof this structure is
+a) 5
+b) 8
+c) Depends on the compiler
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+4 / 8
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STRUCTURES » CLASS 4/12
+
+----------------------------------------
+
+===== Page 7 =====
+
+Structures
+Quiz 3: Structure
+struct what { char ch; int n; } ;
+if sizeof int is 4 bytes and char is 1 byte,
+sizeof this structure is
+a) 5
+b) 8
+c) Depends on the compiler
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+4 / 8
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STRUCTURES » CLASS 4/12
+
+----------------------------------------
+
+===== Page 8 =====
+
+Structures
+Quiz 4: Structure
+struct what { int a[10]; double b; } c[5];
+How to refer to 5th element of a in the 2nd element of c counting from 0?
+a) c[1].a[4]
+b) c[1]->a[4]
+c) c.a[1][4]
+d) C[1][4].a
+© Confidential Information of PES University. All Rights Reserved - 2026 
+5 / 8
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STRUCTURES » CLASS 4/12
+
+----------------------------------------
+
+===== Page 9 =====
+
+Structures
+Quiz 4: Structure
+struct what { int a[10]; double b; } c[5];
+How to refer to 5th element of a in the 2nd element of c counting from 0?
+a) c[1].a[4]
+b) c[1]->a[4]
+c) c.a[1][4]
+d) C[1][4].a
+© Confidential Information of PES University. All Rights Reserved - 2026 
+5 / 8
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STRUCTURES » CLASS 4/12
+
+----------------------------------------
+
+===== Page 10 =====
+
+Structures
+Quiz 5: Structure
+struct what { int a; double b; } a = {1279, 3.14}, b;
+b = a;
+a) Syntax error; structures cannot be assigned
+b) The variable b will point to a
+c) The variable b gets a fieldwise copy of b
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+6 / 8
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STRUCTURES » CLASS 4/12
+
+----------------------------------------
+
+===== Page 11 =====
+
+Structures
+Quiz 5: Structure
+struct what { int a; double b; } a = {1279, 3.14}, b;
+b = a;
+a) Syntax error; structures cannot be assigned
+b) The variable b will point to a
+c) The variable b gets a fieldwise copy of b
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+6 / 8
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STRUCTURES » CLASS 4/12
+
+----------------------------------------
+
+===== Page 12 =====
+
+Structures
+Structure
+•
+A structure has one or more components
+•
+components are generally heterogeneous
+•
+components have names - structure has named components
+•
+in case of array, the components are computed based on the value of an expression
+•
+offset to each component is fixed at compile time
+•
+supports random access. Time required to access the component does not depend on its position in 
+the layout of the structure.
+© Confidential Information of PES University. All Rights Reserved - 2026 
+7 / 8
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STRUCTURES » CLASS 4/12
+
+----------------------------------------
+
+===== Page 13 =====
+
+Structures
+Structure
+•
+The size of a structure depends on implementation.
+•
+The size of structure is at least equal to the sum of the sizes of data members.
+•
+A structure variable stands for the whole structure.
+•
+It does not degenerate to a pointer as is the case with arrays.
+•
+Structures are assignment compatible.
+•
+Conceptually, the compiler generates the code for memberwise copy.
+•
+Structures can be assigned even if the structure contains an array.
+© Confidential Information of PES University. All Rights Reserved - 2026 
+8 / 8
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STRUCTURES » CLASS 4/12
+
+----------------------------------------
+
+===== Page 14 =====
+
+THANK YOU
+Department of Computer Science & Engineering (AI & ML)
+N S Kumar
+Professor

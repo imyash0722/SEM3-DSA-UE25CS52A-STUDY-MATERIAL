@@ -1,156 +1,188 @@
+
+
+===== Page 1 =====
+
 Introduction
 Tree
-Data Structures and its Applications
+Data Structures and its Applications 
 (UE25CS52A)
 N S Kumar
 Professor
-Department of Computer Science &
+Department of Computer Science & 
 Engineering (AI & ML)
-
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 2 » INTRODUCTION
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 2 » INTRODUCTION 
 AND REVISION » CLASS 11/11
-© Confidential Information of PES University. All Rights Reserved - 2026
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 6
 
-1/6
+----------------------------------------
 
-Experiential Learning
+===== Page 2 =====
+
+Experiential Learning
 Finding Running Median using Max-heap and Min-heap
-• Step 1:
-• Understand Callbacks
-• Parameter of a function makes data flexible
-• Parameter of type pointer to function makes operations flexible
-• Experiment with function programming concept
-• Write functions for
-• Map
-• Filter
-• Reduce
-
+•
+Step 1:
+•
+Understand Callbacks 
+•
+Parameter of a function makes data flexible 
+•
+Parameter of type pointer to function makes operations flexible
+•
+Experiment with function programming concept
+•
+Write functions for 
+•
+Map
+•
+Filter
+•
+Reduce
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Experiential Learning
+===== Page 3 =====
+
+Experiential Learning
 Finding Running Median using Max-heap and Min-heap
 •
-•
-•
-•
-
 Step 2:
+•
 Implement a flexible heap
+•
 While initializing provide a function which decides how the comparison is made
-Implement the same heap as
-• MaxHeap
-• MinHeap
-
+•
+Implement the same heap as 
+•
+MaxHeap
+•
+MinHeap
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Experiential Learning
+===== Page 4 =====
+
+Experiential Learning
 Finding Running Median using Max-heap and Min-heap
 •
-•
-•
-•
-
 Step 3:
+•
 Find running median
+•
 Data structures:
-Max-Heap (left_half): Stores the smaller half of the numbers.
-• The root gives the largest element of this lower half.
-• Min-Heap (right_half): Stores the larger half of the numbers.
-• The root gives the smallest element of this upper half.
-
+•
+Max-Heap (left_half): Stores the smaller half of the numbers. 
+•
+The root gives the largest element of this lower half.
+•
+Min-Heap (right_half): Stores the larger half of the numbers. 
+•
+The root gives the smallest element of this upper half.
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Experiential Learning
+===== Page 5 =====
+
+Experiential Learning
 Finding Running Median using Max-heap and Min-heap
 •
-•
-•
-•
-•
-•
-•
-•
-
 Step 3 (continued):
+•
 Find running median
+•
 Algorithm:
+•
 Step-by-Step Algorithm for Each Incoming Number x
+•
 1. Insert:
-If left_half is empty or x <= root(left_half),
+•
+ If left_half is empty or x <= root(left_half), 
+•
 push x into left_half.
-Otherwise, push x into right_half.
-
+•
+ Otherwise, push x into right_half.
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Experiential Learning
+===== Page 6 =====
+
+Experiential Learning
 Finding Running Median using Max-heap and Min-heap
 •
-•
-•
-•
-•
-•
-•
-•
-•
-
 Step 3 (continued):
+•
 Find running median
+•
 Algorithm:
+•
 Step-by-Step Algorithm for Each Incoming Number x
+•
 2. Balance:
+•
 If the size of left_half exceeds right_half by more than 1
-pop the root from left_half and push it into right_half.
-If the size of right_half exceeds left_half,
-pop the root from right_half and push it into left_half.
-
+•
+  pop the root from left_half and push it into right_half.
+•
+If the size of right_half exceeds left_half, 
+•
+  pop the root from right_half and push it into left_half.
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Experiential Learning
+===== Page 7 =====
+
+Experiential Learning
 Finding Running Median using Max-heap and Min-heap
 •
-•
-•
-•
-•
-•
-•
-•
-•
-
 Step 3 (continued):
+•
 Find running median
+•
 Algorithm:
+•
 Step-by-Step Algorithm for Each Incoming Number x
+•
 3. Query Median:
-If total elements N is even: The median is the average of the
-two root elements:
-If total elements N is odd: The median is the root of the heap
-that has the extra element.
-
+•
+If total elements N is even: The median is the average of the 
+•
+two root elements: 
+•
+If total elements N is odd: The median is the root of the heap 
+•
+ 
+ that has the extra element.
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-THANK YOU
+===== Page 8 =====
+
+THANK YOU
 N S Kumar
 Professor
 Department of Computer Science & Engineering (AI & ML)
-
-

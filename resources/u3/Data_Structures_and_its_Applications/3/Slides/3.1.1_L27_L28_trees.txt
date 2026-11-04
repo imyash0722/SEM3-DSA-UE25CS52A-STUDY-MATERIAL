@@ -1,289 +1,370 @@
+
+
+===== Page 1 =====
+
 Introduction
 Tree
-Data Structures and its Applications
+Data Structures and its Applications 
 (UE25CS52A)
 N S Kumar
 Professor
-Department of Computer Science &
+Department of Computer Science & 
 Engineering (AI & ML)
-
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 2 » INTRODUCTION
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 2 » INTRODUCTION 
 AND REVISION » CLASS 11/11
-© Confidential Information of PES University. All Rights Reserved - 2026
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 6
 
-1/6
+----------------------------------------
 
-Tree
+===== Page 2 =====
+
+Tree
 Quiz : Tree
-1. Search on a binary search tree in the worst case will do
+1. Search on a binary search tree in the worst case will do 
 a) n comparisons
 b) n/2 comparisons
 c) Log(n) to base 2 comparisons
 d) Log(n) to base e comparisons
-
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Tree
+===== Page 3 =====
+
+Tree
 Quiz : Tree
-1. Search on a binary search tree in the worst case will do
+1. Search on a binary search tree in the worst case will do 
 a) n comparisons
 b) n/2 comparisons
 c) Log(n) to base 2 comparisons
 d) Log(n) to base e comparisons
-
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Tree
+===== Page 4 =====
+
+Tree
 Quiz : Tree
-2. The smallest key in a binary search tree will
+2. The smallest key in a binary search tree will  
 a) Always be a leaf in the left subtree
 b) Always be a leaf in the right subtree
 c) Could be an internal node with no left subtree
 d) Could be an internal node with no right subtree
-
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Tree
+===== Page 5 =====
+
+Tree
 Quiz : Tree
-2. The smallest key in a binary search tree will
+2. The smallest key in a binary search tree will  
 a) Always be a leaf in the left subtree
 b) Always be a leaf in the right subtree
 c) Could be an internal node with no left subtree
 d) Could be an internal node with no right subtree
-
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Tree
+===== Page 6 =====
+
+Tree
 Quiz : Tree
-
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Tree
+===== Page 7 =====
+
+Tree
 Quiz : Tree
-
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Tree
+===== Page 8 =====
+
+Tree
 Quiz : Tree
-4. A binary tree contains 15 nodes. What is the minimum possible height of the tree,
+4. A binary tree contains 15 nodes. What is the minimum possible height of the tree, 
 where the height of a single-node tree is 0?
 a) 2
 b) 3
 c) 4
 d) 14
-
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Tree
+===== Page 9 =====
+
+Tree
 Quiz : Tree
-4. A binary tree contains 15 nodes. What is the minimum possible height of the tree,
+4. A binary tree contains 15 nodes. What is the minimum possible height of the tree, 
 where the height of a single-node tree is 0?
 a) 2
 b) 3
 c) 4
 d) 14
-
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Tree
+===== Page 10 =====
+
+Tree
 Quiz : Tree
 5. Which statement is always true for a binary tree?
 a) Every node has exactly two children
 b) Every leaf has two children
 c) A node can have at most two children
 d) Every internal node has two children
-
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Tree
+===== Page 11 =====
+
+Tree
 Quiz : Tree
 5. Which statement is always true for a binary tree?
 a) Every node has exactly two children
 b) Every leaf has two children
 c) A node can have at most two children
 d) Every internal node has two children
-
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Binary Tree
+===== Page 12 =====
+
+----------------------------------------
+
+===== Page 13 =====
+
+Binary Tree
 Definitiion
-• A binary tree is a tree in which every node has at most
-two children.
-• The two children are distinguished as the
-left child and right child.
-• A binary tree is either:
-• An empty tree, or
-• A root node together with
-two disjoint binary trees called its:
-• left subtree
-• right subtree
-
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+•
+A binary tree is a tree in which every node has at most 
+two children. 
+•
+The two children are distinguished as the
+ left child and right child.
+•
+A binary tree is either:
+•
+An empty tree, or 
+•
+A root node together with 
+     two disjoint binary trees called its: 
+•
+left subtree 
+•
+right subtree
 
-2/9
+----------------------------------------
 
-Binary Tree
+===== Page 14 =====
+
+Binary Tree
 Inorder traversal of the binary tree
-• If tree is not empty
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 •
+If tree is not empty
 •
-•
-
 Visit the left subtree in inorder
-Visit the root
+•
+Visit the root 
+•
 Visit the right subtree in inorder
-
 Inorder traversal of this tree:
-DBEACF
+D B E A C F
 
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+----------------------------------------
 
-2/9
+===== Page 15 =====
 
-Binary Tree
+Binary Tree
 preorder traversal of the binary tree
-• If tree is not empty
-• Visit the root
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 •
+If tree is not empty
 •
-
+Visit the root 
+•
 Visit the left subtree in preorder
+•
 Visit the right subtree in preorder
-
 preorder traversal of this tree:
-ABDECF
+A B D E C F
 
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+----------------------------------------
 
-2/9
+===== Page 16 =====
 
-Binary Tree
+Binary Tree
 postorder traversal of the binary tree
-• If tree is not empty
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 •
+If tree is not empty
 •
-•
-
 Visit the left subtree in postorder
+•
 Visit the right subtree in postorder
-Visit the root
-
+•
+Visit the root  
 postorder traversal of this tree:
-DEBFCA
+D E B F C A
 
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+----------------------------------------
 
-2/9
+===== Page 17 =====
 
-Binary Tree
+Binary Tree
 Binary Search Tree
-• Every node has a key
-• Nodes are inserted based on the key
-• If the key of a node is less than that of the root, it will
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Every node has a key
+•
+Nodes are inserted based on the key 
+•
+If the key of a node is less than that of the root, it will 
 be inserted in the left subtree
-• Otherwise, it will be inserted in the right subtree
+•
+Otherwise, it will be inserted in the right subtree
 
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+----------------------------------------
 
-2/9
+===== Page 18 =====
 
-Binary Tree
+Binary Tree
 Binary Search Tree : simple and small interface
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 •
-•
-•
-•
-
 Create a tree
+•
 Destroy the tree
+•
 Insert the key
+•
 Display the tree in inorder
+•
+Find the number of nodes 
+•
+Find the number of leaves
 
-• Find the number of nodes
-• Find the number of leaves
+----------------------------------------
 
+===== Page 19 =====
+
+Binary Tree
+Binary Search Tree : structure of  the functions
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+•
+Recursive on nodes and not on tree
+•
+Model for recursive routine :
+•
+Empty tree
+•
+Tree with left and right subtrees
 
-2/9
+----------------------------------------
 
-Binary Tree
-Binary Search Tree : structure of the functions
-• Recursive on nodes and not on tree
-• Model for recursive routine :
-• Empty tree
-• Tree with left and right subtrees
+===== Page 20 =====
 
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
-
-2/9
-
-Binary Tree
+Binary Tree
 Binary Search Tree : interface
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 void init(tree_t *ptr_tree);
 Ground the root.
 void deinit(tree_t *ptr_tree);
 Walk through the tree
-Remove the left subtree
+Remove the left subtree 
 Remove the right subtree
-Remove the root
-void disp(tree_t *ptr_tree);
-// This is inorder traversal of the tree
+Remove the root 
+void disp(tree_t *ptr_tree); 
+        // This is inorder traversal of the tree
 If the tree is not empty
 Display the left subtree
-Display the root
+Display the root 
 Display the right subtree
-
+ 
 void insert(tree_t *ptr_tree, int key);
-If the tree is empty, make this the
-root
-Otherwise compare the keys
-Decide to insert in the left subtree
+If the tree is empty, make this the 
+root 
+Otherwise compare the keys 
+Decide to insert in the left subtree 
 or the right subtree
 
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+----------------------------------------
 
-2/9
+===== Page 21 =====
 
-Binary Tree
+Binary Tree
 Binary Search Tree : insert
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 // on the tree; non recursive
 void insert(tree_t *ptr_tree, int key)
 {
@@ -293,15 +374,17 @@ temp->left_ = temp->right_ = NULL;
 ptr_tree->root_ = insert_recursive(ptr_tree->root_, temp);
 }
 
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+----------------------------------------
 
-2/9
+===== Page 22 =====
 
-Binary Tree
+Binary Tree
 Binary Search Tree : insert
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 // on the node; recursive; observe the assignment to the root
-
 static node_t* insert_recursive(node_t* root, node_t* temp)
 {
 if(root == NULL)
@@ -312,40 +395,48 @@ else if(root->key_ > temp->key_)
 {
 root->left_ = insert_recursive(root->left_, temp);
 }
-else
+else 
 {
 root->right_ = insert_recursive(root->right_, temp);
 }
 return root;
 }
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Binary Tree
+===== Page 23 =====
+
+Binary Tree
 Binary Tree : some recursive algorithms on the node
-1. Count the number of nodes
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+1. Count the number of nodes 
 int number_of_nodes_recursive(node_t* temp)
 {
 if(temp == NULL)
 {
 return 0;
 }
-else
+else 
 {
-return 1 + number_of_nodes_recursive(temp->left_)
+return 1 + number_of_nodes_recursive(temp->left_) 
 + number_of_nodes_recursive(temp->right_);
 }
 }
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Binary Tree
+===== Page 24 =====
+
+Binary Tree
 Binary Tree : some recursive algorithms on the node
-2. Count the number of leaves
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+2. Count the number of leaves 
 int number_of_leaves_recursive(node_t* temp)
 {
 if(temp == NULL)
@@ -358,18 +449,21 @@ return 1;
 }
 else
 {
-return number_of_leaves_recursive(temp->left_)
+return number_of_leaves_recursive(temp->left_) 
 + number_of_leaves_recursive(temp->right_);
 }
 }
 
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+----------------------------------------
 
-2/9
+===== Page 25 =====
 
-Binary Tree
+Binary Tree
 Binary Tree : some recursive algorithms on the node
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 3. Compare two trees
 int are_same_recursive(node_t* root1, node_t* root2)
 {
@@ -377,19 +471,22 @@ if(root1 == NULL && root2 == NULL)
 return 1;
 else if(root1 == NULL || root2 == NULL)
 return 0;
-else
+else 
 return root1->key_ == root2->key_ &&
 are_same_recursive(root1->left_, root2->left_) &&
 are_same_recursive(root1->right_, root2->right_);
 }
 
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+----------------------------------------
 
-2/9
+===== Page 26 =====
 
-Binary Tree
+Binary Tree
 Binary Tree : some recursive algorithms on the node
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 4. Copy tree
 node_t* copy_recursive(node_t* ptr_src)
 {
@@ -402,40 +499,46 @@ temp->left_ = copy_recursive(ptr_src->left_);
 temp->right_ = copy_recursive(ptr_src->right_);
 return temp;
 }
-else
+else 
 {
 return NULL;
 }
 }
 
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+----------------------------------------
 
-2/9
+===== Page 27 =====
 
-Binary Tree
+Binary Tree
 Binary search Tree : some recursive algorithms on the node
-5. search
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+5. search  
 node_t* search_recursive(node_t* root, int key)
 {
 if(root == NULL)
 return NULL;
 else if(key == root->key_)
-return root;
+return root; 
 else if(key < root->key_)
 return search_recursive(root->left_, key);
-else
+else 
 return search_recursive(root->right_, key);
 }
 
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+----------------------------------------
 
-2/9
+===== Page 28 =====
 
-Binary Tree
+Binary Tree
 Binary search Tree : some recursive algorithms on the node
-6. Inorder successor if the argument is the right subtree of a given node
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+6. Inorder successor  if the argument is the right subtree of a given node
 node_t* inorder_successor(node_t* root)
 {
 node_t* temp = root;
@@ -444,101 +547,112 @@ temp = temp->left_;
 return temp;
 }
 
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+----------------------------------------
 
-2/9
+===== Page 29 =====
 
-Binary Tree
+Binary Tree
 Binary search Tree : some recursive algorithms on the node
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 7. Delete based on key
 node_t* delete_key_recursive(node_t* root, int key)
 {
-if(root == NULL) // empty tree
-{
+     if(root == NULL) // empty tree
+    {
 return NULL;
-}
-else if(key < root->key_) // search in left subtree
-{
-root->left_ = delete_key_recursive(root->left_, key);
-}
-else if (key > root->key_) // search in right subtree
-{
-root->right_ = delete_key_recursive(root->right_, key);
-}
-else // match found; action of deletion should start
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+    }
+    else if(key < root->key_) // search in left subtree
+    {
+        root->left_ = delete_key_recursive(root->left_, key);
+    }
+    else if (key > root->key_) // search in right subtree
+    {
+        root->right_ = delete_key_recursive(root->right_, key);
+    }
+  else  // match found; action of deletion should start
 
-2/9
+----------------------------------------
 
-Binary Tree
+===== Page 30 =====
+
+Binary Tree
 Binary search Tree : some recursive algorithms on the node
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 7. Delete based on key continued
 if(root->left_ == NULL && root->right_ == NULL) // 1 leaf
 {
-free(root); return NULL;
+free(root);
+return NULL;
 }
 else if(root->left_ == NULL) // 2. no left
 {
 node_t* temp = root->right_; free(root);
 return temp;
 }
-else if(root->right_ == NULL) // 3. no right
+else if(root->right_ == NULL) // 3. no right 
 {
-node_t* temp = root->left_; free(root);
+node_t* temp = root->left_;  free(root);
 return temp;
 }
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-Binary Tree
+===== Page 31 =====
+
+Binary Tree
 Binary search Tree : some recursive algorithms on the node
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 7. Delete based on key continued; we have found a match
-// 4. has both left and right
-// find the inorder successor
-else
+// 4. has both left and right 
+// find the inorder successor 
+else 
 {
 node_t* temp = inorder_successor(root->right_);
 root->key_ = temp->key_; // replace
 // search with the new key in the right subtree
 root->right_ = delete_key_recursive(root->right_, temp->key_);
 }
+         }
+         return root;
 }
-return root;
-}
 
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+----------------------------------------
 
-2/9
+===== Page 32 =====
 
-Binary Tree
+Binary Tree
 Binary Tree : persistence
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 •
-•
-•
-•
-•
-
 A single traversal will not define the tree uniquely
+•
 An inorder and a postorder traversal combined define a tree uniquely
-Rightmost node in the postorder traversal will be the root of the tree
+•
+Rightmost node in the postorder traversal will be the root of the tree 
+•
 This node in the order traversal divides the tree in left subtree and the right subtree
+•
 Repeating traversal from right to left of post order traversal and locating the node
 to divide the inorder traversal to left and right subtrees
 will recreate the tree
 
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+----------------------------------------
 
-2/9
+===== Page 33 =====
 
-THANK YOU
+THANK YOU
 N S Kumar
 Professor
 Department of Computer Science & Engineering (AI & ML)
-
-

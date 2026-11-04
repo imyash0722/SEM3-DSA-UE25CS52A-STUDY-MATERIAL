@@ -1,248 +1,283 @@
+
+
+===== Page 1 =====
+
 Introduction
 Tree
-Data Structures and its Applications
+Data Structures and its Applications 
 (UE25CS52A)
 N S Kumar
 Professor
-Department of Computer Science &
+Department of Computer Science & 
 Engineering (AI & ML)
-
-B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 2 » INTRODUCTION
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 2 » INTRODUCTION 
 AND REVISION » CLASS 11/11
-© Confidential Information of PES University. All Rights Reserved - 2026
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 6
 
-1/6
+----------------------------------------
 
-AVL tree
+===== Page 2 =====
+
+AVL tree
 AVL tree: height balanced binary search tree
 •
-•
-•
-•
-
 Searching in a binary search tree may require n comparisons
+•
 The tree could become skewed – degenerate to a list
+•
 AVL tree gives a solution to this problem
+•
 Each node has a balance factor
-• Height(left subtree) – Height(right subtree)
-• Difference is maintained within 1 (-1, 0, 1)
-• Rotate the tree to keep the balance
-
+•
+Height(left subtree) – Height(right subtree)
+•
+Difference is maintained within 1 (-1, 0, 1)
+•
+Rotate the tree to keep the balance
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-AVL tree
+===== Page 3 =====
+
+AVL tree
 AVL tree: rotations
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
 Case
-
 Configuration
-
 Rotation
-
 LL
-
 Left-Left
-
 Right rotation
-
 RR
-
 Right-Right
-
 Left rotation
-
 LR
-
 Left-Right
-
 Left rotation + Right rotation
-
 RL
-
 Right-Left
-
 Right rotation + Left rotation
-
 Same direction → single rotation
 Opposite directions → double rotation
 
-B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
+----------------------------------------
 
-2/9
+===== Page 4 =====
 
-AVL tree
+AVL tree
 AVL tree: LL Rotation
-
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-AVL tree
+===== Page 5 =====
+
+AVL tree
 AVL tree: LL Rotation
 Solution: Right Rotation : Rotate right around 30:
-30
-/
-20
-/
-10
-↓
-20
-/ \
-10 30
+          30
+         /
+        20
+       /
+      10
+           ↓
+         20
+       /  \
+     10    30
 The tree is now balanced.
 LL rule : LL → Right Rotation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-AVL tree
+===== Page 6 =====
+
+AVL tree
 AVL tree: RR Rotation
-
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-AVL tree
+===== Page 7 =====
+
+AVL tree
 AVL tree: RR Rotation
 Solution: Solution: Left Rotation; Rotate left around 10:
-10
-\
-20
-\
-30
-↓
-20
-/ \
-10 30
+    10
+      \
+       20
+         \
+          30
+          ↓
+        20
+       /  \
+     10    30
 RR rule
 RR → Left Rotation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-AVL tree
+===== Page 8 =====
+
+AVL tree
 AVL tree: LR Rotation
 Insert: 30, 10, 20
 The BST becomes:
-30
-/
-10
-\
-20
+        30
+       /
+      10
+        \
+         20
 The path is:
 30 → 10 → 20
 The first move is left, but the second is right. Therefore:
 Left → Right
 This is an LR case. (requires double rotation)
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-AVL tree
+===== Page 9 =====
+
+AVL tree
 AVL tree: LR Rotation
 Step 1 : Left rotation : First rotate the subtree rooted at 10 to the left.
-30
-/
-10
-\
-20
+        30
+       /
+      10
+        \
+         20
 becomes:
-30
-/
-20
-/
-10
-Now the tree has become an LL configuration.
+         30
+       /
+      20
+     /
+    10                    Now the tree has become an LL configuration.
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-AVL tree
+===== Page 10 =====
+
+AVL tree
 AVL tree: LR Rotation
 Step 2: Right rotation : Rotate right around 30:
-30
-/
-20
-/
-10
-↓
-20
-/ \
-10 30 The tree is balanced.
+        30
+       /
+      20
+     /
+    10
+        ↓
+ 
+       20
+      /  \
+    10    30      The tree is balanced.
 LR rule : LR → Left Rotation followed by Right Rotation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-AVL tree
+===== Page 11 =====
+
+AVL tree
 AVL tree: RL Rotation
 Now consider:
 10, 30, 20
 The BST becomes:
-10
-\
-30
-/
-20
+    10
+      \
+       30
+      /
+     20
 The path is:
 10 → 30 → 20
 The first move is right, followed by left.
 Therefore, this is an RL case. (requires double rotation)
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-AVL tree
+===== Page 12 =====
+
+AVL tree
 AVL tree: RL Rotation
 Step 1: Right rotation : Rotate right around 30:
-10
-\
-30
-/
-20
+    10
+      \
+       30
+      /
+     20
 becomes:
-10
-\
-20
-\
-30 Now we have an RR configuration.
+    10
+      \
+       20
+         \
+          30    Now we have an RR configuration.
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-AVL tree
+===== Page 13 =====
+
+AVL tree
 AVL tree: RL Rotation
 Step 2: Left rotation : Rotate left around 10:
-10
-\
-20
-\
-30
-↓
-20
-/ \
-10 30 The tree is balanced.
+    10
+      \
+       20
+         \
+          30
+        ↓
+        20
+      /  \
+    10    30    The tree is balanced.
 RL rule : RL → Right Rotation followed by Left Rotation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
 B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
-© Confidential Information of PES University. All Rights Reserved - 2026
 
-2/9
+----------------------------------------
 
-THANK YOU
+===== Page 14 =====
+
+THANK YOU
 N S Kumar
 Professor
 Department of Computer Science & Engineering (AI & ML)
-
-
