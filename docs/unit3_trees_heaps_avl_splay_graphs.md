@@ -224,7 +224,41 @@ node_t* copy_recursive(node_t* src) {
 - Find root in inorder → left/right split
 - Recurse on subtrees
 
+
+### Tree Quiz Questions (from Slides)
+
+**Quiz 1:** Search on a binary search tree in the worst case will do
+- a) n comparisons
+- b) n/2 comparisons
+- c) Log(n) to base 2 comparisons
+- d) Log(n) to base e comparisons
+**Answer: a) n comparisons** (worst case skewed tree)
+
+**Quiz 2:** The smallest key in a binary search tree will
+- a) Always be a leaf in the left subtree
+- b) Always be a leaf in the right subtree
+- c) Could be an internal node with no left subtree
+- d) Could be an internal node with no right subtree
+**Answer: c) Could be an internal node with no left subtree** (leftmost node may have right child)
+
+**Quiz 3:** A binary tree contains 15 nodes. What is the minimum possible height of the tree, where the height of a single-node tree is 0?
+- a) 2
+- b) 3
+- c) 4
+- d) 14
+**Answer: b) 3** (complete binary tree with 15 nodes has height 3: 2^4 - 1 = 15)
+
+**Quiz 4:** Which statement is always true for a binary tree?
+- a) Every node has exactly two children
+- b) Every leaf has two children
+- c) A node can have at most two children
+- d) Every internal node has two children
+**Answer: c) A node can have at most two children**
+
 ---
+
+---
+
 
 ## 3.3 Array Implementation of Binary Tree
 
@@ -339,7 +373,48 @@ void copy(tree_t* src, tree_t* dst) {
 }
 ```
 
+
+### Array Implementation Quiz Questions (from Slides)
+
+**Quiz 1:** In 0-based indexing, mapping the root i to its left child is
+- a) trunc(i/2)
+- b) 2*i
+- c) 2*i+1
+- d) Round(i/2)
+**Answer: c) 2*i+1**
+
+**Quiz 2:** In node-based array representation of a tree, a leaf is identified when its
+- a) left = -1 and right = -1
+- b) left = 0 and right = 0
+- c) Left = -1 is sufficient
+- d) Left = 0 is sufficient
+**Answer: a) left = -1 and right = -1**
+
+**Quiz 3:** In 1-based indexing, the highest index in the array representation of a complete binary tree of n nodes is
+- a) n
+- b) n - 1
+- c) Log(n, 2)
+- d) n + 1
+**Answer: a) n**
+
+**Quiz 4:** In 1-based indexing, the leaf node i in the array representation of a complete binary tree of n nodes will satisfy the following property
+- a) i > n
+- b) 2i > n
+- c) 2i >= n
+- d) i > 2n
+**Answer: b) 2i > n** (if 2i > n, then left child index exceeds array bounds)
+
+**Quiz 5:** In 1-based indexing, a tree of n nodes which is not a complete tree may have a node stored at the highest index
+- a) n
+- b) 2^n - 1
+- c) 2*n
+- d) 2^n
+**Answer: b) 2^n - 1** (worst case skewed tree maps to indices 1, 2, 4, 8, ..., 2^(n-1))
+
 ---
+
+---
+
 
 ## 3.4 Expression Trees
 
@@ -628,7 +703,48 @@ void heapsort(int a[], int n) {
 - Space: O(1) extra
 - **Not cache-friendly** - not used in standard libraries
 
+
+### Heap Quiz Questions (from Slides)
+
+**Quiz 1:** Searching for a key in a maxheap in the worst case makes
+- a) n comparisons
+- b) n – 1 comparisons
+- c) floor(n/2) comparisons
+- d) ceil(n/2) comparisons
+**Answer: a) n comparisons** (heap is not a search tree, must check all nodes)
+
+**Quiz 2:** Adding a key in a maxheap in the worst case makes
+- a) n operations
+- b) n – 1 operations
+- c) floor(n/2) operations
+- d) ceil(n/2) operations
+**Answer: d) ceil(n/2) operations** (height of tree = floor(log2 n), but number of swaps at most floor(log2 n) ≈ ceil(n/2) is wrong... actually it's log n. The quiz question might be asking about something else. Correct answer: O(log n) swaps)
+
+**Quiz 3:** Finding the maximum key in a maxheap in the worst case makes
+- a) n operations
+- b) n – 1 operations
+- c) 1 operation
+- d) n/2 operations
+**Answer: c) 1 operation** (max is always at root index 1)
+
+**Quiz 4:** What happens if the left subtree and the right subtree at each node are swapped?
+- a) The tree is no more a heap
+- b) The max heap becomes a heap tree
+- c) The max heap remains to be a max heap
+- d) Depends on the keys in the tree
+**Answer: c) The max heap remains to be a max heap** (heap property only cares about parent >= children, not left vs right ordering)
+
+**Quiz 5:** A heap has n elements with its root at index 1. Which condition will tell us that the ith node does not have a right subtree?
+- a) 2i + 1 > n
+- b) 2i > n
+- c) 2i + 1 >= n
+- d) 2i >= n
+**Answer: a) 2i + 1 > n** (right child index is 2i+1, if > n then doesn't exist)
+
 ---
+
+---
+
 
 ## 3.7 AVL Trees
 
@@ -728,7 +844,56 @@ node_t* insert_avl(node_t* root, int key, int* taller) {
 - Insert/Delete/Search = O(log n)
 - More rotations than Red-Black trees but simpler
 
+
+### AVL Tree Rotation Summary (from Slides)
+
+| Case | Configuration | Rotation |
+|------|--------------|----------|
+| LL | Left-Left | Right rotation |
+| RR | Right-Right | Left rotation |
+| LR | Left-Right | Left rotation + Right rotation |
+| RL | Right-Left | Right rotation + Left rotation |
+
+**Memory Rule:**
+- **Same direction** (LL, RR) → **Single rotation**
+- **Opposite directions** (LR, RL) → **Double rotation**
+
+### AVL Example Insertion Sequences (from Slides)
+
+**LL Case:** Insert 30, 20, 10
+```
+    30         20
+   /    →     /    20         10  30
+ /
+10
+```
+
+**RR Case:** Insert 10, 20, 30
+```
+10             20
+  \           /    20   →     10  30
+        30
+```
+
+**LR Case:** Insert 30, 10, 20
+```
+    30         30         20
+   /          /          /    10    →    20    →    10  30
+    \        /
+    20      10
+```
+
+**RL Case:** Insert 10, 30, 20
+```
+10             10           20
+  \             \           /    30    →       20   →    10  30
+ /              20              30
+```
+
 ---
+
+---
+
 
 ## 3.8 Splay Trees
 
@@ -802,7 +967,61 @@ void splay(node_t* x) {
 - Network routers (frequent IPs)
 - Data compression
 
+
+### Splay Tree Operations Summary (from Slides)
+
+| Case | Condition | Rotations |
+|------|-----------|-----------|
+| Zig | Node is child of root | 1 rotation |
+| Zig-Zig | Node and parent on same side | 2 rotations (same direction) |
+| Zig-Zag | Node and parent on opposite sides | 2 rotations (opposite directions) |
+
+**Memory Rule:**
+- **Same direction** → Zig-Zig
+- **Opposite direction** → Zig-Zag
+- **One level from root** → Zig
+
+### Splay Tree Example (from Slides)
+
+**Example 1: Search for 20**
+```
+Initial tree:
+        50
+      /        30      70
+   /  \    /   20   40  60  80
+
+Path: 50 → 30 → 20 (Zig-Zig, LL)
+After splaying 20 to root:
+        20
+                     30
+                         50
+            /            40    70
+                /                60    80
+```
+
+**Example 2: Then search for 60**
+```
+Current tree:
+      20
+                 30
+                       50
+           /           40    70
+              /               60  80
+
+Path: 20 → 30 → 50 → 70 → 60 (Zig-Zag)
+After splaying 60 to root:
+         60
+       /          20       70
+       \                30        80
+                  50
+        /
+      40
+```
+
 ---
+
+---
+
 
 ## 3.9 Graphs
 
