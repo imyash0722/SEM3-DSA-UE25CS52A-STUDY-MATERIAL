@@ -1,0 +1,445 @@
+
+
+===== Page 1 =====
+
+Abstract Data Type (ADT)
+ADT
+Department of Computer Science & 
+Engineering (AI & ML)
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 19
+N S Kumar
+Professor
+
+----------------------------------------
+
+===== Page 2 =====
+
+ADT
+Quiz 1: Dynamic Allocation
+struct node { int key_; struct node* next_}; typedef struct node node_t;
+node_t *p = (node_t*)malloc(sizeof(node_t)); p->key_ = 10;
+p->next_ = (node_t*)malloc(sizeof(node_t)); p->next_->key = 20; p->next_->next_ = NULL;
+p = p->next; // comment
+a) p->key_ is 10
+b) p->next_->key_ is 20
+c) Results in dangling pointer
+d) Results in garbage therefore memory leak
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 19
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+
+----------------------------------------
+
+===== Page 3 =====
+
+ADT
+Quiz 1: Dynamic Allocation
+struct node { int key_; struct node* next_}; typedef struct node node_t;
+node_t *p = (node_t*)malloc(sizeof(node_t)); p->key_ = 10;
+p->next_ = (node_t*)malloc(sizeof(node_t)); p->next_->key = 20; p->next_->next_ = NULL;
+p = p->next; // comment
+a) p->key_ is 10
+b) p->next_->key_ is 20
+c) Results in dangling pointer
+d) Results in garbage therefore memory leak
+© Confidential Information of PES University. All Rights Reserved - 2026 
+3 / 19
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+
+----------------------------------------
+
+===== Page 4 =====
+
+ADT
+Quiz 2: Dynamic Allocation
+struct node { int key_; struct node* next_}; typedef struct node node_t;
+node_t *p = (node_t*)malloc(sizeof(node_t)); p->key_ = 10;
+P->next_ = (node_t*)malloc(sizeof(node_t)); p->next_->key_ = 20; p->next_->next_ = NULL;
+a) p->key_ is 10
+b) p->next_->key_ is 20
+c) Results in dangling pointer
+d) Results in garbage therefore memory leak
+© Confidential Information of PES University. All Rights Reserved - 2026 
+4 / 19
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+
+----------------------------------------
+
+===== Page 5 =====
+
+ADT
+Quiz 2: Dynamic Allocation
+struct node { int key_; struct node* next_}; typedef struct node node_t;
+node_t *p = (node_t*)malloc(sizeof(node_t)); p->key_ = 10;
+P->next_ = (node_t*)malloc(sizeof(node_t)); p->next_->key_ = 20; p->next_->next_ = NULL;
+a) p->key_ is 10
+b) p->next_->key_ is 20
+c) Results in dangling pointer
+d) Results in garbage therefore memory leak
+© Confidential Information of PES University. All Rights Reserved - 2026 
+5 / 19
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+
+----------------------------------------
+
+===== Page 6 =====
+
+ADT
+Quiz 3: Dynamic Allocation
+struct node { int key_; struct node* next_}; typedef struct node node_t;
+node_t *p = (node_t*)malloc(sizeof(node_t)); p->key_ = 10; free(p); // p ? 
+a) p->key_ is 10
+b) p->next_->key_ is 20
+c) p in dangling pointer
+d) Results in garbage therefore memory leak
+© Confidential Information of PES University. All Rights Reserved - 2026 
+6 / 19
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+
+----------------------------------------
+
+===== Page 7 =====
+
+ADT
+Quiz 3: Dynamic Allocation
+struct node { int key_; struct node* next_}; typedef struct node node_t;
+node_t *p = (node_t*)malloc(sizeof(node_t)); p->key_ = 10; free(p); // p ?
+a) p->key_ is 10
+b) p->next_->key_ is 20
+c) p in dangling pointer
+d) Results in garbage therefore memory leak
+© Confidential Information of PES University. All Rights Reserved - 2026 
+7 / 19
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+
+----------------------------------------
+
+===== Page 8 =====
+
+ADT
+Quiz 4: Dynamic Allocation
+struct node { int key_; struct node* next_}; typedef struct node node_t;
+node_t *p = (node_t*)malloc(sizeof(node_t)); p->key_ = 10;
+p->next_ = (node_t*)malloc(sizeof(node_t)); p->next_->key_ = 20;
+a) p->key_ is 10
+b) p->next_->key_ is 20
+c) P->next_->next_ in dangling pointer
+d) Results in garbage therefore memory leak
+© Confidential Information of PES University. All Rights Reserved - 2026 
+8 / 19
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+
+----------------------------------------
+
+===== Page 9 =====
+
+ADT
+Quiz 4: Dynamic Allocation
+struct node { int key_; struct node* next_}; typedef struct node node_t;
+node_t *p = (node_t*)malloc(sizeof(node_t)); p->key_ = 10;
+p->next_ = (node_t*)malloc(sizeof(node_t)); p->next_->key_ = 20;
+a) p->key_ is 10
+b) p->next_->key_ is 20
+c) P->next_->next_ in dangling pointer
+d) Results in garbage therefore memory leak
+© Confidential Information of PES University. All Rights Reserved - 2026 
+9 / 19
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+
+----------------------------------------
+
+===== Page 10 =====
+
+ADT
+Quiz 5: Dynamic Allocation
+struct node { int key_; struct node* next_}; typedef struct node node_t;
+node_t *p = (node_t*)malloc(sizeof(node_t)); p->key_ = 10;
+p->next_ = p;
+a) Runtime error
+b) p->next_->key_ is 10
+c) P->next_->next_ in dangling pointer
+d) Results in garbage therefore memory leak
+© Confidential Information of PES University. All Rights Reserved - 2026 
+10 / 19
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+
+----------------------------------------
+
+===== Page 11 =====
+
+ADT
+Quiz 5: Dynamic Allocation
+struct node { int key_; struct node* next_}; typedef struct node node_t;
+node_t *p = (node_t*)malloc(sizeof(node_t)); p->key_ = 10;
+p->next_ = p;
+a) Runtime error
+b) p->next_->key_ is 10 
+c) P->next_->next_ in dangling pointer
+d) Results in garbage therefore memory leak
+© Confidential Information of PES University. All Rights Reserved - 2026 
+11 / 19
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+
+----------------------------------------
+
+===== Page 12 =====
+
+ADT
+Concept of Type
+•
+An integer in Mathematics is a set
+•
+t is closed for addition and multiplication
+•
+25 + 34 is 59
+•
+How do we add?
+•
+Add unit digits and then digits in the tenth place and so on along with the carry from the earlier 
+stage
+•
+Add row wise
+•
+Use fingers and toes
+•
+Use tally marks
+•
+Convert to some other base, add and convert the result back to decimal
+•
+Will the result be different?
+•
+Should we learn how to add if the integers have different values?
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+© Confidential Information of PES University. All Rights Reserved - 2026 
+12 / 19
+
+----------------------------------------
+
+===== Page 13 =====
+
+ADT
+Concept of Type
+•
+An integer is a type
+•
+Represented in a programming language normally as a subset
+•
+A type indicates
+•
+What values are legal
+•
+What we can do with them
+•
+Does not say how we can do them
+•
+Allows us treat almost all values of that type uniformly
+•
+Type of a variable in 'C' has to be declared in the beginning
+•
+Once declared, cannot be changed.
+•
+Type of a variable is determined at compile time
+•
+In Python,
+•
+Type is associated with a value.
+•
+A variable gets a type based on type of value assigned.
+•
+Type is dynamic.
+© Confidential Information of PES University. All Rights Reserved - 2026 
+13 / 19
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+
+----------------------------------------
+
+===== Page 14 =====
+
+ADT
+Type and a programming language
+•
+Can a language support all possible types of the real world?
+•
+A car is a type.
+•
+Supports the following operations
+•
+Start
+•
+Stop
+•
+Accelerate
+•
+Brake
+•
+Steer
+•
+Once you have learnt driving a car, you can (almost) drive any other car
+•
+Other types of real world : fan, mobile phone, browser, laptop, novel, dream, ...
+•
+Can a language support all possible types of the real world? 
+•
+NO
+© Confidential Information of PES University. All Rights Reserved - 2026 
+14 / 19
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+
+----------------------------------------
+
+===== Page 15 =====
+
+ADT
+Type and a programming language
+•
+A Language should support a way of creating our own type
+•
+Abstract Data Type (ADT)
+•
+Like a type (int, double, ...) in a language, this supports
+•
+A few operations
+•
+Specifies what they do and not how they do
+•
+Specifies the interface and not the implementation
+•
+Both the user and the implementor depend on the interface
+•
+Interface once decided is sacred; cannot be changed
+•
+Implementation can be changed without affecting the user
+•
+This is called inversion of dependency
+•
+If B depends on A, any change to A would require change to B.
+•
+If both A and B depend on what does not change, change to A will not affect B
+© Confidential Information of PES University. All Rights Reserved - 2026 
+15 / 19
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+
+----------------------------------------
+
+===== Page 16 =====
+
+ADT
+Data Structure
+•
+A data structure is an abstract data type
+•
+Has number of components arranged in some 
+suitable manner
+•
+To achieve some goal
+•
+An example: arrangement of Tumblers
+Arrangement of Tumblers
+© Confidential Information of PES University. All Rights Reserved - 2026 
+16 / 19
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+
+[Embedded Image / Diagram OCR Text]:
+Tumblers arranged Tumblers arranged
+one within another one by the side of another
+— — = o
+3 ,1'7
+| B N .
+- S - i sawving " ‘ \ / / |
+i (vertical | / g /
+i stacking) [ | 4 | |
+Requires more space
+{horizontalarmangerment)
+
+----------------------------------------
+
+===== Page 17 =====
+
+ADT
+Data Structure
+Another Example: Arrangement of Books
+© Confidential Information of PES University. All Rights Reserved - 2026 
+17 / 19
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+
+[Embedded Image / Diagram OCR Text]:
+Books arranged Books arranged
+one by the side of another one above another
+
+[l iz F FOE © | ToKilla Mockingbird rarperLec @
+
+2 = 5 _ 2 Z ENES The Kite Runner  KiaLep nosseini 4
+
+Bl 2 8 7 2 NS HEE7 ;
+
+- I 7 2 N Prideand Projudice  anEAusTEN @
+- Books are placed next to each other - Books are placed one on top of another
+« Easy to see and access titles « Saves horizontal space
+« Requires more horizontal shelf space « Titles are less visible; need to remove
+
+books to access others.
+
+----------------------------------------
+
+===== Page 18 =====
+
+ADT
+List
+•
+Is a data structure
+•
+Has zero or more components
+•
+Each element has an ordinal position
+•
+Cannot directly access the element based on position
+•
+Sequential access
+•
+No random or direct access
+•
+Insertion and deletion once the position is known requires
+•
+A few operations
+© Confidential Information of PES University. All Rights Reserved - 2026 
+18 / 19
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+
+----------------------------------------
+
+===== Page 19 =====
+
+ADT
+List
+•
+Interface :
+•
+Create
+•
+Destroy
+•
+Insert
+•
+Delete
+•
+...
+•
+Implement using
+•
+A linked list
+•
+An Array
+© Confidential Information of PES University. All Rights Reserved - 2026 
+19 / 19
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ADT » CLASS 6/12
+
+----------------------------------------
+
+===== Page 20 =====
+
+THANK YOU
+Department of Computer Science & Engineering (AI & ML)
+N S Kumar
+Professor

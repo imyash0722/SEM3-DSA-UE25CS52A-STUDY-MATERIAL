@@ -1,0 +1,5914 @@
+
+
+===== Page 1 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+ 
+Department of Computer Science and Engineering
+Vandana M L
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 2 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Introduction to Data Structures
+Vandana M L
+Department of Computer Science and Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 3 =====
+
+Data Structure is a scheme of organizing data in the 
+memory of the computer in such a way that various 
+operations can be performed efficiently on this data
+DATA STRUCTURES AND ITS APPLICATIONS
+Introduction to Data Structures
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 4 =====
+
+Why Data Structure?
+DATA STRUCTURES AND ITS APPLICATIONS
+Introduction to Data Structures
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 5 =====
+
+➢ Computer systems deal with large amount of data 
+     ( text ,image, relational data etc.)
+➢Data is just the raw material for information, 
+analytics, business intelligence, advertising, etc.
+➢The way data is organized in memory plays a 
+     key role in deciding the time complexity of the 
+     algorithms designed for solving the problems 
+➢Data Structures and algorithm go hand in hand
+Hey !!!   
+I am Data 
+Structure
+Hello!!!
+I am Algorithm
+Lets Crack this 
+problem together
+DATA STRUCTURES AND ITS APPLICATIONS
+Introduction to Data Structures
+Why Data Structures?
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 6 =====
+
+➢Data Structures is most fundamental 
+and building block concept in computer 
+science
+➢Good knowledge of Data Structures is 
+required to build efficient software 
+systems
+DATA STRUCTURES AND ITS APPLICATIONS
+Introduction to Data Structures
+Importance of Data Structures
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 7 =====
+
+Abstract Data Type
+ 
+.
+Data Structures and its Applications
+➢Abstract Data Type is used to represent data and operations associated 
+with an entity  from the point of view of user irrespective of 
+implementation
+➢ADT can be implemented using one or more Data Structures and 
+Algorithms
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 8 =====
+
+➢Linear Data Structures
+ 
+Stack, Queue, Linked List
+               
+➢Non Linear Data Structures
+ 
+Tree , Graph
+DATA STRUCTURES AND ITS APPLICATIONS
+Classification of Data Structures
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 9 =====
+
+Linear Organisation
+Stack
+Queue
+Linked List
+Linear List using Array
+DATA STRUCTURES AND ITS APPLICATIONS
+Classification of Data Structures : Linear Data Structures
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 10 =====
+
+Non Linear Organisation
+Tree
+Graph
+DATA STRUCTURES AND ITS APPLICATIONS
+Classification of Data Structures : Non Linear Data Structures
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 11 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Few Applications of Linear Data Structures
+➢Array
+▪To implement other data structures
+▪To store files in memory
+➢Linked Lists
+▪To implement other data structures 
+▪To manipulate large numbers
+➢Stacks
+▪Recursion
+▪Infix to postfix conversion
+➢Queues
+▪Process Scheduling 
+▪Event handling
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 12 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Few Applications of Non Linear Data Structures
+➢Tree
+▪Auto complete features (Trie)
+▪Used by operating systems to maintain the structure of a file system
+➢Heaps
+▪Priority Queue implementation
+▪Heap Sort
+➢Graphs
+▪Computer Networks
+▪Shortest Path Problems
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 13 =====
+
+Overview- Course Contents 
+Unit -1 : Linked Lists
+➢Memory Allocation Static and Dynamic 
+➢Singly Linked List
+➢Doubly Linked Lists
+➢Circularly Linked Lists
+➢Multi Lists : Sparse Matrix
+➢Applications : 
+▪
+Skip List
+Data Structures and Applications
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 14 =====
+
+Overview- Course Contents 
+Unit -2 : Stacks 
+➢Basic Structure of Stack 
+➢Array and Linked Implementation
+➢Applications : 
+▪
+Recursion
+▪
+Conversion of Infix to Postfix
+▪
+Conversion of Infix to Prefix
+▪
+Evaluation of Expression
+▪
+Parentheses Matching
+Data Structures and Applications
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 15 =====
+
+Overview 
+Unit -2 : Queues
+➢Basic Structure
+➢Circular Queue, Priority Queue, Dequeue
+➢Array and Linked Implementation
+➢Applications :
+▪
+Josephus Problem, 
+▪
+CPU Scheduling
+Data Structures and its Applications
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 16 =====
+
+Overview- Course Contents 
+Unit -3 : Trees
+➢Definitions, Binary Trees, Binary Search Tree, Threaded Binary trees. 
+➢Operations on Trees
+➢Implementation of BST,
+➢Threaded BST
+ Unit -3 : Heaps
+➢Heap as a Data Structure
+➢Array Implementation
+➢Priority queue as a heap
+➢Applications : Dictionary Implementation
+Data Structures and Applications
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 17 =====
+
+Overview- Course Contents 
+ 
+Unit -4 : Balanced Trees and Graphs 
+➢AVL Trees 
+➢Operations on AVL Trees
+➢Properties of Graphs
+➢Implementation of Graphs 
+➢Search Operations on Graph
+➢Applications :
+▪
+ Indexing in data bases
+▪
+Representing a Computer Topology
+Data Structures and Applications
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 18 =====
+
+Overview- Course Contents 
+ 
+Unit -5 : Suffix Trees
+➢Tries
+➢Implementation of Tries 
+➢Operations on Tries : Insert, delete and search
+➢Applications :
+▪
+Word Prediction
+▪
+URLs Decoding 
+▪
+Cryptography
+Unit -5 : Hashing
+➢Hashing Techniques
+➢Collision resolution 
+➢Double Hashing, Rehashing
+Data Structures and its Applications
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 19 =====
+
+Overview- Course Contents 
+Text Book :
+Data Structures using C & C++ 
+Yedidyah Langsam, Moshe J. Augenstein, Aaron M. Tenenbaum, 2015, 
+Pearson Education , 2nd Edition.
+Reference Book:
+Data Structure and Program Design in C
+ Robert Kruse, C.L Tondo, Bruce P. Leung – 2007, Pearson Education 
+,2nd Edition.
+Data Structures and its Applications
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 20 =====
+
+vandanamd@pes.edu
++91 7411716615 
+Vandana M L
+Department of Computer Science & Engineering
+THANK YOU
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 21 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Department of Computer Science and Engineering
+Vandana M L
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 22 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Memory Allocation
+Vandana M L
+Department of Computer Science and Engineering
+
+----------------------------------------
+
+===== Page 23 =====
+
+Static Memory Allocation
+Dynamic Memory Allocation
+DATA STRUCTURES AND ITS APPLICATIONS
+Memory Allocation
+
+----------------------------------------
+
+===== Page 24 =====
+
+allocated by the compiler. 
+Exact size and type of memory must be known at compile time
+Memory is allocated in stack area
+int b; 
+int c[10] ;
+DATA STRUCTURES AND ITS APPLICATIONS
+Static Memory Allocation
+
+----------------------------------------
+
+===== Page 25 =====
+
+Memory allocated can not be altered during run time as it 
+is allocated during compile time
+This may lead to under utilization or over utilization of 
+memory
+Memory can not be deleted explicitly only contents can 
+be overwritten
+Useful only when data size is fixed and known before 
+processing
+DATA STRUCTURES AND ITS APPLICATIONS
+Disadvantages of Static Memory Allocation
+
+----------------------------------------
+
+===== Page 26 =====
+
+Dynamic memory allocation is used to obtain and 
+release memory during program execution. 
+It operates at a low-level
+Memory Management functions are used for allocating 
+and deallocating memory during execution of program
+These functions are defined in “stdlib.h”
+Dynamic Memory Allocation Functions:
+–
+Allocate memory - malloc(), calloc(), and realloc()
+–
+Free memory - free()
+DATA STRUCTURES AND ITS APPLICATIONS
+Dynamic Memory Allocation
+
+----------------------------------------
+
+===== Page 27 =====
+
+To allocate memory use 
+void *malloc(size_t size);
+• Takes number of bytes to allocate as argument.
+• Use sizeof to determine the size of a type.
+• Returns pointer of type void *. A void pointer may be assigned to any pointer.
+• If no memory available, returns NULL.
+DATA STRUCTURES AND ITS APPLICATIONS
+Dynamic Memory Allocation Functions: malloc()
+
+----------------------------------------
+
+===== Page 28 =====
+
+To allocate space for 100 integers:
+int *p;
+if ((p = (int*)malloc(100 * sizeof(int))) == NULL){
+printf("out of memory\n");
+exit();
+}
+• Note we cast the return value to int*.
+• Note we also check if the function returns NULL.
+DATA STRUCTURES AND ITS APPLICATIONS
+Dynamic Memory Allocation Functions: malloc()
+
+----------------------------------------
+
+===== Page 29 =====
+
+• cptr = (char *) malloc (20);
+Allocates 20 bytes of space for the pointer cptr of type char
+•
+sptr = (struct stud *) malloc(10*sizeof(struct stud));
+Allocates space for a structure array of 10 elements. sptr points 
+to a structure element of type struct stud
+Always use sizeof operator to find number of bytes for a data type, 
+as it can vary from machine to machine
+DATA STRUCTURES AND ITS APPLICATIONS
+Dynamic Memory Allocation Functions: malloc()
+
+----------------------------------------
+
+===== Page 30 =====
+
+• malloc always allocates a block of contiguous bytes
+– The allocation can fail if sufficient contiguous memory 
+space is not available
+– If it fails, malloc returns NULL
+if  ((p = (int *) malloc(100 * sizeof(int))) == NULL)
+{
+printf (“\n Memory cannot be allocated”);
+exit();
+}
+The n integers allocated can be accessed as *p, *(p+1), *(p+2),…, *(p+n-1) or 
+just as p[0], p[1], p[2], …,p[n-1]
+DATA STRUCTURES AND ITS APPLICATIONS
+Dynamic Memory Allocation Functions: malloc()
+
+----------------------------------------
+
+===== Page 31 =====
+
+To release allocated memory use
+free(ptrvariable)
+• Deallocates memory allocated by malloc().
+• Takes a pointer as an argument.
+e.g.
+free(newPtr);
+Dangling 
+pointer
+Memory 
+Leak
+DATA STRUCTURES AND ITS APPLICATIONS
+Dynamic Memory Allocation Functions: free()
+
+----------------------------------------
+
+===== Page 32 =====
+
+Similar to malloc(),
+But allocated memory space are zero by default..
+calloc() requires two arguments –
+void *calloc(size_t nitem, size_t size);
+Example
+int *p;
+p=(int*)calloc(100,sizeof(int));
+returns a void pointer if the memory allocation is successful, 
+else it'll return a NULL pointer. 
+DATA STRUCTURES AND ITS APPLICATIONS
+Dynamic Memory Allocation Functions: calloc()
+
+----------------------------------------
+
+===== Page 33 =====
+
+Reallocate a block
+Two arguments
+• Pointer to the already allocated block 
+• Size of new block
+int *ip;
+ip = (int*)malloc(100 * sizeof(int));
+...
+/* need twice as much space */
+ip = (int*)realloc(ip, 200 * sizeof(int));
+DATA STRUCTURES AND ITS APPLICATIONS
+Dynamic Memory Allocation Functions: realloc()
+
+----------------------------------------
+
+===== Page 34 =====
+
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Lecture Summary
+Memory Allocation
+Static Memory allocation 
+Dynamic memory allocation
+Apply the concepts to implement C program for the following problem statement
+Multiply two matrices . Allocate the memory for the matrices dynamically
+
+----------------------------------------
+
+===== Page 35 =====
+
+vandanamd@pes.edu
++91 7411716615 
+Vandana M L
+Department of Computer Science & Engineering
+THANK YOU
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 36 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Department of Computer Science and Engineering
+Vandana M L
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 37 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Introduction to Singly Linked List
+Vandana M L
+Department of Computer Science and Engineering
+
+----------------------------------------
+
+===== Page 38 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+List Data Structure
+List
+Dynamic data structure consists of a collection of elements
+Can be implemented in two ways
+By contiguous memory allocation : ArrayList
+By Linked Allocation : Linked List
+
+----------------------------------------
+
+===== Page 39 =====
+
+• Creating a List
+• Inserting an element in a list
+• Deleting an element from a list
+• Searching alist
+• Reversing alist
+• Concatenating two lists
+• Traversing a list
+DATA STRUCTURES AND ITS APPLICATIONS
+List Data Structure: Operations
+
+----------------------------------------
+
+===== Page 40 =====
+
+Placement
+• Sequential
+Access
+• Sequential
+DATA STRUCTURES AND ITS APPLICATIONS
+Understanding Array List  (Linear List using Arrays)
+
+[Embedded Image / Diagram OCR Text]:
+Y 2 2
+o n
+S Ly
+A : : % 'm
+a..@ ﬁ@@% i@,
+fiaxgigel | SE | kil Ly
+W) = » ; i
+
+----------------------------------------
+
+===== Page 41 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Understanding Linked List
+Placement
+• Random
+Access
+• Sequential
+
+[Embedded Image / Diagram OCR Text]:
+s PO B
+$s¥ Vo
+Y
+
+o-v 6 0ly e
+®.01),0.0)i¢
+B ‘ = el A (| Rt s
+.'u‘l'n‘l I (| J'l.;l!.
+J =8 == o 1
+
+----------------------------------------
+
+===== Page 42 =====
+
+ArrayList
+Linked list
+Fixed size: Resizing is expensive
+Dynamic size
+Insertions and Deletions are
+inefficient
+Insertions and Deletions are 
+efficient
+Elements in  contiguous memory
+locations
+Elements not  in contiguous 
+memory locations
+May result in memory wasteage
+if all the allocated space is not 
+used
+Since memory is allocated 
+dynamically(as per requirement) 
+there is no wastage of memory.
+Sequential and random access is 
+faster 
+Sequential and random access is 
+slow 
+DATA STRUCTURES AND ITS APPLICATIONS
+Array List Vs Linked List
+
+----------------------------------------
+
+===== Page 43 =====
+
+Singly Linked List
+Doubly Linked List
+Circular Linked List 
+Multi Linked List
+DATA STRUCTURES AND ITS APPLICATIONS
+Types of Linked List
+
+----------------------------------------
+
+===== Page 44 =====
+
+A linked list is a linear data structure.
+Nodes make up linked lists.
+Nodes are structures made up  of data and a pointer to another  node.
+Usually the pointer is called as link.
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List
+
+----------------------------------------
+
+===== Page 45 =====
+
+Each node has only one link part
+Each link part contains the address of the
+next node in  the list
+Link part of the last node contains NULL
+value which  signifies the end of the
+node
+DATA
+LINK
+DATA STRUCTURES AND ITS APPLICATIONS
+Single Linked List
+
+----------------------------------------
+
+===== Page 46 =====
+
+•Each node contains a value(data) and a pointer  to the next
+node in the list
+•Head/start is a pointer which pointsat the first node in the
+list
+head
+DATA STRUCTURES AND ITS APPLICATIONS
+Single Linked List :Schematic representation
+
+----------------------------------------
+
+===== Page 47 =====
+
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Lecture Summary
+Singly Linked List 
+Apply the concepts to answer the following questions
+Give structure definition for node of singly linked list used to store employee data
+(employee no , name, salary ,designation)
+
+----------------------------------------
+
+===== Page 48 =====
+
+vandanamd@pes.edu
++91 7411716615 
+Vandana M L
+Department of Computer Science & Engineering
+THANK YOU
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 49 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Department of Computer Science and Engineering
+Vandana M L
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 50 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List
+Vandana M L
+Department of Computer Science and Engineering
+
+----------------------------------------
+
+===== Page 51 =====
+
+Defining node structure
+struct node 
+{
+int data;
+struct node *link;
+};
+typedef struct node NODE;
+data         link
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List: Node Structure
+struct polydata
+{
+int coeff;
+int expo;
+};
+typedef struct node
+{
+polydata data;
+struct node *link;
+}polynode;
+coef
+expo      link
+
+----------------------------------------
+
+===== Page 52 =====
+
+Creating a node
+Allocate memory for the node dynamically
+If the memory is allocated successfully
+set the data part to user defined value
+set the link part to NULL
+data data
+link
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List Operations
+20
+NULL
+
+----------------------------------------
+
+===== Page 53 =====
+
+Inserting a node
+There
+are
+3cases
+Insertion at the beginning
+Insertion at the end
+Insertion at a given position
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List operations
+
+----------------------------------------
+
+===== Page 54 =====
+
+Insertion at the beginning
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List operations
+Create a node
+If the list is empty 
+make the head pointer  point towards the new node;
+Else 
+Make the next pointer of the node point towards the  
+first node of the list
+Make the head pointer point towards this new node
+
+----------------------------------------
+
+===== Page 55 =====
+
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List operations
+Insertion at the beginning
+CASE1
+
+[Embedded Image / Diagram OCR Text]:
+head
+o]
+data link
+head
+0x190
+ﬁ
+data link
+
+----------------------------------------
+
+===== Page 56 =====
+
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List operations
+Insertion at the beginning
+CASE2
+
+[Embedded Image / Diagram OCR Text]:
+head -
+0x190 0x148 0x210
+[2 foue}->[[s Jowteo] » [Ts o]
+data link data link  data link
+---
+0x190
+]
+data link
+: 0x148 0x210
+Lo Joctea] > [ o]
+data link data link
+
+----------------------------------------
+
+===== Page 57 =====
+
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List operations
+Insertion at the end of the 
+Create a node
+If the list is empty 
+make the head pointer  point towards the new node;
+Else 
+Traverse the linked list to find out the last node
+Make the link pointer of the last node to point to the 
+new node
+
+----------------------------------------
+
+===== Page 58 =====
+
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List operations
+Insertion at the end of the
+
+[Embedded Image / Diagram OCR Text]:
+0x190
+o [ o]
+[2 o]
+data link
+0x148 0x210 @
+— (e o] ‘
+data link data link
+---
+head
+i 0x210 0x190
+— [ —
+data link data link data link
+
+----------------------------------------
+
+===== Page 59 =====
+
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List operations
+Insertion at the given position 
+Create a node
+If the list is empty or if insertion is to be done at first position
+Same steps as insert front
+Else 
+Traverse the linked list to reach given position
+Keep track of the previous node
+If it is an intermediate position
+Change previous node link to point to the newnode
+Newnode to point to the next node
+Else 
+If it is last position 
+Same steps as insert at end      
+Else
+Print “Invalid position”
+
+----------------------------------------
+
+===== Page 60 =====
+
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List operations
+Insertion at the given position
+
+[Embedded Image / Diagram OCR Text]:
+heed 0x1c0
+
+0x190 0x148 @ 0x210
+L Loz T >[5 owtag » (e o]
+
+data link  data link data link
+
+head
+0x190 Ox148 RS 0x210
+[z T [ Jose [ o Josata] e o]
+data link  data link data link data link
+
+----------------------------------------
+
+===== Page 61 =====
+
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Lecture Summary
+Singly Linked List insert operation
+Apply the concepts to implement following operations on a circular singly linked list
+Count number of nodes 
+Concatenate two lists
+Sum of all the node values in the list
+
+----------------------------------------
+
+===== Page 62 =====
+
+vandanamd@pes.edu
++91 7411716615 
+Vandana M L
+Department of Computer Science & Engineering
+THANK YOU
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 63 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Department of Computer Science and Engineering
+Vandana M L
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 64 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List
+Vandana M L
+Department of Computer Science and Engineering
+
+----------------------------------------
+
+===== Page 65 =====
+
+Deleting a node
+There
+are
+3cases
+Deleting first node
+Deleting last node
+Deleting a node at a given position
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List Operations
+
+----------------------------------------
+
+===== Page 66 =====
+
+Deleting first node
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List Operations
+Case 1: Linked list is empty
+Case 2: Linked list with a single node 
+delete the node 
+set head to NULL
+Case3:Linked list has more than one node
+Change head to point to second node
+Delete the first node
+
+----------------------------------------
+
+===== Page 67 =====
+
+Deleting first node                      
+Only one node in list            More than one node    
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List Operations
+Free this
+Memory 
+Manager
+
+[Embedded Image / Diagram OCR Text]:
+head
+0x190
+t
+data link
+---
+head B
+0x190 0x148 0x210
+- [[ewox]
+data link data link  data link
+---
+head -
+0x148 0210
+- [
+data link  data link
+
+----------------------------------------
+
+===== Page 68 =====
+
+Deleting last node
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List Operations
+Case 1: Linked list is empty
+Case 2: Linked list with a single node 
+delete the node 
+set head to NULL
+Case3:Linked list has more than one node
+Traverse the linked list to point to second last 
+node
+Delete the last node 
+Set link field of second last node to NULL
+
+----------------------------------------
+
+===== Page 69 =====
+
+Deleting last node
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List Operations
+dhead
+dhead
+dhead
+Free this
+More than one node
+
+[Embedded Image / Diagram OCR Text]:
+head -
+
+oxaso
+0x190 0x148 0x210
+[ Tl >{'s Torte] > [ o]
+data link data link data link
+---
+head -
+owaso
+0x190 0x148
+data link data link
+
+----------------------------------------
+
+===== Page 70 =====
+
+Deleting node from a given position
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List Operations
+If the linked list is not empty
+If position is 1 
+Delete from the front of the linked list
+Else 
+If position is a valid position
+Traverse linked list to get the desired position
+keep track of previous node
+set previous node link field to link field of 
+current node
+delete the current node
+Else 
+print invalid position
+
+----------------------------------------
+
+===== Page 71 =====
+
+Deleting node from a given position
+DATA STRUCTURES AND ITS APPLICATIONS
+Singly Linked List Operations
+Pos=2
+Memory 
+Manager
+
+[Embedded Image / Diagram OCR Text]:
+head -
+
+[pasd
+0x190 Ox148 0210
+[ T >{'s Torre] > [ o]
+data link data link  data link
+---
+head -
+[oasd
+0x190 0x210
+[z oass]> [« o]
+data link data link
+
+----------------------------------------
+
+===== Page 72 =====
+
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Lecture Summary
+Singly Linked List delete operation
+Apply the concepts to implement following operations for a singly linked list
+Delete a node with given key value 
+Delete all alternate nodes 
+Delete all the nodes (erase the linked list)
+
+----------------------------------------
+
+===== Page 73 =====
+
+vandanamd@pes.edu
++91 7411716615 
+Vandana M L
+Department of Computer Science & Engineering
+THANK YOU
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 74 =====
+
+DATA STRUCTURES AND APPLICATIONS
+Department of Computer Science and Engineering
+Vandana M L
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 75 =====
+
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List
+Vandana M L
+Department of Computer Science and Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 76 =====
+
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List
+Adoubly linked list contain three fields:
+
+Data
+
+link to the next node
+
+link to the previous node.
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 77 =====
+
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List :Node Structure
+A
+B
+C
+previous
+data
+next
+NULL
+50
+0x190
+0x190
+0x148
+0x120
+0x14
+8
+0x12
+0
+0x190
+70
+NULL
+0x148
+60
+0x120
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 78 =====
+
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Vs Singly Linked List
+Advantages:
+Can be traversed in
+either  direction (may 
+be  essential for some  
+programs)
+Some operations, such 
+as deletion and 
+inserting  before a 
+node, become  easier
+Disadvantages:
+Requires more space
+List manipulations are  
+slower (because more  
+links must be
+changed)
+Greater
+chance
+of
+having
+bugs (because
+more links
+must be
+manipulated)
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 79 =====
+
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Node definition
+struct node
+{
+int data;  
+node*llink;  
+node*rlink;
+};
+.Data
+.
+.
+inf
+Point to 
+previous 
+node
+Point to 
+next 
+node
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 80 =====
+
+Creating a node
+Allocate memory for the node dynamically
+If the memory is allocated successfully
+set the data part to user defined value
+set the llink (address of previous node) and rlink (address of next node) part 
+to NULL
+Datvllink
+data      rlink
+link
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Implementation
+NULL
+20
+NULL
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 81 =====
+
+Inserting a node
+There
+are
+3cases
+Insertion at the beginning
+Insertion at the end
+Insertion at a given position
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Implementation
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 82 =====
+
+Insertion at the beginning
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Implementation
+What all will change
+If the linked list empty(case 1)
+Head/Start pointer
+else                                 (case2)
+Head/Start pointer
+New front's llink and rlink
+Old front's llink
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 83 =====
+
+Insertion at the beginning (Case1)
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Implementation
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+---
+head  0¥190
+(o]
+llink data rlink
+---
+head 0x190
+llink data rlink
+
+----------------------------------------
+
+===== Page 84 =====
+
+Insertion at the beginning(Case 2)
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Implementation
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+---
+head
+0x190 0x148 0x1c0 0x210
+o 2 [octsslforto] > [oreo] oxe] @ Joroffoxten] o [
+llink data rlink llink data rlink llink data rlink llink data rlink
+---
+0x190
+e
+llink data rlink
+0x148 0x1c0 0x210
+[wons s Jortafolontes] o o] fortn] o Juons |
+link data rlink llink data rlink  llink data rlink
+
+----------------------------------------
+
+===== Page 85 =====
+
+link
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Implementation
+Insertion at the end  
+What all will change
+If the linked list empty(same as case 1 of insert at front)
+Head/Start pointer(case 2)
+else
+Last node’s rlink
+New node’s llink
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 86 =====
+
+link
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Implementation
+Insertion at the end
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+---
+head
+0x148 0x1c0 0x210 0x190
+O e I o ) i = e
+llink data rlink llink data rlink llink data rlink llink data rlink
+---
+0x190
+
+llink data rlink
+0x148 0x1c0 0x210 @
+o5 Josteol>foctss] o JorztafZfoxtco] o [ruwe]
+llink data rlink llink data rlink llink data rlink
+
+----------------------------------------
+
+===== Page 87 =====
+
+link
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Implementation
+Insertion at the given position 
+Create a node
+If the list is empty 
+make the start pointer  point towards the new node;
+Else 
+Traverse the linked list to reach given position
+Keep track of the previous node
+If it is an intermediate position
+Change previous node rlink to point to the newnode
+Newnode’s llink to point to previous node and rlink
+to point to  the next node
+Next node llink to point to the newnode
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 88 =====
+
+link
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Implementation
+Insertion at the given position
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+---
+0x190
+0x148 llink data rlink
+0x148 0x1c0 N ox210
+ot [ Jorteo] foxts] o [oszto] Hoxten] o Juons
+llink data rlink llink data rlink llink data rlink
+---
+head
+
+0x148
+0x148 0x1c0 0x190 0x210
+wout s Jocteol Aot s Jorto]owrco] 12 Joxarof Hotao] ¢ Juurr
+link data rlink  link data rlink  llink data rlink  link data rlink
+
+----------------------------------------
+
+===== Page 89 =====
+
+Deleting a node
+There
+are
+3cases
+Deleting first node
+Deleting last node
+Deleting a node at a given position
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Implementation
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 90 =====
+
+Deleting a node
+There
+are
+3cases
+Deleting first node
+Deleting last node
+Deleting a node at a given position
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Implementation
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 91 =====
+
+Deleting first node
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Implementation
+What will change??
+Case I    : Empty Linked List
+Case II   : Linked list with a single node
+first node gets freed up 
+head points to NULL
+Case III  : Linked List with more than one node
+Second node llink gets changed to NULL
+first node gets freed off
+head points to second node
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 92 =====
+
+Deleting first node
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Implementation
+Case II   : Linked list with a single node
+Delete
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+---
+head
+0x190
+NULL n NULL
+llink data rlink
+
+----------------------------------------
+
+===== Page 93 =====
+
+Deleting first node
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Implementation
+Case III  : Linked List with more than one node
+Delete
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+---
+head
+
+0x148
+0x148 0x1c0
+NULL nmm 0x148 n NULL
+llink data rlink llink data rlink
+---
+head
+p 0x148 0x1c0
+[ T Joxsel Hoxto] o JorteofHorta o [rue]
+w llink data rlink llink data rlink
+
+----------------------------------------
+
+===== Page 94 =====
+
+Deleting last node
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Implementation
+What will change??
+Case I    : Empty Linked List
+Case II   : Linked list with a single node
+first node gets freed up 
+head points to NULL
+Case III  : Linked List with more than one node
+Second last  node rlink point to NULL
+last node gets freed up
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 95 =====
+
+Deleting last node
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Implementation
+Case II  : Linked List with more than one node
+Delete
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+---
+head
+
+0x148
+0x148 0x1c0
+NULL nmm 0x148 n NULL
+llink data rlink llink data rlink
+---
+head
+0x148 0x1c0 0x210
+T = 0 N e (X
+llink data rlink llink data rlink llink data rlink
+
+----------------------------------------
+
+===== Page 96 =====
+
+Deleting a node at intermediate position
+DATA STRUCTURES AND APPLICATIONS
+Doubly Linked List Implementation
+Case II  : Linked List with more than one node
+Delete
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+---
+head
+0x148 0x210
+foos] = o] [on
+llink data rlink link data rlink
+---
+head
+0x148 Ox1c0 0x210
+{l
+(i s [ralfor]  felome] &
+llink data rlink link data rlink llink data rlink
+
+----------------------------------------
+
+===== Page 97 =====
+
+link
+DATA STRUCTURES AND APPLICATIONS
+Lecture Summary
+Doubly Linked List insert operation
+Apply the concepts to implement following operations for a Doubly linked list
+reverse a doubly linked list
+Find the node pairs with a given sum in a doubly linked list
+Insert a node after a node with a given value
+Remove duplicate nodes from a doubly linked list
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 98 =====
+
+Vandana M L
+Assistant Professor, Department of Computer Science
+vandanamd@pes.edu
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 99 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Department of Computer Science and Engineering
+Vandana M L
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 100 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Doubly Linked List
+Vandana M L
+Department of Computer Science and Engineering
+
+----------------------------------------
+
+===== Page 101 =====
+
+Deleting a node
+There
+are
+3cases
+Deleting first node
+Deleting last node
+Deleting a node at a given position
+DATA STRUCTURES AND ITS APPLICATIONS
+Doubly Linked List Operations
+
+----------------------------------------
+
+===== Page 102 =====
+
+Deleting a node
+There
+are
+3cases
+Deleting first node
+Deleting last node
+Deleting a node at a given position
+DATA STRUCTURES AND ITS APPLICATIONS
+Doubly Linked List Operations
+
+----------------------------------------
+
+===== Page 103 =====
+
+Deleting first node
+DATA STRUCTURES AND ITS APPLICATIONS
+Doubly Linked List Implementation
+What will change??
+Case I    : Empty Linked List
+Case II   : Linked list with a single node
+first node gets freed up 
+head points to NULL
+Case III  : Linked List with more than one node
+Second node llink gets changed to NULL
+first node gets freed off
+
+----------------------------------------
+
+===== Page 104 =====
+
+Deleting first node
+DATA STRUCTURES AND ITS APPLICATIONS
+Doubly Linked List Operations
+Case II   : Linked list with a single node
+Delete
+
+[Embedded Image / Diagram OCR Text]:
+head
+0x190
+o [ o]
+llink data rlink
+
+----------------------------------------
+
+===== Page 105 =====
+
+Deleting first node
+DATA STRUCTURES AND ITS APPLICATIONS
+Doubly Linked List Implementation
+Case III  : Linked List with more than one node
+Delete
+
+[Embedded Image / Diagram OCR Text]:
+head
+
+0x148
+0x148 0x1c0
+NULL nmm 0x148 n NULL
+llink data rlink llink data rlink
+---
+head
+M ox148 [
+[ vz Joctssl oxoo] s Toneof2fonas] o wuic]
+llink data rlink llink data rlink
+
+----------------------------------------
+
+===== Page 106 =====
+
+Deleting last node
+DATA STRUCTURES AND ITS APPLICATIONS
+Doubly Linked List Operations
+What will change??
+Case I    : Empty Linked List
+Case II   : Linked list with a single node
+first node gets freed up 
+head points to NULL
+Case III  : Linked List with more than one node
+Second last  node rlink point to NULL
+last node gets freed up
+
+----------------------------------------
+
+===== Page 107 =====
+
+Deleting last node
+DATA STRUCTURES AND ITS APPLICATIONS
+Doubly Linked List Implementation
+Case II  : Linked List with more than one node
+Delete
+
+[Embedded Image / Diagram OCR Text]:
+head
+
+0x148
+0x148 0x1c0
+NULL nmm 0x148 n NULL
+llink data rlink llink data rlink
+---
+head
+0x148 0x1c0 0x210
+w3 orale o] o [oenlcpfona] « [wc]
+llink data rlink llink data rlink llink data rlink
+
+----------------------------------------
+
+===== Page 108 =====
+
+Deleting a node at intermediate position
+DATA STRUCTURES AND ITS APPLICATIONS
+Doubly Linked List Operations
+Traverse list to find the desired position, keep track of the previous node
+If position is found
+If position is 1
+Delete from front
+else
+If it is last position
+Delete from end
+else
+if intermediate position
+Change previous node rlink to rlink of current node
+Change llink of node following current node to previous node
+Delete current node
+else 
+invalid position
+
+----------------------------------------
+
+===== Page 109 =====
+
+Deleting a node at intermediate position
+DATA STRUCTURES AND ITS APPLICATIONS
+Doubly Linked List Operations
+Case II  : Linked List with more than one node
+Delete
+
+[Embedded Image / Diagram OCR Text]:
+head
+0x148 0x210
+{roc] o o >{pass] o Jruu]
+llink data rlink llink data rlink
+---
+head
+0x148 m 0x210
+{uie s Tocieo]Hoctts o Toco[Hosteo[ s Tru]
+llink data rlink link data rlink llink data rlink
+
+----------------------------------------
+
+===== Page 110 =====
+
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Lecture Summary
+Doubly Linked List insert operation
+Apply the concepts to implement following operations for a Doubly linked list
+reverse a doubly linked list
+Remove duplicate nodes from a doubly linked list
+Delete a node with a given key value from doubly linked list
+
+----------------------------------------
+
+===== Page 111 =====
+
+vandanamd@pes.edu
++91 7411716615 
+Vandana M L
+Department of Computer Science & Engineering
+THANK YOU
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 112 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Department of Computer Science and Engineering
+Vandana M L
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 113 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Singly Linked List
+Vandana M L
+Department of Computer Science and Engineering
+
+----------------------------------------
+
+===== Page 114 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Linked List
+Circular linked list is a linked list where all nodes are 
+connected to form a circle.
+Circular Singly Linked List
+Circular Doubly Linked List
+With additional head node
+Without additional head node
+
+----------------------------------------
+
+===== Page 115 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular  Linked List Operations
+Insert a 
+node
+• Insert at front 
+• Insert at end
+• Insert at a position
+• Ordered insertion
+Delete 
+node
+• Delete front node
+• Delete end node
+• Delete a node from position
+• Delete a node with a given value
+Additional
+• Display list
+• Concatenate two list
+• reverse a list
+
+----------------------------------------
+
+===== Page 116 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Linked List: Applications
+Useful for implementation of queue, eliminates 
+the need to maintain two pointers as in case of 
+queue implementation using arrays   
+Circular linked lists are useful for applications to 
+repeatedly go around the list like playing video and 
+sound files in “looping” mode
+Advanced data structures like Fibonacci Heap 
+Implementation
+Plays a key role in linked implementation of graphs
+
+----------------------------------------
+
+===== Page 117 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Singly Linked List
+• It supports traversing from the end of the list to the 
+beginning by making the last node point back to the head of 
+the list
+• A Tail pointer is often used instead of a Head pointer
+Tail
+10
+20
+40
+70
+55
+10
+20
+40
+70
+55
+Head
+
+----------------------------------------
+
+===== Page 118 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Singly Linked List Node Definition
+#include <iostream>
+using namespace std;
+struct Node{
+int data;
+struct Node* next;
+};
+typedef struct node csll_node;
+
+----------------------------------------
+
+===== Page 119 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Singly Linked List Operations
+Insert at the front of linked list
+Create a node
+If the list is empty 
+make the tail pointer  point towards the new node
+Else 
+Change the new node link field to point to the first node
+Change the last node link to point to the new node
+Insertion at the beginning
+
+----------------------------------------
+
+===== Page 120 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Singly Linked List Operations
+Insertion into an empty list
+Tail
+10
+New
+
+----------------------------------------
+
+===== Page 121 =====
+
+Insert to head of a Circular Linked List
+Tail
+New
+New->next = Cur; 
+New->next = Tail->next;
+Prev->next = New;            Tail->next = New;
+Prev
+Cur
+10
+20
+40
+55
+70
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Singly Linked List Operations
+
+----------------------------------------
+
+===== Page 122 =====
+
+Insert to the end of a Circular Linked List
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Singly Linked List Operations
+New->next = Cur;
+New->next = Tail->next;
+Prev->next = New;
+Tail->next = New;
+Tail = New;
+Tail
+New
+Prev
+Cur
+10
+20
+40
+55
+70
+
+----------------------------------------
+
+===== Page 123 =====
+
+Insert to the middle of Circular Linked List
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Singly Linked List Operations
+New->next = Cur;
+Prev->next = New; 
+Prev
+New
+Tail
+Cur
+10
+55
+20
+40
+70
+
+----------------------------------------
+
+===== Page 124 =====
+
+Delete a node from a single-node Circular Linked List
+Tail = Cur = Prev
+Tail = NULL;
+free( Cur);
+10
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Singly Linked List Operations
+
+----------------------------------------
+
+===== Page 125 =====
+
+Delete the head node from a Circular Linked List
+Tail
+Cur
+Prev->next = Cur->next;
+// same as: Tail->next = Cur->next
+free(cur);
+Prev
+10
+20
+40
+55
+70
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Singly Linked List Operations
+
+----------------------------------------
+
+===== Page 126 =====
+
+Delete a middle  node Cur from a Circular Linked List
+Prev
+Tail
+Cur
+Prev->next = Cur->next;
+Free(Cur);
+10
+20
+40
+55
+70
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Singly Linked List Operations
+
+----------------------------------------
+
+===== Page 127 =====
+
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Lecture Summary
+Circular Singly Linked List operations
+Apply the concepts to implement following operations for a singly linked list
+insert a node after a given node(pointer)
+Insert a node after a node with a given value
+
+----------------------------------------
+
+===== Page 128 =====
+
+vandanamd@pes.edu
++91 7411716615 
+Vandana M L
+Department of Computer Science & Engineering
+THANK YOU
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 129 =====
+
+Data Structures and itsApplications
+Dinesh Singh
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 130 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Linked Lists
+Dinesh Singh
+Department of Computer Science & Engineering
+
+----------------------------------------
+
+===== Page 131 =====
+
+Circular Linked Lists
+Data Structures and its Applications
+•
+The first node in the list is the header node. 
+•
+The address part of the last node points to the header 
+node
+•
+Circular list does not have a natural first or the last node
+•
+An External pointer points to the header node  and the 
+one following this node is the first node.
+
+[Embedded Image / Diagram OCR Text]:
+&
+My B Rl
+eotrNodo
+B
+B )
+
+----------------------------------------
+
+===== Page 132 =====
+
+Operations on Circular Linked Lists
+Data Structures and its Applications
+Implementation of some operations on Circular linked Lists with header node
+•
+Insert at the head of a list
+•
+Insert at the end of the List
+•
+Delete a Node given its value
+Note: head is a pointer to the header node and the following node is 
+the first node
+
+----------------------------------------
+
+===== Page 133 =====
+
+Operations on Circular Linked Lists
+Data Structures and its Applications
+struct node *create_head()
+{
+struct node *temp;
+temp=(struct node*)malloc(sizeof(struct node));
+temp->data=0; // keeps the count of nodes in the list
+temp->next=temp;
+return temp;
+}
+Creating Header node
+
+----------------------------------------
+
+===== Page 134 =====
+
+Operations on Circular Linked Lists
+Data Structures and its Applications
+Algorithm to insert a node at the head of the list
+insert_head(p,x)
+//p pointer to header node, x element to be inserted 
+//x gets inserted after the header node
+allocate memory for the node
+initialise the node
+//insert the new node after the header node
+Copy the value of the next part of the header node into the next 
+part of the new node
+Copy the address of the new node into  next part of the header 
+node
+
+----------------------------------------
+
+===== Page 135 =====
+
+Operations on Circular Linked Lists with header node
+Data Structures and its Applications
+void insert_head(struct node *p,int x)
+//p points to the header node, x element to be inserted
+{
+struct node *temp;
+//create node and initialise
+temp=(struct node*)malloc(sizeof(struct node));
+temp->data=x;
+// next part of new node points to the node after the header node
+temp->next=p->next; 
+p->next=temp; //next part of header node points to the new node
+p->data++;
+}
+
+----------------------------------------
+
+===== Page 136 =====
+
+Operations on Circular Linked Lists with header node
+Data Structures and its Applications
+Algorithm to insert a node at the end of the list
+insert_tail(p,x)
+//p pointer to header node, x element to be inserted 
+allocate memory for the node
+initialise the node
+move to the last node
+//insert the new node after the last node
+Copy the address of the header node into next of new node
+Copy the address of the new node into the next of last node
+
+----------------------------------------
+
+===== Page 137 =====
+
+Operations on Circular Linked Lists with header node
+Data Structures and its Applications
+void insert_tail(struct node *p,int x)
+{
+struct node *temp,*q;
+temp=(struct node*)malloc(sizeof(struct node));
+temp->data=x;
+q=p->next; // go the first node
+while(q->next!=p) // move to the last node
+q=q->next;
+temp->next=p;// copy address of header node into next of new node 
+q->next=temp; // copy the address of new node into next of the last node
+p->data++; // increment the count of nodes in the list
+}
+Algorithm to insert a node at the end of the list
+
+----------------------------------------
+
+===== Page 138 =====
+
+Operations on Circular Linked Lists with header node
+Data Structures and its Applications
+Algorithm to delete a node given its value
+delete_node(p,x)
+//p pointer to header node, x element to be deleted
+move forward until the node to be deleted is found
+or header node is reaches
+If(node found)
+delete the node by adjusting the pointers
+else
+node not found // if header node is reached
+
+----------------------------------------
+
+===== Page 139 =====
+
+Operations on Circular Linked Lists with header node
+Data Structures and its Applications
+void delete_node(struct node *p, int x)
+{
+//p points to the header node, x is element to be inserted
+struct node *prev,*q;
+q=p->next; // go to the first node
+prev=p;    
+//move forward until the data is found or header node is reached
+while((q!=p)&&(q->data!=x))
+{
+prev=q; // keep track of the previous node
+q=q->next;
+}
+
+----------------------------------------
+
+===== Page 140 =====
+
+Operations on Circular Linked Lists with header node
+Data Structures and its Applications
+if(q==p) // header node reached
+printf("Node not found..\n");
+else
+{
+prev->next=q->next; //delete the node
+free(q);
+p->data--; // decrement the count of nodes in the list
+}
+}
+
+----------------------------------------
+
+===== Page 141 =====
+
+dineshs@pes.edu
++91 8088654402 
+THANK YOU
+Dinesh Singh
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 142 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Department of Computer Science and Engineering
+Vandana M L
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 143 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List
+Vandana M L
+Department of Computer Science and Engineering
+
+----------------------------------------
+
+===== Page 144 =====
+
+Node Structure Definition
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List
+Adoubly linked list node contain three fields:
+
+Data
+
+link to the next node
+
+link to the previous node.
+
+----------------------------------------
+
+===== Page 145 =====
+
+Node Structure Definition
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List
+struct node
+{
+int data;  
+struct node*llink;  
+struct node*rlink;
+};
+.Data
+.
+.
+inf
+Point to 
+previous 
+node
+Point to 
+next 
+node
+
+----------------------------------------
+
+===== Page 146 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List: Example
+
+[Embedded Image / Diagram OCR Text]:
+head
+0x190 0x148 0x1c0 0x210
+o] o] 5 [oval2fos] 3 [l foma] s o]
+llink data rlink llink data rlink llink data rlink llink data rlink
+
+----------------------------------------
+
+===== Page 147 =====
+
+Creating a node
+Allocate memory for the node dynamically
+If the memory is allocated successfully
+
+set the data part 
+
+set the llink and rlink to NULL
+Datvllink
+data      rlink
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List Operations
+NULL
+20
+NULL
+
+----------------------------------------
+
+===== Page 148 =====
+
+Inserting a node
+There
+are
+3cases
+Insertion at the beginning
+Insertion at the end
+Insertion at a given position
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List Operations
+
+----------------------------------------
+
+===== Page 149 =====
+
+Insertion at the beginning
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List Operations
+What all will change
+Case 1:  linked list empty
+Head pointer
+Case 2:  linked list is not empty
+Head pointer
+New front node’s rlink and llink
+Old front node’s llink
+Last node’s rlink
+
+----------------------------------------
+
+===== Page 150 =====
+
+Insertion at the beginning (Case1)
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List Operations
+
+[Embedded Image / Diagram OCR Text]:
+head 0190
+(o]
+llink data rlink
+---
+head
+0x190
+=T
+llink data rlink
+
+----------------------------------------
+
+===== Page 151 =====
+
+Insertion at the beginning(Case 2)
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List Operations
+Head pointer
+New front node’s rlink and llink
+Old front node’s llink
+Last node’s rlink
+
+[Embedded Image / Diagram OCR Text]:
+head
+0x190 0x148 0x1c0 0x210
+o] o] 5 [oval2fos] 3 [l foma] s o]
+llink data rlink llink data rlink llink data rlink llink data rlink
+---
+0x190
+o 7 ]
+head
+llink data rlink
+-
+A4
+0x148 0x1c0 0x210
+o] oo @ [owleforo] « [
+llink data rlink llink data rlink llink data rlink
+
+----------------------------------------
+
+===== Page 152 =====
+
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List Operations
+Insertion at the end  
+What all will change
+Case 1:  linked list empty
+Head pointer
+Case 2:  linked list is not empty else
+Last node’s rlink
+First node llink
+New node’s llink and rlink
+
+----------------------------------------
+
+===== Page 153 =====
+
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List Operations
+Insertion at the end  
+Last node’s rlink
+First node llink
+New node’s llink and rlink
+
+[Embedded Image / Diagram OCR Text]:
+head
+0x148 0x1c0 0x210 0x190
+(oo Tonalo{oa] @ [l o]« [#59]2 rm] T
+llink data rlink llink data rlink llink data rlink llink data rlink
+---
+0x190
+head llink data rlink
+[oxtee] @
+0x148 Ox1c0 0x210
+o] s ol o o [oczrolforio] e Truts}
+llink data rlink llink data rlink llink data rlink
+
+----------------------------------------
+
+===== Page 154 =====
+
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List Operations
+Insertion at the given position 
+Create a node
+If the list is empty 
+make the start pointer  point towards the new node;
+Else 
+if it is first position
+Insert at front
+else
+Traverse the linked list to reach given position
+Keep track of the previous node
+If it is valid position
+intermediate position
+Change link fields of current previous and intermediate node
+last position 
+insert at end
+
+----------------------------------------
+
+===== Page 155 =====
+
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List Operations
+Insertion at the given position
+
+[Embedded Image / Diagram OCR Text]:
+0x190
+head link data rlink
+oy 4
+0x148 Ox1c0 0x210
+I = nm-mnmmnm
+link data rlink  llink data rlink llink data rlink
+---
+head
+
+0x148
+0x148 0x1c0 0x190 0x210
+wout s Jocteol Aot ] s Joxto]oxrco] 12 Joxarof Hostao] ¢ Juurr
+link data rlink  llink data rlink  llink data rlink  link data rlink
+
+----------------------------------------
+
+===== Page 156 =====
+
+Deleting a node
+There
+are
+3cases
+Deleting first node
+Deleting last node
+Deleting a node at a given position
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List Operations
+
+----------------------------------------
+
+===== Page 157 =====
+
+Deleting a node
+There
+are
+3cases
+Deleting first node
+Deleting last node
+Deleting a node at a given position
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List Operations
+
+----------------------------------------
+
+===== Page 158 =====
+
+Deleting first node
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List Operations
+What will change??
+Case I    : Empty Linked List
+Case II   : Linked list with a single node
+first node gets freed up 
+head points to NULL
+Case III  : Linked List with more than one node
+Second node llink
+last node rlink
+first node gets freed off
+head pointer points to second node
+
+----------------------------------------
+
+===== Page 159 =====
+
+Deleting first node
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List Operations
+Case II   : Linked list with a single node
+Delete
+
+[Embedded Image / Diagram OCR Text]:
+head
+0x190
+=T
+llink data rlink
+
+----------------------------------------
+
+===== Page 160 =====
+
+Deleting first node
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List Operations
+Case III  : Linked List with more than one node
+Delete
+
+[Embedded Image / Diagram OCR Text]:
+head
+
+[orie]
+0x148 0x1c0 0x210
+vl & Joraffoa] & Joalefoma] i
+llink data rlink llink data rlink llink data rlink
+---
+head
+' 0x148 0x1c0 0x210
+oo e Jossehplono] s [oncofefona] o Joofe{onc] @ Jore]
+llink data rlink llink data rlink llink data rlink llink data rlink
+
+----------------------------------------
+
+===== Page 161 =====
+
+Deleting last node
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List Operations
+What will change??
+Case I    : Empty Linked List
+Case II   : Linked list with a single node
+first node gets freed up 
+head points to NULL
+Case III  : Linked List with more than one node
+Second last  node rlink
+first node llink
+last node gets freed up
+
+----------------------------------------
+
+===== Page 162 =====
+
+Deleting last node
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List Operations
+Case II  : Linked List with more than one node
+Delete
+
+[Embedded Image / Diagram OCR Text]:
+head
+
+[l
+0x148 0x1c0 0x210
+o] s ot Hoctia] o Torzte]Afoctco] o Trww]
+llink data rlink ~llink data rlink llink data rlink
+---
+head
+
+0x148
+0x148 ox1c0 0x210 0x190
+g 0 L = e O e e 0 e S KA
+llink data rlink llink data rlink llink data rlink iak data rlink
+
+----------------------------------------
+
+===== Page 163 =====
+
+Deleting a node at intermediate position
+DATA STRUCTURES AND ITS APPLICATIONS
+Circular Doubly Linked List Operations
+Case II  : Linked List with more than one node
+Delete
+
+[Embedded Image / Diagram OCR Text]:
+head
+
+[oues]
+0x148 Oxtc0 0x210
+o] s Jowten | foxtes] o Toarofouten] ¢ Jhuc]
+link data rlink  llink data rlink llink data rlink
+---
+head
+
+ox148
+0x148 0x1c0 m 0210
+w5 ool >foxse] s JowtsofgPfonten] 12 Jocerol Howten] o Jruwt
+llink data rlink llink data rlink link data rlink llink data rlink
+
+----------------------------------------
+
+===== Page 164 =====
+
+link
+DATA STRUCTURES AND ITS APPLICATIONS
+Lecture Summary
+Circular doubly Linked List operations
+Apply the concepts to implement following operations for a doubly circular linked list
+Reverse list using recursion 
+Search given element in the list
+Find the largest value in the list
+
+----------------------------------------
+
+===== Page 165 =====
+
+vandanamd@pes.edu
++91 7411716615 
+Vandana M L
+Department of Computer Science & Engineering
+THANK YOU
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 166 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Department of Computer Science and Engineering
+Prof. Vandana M L
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 167 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Multilist Representation
+Prof. Vandana M L
+Department of Computer Science and Engineering
+
+----------------------------------------
+
+===== Page 168 =====
+
+Matrix ??
+Two Dimensional data
+1 1 3 0 4            
+1 3 5 1 0
+9 0 5 1 0
+Sparse Matrix??
+More zero elements than non zero elements
+0 0 3 0 0            
+0 0 5 1 0
+0 0 0 0 0
+DATA STRUCTURES AND ITS APPLICATIONS
+Sparse Matrix
+
+----------------------------------------
+
+===== Page 169 =====
+
+2D Matrix
+results in lot of memory wastage as non zero elements are also 
+stored
+Triple Notation
+Array representation 
+Multilist Representation
+Linked representation hence size can be changed dynamically
+DATA STRUCTURES AND ITS APPLICATIONS
+Sparse Matrix Representation
+
+----------------------------------------
+
+===== Page 170 =====
+
+In triple notation sparse matrix is represented as an array of tuple values. 
+Each tuple consists of 
+<rowno columnno Value>
+The first block in array block holds information regarding 
+<total no of rows, total no of columns ,value>
+DATA STRUCTURES AND ITS APPLICATIONS
+Sparse Matrix Representation: Triple Notation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0
+6
+0
+0
+1
+0
+0
+8
+0
+0
+0
+0
+3
+0
+0
+4
+0
+0
+0
+2
+ 
+                                                                                               
+Row No 
+Column 
+No 
+Value 
+5 
+4 
+6 
+0 
+0 
+2 
+1 
+0 
+4 
+1 
+3 
+3 
+3 
+0 
+8 
+3 
+3 
+1 
+4 
+2 
+6 
+Triple Notation
+
+----------------------------------------
+
+===== Page 171 =====
+
+Two types of nodes are used 
+DATA STRUCTURES AND ITS APPLICATIONS
+Sparse Matrix Representation: Linked representation
+Node Structure
+
+[Embedded Image / Diagram OCR Text]:
+Header Node Data Node
+
+----------------------------------------
+
+===== Page 172 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Sparse Matrix Representation: Linked representation
+Node Structure Definition
+#define MAX_SIZE 50 /* size of largest 
+matrix */
+typedef enum {head, entry} tagfield; 
+typedef struct matrixNode * matrixPointer;
+typedef struct entryNode {
+int row;
+int col;
+int value; };
+typedef struct matrixNode { 
+matrixPointer down;
+matrixPointer right; 
+tagfield tag;
+union 
+{
+matrixPointer next; 
+entryNode entry; 
+} u; 
+};
+
+----------------------------------------
+
+===== Page 173 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Sparse Matrix Representation: Linked representation
+Example
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0
+6
+0
+0
+1
+0
+0
+8
+0
+0
+0
+0
+3
+0
+0
+4
+0
+0
+0
+2
+
+----------------------------------------
+
+===== Page 174 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Sparse Matrix Representation: Linked representation
+Courtesy: “Fundamentals of Data Structures” By Ellis Horowitz and Sartaj Sahni
+
+[Embedded Image / Diagram OCR Text]:
+_— . .
+HE NE NE NE N .
+mm  ong
+
+HE N
+
+. ooa [0
+s = mn
+-
+
+[
+
+- O]
+[ i
+-
+
+] mn
+
+----------------------------------------
+
+===== Page 175 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Sparse Matrix Representation Summary
+Sparse matrix representation
+Triple
+Linked Representation
+Concepts can be applied to implement the following operations
+Create_SparseMatrix()
+Transpose_of_SparseMatrix()
+Add_SparseMatrices()
+Multiple_SparseMatrices()
+
+----------------------------------------
+
+===== Page 176 =====
+
+Prof. Vandana M L
+Department of Computer Science and Engineering
+vandanamd@pes.edu
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 177 =====
+
+DATA STRUCTURES & ITS 
+APPLICATIONS
+UE21CS252A
+Kusuma K V
+Department of Computer Science
+ & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 178 =====
+
+DATA STRUCTURES & ITS APPLICATIONS
+UNIT 1: Skip List
+Kusuma K V
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 179 =====
+
+Performance considerations: lists
+• Size(): 
+• O(1) if size is stored explicitly, else O(n)
+• IsEmpty(): 
+• O(1)
+• FindElement(k): 
+• O(n) 
+• InsertItem(k, e):
+• O(1) (assumes item already found)
+• Remove(k): 
+• O(1) (assumes item already found)
+DATA STRUCTURES & ITS APPLICATIONS
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 180 =====
+
+Skip List
+• Skip Lists support O(log n)
+• Insertion
+• Deletion
+• Search
+• A relatively recent data structure
+• W. Pugh in 1989
+• “A probabilistic alternative to balanced trees”
+DATA STRUCTURES & ITS APPLICATIONS
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 181 =====
+
+Skip List
+• A
+skip 
+list
+is 
+a
+probabilistic
+data 
+structure
+that 
+allows O(logn) search complexity as well as O(logn) insertion 
+complexity within an ordered sequence of n elements
+• Thus it can get the best features of a sorted array (for 
+searching) while maintaining a linked list-like structure that 
+allows insertion, which is not possible in an array
+DATA STRUCTURES & ITS APPLICATIONS
+https://en.wikipedia.org/wiki/Skip_list
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 182 =====
+
+Skip List
+• Fast search is made possible by maintaining a linked 
+hierarchy 
+of 
+sub 
+sequences, 
+with 
+each 
+successive 
+subsequence skipping over fewer elements than the previous 
+one
+• Searching starts in the sparsest subsequence until two 
+consecutive elements have been found, one smaller and one 
+larger than or equal to the element searched for
+• Via the linked hierarchy, these two elements link to elements 
+of the next sparsest subsequence, where searching is 
+continued until finally we are searching in the full sequence
+DATA STRUCTURES & ITS APPLICATIONS
+https://en.wikipedia.org/wiki/Skip_list
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+---
+E B
+- - -] -]
+E B B B B -]
+EEEEEEEEEEERD
+BEBEEAEGEEBEAM
+
+----------------------------------------
+
+===== Page 183 =====
+
+Perfect Skip List
+• A skip list is a collection of lists at different levels
+• The lowest level (0) is a sorted, singly linked list of all nodes
+• The first level (1) links alternate nodes
+• The second level (2) links every fourth node
+• In general, level i links every 2ith node
+• In total, log2 n levels (i.e. O(log2 n) levels)
+• Each level has half the nodes of the one below it
+DATA STRUCTURES & ITS APPLICATIONS
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 184 =====
+
+Perfect Skip List
+• Example of a Perfect Skip List
+DATA STRUCTURES & ITS APPLICATIONS
+56
+64
++
+31
+34
+44
+−
+12
+23
+26
++
+−
++
+31
+−
+64
++
+31
+44
+−
+23
+S0
+S1
+S2
+S3
+64
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 185 =====
+
+Insertions/Deletions
+When we add a new node, our beautifully precise structure 
+might become invalid
+• We may have to change the level of every node
+• One option is to move all the elements around
+• But it takes O(n) time, which is back where we began
+• Is it possible to achieve a net gain?
+DATA STRUCTURES & ITS APPLICATIONS
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 186 =====
+
+Randomized Skip List
+Example of a Randomized Skip List
+DATA STRUCTURES & ITS APPLICATIONS
+56
+64
+78
++
+31
+34
+44
+−
+12
+23
+26
++
+−
++
+31
+−
+64
++
+31
+34
+−
+23
+S0
+S1
+S2
+S3
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 187 =====
+
+Skip List
+Skip List definition
+• A skip list for a set S of distinct (key, element) items is a series 
+of lists S0, S1 , … , Sh such that:
+•
+Each list Si contains the special keys + and − 
+•
+List S0 contains the keys of S in non decreasing order 
+•
+Each list is a subsequence of the previous one, i.e.,
+  
+ 
+S0  S1  …  Sh
+•
+List Sh contains only the two special keys
+DATA STRUCTURES & ITS APPLICATIONS
+56
+64
+78
++
+31
+34
+44
+−
+12
+23
+26
++
+−
++
+31
+−
+64
++
+31
+34
+−
+23
+S0
+S1
+S2
+S3
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 188 =====
+
+Skip List
+Initialization
+A new list is initialized as follows:
+• A node NIL (+ ) is created and its key is set to a value 
+greater than the greatest key that could possibly used in the 
+list
+• Another node NIL (−) is created, value set to lowest key 
+that could be used 
+DATA STRUCTURES & ITS APPLICATIONS
++
+−
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 189 =====
+
+References
+• Presentation Slides: Advanced Data Structures
+        Dr. RamaMoorthy Srinath, Professor, CSE, PESU
+DATA STRUCTURES & ITS APPLICATIONS
+Note: Apart from the  links already mentioned on Slides
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 190 =====
+
+kusumakv@pes.edu
+THANK YOU
+Kusuma K V
+Department of Computer Science
+& Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 191 =====
+
+DATA STRUCTURES & ITS 
+APPLICATIONS
+UE21CS252A
+Kusuma K V
+Department of Computer Science
+ & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 192 =====
+
+DATA STRUCTURES & ITS APPLICATIONS
+UNIT 1: Skip List
+Kusuma K V
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 193 =====
+
+Skip List
+Search
+We search for a key x in a skip list as follows:
+• We start at the first position of the top list 
+• At the current position p, we compare x with y i.e., key(after(p))
+  
+x = y: we return element(after(p))
+  
+x > y: we “scan forward” 
+  
+x < y: we “drop down”
+• If we try to drop down past the bottom list, we return 
+NO_SUCH_KEY
+• Example: search for 78
+DATA STRUCTURES & ITS APPLICATIONS
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 194 =====
+
+Skip List
+Searching in Skip List Example
+DATA STRUCTURES & ITS APPLICATIONS
++
+−
+S1
+S2
+S3
++
+31
+−
+64
++
+31
+34
+−
+23
+56
+64
+78
++
+31
+34
+44
+−
+12
+23
+26
+S0
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 195 =====
+
+Skip List
+Insertion
+• The insertion algorithm for skip lists uses randomization to 
+decide how many references to the new item should be 
+added to the skip list 
+• We then insert the new item in this bottom-level list at its 
+appropriate position. After inserting the new item at this 
+level we “flip a coin”
+• If the flip comes up tails, then we stop right there.
+• If the flip comes up heads, we move to next higher level 
+and insert in this level at the appropriate position
+DATA STRUCTURES & ITS APPLICATIONS
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 196 =====
+
+Randomized Algorithms
+DATA STRUCTURES & ITS APPLICATIONS
+• A randomized algorithm performs coin tosses (i.e., uses 
+random bits) to control its execution
+• Its running time depends on the outcomes of the coin 
+tosses
+• We analyze the expected running time of a randomized 
+algorithm under the following assumptions
+• the coins are unbiased, and 
+• the coin tosses are independent
+• The worst-case running time of a randomized algorithm is 
+large but has very low probability (e.g., it occurs when all 
+the coin tosses give “heads”)
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 197 =====
+
+Skip List
+DATA STRUCTURES & ITS APPLICATIONS
+Insertion in Skip List Example
+• Suppose we want to insert 15
+• Do a search, and find the spot between 10 and 23
+• Suppose the coin comes up “head” two times
++
+−
+10
+36
++
+−
+23
+23
++
+−
+S0
+S1
+S2
+S0
+S1
+S2
+S3
++
+−
++
+−
+10
+36
+23
+15
++
+−
+15
++
+−
+23
+15
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 198 =====
+
+Skip List
+Deletion 
+• We begin by performing a search for the given key k.
+• If a position p with key k is not found, then we return the 
+NO_SUCH_KEY element
+• Otherwise, if a position p with key k is found (it would be 
+found on the bottom level), then we remove all the position 
+above p
+• If more than one upper level is empty, remove it
+DATA STRUCTURES & ITS APPLICATIONS
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 199 =====
+
+Skip List
+Deletion in Skip List Example
+• Suppose we want to delete 34
+• Do a search, find the spot between 23 and 45
+• Remove all the position above p
+DATA STRUCTURES & ITS APPLICATIONS
+−
++
+45
+12
+−
++
+23
+23
+−
++
+S0
+S1
+S2
+−
++
+S0
+S1
+S2
+S3
+−
++
+45
+12
+23
+34
+−
++
+34
+−
++
+23
+34
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 200 =====
+
+Skip List
+Starting with an empty skip list, insert these keys, with these 
+“randomly generated” levels
+• 5, with level 1
+• 26, with level 1
+• 25, with level 4
+• 6, with level 3
+• 21,  with level 0
+• 3, with level 2
+• 22, with level 2
+ Note that the ordering of the keys in the skip list is 
+determined by the value of the keys only; the levels of the 
+nodes are determined by the random number generator only
+DATA STRUCTURES & ITS APPLICATIONS
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 201 =====
+
+Skip List
+5 with level 1,    26 with level 1,    25 with level 4,    6 with level 3
+21 with level 0,   3 with level 2,     22 with level 2
+DATA STRUCTURES & ITS APPLICATIONS
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 202 =====
+
+References
+• Presentation Slides: Advanced Data Structures
+        Dr. RamaMoorthy Srinath, Professor, CSE, PESU
+DATA STRUCTURES & ITS APPLICATIONS
+Note: Apart from the  links already mentioned on Slides
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 203 =====
+
+kusumakv@pes.edu
+THANK YOU
+Kusuma K V
+Department of Computer Science
+& Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 204 =====
+
+Data Structures and its Applications
+Dinesh Singh
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 205 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Stacks
+Dinesh Singh
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 206 =====
+
+Stacks - Definition
+Data Structures and its Applications
+•
+A Stack is a data Structure in which all the insertions and 
+deletions of entries are at one end. This end is called the TOP 
+of the stack.
+•
+When an item is added to a stack it is called push into the stack
+•
+When an item is removed it is called pop from the stack. 
+•
+The Last item pushed onto a stack is always the first that will 
+be popped from the stack.
+•
+This property is called the last in, first out or LIFO for short
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+---
+ement Daty
+pata B e,
+. LastIn- Firstout 7
+Push ™  Pop
+Data Element
+Stack
+Data Element
+Data Element
+
+----------------------------------------
+
+===== Page 207 =====
+
+Stacks – Representation in C
+Data Structures and its Applications
+A stack in C is declared as a structure containing two objects :
+•
+An array to hold the elements of the stack
+•
+An Integer to indicate the position of the current stack top within 
+the array
+•
+Stack of integers can be done by the following declaration
+#define STACKSIZE 100
+struct stack
+{
+  int top;
+  int items[STACKSIZE]
+};
+Once this is done, actual stack can be declared by
+struct stack s;
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 208 =====
+
+Stacks – Representation in C
+Data Structures and its Applications
+Items need not be restricted to integers, items can be of any type. 
+A stack can contain items of different types by using C unions.
+#define STACKSIZE 100
+#define INT 1
+#define FLOAT 2
+#define STRING 3
+struct stackelement {
+    int etype;
+    union{
+        int ival;
+        float fval;
+        char *pavl; //pointer to string
+   } element;
+};
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 209 =====
+
+Stacks – Representation in C
+Data Structures and its Applications
+struct stack
+{
+   int top;
+   struct stackelement items[STACKSIZE];
+};
+•
+The above declaration defines a stack whose items can either 
+be integers, floating point numbers or string depending on the 
+value of etype (previous slide).
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 210 =====
+
+Stacks – Implementation of operations of stack
+Data Structures and its Applications
+Operations on stack
+•
+Inserting an element on to the stack : push
+•
+Deleting an element from the stack : pop
+•
+Checking the top element : peep
+•
+Checking if the stack is empty : empty
+•
+Checking if the stack is full : overflow
+Representation of stack will be as follows
+#define STACKSIZE 100
+struct stack
+{
+  int top;
+  int items[STACKSIZE]
+};
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 211 =====
+
+Stacks – Implementation of operations of stack
+Data Structures and its Applications
+void push(struct stack *ps, int x)
+/*ps is pointer to the structure representing stack, x is integer to be inserted
+top is integer that indicates the position of the current stack top within the 
+array, items is an integer array that represents stack, STACK_SIZE is the 
+maximum size of the stack */
+{
+    if (ps->top == STACKSIZE -1) //check if the stack is full
+             printf(“STACK FULL Cannot insert..”);
+  else
+   {
+       ++(ps->top); //increment top
+       ps->items[ps->top]=x; //insert the element at a location top
+    }
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 212 =====
+
+Stacks – Implementation of operations of stack
+Data Structures and its Applications
+int pop(struct stack *ps )
+/*ps is pointer to the structure representing stack, top is integer that indicates 
+the position of the current stack top within the array , items is an integer 
+array that represents stack, STACK_SIZE is the maximum size of the stack */
+   {
+    if (ps->top == -1) // check if the stack is the empty
+             printf(“STACK EMPTY Cannot DELETE..”);
+  else
+   {
+       x=ps->items[ps->top]; //delete the element
+ 
+--(ps->top); //decrement top
+      return x;
+     }
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 213 =====
+
+Stacks – Implementation of operations of stack
+Data Structures and its Applications
+int display(struct stack *ps )
+/*ps is pointer to the structure representing stack, top is integer that indicates 
+the position of the current stack top within the array , items is an integer 
+array that represents stack, STACK_SIZE is the maximum size of the stack */
+   {
+    if (ps->top == -1) // check if the stack is the empty
+   
+printf(“STACK EMPTY “);
+  else
+   {
+       for (i=ps->top;i>=0;i--) // displays the elements from top
+ 
+printf(“%d”,ps->items[i]);
+ }
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 214 =====
+
+Stacks – Implementation of operations of stack
+Data Structures and its Applications
+int peep(struct stack *ps )
+{
+    if (ps->top == -1)
+             printf(“STACK EMPTY ..”);
+  else
+   {
+       x=ps->items[ps->top]; //get the element
+       return x;
+     }
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 215 =====
+
+Stacks – Implementation of operations of stack
+Data Structures and its Applications
+int empty(struct stack *ps )
+{
+    if (ps->top == -1)
+             return 1;
+   return 0;
+}
+int overflow(struct stack *ps)
+{
+    if (ps->top==STACKSIZE-1)
+      return 1;
+  return 0;
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 216 =====
+
+Stacks – Implementation of operations of stack
+Data Structures and its Applications
+implementation of stack operations where the items array and  
+top are separate variables (Not part of structure)
+void push(int *s, int *top, int x)
+{
+   if(*top==STACKSIZE-1)//check if the stack is full
+  {
+     printf(“stack overflow..cannot insert”);
+    return 0;
+ }
+ else
+   {
+      ++*top; //increment the top
+      s[*top]=x; //insert the element
+   }
+ return 1;
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 217 =====
+
+Stacks – Implementation of operations of stack
+Data Structures and its Applications
+•
+Implementation of stack operations where the items and the 
+top are separate variables (Not part of structure)
+int pop(int *s, int *top)
+{
+   if(*top==-1)//check if the stack is empty
+  {
+     printf(“Stack empty .. Cannot delete”);
+    return -1;
+ }
+ else
+   {
+      x=s[*top]; //insert the element
+      --*top; //decrement top
+     return x; // return the deleted element
+   } 
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 218 =====
+
+Stacks – Implementation of operations of stack
+Data Structures and its Applications
+•
+Implementation of stack operations where the items and the 
+top are separate variables (Not part of structure)
+display(int *s, int *top)
+{
+    if(*top==-1)
+     printf(“Empty stack”);
+ else
+  {
+    for(i=*top;i>=0;i--) // display the elements from the top
+       printf(“%d”,s[i]);
+  }
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 219 =====
+
+Stacks – Application of Stack
+Data Structures and its Applications
+•
+Write an algorithm to determine if an input character string is of the 
+form x C y where x is a string consisting of the letters ‘A’ and ‘B’ and 
+where y is the reverse of x. At each point you may read only the 
+character of the string
+        int check(t)
+      //the function returns 1 if string t is of the form x C y, else returns 0
+     //uses stack s and its operations push and pop
+       {
+           i=0;
+           while(t[i]!=‘C’) //push all the characters of the string into the stack 
+until C is encountered  
+           {
+              push(&s, t[i]); 
+              i=i+1;
+           }
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 220 =====
+
+Stacks – Application of Stack
+Data Structures and its Applications
+//pop the contents of the stack and compare with t[i] until the end of  the string 
+while(t[i]!=‘\0’)
+{
+    x=pop(&s);
+    if(t[i]!=x) //if the character popped out is not equal to the character read from the string
+        return 0; // not of the form xCy
+ i=i+1;  
+ }
+  return 1; // string of the form
+ }
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 221 =====
+
+dineshs@pes.edu
++91 8088654402 
+THANK YOU
+Dinesh Singh
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 222 =====
+
+Data Structures and its Applications
+Dinesh Singh
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 223 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Stacks – Linked List Implementation
+Dinesh Singh
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 224 =====
+
+Stacks – linked list implementation
+Data Structures and its Applications
+•
+A stack can be easily implemented through the linked list. In the 
+Implementation by a linked list, the stack contains a top pointer. 
+which is “head” of the stack. The pushing and popping of items 
+happens at the head of the list. 
+Structure of the stack
+struct node 
+{
+int data;
+struct node *next;                              
+}
+struct node *top 
+top=NULL;      
+data
+next
+data
+next
+data
+next
+top
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 225 =====
+
+Stacks – linked list implementation
+Data Structures and its Applications
+Note :
+•
+Items of the stack represented as the linked list.
+•
+Each item is a node
+•
+Top is a pointer that points to the first node (top of the stack)
+•
+Top is initially NULL ( Empty stack)
+•
+Insertion and deletion  happens at the front of the list
+•
+stack size is not limited.
+Operations on the stack
+•
+Push : Inserting an element at the front of the list
+•
+Pop : delete an element from the front of the list
+•
+Display : displaying the list
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 226 =====
+
+Stacks – linked list implementation
+Data Structures and its Applications
+//implements the push operation
+void push(int x, struct node **top)
+{      
+struct node *temp;
+temp=(struct node*)malloc(sizeof(struct node));
+temp->data=x;
+temp->next=*top; // insert in front of the list
+*top=temp; // make top points to the new top node
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 227 =====
+
+Stacks – linked list implementation
+Data Structures and its Applications
+//implements the pop operation
+//returns top element, -1 if stack is empty
+int pop(struct node **top)
+{
+int x;
+struct node *q;
+if(*top==NULL)
+{
+printf("Empty Stack\n");
+return -1;
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 228 =====
+
+Stacks – linked list implementation
+Data Structures and its Applications
+//implements the pop operation
+else
+{
+q=*top;
+x=q->data; // get the top element
+*top=q->next; // make top point to the next top
+free(q); // free the memory of the node
+return(x);
+}
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 229 =====
+
+Stacks – linked list implementation
+Data Structures and its Applications
+//implements the display  operation
+void display(struct node *top)
+{
+if(top==NULL)
+printf("Empty Stack\n");
+else
+{
+while(top!=NULL)
+{
+printf("%d->“,top->data);
+top=top->next;
+}
+}
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 230 =====
+
+Stacks – linked list implementation
+Data Structures and its Applications
+Another representation of structure of stack
+struct node
+{
+int data;
+struct node *next;
+};
+struct stack
+{
+struct node *top;
+}
+struct stack s;
+s.top=NULL;
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 231 =====
+
+Stacks – linked list implementation
+Data Structures and its Applications
+//implements the push operation
+void push(int x, struct stack * s)
+//s is pointer to structure stack
+{      
+struct node *temp;
+temp=(struct node*)malloc(sizeof(struct node));
+temp->data=x;
+temp->next=s->top; // insert in front of the list
+s->top=temp; // make top points to the new top node
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 232 =====
+
+Stacks – linked list implementation
+Data Structures and its Applications
+//implements the pop operation
+//returns top element, -1 if stack is empty
+int pop(struct stack *s)
+{
+int x;
+struct node *q;
+if(s->top==NULL)
+{
+printf("Empty Stack\n");
+return -1;
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 233 =====
+
+Stacks – linked list implementation
+Data Structures and its Applications
+//implements the pop operation
+else
+{
+q=s->top;
+x=q->data; // get the top element
+s->top=q->next; // make top point to the next top
+free(q); // free the memory of the node
+return(x);
+}
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 234 =====
+
+Stacks – linked list implementation
+Data Structures and its Applications
+//implements the display  operation
+void display(struct stack *s)
+{
+struct node *q;
+if(s->top==NULL)
+printf("Empty Stack\n");
+else
+{
+q=s->top;
+while(q!=NULL)
+{
+printf("%d->“,q->data);
+q=q->next;
+}
+}
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 235 =====
+
+Stacks – Application
+Data Structures and its Applications
+Write an Algorithm to print a string in the reverse order
+//prints the text in a reverse order
+reverse(t)
+{
+i=0;
+//push all the characters on to the stack
+while(t[i]!=‘\0’)
+{
+push(s,t[i]);
+i=i+1;
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 236 =====
+
+Stacks – Application
+Data Structures and its Applications
+pop all the characters from the stack until the stack is empty
+while(!empty(s))
+{
+x= pop(s);
+print(x)
+}    
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 237 =====
+
+dineshs@pes.edu
++91 8088654402 
+THANK YOU
+Dinesh Singh
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 238 =====
+
+Data Structures and its Applications
+Dinesh Singh
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 239 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Application of stacks– Functions, nested 
+functions and Recursion
+Dinesh Singh
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 240 =====
+
+Application of stacks – Functions, nested functions 
+Data Structures and its Applications
+Activation record : 
+•When functions are called, The system (or the program) must 
+remember the place where the call was made, so that it can return 
+there after the function is complete. 
+•It must also remember all the local variables, processor registers, 
+and the like, so that information will not be lost while the function 
+is working. 
+•This information is considered as  large data structure . This 
+structure is sometimes called the invocation record or the 
+activation record for the function call.
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 241 =====
+
+Application of stacks – Functions, nested functions and Recursion
+Data Structures and its Applications
+•
+Suppose that there are three functions called A,B and C. M is the 
+main  function.
+•
+Suppose that A invokes B and B invokes C. Then B will not have 
+finished its work until C has finished and returned. Similarly, A is the 
+first to start work, but it is the last to be finished, not until sometime 
+after B has finished and returned.
+•
+Thus the sequence by which function activity proceeds is summed 
+up as the property last in, first out.
+•
+The machine’s task of assigning temporary storage area (activation 
+records ) used by functions would be in same order (LIFO).
+•
+Since LIFO property is used, the machine  allocates these records in 
+the stack
+•
+Hence a stack plays a key role in invoking functions in a computer 
+system.
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 242 =====
+
+Application of stacks – Functions, nested functions 
+Data Structures and its Applications
+Example :
+Consider the following showing the order in which the functions are 
+invoked
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+---
+Start M Finish
+A
+5 D]
+c D
+D )
+
+----------------------------------------
+
+===== Page 243 =====
+
+Application of stacks – Functions, nested functions
+Data Structures and its Applications
+The Sequence of stack frames of the activation records of the function 
+calls is given below. Each vertical column shows the contents of the stack 
+at a given time, and changes to the stack are portrayed by reading 
+through the frames from left to right.
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+---
+Start M Finish
+A
+5 D]
+c D
+D )
+---
+— P
+L Gl
+AsUeTele, _folofo]) ’
+A A Aol [o[o[o [ |
+(o[ [Tl [ oo [ ]
+
+----------------------------------------
+
+===== Page 244 =====
+
+Application of stacks – Recursion
+Data Structures and its Applications
+Recursion :
+•Recursion is a computer programming technique involving the use of a 
+procedure, subroutine or a  function. 
+•The process in which a function calls itself directly or indirectly is called 
+recursion and the corresponding function is called as recursive function.
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+---
+void recurse()
+
+{ recursive
+sieins wims iimie call
+recurse();
+
+}
+
+int main()
+
+{
+recurse();
+
+}
+
+----------------------------------------
+
+===== Page 245 =====
+
+Application of stacks – Recursion
+Data Structures and its Applications
+How a particular problem is solved using recursion?
+•The idea is to represent a problem in terms of one or more smaller 
+problems. 
+•A way is found to solve these smaller problems and then build up a 
+solution to the entire problem.
+•The sub problems are in turn broken down into smaller sub problems 
+until the solution to the smallest sub problem is known. 
+•The solution to the smallest sub problem is called the base case.
+•In the recursive program, the solution to thebase case is provided
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 246 =====
+
+Application of stacks – Recursion
+Data Structures and its Applications
+Example 1: Factorial of a Number n
+Recursive definition :  
+n! = 1 if n=1
+n!= n * (n-1)! If n>1
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+---
+Final value = 120
+51
+5% 24 =120
+returns 120
+476 =24
+returns 24
+4 * 3!
+3*2=86
+returns &
+3% 2!
+2% 1 =2
+returns 2
+» eturns 1
+
+----------------------------------------
+
+===== Page 247 =====
+
+Application of stacks – Recursion
+Data Structures and its Applications
+Recursive function to compute factorial of n
+factorial(n)
+{
+  int f; 
+  if(n==0) 
+       return 1;
+   f=n*factorial(n-1); 
+return f;
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+---
+Call Return
+n=3 factorial(3) = 6
+A factorial(3) = 3 = factorial(2)
+n=2 J 1\ factorial(2) =2
+|
+rd for A
+B factorial(2) = 2 * factorial(1) record tor
+n=1 factorial(1) = 1 Activation
+\ record for B
+C factorial(1) = 1  factorial(0)
+record for C
+n=0 | factorial(0) = 1 record tor
+Activation
+D factorial(0) = 1 record for D
+Recursion termination
+) ()
+
+----------------------------------------
+
+===== Page 248 =====
+
+Application of stacks – Recursion
+Data Structures and its Applications
+Recursive function to find the product of a*b
+a*b= a if b=1;
+a*b = a*(b-1)+a if b >1;
+To evaluate 6 * 3
+6*3 = 6*2 + 6 = 6*1 + 6 + 6 = 6 + 6 + 6 = 18
+multiply(int a, int b)
+{
+   int p;
+    if (b==1)
+     return a
+   p= multiply(a,b-1) + a;
+  return p;
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 249 =====
+
+Application of stacks – Recursion
+Data Structures and its Applications
+Fibonacci Sequence
+The fibonacci sequence is the sequence of integers 
+1, 1, 2, 3, 5, 8, 13, 21, 34...
+Each element is the sum of two preceding elements
+ 
+If  we consider fib(0) = 1 and fib(1)=1 
+then recursive definition to compute the nth element in the sequence  is 
+fib(n) = n if n=0 or n=1
+fib(n) = fib(n-1) + fib(n-2) for n >=2
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 250 =====
+
+Application of stacks – Recursion
+Data Structures and its Applications
+Recursive function to compute the nth element in the Fibonacci 
+Sequence
+ fib(int n)
+{
+   int x,y;
+   if ( (n==0) || (n==1))
+     return n;
+  x= fib(n-1) ;
+  y=fib(n-2);
+ return x+y;
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+---
+/mﬂ‘\
+Jivls) 153)
+i e @
+3
+S
+i iy 10 sy 10 10
+g
+sy 7o
+
+----------------------------------------
+
+===== Page 251 =====
+
+Application of stacks – Recursion
+Data Structures and its Applications
+Recursive function to find the sum of elements of an array
+int sum(int *a, int n)
+//a is pointer to the array, n is the index of the last element of the array
+{
+  int s;
+  if(n==0) // base condition
+   return a[0];
+  s= sum(a,n-1) + a[n]; // compute sum of n-1 elements and add the nth element
+  return s;
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 252 =====
+
+Application of stacks – Recursion
+Data Structures and its Applications
+Recursive function to display the elements of the linked list in the reverse 
+order
+int display(struct node *p)
+{
+   if(p->next!=NULL)
+       display(p->next)
+  printf(“%d “,p->data);
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 253 =====
+
+Application of stacks – Recursion
+Data Structures and its Applications
+Tower of Hanoi
+Three Pegs A, B and C exists. N disks of differing diameters are 
+placed on peg A. The Larger disk is always below a smaller disk. The 
+objective is to move the N disks from Peg A to Peg C using Peg B as 
+the auxillary peg
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+---
+Beginning Solution
+3 i
+osis  Source  Auxiiary  Destination i Source  Auxiliary Destination
+{ <>
+
+----------------------------------------
+
+===== Page 254 =====
+
+Application of stacks – Recursion
+Data Structures and its Applications
+Tower of Hanoi – recursive solution
+If a solution to n-1 disks is found, then the problem would be 
+solved. Because in the trivial case of one disk, the solution would 
+be to move the single disk from Peg A to Peg C.
+To move n disks from A to C , the recursive solution would be as 
+follows
+1. If n=1 move the single disk from A to C and stop
+2. Move the top n-1 disks from A to B using C as auxillary 
+3. Move the remaining disk from A to C
+4. Move n-1 disks from B to C using A as the auxillary
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 255 =====
+
+Application of stacks – Recursion
+Data Structures and its Applications
+Recursive function for Tower of Hanoi
+void tower(int n,char src,char tmp,char dst)
+  {
+    if(n==1)
+    {
+     printf("\nMove disk %d from %c to %c",n,src,dst);
+     return;
+    }
+    tower(n-1,src,dst,tmp);
+    printf("\nMove disk %d form %c to %c",n,src,dst);
+    tower(n-1,tmp,src,dst);
+    return;   
+   }
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 256 =====
+
+Application of stacks – Recursion
+Data Structures and its Applications
+Recursive function for Tower of Hanoi
+Solution for 4 disks
+Move disk 1 from peg A to peg B                               
+Move disk 2 from peg A to peg C  
+          
+Move disk 1 from peg B to peg C
+Move disk 3 from peg A to peg B
+Move disk 1 from peg C to peg A
+Move disk 2 from peg C to peg B
+Move disk 1 from peg A to peg B  
+Solution for moving 3 disks from A to B
+Move disk 4 from peg A to peg C  
+Move  4th disk from A to C
+Move disk 1 from peg B to peg C  
+Solution for moving 3 disks from B to C
+Move disk 2 from peg B to peg A
+Move disk 1 from peg C to peg A
+Move disk 3 from peg B to peg C
+Move disk 1 from peg A to peg B
+Move disk 2 from peg A to peg C
+Move disk 1 from peg B to peg C
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 257 =====
+
+dineshs@pes.edu
++91 8088654402 
+THANK YOU
+Dinesh Singh
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 258 =====
+
+Data Structures and its Applications
+Dinesh Singh
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 259 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Infix to Postfix and Prefix Expressions – 
+Implementation 
+Dinesh Singh
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 260 =====
+
+Infix , Postfix and Prefix Expressions 
+Data Structures and its Applications
+•
+Consider the sum of A and B expressed as A + B
+•
+This representation is called infix.
+•
+There are two alternate notations for expressing sum of A and B 
+using the symbols A , B and + , these are
+•
+Prefix  : + A B
+•
+Postfix :  A B +
+•
+The prefixes “Pre” , “post” and “in” refers to the relative position of 
+the operator with respect to the two operands.
+•
+In prefix, operators precedes the two operands
+•
+In postfix, the operator follows the two operands
+•
+In infix, the operator is in between the two operands
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 261 =====
+
+Infix , Postfix and Prefix Expressions 
+Data Structures and its Applications
+Conversion of Infix to Postfix 
+•
+For Example : consider the expression A + B * C
+•
+The evaluation of the above expression requires the knowledge of 
+precedence of operators
+•
+A + B * C can be expressed as A + (B * C) as multiplication takes 
+precedence over addition
+•
+Applying the rules of precedence the above infix expression can be 
+converted to postfix as follows
+A + B * C  =  A + ( B * C )
+ 
+ 
+= A + ( BC *)    convert the multiplication
+ 
+ 
+= A ( B C * ) +   convert the addition
+ 
+ 
+= A B C * +
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 262 =====
+
+Infix , Postfix and Prefix Expressions 
+Data Structures and its Applications
+Conversion of Infix to Prefix 
+•
+For Example : consider the expression A + B * C
+•
+Applying the rules of precedence the above infix expression can be 
+converted to prefix as follows
+A + B * C  =  A + ( B * C )
+ 
+ 
+= A + ( * B C)    convert the multiplication
+ 
+ 
+= + A (* B C  ) +   convert the addition
+ 
+ 
+= + A * B C
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 263 =====
+
+Infix , Postfix and Prefix Expressions 
+Data Structures and its Applications
+Infix
+Postfix
+Prefix
+A + B * C + D
+A B C * + D +
++ + A * B C D
+(A + B) * (C + D)
+A B + C D + *
+* + A B + C D
+A * B + C * D
+A B * C D * +
++ * A B * C D
+A + B + C + D
+A B + C + D +
++ + + A B C D
+A $ B * C – D + E / F / (G+H)
+A B $ C * D – E F / G H + / +
++ - * $ A B C D / /E F + G H
+((A + B)*C – (D – E)) $ (F + G)
+A B + C * D E – -  F G + $
+$ - * + A B C – D E + F G
+A – B / (C * D $ E )
+A B C D E $ * / -
+- A / B * C $ D E
+Applying the rules of precedence the table shows the conversion of  
+Infix  to Postfix and Prefix Expression
+$ is the exponentiation operator and its precedence is from right to left
+For example A $ B $ C = A $ ( B $ C)
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 264 =====
+
+Infix to postfix conversion - algorithm 
+Data Structures and its Applications
+opstk is the empty stack
+while(not end of input)
+{
+   symb = next input character
+// if the input symbol is an operand , add it to the postfix string
+ if(symb is an operand)
+     add symb to postfix string
+else
+    {
+       // pop the contents of the stack while the precedence of
+      // top of the stack is greater than the precedence of the symbol scanned
+ 
+//prcd function returns true in this case
+        while(!empty(opstk ) and ( prcd(stacktop(opstk),symb)) 
+         {
+              topsymb=pop(opstk)
+             add topsymb to postfix string
+         }
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 265 =====
+
+Infix to postfix conversion - algorithm 
+Data Structures and its Applications
+/* if prcd function returns false, then
+if  the stack is empty and symbol is not ‘)’, push symb on to the stack*/
+         if( empty(opstk) || symb!=‘)’) 
+             push(opstk,symb)
+      else
+           topsymb=pop(opstk); // if symb is ‘)’ ,  pop ‘ ( ‘ from the stack 
+}
+while(!empty(opstk)
+ {
+    topsymb=pop(opstk)
+    add topsymb to postfix string
+ }
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 266 =====
+
+Infix to postfix conversion - algorithm 
+Data Structures and its Applications
+•
+prcd(OP1,OP2) is a function that  compares the precedence of the top of 
+the stack(OP1) and the input symbol (OP2) and returns TRUE if the 
+precedence is greater else returns FALSE.
+•
+Some of the return values of prcd function
+•
+prcd(‘ * ‘ , ‘ + ‘ )  returns TRUE :  prcd(‘ * ’, ’ / ’) returns TRUE
+•
+prcd(‘ + ‘, ‘ * ‘)  returns FALSE  :  prcd(‘ / ’, ’ * ’) returns TRUE
+•
+prcd(‘ + ‘ , ‘ + ‘) returns TRUE  :  
+•
+prcd(‘ + ‘ ,  ‘ – ‘) returns TRUE
+•
+prcd(‘ – ‘ , ‘ – ‘ ) returns TRUE
+•
+prcd(‘ $ ‘ , ‘$’ ) returns FALSE : exponentiation operator, associatively 
+from right to left
+•
+prcd(‘ ( ‘, op) , prcd(op ‘ (‘) returns FALSE for any operator
+•
+prcd (op , ‘ )‘) returns TRUE for any operator
+•
+Prcd( ‘ ( ‘ , ‘ ) ‘ ) returns FALSE
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 267 =====
+
+Infix to postfix conversion - algorithm 
+Data Structures and its Applications
+•
+The motivation behind the conversion algorithm is the desire to output the 
+operators in the order in which they are to be executed.
+•
+If an incoming operator is of greater precedence than the one on top of the 
+stack, this new operator is pushed on to the stack.
+•
+If on the other hand , the precedence of the new operator is less than the  
+one on the top of the stack, the operator on the top of the stack should be 
+executed first. 
+•
+Therefore the top of the stack is popped out and added to the postfix and 
+the incoming symbol is compared with the new top and so on.
+•
+Parenthesis in the input string override the order of operations
+•
+When a left parenthesis is scanned, it is pushed on to the stack 
+•
+When its associated right parenthesis is found, all the operators between 
+the two parenthesis are placed on the output string. Because they are to be 
+executed before any operators appearing after the parenthesis
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 268 =====
+
+Infix to postfix conversion – Trace of the algorithm 
+Data Structures and its Applications
+Trace of the algorithm for  A + B * C
+ symb
+postfix 
+string
+opstk
+Remarks
+A
+A
+Empty
+symb is operand , add ‘A’on to the postfix 
+string
++
+A
++
+symb is operator, and stack empty, push + on 
+to the stack
+B
+AB
++
+symb is operand , Add ‘B’ to the postfix 
+string
+*
+AB
++*
+symb is operator, precedence of + (stack top) 
+is < than precedence of *, therefore push * 
+on to the stack
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 269 =====
+
+Infix to postfix conversion – Trace of the algorithm 
+Data Structures and its Applications
+Trace of the algorithm for  A + B * C
+ symb
+postfix 
+string
+opstk
+Remarks
+C
+ABC
++ *
+symb is operand ,  add C on to the 
+postfix string
+End of input
+ABC*
++
+Pop * from the stack and add to the 
+postfix string
+-
+ABC*+
+Empty
+Pop + from the stack and add to the 
+postfix string
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 270 =====
+
+Infix to postfix conversion – Trace of the algorithm 
+Data Structures and its Applications
+Trace of the algorithm for  (A + B )* C
+ symb
+postfix 
+string
+opstk
+Remarks
+(
+-
+Empty
+Stack empty, push ‘(‘ on to the stack
+A
+A
+(
+Symb is an operand, add ‘A’ to the post 
+fix string
++
+A
+(+
+Precedence of top of the stack ‘(‘ is 
+less than ‘+’ , push ‘+’ on to the stack
+B
+AB
+(+
+Symb is an operand, add B to the 
+postfix string
+)
+AB+
+(
+Precedence of stack top ‘+’ is > than ‘)’
+Pop ‘+’ from the stack and add to the 
+postfix string
+AB+
+empty
+Precedence of stack top stack top ‘(‘ is 
+not greater than ‘)’ and symb is ‘)’, 
+therefore pop ‘(‘ from the stack
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 271 =====
+
+Infix to postfix conversion – Trace of the algorithm 
+Data Structures and its Applications
+Trace of the algorithm for  (A + B )* C
+ symb
+postfix 
+string
+opstk
+Remarks
+*
+AB+
+*
+Stack empty, push ‘*’ on to the stack
+C
+AB+C
+*
+Symb is an operand, add ‘C’ to the 
+postfix string
+End of 
+string
+AB+C*
+Empty
+End of input, pop * from the stack and 
+add to the postfix.
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 272 =====
+
+Infix to posfix conversion – another algorithm 
+Data Structures and its Applications
+void convert_postfix(char *infix,char*postfix)
+ {
+     i=0;
+    char ch;
+    j=0;
+    push(s,&top,'#');
+    while(infix[i]!='\0')
+    {
+      ch=infix[i];
+   //while the prcedence of top of stack is greater than the 
+//precedence of the input symbol, pop and add to the postfix
+   while(stack_prec(peep(s,top))>input_prec(ch))
+          postfix[j++]=pop(s,&top);
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 273 =====
+
+Infix to posfix conversion – another algorithm 
+Data Structures and its Applications
+if(input_prec(ch)!=stack_prec(peep(s,top)))
+         push(s,&top,ch);
+       else
+         pop(s,&top);
+     i++;
+    }
+    while(peep(s,top)!='#')
+      postfix[j++]=pop(s,&top);
+    postfix[j]='\0';
+  }
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 274 =====
+
+Infix to posfix conversion – another algorithm 
+Data Structures and its Applications
+Operator
+Input Precedence
+Stack Precedence
++ , -
+1
+2
+* , /
+3 
+4
+$
+6
+5
+Operands
+7
+8
+)
+0
+- : Never pushed on to stack
+(
+9
+0
+#
+-
+-1
+Precedence table
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 275 =====
+
+Infix to prefix conversion –  algorithm 
+Data Structures and its Applications
+Example  1:
+ Input : A * B + C / D
+Output : + * A B/ C D
+Example 2 :
+Input : (A - B/C) * (D/K-L)
+Output : *-A/BC-/DKL
+1: Reverse the infix expression i.e A+B*C will become C*B+A.
+ Note while reversing each ‘(‘ will become ‘)’ and each ‘)’ becomes ‘(‘.
+ 2: Obtain the postfix expression of the modified expression i.e CB*A+.
+3: Reverse the postfix expression. Hence in our example prefix is +A*BC.
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 276 =====
+
+dineshs@pes.edu
++91 8088654402 
+THANK YOU
+Dinesh Singh
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 277 =====
+
+Data Structures and its Applications
+Dinesh Singh
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 278 =====
+
+DATA STRUCTURES AND ITS APPLICATIONS
+Evaluation of Postfix expression and 
+Parenthesis matching
+Dinesh Singh
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 279 =====
+
+Evaluation of Postfix Expression - Algorithm
+Data Structures and its Applications
+•
+Each operator in a postfix string refers to the previous two 
+operands.
+•
+Each time an operand is read , it is pushed on to the stack
+•
+When an operator is reached, its operands will be the top two 
+elements on to the stack.
+•
+The two elements are popped out, the indicated operation is 
+performed on them and result is pushed on the stack so that it 
+will be available for use as an operand of the next operator.
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 280 =====
+
+Evaluation of Postfix Expression - Algorithm
+Data Structures and its Applications
+opndstk is the empty stack
+while(not end of the input) // scan the input string 
+{
+ symb=next input character;
+ if (symb is an operand)
+   push(opndstk,symb)
+else
+   {
+     opnd2=pop(opndstk);
+     opnd1=pop(opndstk);
+     value = result of applying symb to opnd1 and opn2;
+    push(opndstk, value);
+  }
+ return(pop(opndstk));
+}
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 281 =====
+
+Evaluation of Postfix Expression – Trace of the Algorithm
+Data Structures and its Applications
+Symb
+Opnd1
+Opnd2
+Value
+opndstk
+3
+-
+3
+5
+3,  5
+4
+3 , 5 , 4
+*
+5
+4
+20
+3  , 20
++
+3
+20
+60
+60
+Infix : 3 + 5 * 4
+Postfix expression   : 3 5 4 * +
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 282 =====
+
+Evaluation of Postfix Expression - implementation
+Data Structures and its Applications
+int postfix_eval(char* postfix)
+ {
+   int i,top,r;
+   int s[10];//stack
+   top=-1;
+   i=0;
+   while(postfix[i]!='\0')
+   {
+     char ch=postfix[i];
+     if(isoper(ch))
+     {
+       int op1=pop(s,&top);
+       int op2=pop(s,&top);
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 283 =====
+
+Evaluation of Postfix Expression - implementation
+Data Structures and its Applications
+switch(ch)
+        {
+           case '+':r=op1+op2;
+                    push(s,&top,r);
+                    break;
+           case '-':r=op2-op1;
+                     push(s,&top,r);
+                     break;
+            case '*':r=op1*op2;
+                    push(s,&top,r);
+                     break;
+           case '/':r=op2/op1;
+                     push(s,&top,r);
+                    break;
+        }//end switch   
+     }//end if
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 284 =====
+
+Evaluation of Postfix Expression - implementation
+Data Structures and its Applications
+else
+      push(s,&top,ch-'0');//convert charcter to 
+integer and push
+     i++;
+    }  //end while
+  return(pop(s,&top));
+ }
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 285 =====
+
+Parenthesis Matching – overview of the Algorithm
+Data Structures and its Applications
+Examples 
+1.
+( (  ) )  : Valid Expression
+2.
+( ( ( ) )  : Invalid Expression ( Extra opening parenthesis )
+3.
+( ( ) ) ) : Invalid Expression  ( Extra closing parenthesis )
+4.
+( ( } )  : Invalid Expression ( Parenthesis mismatch )
+5.
+( ( ) ] : Invalid Expression ( Parenthesis mismatch )
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 286 =====
+
+Parenthesis Matching – overview of the Algorithm
+Data Structures and its Applications
+1.Read the input symbol from the input  expression 
+2. If the input symbol is one of the open parenthesis ( ‘(‘ , ‘ { ‘ or ‘ [ ‘ ), it 
+is pushed on to the stack
+3. If the input symbol is of closing parenthesis, stack is popped and the 
+popped parenthesis is compared  with the input symbol, if there is a 
+mismatch in the type of the parenthesis, return 0 ( Mismatch of 
+parenthesis) 
+4. If there is a match in the  parenthesis , the next input symbol is read.
+5. If during this process, if the stack becomes empty,  return 0 ( Extra 
+closing parenthesis) 
+6. If at the end of the expression, if the stack is not empty, return 0 ( 
+Extra opening parenthesis)
+7. If at the end of the input expression, if the stack is empty, return 1. 
+( Parenthesis are matching )
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 287 =====
+
+Parenthesis Matching - Implementation
+Data Structures and its Applications
+int match(char *expr)
+  {
+     int i,top;
+     char s[10],ch,x;//stack
+     i=0;
+      top=-1;
+     while(expr[i]!='\0')
+     {
+       ch=expr[i];
+       switch(ch)
+       {
+           case '(':
+           case '{':
+           case '[':push(s,&top,ch);
+                    break;
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 288 =====
+
+Parenthesis Matching
+Data Structures and its Applications
+case ')':if(!isempty(top))
+                    {
+                      x=pop(s,&top);
+                      if(x=='(')
+                        break;
+                      else
+                        return 0;//mismatch of parenthesis
+                    }
+                    else
+                      return 0;//extra closing parenthesis
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 289 =====
+
+Parenthesis Matching
+Data Structures and its Applications
+case '}':if(!isempty(top))
+                    {
+                      x=pop(s,&top);
+                      if(x=='{')
+                        break;
+                      else
+                        return 0;//mismatch of parenthesis
+                    }                    
+                    else
+                      return 0;//extra closing parenthesis
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 290 =====
+
+Parenthesis Matching
+Data Structures and its Applications
+case ']':if(!isempty(top))
+                    {
+                      x=pop(s,&top);
+                      if(x=='[')
+                        break;
+                      else
+                        return 0;//mismatch of parenthesis
+                    }
+                    else
+                      return 0;//extra closing parenthesis
+           }//end switch
+           i++;
+      }//end while
+     if(isempty(top))
+         return 1;
+       return 0;//extra opening parenthesis
+   }
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE
+
+----------------------------------------
+
+===== Page 291 =====
+
+dineshs@pes.edu
++91 8088654402 
+THANK YOU
+Dinesh Singh
+Department of Computer Science & Engineering
+
+[Embedded Image / Diagram OCR Text]:
+UNIVERSITY
+ONLINE

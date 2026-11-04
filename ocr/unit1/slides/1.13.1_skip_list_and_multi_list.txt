@@ -1,0 +1,524 @@
+
+
+===== Page 1 =====
+
+Introduction
+Skiplist and Multilist: 
+Data Structures and its Applications 
+(UE25CS52A)
+N S Kumar
+Professor
+Department of Computer Science & 
+Engineering (AI & ML)
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » INTRODUCTION 
+AND REVISION » CLASS 11/11
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 6
+
+----------------------------------------
+
+===== Page 2 =====
+
+Skiplist and Multilist
+Quiz : Skiplist and Multilist
+1 What is true in a skiplist?
+a)
+There are multilevels, each of which has the same number of nodes
+b)
+The number of pointers in each node depends on the number of levels planned
+c)
+The traversal for any operation starts at the higher level and this level has all the 
+nodes
+d)
+Any insertion will affect atmost one level
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 3 =====
+
+Skiplist and Multilist
+Quiz : Skiplist and Multilist
+1 What is true in a skiplist?
+a)
+There are multilevels, each of which has the same number of nodes
+b)
+The number of pointers in each node depends on the number of levels planned
+c)
+The traversal for any operation starts at the higher level and this level has all the 
+nodes
+d)
+Any insertion will affect atmost one level
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 4 =====
+
+Skiplist and Multilist
+Quiz : Skiplist and Multilist
+2 What is true in a multilist?
+a)
+This is same as a multidimensional array
+b)
+Every node will have only  single pointer  
+c)
+Every node may participate in multiple lists
+d)
+Addition of a node would require updation in only one list
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 5 =====
+
+Skiplist and Multilist
+Quiz : Skiplist and Multilist
+2 What is true in a multilist?
+a)
+This is same as a multidimensional array
+b)
+Every node will have only  single pointer  
+c)
+Every node may participate in multiple lists
+d)
+Addition of a node would require updation in only one list
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 6 =====
+
+Skiplist and Multilist
+Quiz : Skiplist and Multilist
+3 sparse matrix is an example of 
+a)
+Using more space to gain in time
+b)
+Using less space at the cost of time
+c)
+a 2D array which can be directly indexed
+d)
+A matrix where most of the elements are non zero
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 7 =====
+
+Skiplist and Multilist
+Quiz : Skiplist and Multilist
+3 sparse matrix is an example of 
+a)
+Using more space to gain in time
+b)
+Using less space at the cost of time
+c)
+a 2D array which can be directly indexed
+d)
+A matrix where most of the elements are non zero
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 8 =====
+
+Skiplist and Multilist
+Quiz : Skiplist and Multilist
+4  In a SkipList, the bottom-most level contains:
+a) Only the largest element
+b) Only the smallest element
+c) All the elements in sorted order
+d) Randomly selected elements
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 9 =====
+
+Skiplist and Multilist
+Quiz : Skiplist and Multilist
+4  In a SkipList, the bottom-most level contains:
+a) Only the largest element
+b) Only the smallest element
+c) All the elements in sorted order
+d) Randomly selected elements
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 10 =====
+
+Skiplist and Multilist
+Quiz : Skiplist and Multilist
+5. A multilist is particularly useful when:
+a) Data needs to be accessed through multiple relationships
+b) Only sequential access is required
+c) Memory must not contain pointers
+d) Only one ordering of data is needed
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 11 =====
+
+Skiplist and Multilist
+Quiz : Skiplist and Multilist
+5. A multilist is particularly useful when:
+a) Data needs to be accessed through multiple relationships
+b) Only sequential access is required
+c) Memory must not contain pointers
+d) Only one ordering of data is needed
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 12 =====
+
+Skiplist and Multilist
+ADT: Revision
+•
+Lists and stacks can be implemented in different ways while supporting the same interface.
+•
+Separating concerns leads to good software development.
+•
+A data structure has components; each component should have its own behaviour.
+•
+Example: a polynomial can be represented using an array or a list of terms.
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 13 =====
+
+Skiplist and Multilist
+Skiplist: Intuition
+•
+A normal shuttle bus stops at every village and may take a long time.
+•
+An express bus can skip villages and then a local bus can reach the destination.
+•
+This idea of skipping portions of a sorted list is called a skip list.
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 14 =====
+
+Skiplist and Multilist
+Limitation of a Normal List
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Example: 10 → 20 → 30 → 40 → 50 → 60 → 70 → 80 → 90 → 100
+•
+Searching for 90 requires traversing almost the whole list.
+•
+Worst-case steps and comparisons are proportional 
+to the number of elements
+
+----------------------------------------
+
+===== Page 15 =====
+
+Skiplist and Multilist
+Structure of a Skiplist
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Level 2: 10 ─────────→ 40 ─────────→ 70 ─────→ 100
+•
+Level 1: 10 ───→ 20 ───→ 40 ───→ 50 ───→ 70 ───→ 100
+•
+Level 0: 10 → 20 → 30 → 40 → 50 → 60 → 70 → 80 → 90 → 100
+•
+Higher levels provide shortcuts; 
+•
+level 0 walks through the list one step at a time.
+
+----------------------------------------
+
+===== Page 16 =====
+
+Skiplist and Multilist
+Searching for 90 in a Skiplist
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Start at 10 on the highest level.
+•
+Move to 40, then 70 because each is less than 90.
+•
+The next node is 100, which is greater than 90.
+•
+Drop down one level at 70.
+•
+Drop one more level at 70.
+•
+At level 0: 70 → 80 → 90; reach 90
+
+----------------------------------------
+
+===== Page 17 =====
+
+Skiplist and Multilist
+Searching for 90 in a Skiplist
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Start at 10 on the highest level.
+•
+Move to 40, then 70 because each is less than 90.
+•
+The next node is 100, which is greater than 90.
+•
+Drop down a level at 70.
+•
+At level 0: 70 → 80 → 90; reach 90
+
+----------------------------------------
+
+===== Page 18 =====
+
+Skiplist and Multilist
+Why the Skiplist Helps?
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Higher levels allow us to jump over large portions of the 
+list.
+•
+Instead of examining all eight elements before 90, only a 
+few nodes are examined.
+•
+A skip list is a sorted linked list augmented with multiple 
+levels of forward pointers.
+
+----------------------------------------
+
+===== Page 19 =====
+
+Skiplist and Multilist
+Skiplist: Structure and Operations
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+A skip list may have any number of levels.
+•
+The number of levels depends on the expected number of 
+nodes.
+•
+Normally, each higher level has about half the nodes of the 
+next level.
+•
+Each node has active pointers for the levels in which it 
+participates. Other pointers are grounded.
+•
+Insertion and deletion follow the same top-down idea as 
+searching.
+
+----------------------------------------
+
+===== Page 20 =====
+
+Skiplist and Multilist
+Skiplist: Applications and Salient Points
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+In-memory ordered data for faster insertion, deletion and searching.
+•
+Concurrent data structures where operations can happen in parallel.
+•
+Priority ordered events.
+•
+Can be used instead of balanced search trees.
+•
+Bottom level contains all elements; higher levels contain fewer 
+elements and provide shortcuts.
+•
+Note: Implementation of a skiplist is not part of the source's stated 
+syllabus.
+
+----------------------------------------
+
+===== Page 21 =====
+
+Skiplist and Multilist
+Multilists
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+A multilist means a list of lists.
+•
+A node may be part of more than one list.
+•
+A list may have nodes whose keys are heads of another list.
+•
+The same node can be reached through different linked lists 
+representing different relationships.
+
+----------------------------------------
+
+===== Page 22 =====
+
+Skiplist and Multilist
+Sparse Matrix: Motivation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Very large matrices may contain mostly zero elements.
+•
+Storing every element consumes a lot of memory.
+•
+Store only non-zero elements together with their row and column 
+information.
+•
+For efficient rowwise and columnwise traversal, maintain a row list for 
+each row and a column list for each column.
+
+----------------------------------------
+
+===== Page 23 =====
+
+Skiplist and Multilist
+One Physical Node, Multiple Logical Views
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Example: students take courses, and each course has students.
+•
+One view finds the courses taken by a student.
+•
+Another view finds the students who have taken a course.
+•
+Keeping separate structures would duplicate data and require multiple 
+updates.
+•
+A multilist captures the mapping and supports both traversals.
+
+----------------------------------------
+
+===== Page 24 =====
+
+Skiplist and Multilist
+Applications of Multilists
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Sparse matrix
+•
+Graph representation
+•
+Social networks
+•
+Multiple views as in files
+
+----------------------------------------
+
+===== Page 25 =====
+
+Skiplist and Multilist
+Multilist: Salient Points
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Supports Multiple relations
+•
+Avoids duplicates
+•
+Avoids multiple updation
+•
+Has Complicated pointer management
+•
+Has Complicated insertion and deletion
+
+----------------------------------------
+
+===== Page 26 =====
+
+Skiplist and Multilist
+Summary
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Skiplist: a sorted linked list with multiple levels of forward pointers.
+•
+Higher skiplist levels provide shortcuts for faster searching.
+•
+Multilist: a list of lists in which a physical node can participate in 
+multiple logical lists.
+•
+Multilists are useful when the same data needs multiple views or 
+relationships.
+
+----------------------------------------
+
+===== Page 27 =====
+
+THANK YOU
+N S Kumar
+Professor
+Department of Computer Science & Engineering (AI & ML)

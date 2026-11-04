@@ -1,0 +1,296 @@
+
+
+===== Page 1 =====
+
+Arrays
+Arrays
+N S Kumar
+Professor
+Department of Computer Science & 
+Engineering (AI & ML)
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 9
+
+----------------------------------------
+
+===== Page 2 =====
+
+Arrays
+Quiz 1: Arrays
+1.
+Which of the following is false?
+   int a[10] ;
+   int main() {
+   }
+   What can we say about the array a?
+   a) All elements will be initialized to 0
+   b) All elements will have the same garbage value
+   c) Each element will have a distinct garbage value
+   d) Results in a syntax error
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 3 =====
+
+Arrays
+Quiz 1: Arrays
+1.
+Which of the following is false?
+   int a[10] ;
+   int main() {
+   }
+   What can we say about the array a?
+   a) All elements will be initialized to 0
+   b) All elements will have the same garbage value
+   c) Each element will have a distinct garbage value
+   d) Results in a syntax error
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 4 =====
+
+Arrays
+Quiz 2: Arrays
+2.
+Comment :
+int a[] = {10, 20, 30, 40, 50}; int *p = a + 2;
+int x = *p++;
+What happens?
+a) x becomes 31; p is not changed
+b) x becomes 30; p points to a[3];
+c) Syntax error; initialize of p not correct
+d) x becomes 40; p points to a[3];
+© Confidential Information of PES University. All Rights Reserved - 2026 
+3 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 5 =====
+
+Arrays
+Quiz 2: Arrays
+2.
+Comment :
+int a[] = {10, 20, 30, 40, 50}; int *p = a + 2;
+int x = *p++;
+What happens?
+a) x becomes 31; p is not changed
+b) x becomes 30; p points to a[3];
+c) Syntax error; initialize of p not correct
+d) x becomes 40; p points to a[3];
+© Confidential Information of PES University. All Rights Reserved - 2026 
+3 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 6 =====
+
+Arrays
+Quiz 3: Arrays
+3.
+Comment :
+int a[] = {1, 2, 3}; int b[] = {1, 2, 3};
+a == b
+a) Is a syntax error; arrays cannot be compared
+b) 1 as both are arrays contain the same elements
+c) 0 as both the arrays point to different locations
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+4 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 7 =====
+
+Arrays
+Quiz 3: Arrays
+3.
+Comment :
+int a[] = {1, 2, 3}; int b[] = {1, 2, 3};
+a == b
+a) Is a syntax error; arrays cannot be compared
+b) 1 as both are arrays contain the same elements
+c) 0 as both the arrays point to different locations
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+4 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 8 =====
+
+Arrays
+Quiz 4: Functions, Pointers and Arrays
+4.
+Comment :
+sizeof int on this implementation is say 4 bytes.
+int a[] = {10, 20, 30, 40, 50}; int *p = a + 5; 
+what is the value of p – a?
+a) 20
+b) 5
+c) Depends on implementation
+d) Error: pointer – array not allowed
+© Confidential Information of PES University. All Rights Reserved - 2026 
+5 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 9 =====
+
+Arrays
+Quiz 4: Functions, Pointers and Arrays
+4.
+Comment :
+sizeof int on this implementation is say 4 bytes.
+int a[] = {10, 20, 30, 40, 50}; int *p = a + 5; 
+what is the value of p – a?
+a) 20
+b) 5
+c) Depends on implementation
+d) Error: pointer – array not allowed
+© Confidential Information of PES University. All Rights Reserved - 2026 
+5 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 10 =====
+
+Arrays
+Quiz 5: Functions
+5.
+int a[5][4]; The array is arranged linearly in the memory of the computer.
+Counting from 0, what is the position of a[3][2] in the array?
+a) 14
+b) 17
+c) 13
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+6 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 11 =====
+
+Arrays
+Quiz 5: Functions
+5.
+int a[5][4]; The array is arranged linearly in the memory of the computer.
+Counting from 0, what is the position of a[3][2] in the array?
+a) 14
+b) 17
+c) 13
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+6 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 12 =====
+
+Arrays
+Revision: Array
+•
+has # of elements
+•
+all the elements should be of the same type - homogeneous
+•
+size of the array is specified at the point of creation
+•
+size is given as a constant at compile time
+•
+size could be specified at runtime in C99 VLA : variable length array
+•
+array cannot grow or shrink
+•
+elements are selected based on index or subscript
+•
+index is an integer; starting value is 0 - zero based indexing
+•
+supports random access
+•
+time required to access the element does not depend on its position
+•
+is always same
+© Confidential Information of PES University. All Rights Reserved - 2026 
+7 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 13 =====
+
+Arrays
+Revision Array
+•
+Array at compile time is an array. It knows everything about itself.
+•
+Array at runtime degenerates to a pointer.
+•
+At runtime, the size of the array is not stored.
+•
+Index out of bounds - accessing elements beyond the size of the array cannot be checked.
+•
+Checking would require the size of the array at runtime - extra memory
+•
+Checking would incur some runtime cost.
+•
+This if done would be penalizing the right programmer
+•
+So, 'C' follows this philosophy. The programmer gets what he deserves!
+•
+C array at runtime is a constant pointer
+•
+So, arrays cannot be assigned one to another. Arrays are not assignment compatible.
+© Confidential Information of PES University. All Rights Reserved - 2026 
+8 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 14 =====
+
+Arrays
+Revision: Array
+•
+Every element of an array itself can be an array
+•
+This is called multidimensional array
+•
+Stored in a row major fashion
+•
+Size of each dimension but for the first required to access an element of the multidimensional array
+•
+If a 2 D array is passed as an argument to a function, the corresponding parameter is a pointer to an 
+array
+•
+void foo(int a[][10]);  // only 2 D array having 10 columns can be passed as argument
+•
+void bar(int n, int a[][n]);  // Any 2 D array can be passed as argument as long as the first argument 
+indicates the number of columns
+© Confidential Information of PES University. All Rights Reserved - 2026 
+9 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 15 =====
+
+THANK YOU
+Department of Computer Science & Engineering (AI & ML)
+N S Kumar
+Professor

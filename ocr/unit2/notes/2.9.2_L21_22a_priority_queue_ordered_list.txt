@@ -1,0 +1,445 @@
+
+
+===== Page 1 =====
+
+Priority Queue : Different implementations
+A priority queue is an abstract data type in which each element is associated with a priority.
+Unlike an ordinary queue, where elements are removed according to FIFO (First-In, First-Out) order, a 
+priority queue removes the component with the highest priority first.
+A priority is a number associated with each component. Higher the numeric value, could mean higher 
+the priority. Or lower the numeric value could mean higher priority. 
+In our examples, we will assume that higher the numeric value, higher the priority.
+Let us relook at the interface of the priority queue before discussing the implementation using 
+unordered list.
+Interface of the priority queue:
+The interface of a priority queue is same as that of queue. Component x would have a priority associated 
+with it.
+initialize()
+deinitialize()
+Create an empty queue
+Make the queue empty
+enqueue(x)
+Insert x
+We may add in number of ways. This in 
+turn would affect dequeue
+dequeue()
+Remove the element with the highest 
+priority. This in turn depends how 
+enqueue operation was done
+isEmpty()
+Check whether the queue is empty
+isFull()
+Check whether the queue is full, for 
+bounded implementations
+1. Implementation of priority queue: Using an Ordered List
+
+----------------------------------------
+
+===== Page 2 =====
+
+We have discussed the implementation of priority queue using an unordered list. Now, we shall discuss 
+the priority queue using an ordered list. The queue structure will remain the same. The node structure 
+will remain the same. The interface will also remain the same!
+struct queue 
+{
+node_t* front_;
+node_t* rear_;
+};
+typedef struct queue queue_t;
+struct node
+{
+job_t jobx_;
+struct node* next_;
+};
+typedef struct node node_t;
+void init_queue(queue_t *ptr_queue);
+void deinit_queue(queue_t *ptr_queue);
+void enque(queue_t *ptr_queue, job_t *ptr_job);
+job_t deque(queue_t *ptr_queue);
+int is_empty(queue_t *ptr_queue);
+int is_full(queue_t *ptr_queue); 
+The list is not in any order based on priority. Let us discuss each one of these operations.
+
+----------------------------------------
+
+===== Page 3 =====
+
+Initialize:
+No change. Both the front and the rear of the queue are grounded.
+ void init_queue(queue_t *ptr_queue)
+{
+ptr_queue->rear_ = ptr_queue->front_ = NULL;
+}
+Deinitialize :
+No change. This is one of the ways of removing all the elements in the queue. Deque each element until 
+the queue becomes empty. 
+The following questions are still valid.
+As deque is a costly operation, we could do it better. Can you try it out?
+Look at this code below. Do you think this is required?
+
+[Embedded Image / Diagram OCR Text]:
+v @ Review Sides Mistakes Ph | Eemereean | et 53| L W e Cr i b || 4 AskGemini | — x
+€ 5 C 2% chatgptcom/c/6a943cde-0a80-83ee-82ee-fedcach239a3 [SERSNERN I
+88 [ All Bookmarks
+® X Priority Queue Implementations Cheat Sheet & e
+@ @ PRIORITY QUEUE : ORDERED LIST IN ) comment @3 Remove 86 ) frase O Resize U6 on Page 4 (L103) 0% o
+Q A. STRUCTURE (Non-increasing priority) B. ENQUEUE EXAMPLE (Insert 45, p=45) C. DEQUEUE EXAMPLE D. INSERT
+* Higher priority at the front. Step 1: Start at ront (Remove highest priorty) Insert ot beg
+o Pron - it Betore dequeue: ”E
+! 2 a-EHEHE &
+B ZHEH
+;o - e
+p 248 80.2 sap b 80 Fiia .
+(pe50) (9e40) ®=30) (p-20) 10 s s Lo
+. PSS, AR
+ER) ‘ gy EA g E R =
+S s Step 3: After insertion "'"ﬁ—"—l
+- as | .| s0 a0 30 20 |/ 0 =
+| [value GobNo, pririty) | [+ pointer to next node ) Q.Q—-Q.Q.@g%m E. COMPLE
+b = Operation.
+i
+=
+§ W . o et o o ARSATE) | [ Wt O i o e 5 | |
+v
+o PRIORITY QUEUE : UNORDERED ARRAY IMPLEMENTATION ‘Where to use: After “Enque” on Page 4 (L82)
+A ARRAY REPRESENTATION (o rse C. DEQUEUE EXAMPLE (Remove st i Ty rT———
+wdex: o 2 3w T R
+Ay [0 | wasa [ ovre [ e, + Describe edits @© Think o T G i
+° nes 40 10250 10310 | 104,30 10635 107.4
+- - — g = " S A o o OB T
+Bl - vercocownn 4. IEIER e 0 e B 25 Mostycouty A B8 2w N 2 g |
+
+----------------------------------------
+
+===== Page 4 =====
+
+ptr_queue->rear_ = ptr_queue->front_ = NULL;
+void deinit_queue(queue_t *ptr_queue)
+{
+while(! is_empty(ptr_queue))
+{
+deque(ptr_queue);
+}
+ptr_queue->rear_ = ptr_queue->front_ = NULL;
+}
+Is full :
+No change. This is a trick. Try allocating. If it succeeds, then there is memory available. Release the 
+memory allocated just for the testing purpose.
+int is_full(queue_t *ptr_queue)
+{
+    node_t* temp;
+   temp = (node_t*)malloc(sizeof(node_t));
+    if (temp == NULL) {
+        return 1; 
+    }
+    free(temp); 
+    return 0;
+}
+Is empty:
+
+----------------------------------------
+
+===== Page 5 =====
+
+No change. Check whether the front of the queue is NULL.
+Can we check the rear of the queue in stead?
+Would front and rear being equal indicate that the queue is empty?
+int is_empty(queue_t *ptr_queue)
+{
+return ptr_queue->front_ == NULL;
+}
+Enque :
+This operation does consider the priority while inserting the node. 
+If queue is full, the program is exited.
+
+[Embedded Image / Diagram OCR Text]:
+—_
+0 PRIORITY QUEUE : ORDERED LIST IMPLEMENTATION | Where to use: After “Enque” on Page 4 (L103)
+A. STRUCTURE (Non-increasing priority) B. ENQUEUE EXAMPLE (Insert 45, p=45) C. DEQUEUE EXAMPLE D. INSERTION POSITIONS
+* Higher pririty at the front. Stop 1: Start st front (Romove Highest prority lnsrt st bagining (now highest)
+Bafore decueue: & _,wu.
+"gm ’T' 4’ £ ES = =
+Les) L] L L) 50 w0l | ™
+L (p50) |6=30)] |@=200| | mi0) Insert in middle
+Step 2:45 < 50 but 45 2 40 = inset between 40 and 50 T =1 = =i
+N A e NULL After dequeue (remove 50): front.
+i (= Insert at end (new lowest)
+Eoch node e two bowes: == =] gyt = oL
+‘ [ value obNo, priority) ] [+ pointer to next node 1 S S i front o
+e i e e 731 N e ey E. COMPLEXTY sumMMARY
+] et g Y Oparaion Worst Cazo
+s e 00 ey wmre et
+Ooauesn ramors st |0 - ramovs o ront
+P R e e T AT |ty o
+| Wherstouse: Insrton logc explanation o Page 4 (186-L112) | % Wheretouse: Do explantion on Poge 6 Q125-1138) | Lot o=
+* o ths inlmeration, . memary shocation shack.
+@ PRIORITY QUEUE : UNORDERED ARRAY IMPLEMENTATION | Where to use Afer "Enquee” on Page 4 (82) |
+A. ARRAY REPRESENTATION (No order) . DEQUEUE EXAMPLE (Remove hghostprioy) D. SHIFTING VISUAL (Removing index 1)
+e T G e e LY Step 1 Find Highest pririty (raverse aray) Betors: e e
+avray+ [ 10120 | 10250 | 103,10 [ 10430 o838 | - [ - | - | - dex: 0 1 i s s AR e . e
+s i T 10310 ][ 10430 |[ 1063 |[ 10740 | aray+ [ 10120 | 10250 | 10310 | 10830 | 108,35 | 10740
+B, ENQUEUE EXAMPLE (nsert 107, ped0) ma.pos = 1 priority 50)
+Before enqueve: Step 2: Remove clement at max.pos and shit left At ramoving idex 1 (102,501
+e = £ compLEaTY suMMARY
+- [, Y T N v Worst o
+[ 10120 || 10250 |[ 103,10 |[ 10430 [ 10635 [ 10740 | Array [ 10120 | 10310 | 10430 | 10635 [ 1070 | -
+Attr onqueue (atindx Jrees Encuve ) o~ st ana
+e R N T S P T e ndox: 0 ' 2 3 © s Oxcioe romov gt | 00 - s+ it
+Array ~ [ 101,20 | 10250 | 10310 | 104,30 10635 (10740 - | - | - Array [ 101,20 | 103,10 [ 10430 || 108,35 | 10740 | - empty om
+n=6 Removed job: (102,50) nE L sl
+4 Where to use: Enqueus explanation on Page 4 (L82-L90) | Where to use: Dequeue explanation on Page 5 (L104-L136) | Where to use: Aftr effciency discussion (Page 6, L144-L148)
+e PRIORITY QUEUE : ORDERED ARRAY IMPLEMENTATION Where to use: After “Enquee” on Page 4 (L82) J
+A ARRAY REPRESENTATION (Non-decreasing priait . DEQUEUE EXAMPLE (Romove highost pricrit) D. INSERTION CASES E. SHIFTING VISUAL (Ouring nsertion 106.38) . COMPLEXITY SUMMARY
+Cowest oy a . ighast o g Ottre e shrmert g o
+[rp— st
+iar 50" A M L B a8 45 in R
+Amay = | 10110 | 10220 | 10325 104,30 | 105.40 = E oo L i1 . A (=] st el R s ol (103,25 108, e
+nes Amay + | 101,20 | 103,25 | 106,35 | 10430 | 105.40 =i e Ay [ 99U0 62204 Y0025} Y04S0 | 050 ‘Enqueve (nsert) () - shift many cloments
+5. ENQUEUE EXAMPLE (raet 108, pe25) == I L B [emr—"
+S .t et rm g ) e Ee———
+= Dl e . F A AN ‘Docqueue (remave last element): v 102201025 o110 o025 s, 110 0nzs 10835 e B b gie i de b gy om
+e+ [ tovao 1020 | tonzs || toaso | 10840 b Fo T sl : T | o
+R ey Ay~ [Tou0 | 10220 | wesas es0 | - |} il i
+ot T L [ YOV T
+e+ [1ovao [ woazo [ wons | toas |[10a30 | 080 Ramoved b (10540 se B || oo 01 g b s | ———
+| [rons s Ea da iy i W s Ao fcioncydcussion
+1 Where 10 s Encuese exlonation on Page -5 L83-L171) | Where to use: Daqueus explanation on Page § (L119-L136) ary [0zl ionzs[wes[ioesofwedd] | | (Pogo s, L1z7-L1a1)
+LEGEND (For alldiagrams) NOTATION USED, EXAMPLE 08 . IMPORTANT NOTE
+jobio Unicue job number . | “@- i i
+Next Higher numeric value i /.
+[ [ 1] = 2t e \ i o o
+EtioTpront) NULL: End of ot . Namber o amarts n he gty cvve Example: priority 50 > priority 20
+
+----------------------------------------
+
+===== Page 6 =====
+
+We will see to it that the node with the highest priority is always at the front.
+What if more than one node has the same high priority. We will insert before the one with the same 
+priority so that the newly added job gets services last amongst those with the same priority.
+Make a node. Populate the node. Find the position to insert. 
+If the queue is empty, add at the rear. Also change the front to point to the new node created.
+Otherwise traverse using two pointers prev and pres.
+Compare the priority of the present node with that of the new node to decide whether we have found 
+the position to insert. 
+Observe the relational operator >=. Would this work if the operator is changed to > ?
+while(pres != NULL && get_priority(&pres->jobx_) >= get_priority(&temp->jobx_))
+Once  the location is found, check whether the insertion is in the beginning or the end or anywhere in 
+between. 
+Make the changes in the queue as well as the new node added.
+
+[Embedded Image / Diagram OCR Text]:
+—_
+0 PRIORITY QUEUE : ORDERED LIST IMPLEMENTATION | Where to use: After “Enque” on Page 4 (L103)
+A. STRUCTURE (Non-increasing priority) B. ENQUEUE EXAMPLE (Insert 45, p=45) C. DEQUEUE EXAMPLE D. INSERTION POSITIONS
+* Higher pririty at the front. Stop 1: Start st front (Romove Highest prority lnsrt st bagining (now highest)
+Bafore decueue: & _,wu.
+"gm ’T' 4’ £ ES = =
+Les) L] L L) 50 w0l | ™
+L (p50) |6=30)] |@=200| | mi0) Insert in middle
+Step 2:45 < 50 but 45 2 40 = inset between 40 and 50 T =1 = =i
+N A e NULL After dequeue (remove 50): front.
+i (= Insert at end (new lowest)
+Eoch node e two bowes: == =] gyt = oL
+‘ [ value obNo, priority) ] [+ pointer to next node 1 S S i front o
+e i e e 731 N e ey E. COMPLEXTY sumMMARY
+] et g Y Oparaion Worst Cazo
+s e 00 ey wmre et
+Ooauesn ramors st |0 - ramovs o ront
+P R e e T AT |ty o
+| Wherstouse: Insrton logc explanation o Page 4 (186-L112) | % Wheretouse: Do explantion on Poge 6 Q125-1138) | Lot o=
+* o ths inlmeration, . memary shocation shack.
+@ PRIORITY QUEUE : UNORDERED ARRAY IMPLEMENTATION | Where to use Afer "Enquee” on Page 4 (82) |
+A. ARRAY REPRESENTATION (No order) . DEQUEUE EXAMPLE (Remove hghostprioy) D. SHIFTING VISUAL (Removing index 1)
+e T G e e LY Step 1 Find Highest pririty (raverse aray) Betors: e e
+avray+ [ 10120 | 10250 | 103,10 [ 10430 o838 | - [ - | - | - dex: 0 1 i s s AR e . e
+s i T 10310 ][ 10430 |[ 1063 |[ 10740 | aray+ [ 10120 | 10250 | 10310 | 10830 | 108,35 | 10740
+B, ENQUEUE EXAMPLE (nsert 107, ped0) ma.pos = 1 priority 50)
+Before enqueve: Step 2: Remove clement at max.pos and shit left At ramoving idex 1 (102,501
+e = £ compLEaTY suMMARY
+- [, Y T N v Worst o
+[ 10120 || 10250 |[ 103,10 |[ 10430 [ 10635 [ 10740 | Array [ 10120 | 10310 | 10430 | 10635 [ 1070 | -
+Attr onqueue (atindx Jrees Encuve ) o~ st ana
+e R N T S P T e ndox: 0 ' 2 3 © s Oxcioe romov gt | 00 - s+ it
+Array ~ [ 101,20 | 10250 | 10310 | 104,30 10635 (10740 - | - | - Array [ 101,20 | 103,10 [ 10430 || 108,35 | 10740 | - empty om
+n=6 Removed job: (102,50) nE L sl
+4 Where to use: Enqueus explanation on Page 4 (L82-L90) | Where to use: Dequeue explanation on Page 5 (L104-L136) | Where to use: Aftr effciency discussion (Page 6, L144-L148)
+e PRIORITY QUEUE : ORDERED ARRAY IMPLEMENTATION Where to use: After “Enquee” on Page 4 (L82) J
+A ARRAY REPRESENTATION (Non-decreasing priait . DEQUEUE EXAMPLE (Romove highost pricrit) D. INSERTION CASES E. SHIFTING VISUAL (Ouring nsertion 106.38) . COMPLEXITY SUMMARY
+Cowest oy a . ighast o g Ottre e shrmert g o
+[rp— st
+iar 50" A M L B a8 45 in R
+Amay = | 10110 | 10220 | 10325 104,30 | 105.40 = E oo L i1 . A (=] st el R s ol (103,25 108, e
+nes Amay + | 101,20 | 103,25 | 106,35 | 10430 | 105.40 =i e Ay [ 99U0 62204 Y0025} Y04S0 | 050 ‘Enqueve (nsert) () - shift many cloments
+5. ENQUEUE EXAMPLE (raet 108, pe25) == I L B [emr—"
+S .t et rm g ) e Ee———
+= Dl e . F A AN ‘Docqueue (remave last element): v 102201025 o110 o025 s, 110 0nzs 10835 e B b gie i de b gy om
+e+ [ tovao 1020 | tonzs || toaso | 10840 b Fo T sl : T | o
+R ey Ay~ [Tou0 | 10220 | wesas es0 | - |} il i
+ot T L [ YOV T
+e+ [1ovao [ woazo [ wons | toas |[10a30 | 080 Ramoved b (10540 se B || oo 01 g b s | ———
+| [rons s Ea da iy i W s Ao fcioncydcussion
+1 Where 10 s Encuese exlonation on Page -5 L83-L171) | Where to use: Daqueus explanation on Page § (L119-L136) ary [0zl ionzs[wes[ioesofwedd] | | (Pogo s, L1z7-L1a1)
+LEGEND (For alldiagrams) NOTATION USED, EXAMPLE 08 . IMPORTANT NOTE
+jobio Unicue job number . | “@- i i
+Next Higher numeric value i /.
+[ [ 1] = 2t e \ i o o
+EtioTpront) NULL: End of ot . Namber o amarts n he gty cvve Example: priority 50 > priority 20
+
+----------------------------------------
+
+===== Page 7 =====
+
+void enque(queue_t *ptr_queue, job_t *ptr_job)
+{
+if(! is_full(ptr_queue))
+{
+node_t* temp = create_node(ptr_job);
+// empty queue 
+if(ptr_queue->rear_ == NULL)
+{
+ptr_queue->front_ = temp;
+ptr_queue->rear_ = temp;
+temp->next_ = NULL;
+}
+else // find the location to insert
+{
+node_t* prev = NULL; node_t* pres = ptr_queue->front_;
+while(pres != NULL && 
+get_priority(&pres->jobx_) >= get_priority(&temp->jobx_))
+{
+prev = pres;
+pres = pres->next_;
+}
+if(prev == NULL)
+{
+ptr_queue->front_ = temp;
+}
+else
+
+----------------------------------------
+
+===== Page 8 =====
+
+{
+prev->next_ = temp;
+if(pres == NULL)
+{
+ptr_queue->rear_ = temp;
+}
+}
+temp->next_ = pres;
+}
+}
+else 
+{
+printf("queue full; cannot push\n");
+exit(1);
+}
+}
+Deque :
+As the priority queue is in an ordered list, the deque is straight forward. Remove the node to which front 
+points to.
+If the queue is empty, exit the program.
+Otherwise, copy the pointer to the first node to a local variable.
+Copy the job to a local variable.
+Change front to point to the node after the first.
+If front becomes NULL, change the rear too.
+Release the memory of the first node whose pointer has been copied.
+
+----------------------------------------
+
+===== Page 9 =====
+
+Returned the job held in a local variable.
+job_t deque(queue_t *ptr_queue)
+{
+if(! is_empty(ptr_queue))
+{
+job_t jobx;  node_t* temp = ptr_queue->front_;
+jobx = temp->jobx_;
+ptr_queue->front_ = temp->next_;
+if(ptr_queue->front_ == NULL)
+{
+ptr_queue->rear_ = NULL;
+}
+free(temp);
+
+[Embedded Image / Diagram OCR Text]:
+—_
+0 PRIORITY QUEUE : ORDERED LIST IMPLEMENTATION | Where to use: After “Enque” on Page 4 (L103)
+A. STRUCTURE (Non-increasing priority) B. ENQUEUE EXAMPLE (Insert 45, p=45) C. DEQUEUE EXAMPLE D. INSERTION POSITIONS
+* Higher pririty at the front. Stop 1: Start st front (Romove Highest prority lnsrt st bagining (now highest)
+Bafore decueue: & _,wu.
+"gm ’T' 4’ £ ES = =
+Les) L] L L) 50 w0l | ™
+L (p50) |6=30)] |@=200| | mi0) Insert in middle
+Step 2:45 < 50 but 45 2 40 = inset between 40 and 50 T =1 = =i
+N A e NULL After dequeue (remove 50): front.
+i (= Insert at end (new lowest)
+Eoch node e two bowes: == =] gyt = oL
+‘ [ value obNo, priority) ] [+ pointer to next node 1 S S i front o
+e i e e 731 N e ey E. COMPLEXTY sumMMARY
+] et g Y Oparaion Worst Cazo
+s e 00 ey wmre et
+Ooauesn ramors st |0 - ramovs o ront
+P R e e T AT |ty o
+| Wherstouse: Insrton logc explanation o Page 4 (186-L112) | % Wheretouse: Do explantion on Poge 6 Q125-1138) | Lot o=
+* o ths inlmeration, . memary shocation shack.
+@ PRIORITY QUEUE : UNORDERED ARRAY IMPLEMENTATION | Where to use Afer "Enquee” on Page 4 (82) |
+A. ARRAY REPRESENTATION (No order) . DEQUEUE EXAMPLE (Remove hghostprioy) D. SHIFTING VISUAL (Removing index 1)
+e T G e e LY Step 1 Find Highest pririty (raverse aray) Betors: e e
+avray+ [ 10120 | 10250 | 103,10 [ 10430 o838 | - [ - | - | - dex: 0 1 i s s AR e . e
+s i T 10310 ][ 10430 |[ 1063 |[ 10740 | aray+ [ 10120 | 10250 | 10310 | 10830 | 108,35 | 10740
+B, ENQUEUE EXAMPLE (nsert 107, ped0) ma.pos = 1 priority 50)
+Before enqueve: Step 2: Remove clement at max.pos and shit left At ramoving idex 1 (102,501
+e = £ compLEaTY suMMARY
+- [, Y T N v Worst o
+[ 10120 || 10250 |[ 103,10 |[ 10430 [ 10635 [ 10740 | Array [ 10120 | 10310 | 10430 | 10635 [ 1070 | -
+Attr onqueue (atindx Jrees Encuve ) o~ st ana
+e R N T S P T e ndox: 0 ' 2 3 © s Oxcioe romov gt | 00 - s+ it
+Array ~ [ 101,20 | 10250 | 10310 | 104,30 10635 (10740 - | - | - Array [ 101,20 | 103,10 [ 10430 || 108,35 | 10740 | - empty om
+n=6 Removed job: (102,50) nE L sl
+4 Where to use: Enqueus explanation on Page 4 (L82-L90) | Where to use: Dequeue explanation on Page 5 (L104-L136) | Where to use: Aftr effciency discussion (Page 6, L144-L148)
+e PRIORITY QUEUE : ORDERED ARRAY IMPLEMENTATION Where to use: After “Enquee” on Page 4 (L82) J
+A ARRAY REPRESENTATION (Non-decreasing priait . DEQUEUE EXAMPLE (Romove highost pricrit) D. INSERTION CASES E. SHIFTING VISUAL (Ouring nsertion 106.38) . COMPLEXITY SUMMARY
+Cowest oy a . ighast o g Ottre e shrmert g o
+[rp— st
+iar 50" A M L B a8 45 in R
+Amay = | 10110 | 10220 | 10325 104,30 | 105.40 = E oo L i1 . A (=] st el R s ol (103,25 108, e
+nes Amay + | 101,20 | 103,25 | 106,35 | 10430 | 105.40 =i e Ay [ 99U0 62204 Y0025} Y04S0 | 050 ‘Enqueve (nsert) () - shift many cloments
+5. ENQUEUE EXAMPLE (raet 108, pe25) == I L B [emr—"
+S .t et rm g ) e Ee———
+= Dl e . F A AN ‘Docqueue (remave last element): v 102201025 o110 o025 s, 110 0nzs 10835 e B b gie i de b gy om
+e+ [ tovao 1020 | tonzs || toaso | 10840 b Fo T sl : T | o
+R ey Ay~ [Tou0 | 10220 | wesas es0 | - |} il i
+ot T L [ YOV T
+e+ [1ovao [ woazo [ wons | toas |[10a30 | 080 Ramoved b (10540 se B || oo 01 g b s | ———
+| [rons s Ea da iy i W s Ao fcioncydcussion
+1 Where 10 s Encuese exlonation on Page -5 L83-L171) | Where to use: Daqueus explanation on Page § (L119-L136) ary [0zl ionzs[wes[ioesofwedd] | | (Pogo s, L1z7-L1a1)
+LEGEND (For alldiagrams) NOTATION USED, EXAMPLE 08 . IMPORTANT NOTE
+jobio Unicue job number . | “@- i i
+Next Higher numeric value i /.
+[ [ 1] = 2t e \ i o o
+EtioTpront) NULL: End of ot . Namber o amarts n he gty cvve Example: priority 50 > priority 20
+
+----------------------------------------
+
+===== Page 10 =====
+
+return jobx;
+}
+else 
+{
+printf("queue empty; cannot pop\n");
+exit(1);
+}
+}
+Efficiency of operations :
+Enque :  This requires walking through the list to find the node with the highest priority and then insert. 
+So, the number of operations in the worst case is proportional to the number of nodes in the queue 
+Deque :. This requires a few operations. We remove from the front without considering the priority.
+
+----------------------------------------
+
+===== Page 11 =====
