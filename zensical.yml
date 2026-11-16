@@ -62,8 +62,15 @@ markdown_extensions:
 nav:
   - HOME: index.md
   - UNIT 1:
-      - "Detailed Walkthrough": unit1_walkthrough.md
-      - "Example Programs": unit1/unit1_complete_walkthrough.md
+      - "Course Overview & ADT": unit1/theory/unit1_01_course_overview_adt.md
+      - "Memory Allocation": unit1/theory/unit1_02_memory_allocation.md
+      - "Dynamic Memory Functions": unit1/theory/unit1_03_dynamic_memory_functions.md
+      - "SLL - Node Structure": unit1/theory/unit1_04_sll_node_structure.md
+      - "SLL - Insertion": unit1/theory/unit1_05_sll_insertion.md
+      - "SLL - Deletion": unit1/theory/unit1_06_sll_deletion.md
+      - "Doubly Linked List": unit1/theory/unit1_07_doubly_linked_list.md
+      - "Circular Linked List": unit1/theory/unit1_08_circular_linked_list.md
+      - "Anchor Programs": unit1/theory/unit1_09_anchor_programs.md
   - UNIT 2:
       - "Detailed Walkthrough": unit2_walkthrough.md
       - "Example Programs": unit2/unit2_complete_walkthrough.md
