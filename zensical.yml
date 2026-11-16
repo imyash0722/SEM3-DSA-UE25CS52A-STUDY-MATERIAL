@@ -63,52 +63,16 @@ nav:
   - HOME: index.md
   - UNIT 1:
       - "Detailed Walkthrough": unit1_walkthrough.md
-      - "Functions & Pointers": unit1/unit_1_functions_and_pointers.md
-      - "Arrays": unit1/unit_1_arrays.md
-      - "Structures": unit1/unit_1_structures.md
-      - "Dynamic Memory": unit1/unit_1_dynamic_memory_management.md
-      - "ADTs": unit1/unit_1_abstract_data_types_adt.md
-      - "Linked Lists": unit1/unit_1_lists_and_linked_lists.md
-      - "Ordered Lists": unit1/unit_1_ordered_lists.md
-      - "Header Node Lists": unit1/unit_1_list_with_header_node.md
-      - "Stacks": unit1/unit_1_stack.md
-      - "Stack Applications": unit1/unit_1_stack_applications.md
-      - "Skiplists & Multilists": unit1/unit_1_skiplist_and_multilist.md
-      - "Example Programs": unit1_02_example_programs.md
+      - "Example Programs": unit1/unit1_complete_walkthrough.md
   - UNIT 2:
       - "Detailed Walkthrough": unit2_walkthrough.md
-      - "Circular Linked Lists": unit2/21_circular_linked_list.md
-      - "Doubly Linked Lists": unit2/22_doubly_linked_list.md
-      - "Queue (Linked List)": unit2/23_queue_linked_list_implementation.md
-      - "Queue (Circular Array)": unit2/24_queue_circular_array_implementation.md
-      - "Priority Queue Concepts": unit2/25_priority_queue.md
-      - "PQ Implementations": unit2/26_priority_queue_implementations.md
-      - "Deque": unit2/27_deque_double_ended_queue.md
-      - "Round Robin Scheduling": unit2/28_round_robin_scheduling_experiential_learning.md
-      - "Example Programs": unit2_example_programs.md
+      - "Example Programs": unit2/unit2_complete_walkthrough.md
   - UNIT 3:
       - "Detailed Walkthrough": unit3_walkthrough.md
-      - "Trees & Binary Trees": unit3/31_general_trees_and_binary_trees.md
-      - "Binary Trees & BST": unit3/32_binary_trees.md
-      - "Array Implementation": unit3/33_array_implementation_of_binary_tree.md
-      - "Expression Trees": unit3/34_expression_trees.md
-      - "Threaded Binary Trees": unit3/35_threaded_binary_trees.md
-      - "Heaps": unit3/36_heaps.md
-      - "AVL Trees": unit3/37_avl_trees.md
-      - "Splay Trees": unit3/38_splay_trees.md
-      - "Graphs": unit3/39_graphs.md
-      - "Example Programs": unit3_example_programs.md
+      - "Example Programs": unit3/unit3_complete_walkthrough.md
   - UNIT 4:
       - "Detailed Walkthrough": unit4_walkthrough.md
-      - "Graph Representations": unit4/41_graph_representations_and_traversals.md
-      - "Graph Traversals (DFS/BFS)": unit4/42_graph_traversals.md
-      - "Connected Components": unit4/43_connected_components.md
-      - "Path Finding": unit4/44_path_finding.md
-      - "Hash Tables": unit4/45_hash_tables.md
-      - "Hash Implementations": unit4/46_hash_table_implementations.md
-      - "Tries": unit4/47_tries_prefix_trees.md
-      - "Suffix Trees": unit4/48_suffix_trees.md
-      - "Example Programs": unit4_example_programs.md
+      - "Example Programs": unit4/unit4_complete_walkthrough.md
   - REF: INDEX.md
 
 copyright: "Data Structures & Applications (UE25CS52A) Study Guide | Based on Tenenbaum & Kruse"
