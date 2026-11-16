@@ -62,6 +62,7 @@ markdown_extensions:
 nav:
   - HOME: index.md
   - UNIT 1:
+      - "Detailed Walkthrough": unit1_walkthrough.md
       - "Functions & Pointers": unit1/unit_1_functions_and_pointers.md
       - "Arrays": unit1/unit_1_arrays.md
       - "Structures": unit1/unit_1_structures.md
@@ -75,6 +76,7 @@ nav:
       - "Skiplists & Multilists": unit1/unit_1_skiplist_and_multilist.md
       - "Example Programs": unit1_02_example_programs.md
   - UNIT 2:
+      - "Detailed Walkthrough": unit2_walkthrough.md
       - "Circular Linked Lists": unit2/21_circular_linked_list.md
       - "Doubly Linked Lists": unit2/22_doubly_linked_list.md
       - "Queue (Linked List)": unit2/23_queue_linked_list_implementation.md
@@ -85,6 +87,7 @@ nav:
       - "Round Robin Scheduling": unit2/28_round_robin_scheduling_experiential_learning.md
       - "Example Programs": unit2_example_programs.md
   - UNIT 3:
+      - "Detailed Walkthrough": unit3_walkthrough.md
       - "Trees & Binary Trees": unit3/31_general_trees_and_binary_trees.md
       - "Binary Trees & BST": unit3/32_binary_trees.md
       - "Array Implementation": unit3/33_array_implementation_of_binary_tree.md
@@ -96,6 +99,7 @@ nav:
       - "Graphs": unit3/39_graphs.md
       - "Example Programs": unit3_example_programs.md
   - UNIT 4:
+      - "Detailed Walkthrough": unit4_walkthrough.md
       - "Graph Representations": unit4/41_graph_representations_and_traversals.md
       - "Graph Traversals (DFS/BFS)": unit4/42_graph_traversals.md
       - "Connected Components": unit4/43_connected_components.md
