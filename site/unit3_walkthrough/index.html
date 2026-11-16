@@ -16,10 +16,6 @@
       
       
       
-        <link rel="prev" href="../unit2/theory/unit2_11_anchor_programs/">
-      
-      
-        <link rel="next" href="../unit3/unit3_complete_walkthrough.md">
       
       
         
@@ -30,7 +26,7 @@
     
     
       
-        <title>Detailed Walkthrough - Data Structures & Applications Exam Prep — UE25CS52A</title>
+        <title>Unit 3: Trees, Binary Search Trees, Heaps, AVL, Splay Trees, Graphs - Data Structures & Applications Exam Prep — UE25CS52A</title>
       
     
     
@@ -118,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Detailed Walkthrough
+              Unit 3: Trees, Binary Search Trees, Heaps, AVL, Splay Trees, Graphs
             
           </span>
         </div>
@@ -253,16 +249,14 @@
   
   
   
-    
-  
   
     
       
     
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="././" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../unit3/theory/unit3_01_trees_binary_trees/" class="md-tabs__link">
           
   
   UNIT 3
@@ -284,7 +278,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../unit4_walkthrough/" class="md-tabs__link">
+        <a href="../unit4/theory/unit4_01_hashing/" class="md-tabs__link">
           
   
   UNIT 4
@@ -1075,31 +1069,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -1117,7 +1108,7 @@
           </label>
         
         
-          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
             <label class="md-nav__title" for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
               
@@ -1131,43 +1122,17 @@
                   
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Detailed Walkthrough
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="././" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../unit3/theory/unit3_01_trees_binary_trees/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Detailed Walkthrough
+  Trees & Binary Trees
 
     
   </span>
@@ -1175,910 +1140,6 @@
   
 
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#unit-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        📚 Unit Overview
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#trees-fundamental-concepts" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        🌳 Trees - Fundamental Concepts
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🌳 Trees - Fundamental Concepts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-is-a-tree" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        What is a Tree?
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tree-terminology-genealogy-botany" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Tree Terminology (Genealogy + Botany)
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Properties
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#binary-trees" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        🌲 Binary Trees
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🌲 Binary Trees">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definition" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Definition
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#node-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Node Structure
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tree-traversals-the-three-orders" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        🔄 Tree Traversals - The Three Orders
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔄 Tree Traversals - The Three Orders">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-inorder-left-root-right" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        1. Inorder (Left → Root → Right)
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-preorder-root-left-right" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        2. Preorder (Root → Left → Right)
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-postorder-left-right-root" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        3. Postorder (Left → Right → Root)
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#when-to-use-which" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        When to Use Which?
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#binary-search-tree-bst" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        🔍 Binary Search Tree (BST)
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔍 Binary Search Tree (BST)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#bst-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        BST Property
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#operations-all-oh-where-h-height" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Operations - All O(h) where h = height
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Operations - All O(h) where h = height">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#search" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Search
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#insert" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Insert
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-4-cases" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Delete (4 Cases)
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bst-implementation-2-array-based" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        📊 BST Implementation 2: Array-Based
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📊 BST Implementation 2: Array-Based">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Structure
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#key-differences-from-dynamic-version" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Key Differences from Dynamic Version
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#insert_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Insert
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#expression-trees" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        🌿 Expression Trees
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🌿 Expression Trees">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#concept" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Concept
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#build-from-postfix" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Build from Postfix
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#evaluate-expression-tree" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Evaluate Expression Tree
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#threaded-binary-trees" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        🧵 Threaded Binary Trees
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🧵 Threaded Binary Trees">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Problem
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#solution-threads" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Solution: Threads
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#structure_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Structure
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inorder-traversal-iterative-no-recursion" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Inorder Traversal (Iterative - No Recursion!)
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#heaps" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        📦 Heaps
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📦 Heaps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definition-max-heap" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Definition (Max-Heap)
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#array-representation-1-indexed" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Array Representation (1-indexed)
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#structure_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Structure
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#core-operations" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Core Operations
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Core Operations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#heapify-fix-subtree-at-position-i" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Heapify (Fix subtree at position i)
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#build-heap-on" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Build Heap (O(n))
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#insert-olog-n" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Insert (O(log n))
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-max-olog-n" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Delete Max (O(log n))
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#heapsort-on-log-n" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Heapsort (O(n log n))
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#priority-queue-using-heap" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Priority Queue using Heap
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#avl-trees-balanced-bst" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        ⚖️ AVL Trees (Balanced BST)
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚖️ AVL Trees (Balanced BST)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problem_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Problem
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#avl-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        AVL Property
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-rotation-cases" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        4 Rotation Cases
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#right-rotation-ll-case" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Right Rotation (LL Case)
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#left-rotation-rr-case" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Left Rotation (RR Case)
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#double-rotations" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Double Rotations
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#splay-trees-self-adjusting" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        🎯 Splay Trees (Self-Adjusting)
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🎯 Splay Trees (Self-Adjusting)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#concept_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Concept
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#splaying-cases" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Splaying Cases
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#applications" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Applications
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graphs" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        🌐 Graphs
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🌐 Graphs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definition_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Definition
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#representations" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Representations
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Representations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-adjacency-matrix" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        1. Adjacency Matrix
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-adjacency-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        2. Adjacency List
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-graph" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Example Graph
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#traversals" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Traversals
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Traversals">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#bfs-breadth-first-search-uses-queue" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        BFS (Breadth-First Search) - Uses Queue
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dfs-depth-first-search-uses-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        DFS (Depth-First Search) - Uses Stack
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#graph-algorithms" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Graph Algorithms
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Graph Algorithms">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dijkstras-shortest-path-weighted-non-negative" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Dijkstra's Shortest Path (Weighted, Non-negative)
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#prims-mst-minimum-spanning-tree" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Prim's MST (Minimum Spanning Tree)
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#anchor-programs-for-unit-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        🎯 Anchor Programs for Unit 3
-      </span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🎯 Anchor Programs for Unit 3">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#program-1-complete-bst-dynamic" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Program 1: Complete BST (Dynamic)
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#program-2-heap-with-priority-queue" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Program 2: Heap with Priority Queue
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#program-3-graph-bfsdfs" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Program 3: Graph BFS/DFS
-      </span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-takeaways-for-unit-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        📝 Key Takeaways for Unit 3
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2091,14 +1152,230 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit3/unit3_complete_walkthrough.md" class="md-nav__link">
+      <a href="../unit3/theory/unit3_02_binary_trees_bst/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Example Programs
+  Binary Trees & BST
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit3/theory/unit3_03_bst_array_implementation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Array Implementation
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit3/theory/unit3_04_expression_trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Expression Trees
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit3/theory/unit3_05_threaded_binary_trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Threaded Binary Trees
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit3/theory/unit3_06_heaps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Heaps
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit3/theory/unit3_07_avl_trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  AVL Trees
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit3/theory/unit3_08_splay_trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Splay Trees
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit3/theory/unit3_09_graphs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Graphs
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit3/theory/unit3_10_anchor_programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anchor Programs
 
     
   </span>
@@ -2179,14 +1456,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit4_walkthrough/" class="md-nav__link">
+      <a href="../unit4/theory/unit4_01_hashing/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Detailed Walkthrough
+  Hashing
 
     
   </span>
@@ -2206,14 +1483,122 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit4/unit4_complete_walkthrough.md" class="md-nav__link">
+      <a href="../unit4/theory/unit4_02_collision_resolution/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Example Programs
+  Collision Resolution
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit4/theory/unit4_03_tries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tries
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit4/theory/unit4_04_suffix_trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Suffix Trees
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit4/theory/unit4_05_advanced_graph_algorithms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Advanced Graph Algorithms
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit4/theory/unit4_06_anchor_programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anchor Programs
 
     
   </span>
@@ -4183,44 +3568,6 @@
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../unit2/theory/unit2_11_anchor_programs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Anchor Programs">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Anchor Programs
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../unit3/unit3_complete_walkthrough.md" class="md-footer__link md-footer__link--next" aria-label="Next: Example Programs">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Example Programs
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">

@@ -85,11 +85,23 @@ nav:
       - "Deque": unit2/theory/unit2_11_deque.md
       - "Anchor Programs": unit2/theory/unit2_11_anchor_programs.md
   - UNIT 3:
-      - "Detailed Walkthrough": unit3_walkthrough.md
-      - "Example Programs": unit3/unit3_complete_walkthrough.md
+      - "Trees & Binary Trees": unit3/theory/unit3_01_trees_binary_trees.md
+      - "Binary Trees & BST": unit3/theory/unit3_02_binary_trees_bst.md
+      - "Array Implementation": unit3/theory/unit3_03_bst_array_implementation.md
+      - "Expression Trees": unit3/theory/unit3_04_expression_trees.md
+      - "Threaded Binary Trees": unit3/theory/unit3_05_threaded_binary_trees.md
+      - "Heaps": unit3/theory/unit3_06_heaps.md
+      - "AVL Trees": unit3/theory/unit3_07_avl_trees.md
+      - "Splay Trees": unit3/theory/unit3_08_splay_trees.md
+      - "Graphs": unit3/theory/unit3_09_graphs.md
+      - "Anchor Programs": unit3/theory/unit3_10_anchor_programs.md
   - UNIT 4:
-      - "Detailed Walkthrough": unit4_walkthrough.md
-      - "Example Programs": unit4/unit4_complete_walkthrough.md
+      - "Hashing": unit4/theory/unit4_01_hashing.md
+      - "Collision Resolution": unit4/theory/unit4_02_collision_resolution.md
+      - "Tries": unit4/theory/unit4_03_tries.md
+      - "Suffix Trees": unit4/theory/unit4_04_suffix_trees.md
+      - "Advanced Graph Algorithms": unit4/theory/unit4_05_advanced_graph_algorithms.md
+      - "Anchor Programs": unit4/theory/unit4_06_anchor_programs.md
   - REF: INDEX.md
 
 copyright: "Data Structures & Applications (UE25CS52A) Study Guide | Based on Tenenbaum & Kruse"
