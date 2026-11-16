@@ -1,0 +1,2331 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete study guide for DSA (UE25CS52A) covering Units 1-4 with code examples, algorithms, and exam patterns">
+      
+      
+        <meta name="author" content="Course Prep Team">
+      
+      
+        <link rel="canonical" href="https://imyash0722.github.io/SEM3-DSA-UE25CS52A-STUDY-MATERIAL/unit1/theory/unit1_03_dynamic_memory_functions/">
+      
+      
+      
+        <link rel="prev" href="../unit1_02_memory_allocation/">
+      
+      
+        <link rel="next" href="../unit1_04_sll_node_structure/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.73">
+    
+    
+      
+        <title>Dynamic Memory Functions - Data Structures & Applications Exam Prep — UE25CS52A</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Data Structures &amp; Applications Exam Prep — UE25CS52A" class="md-header__button md-logo" aria-label="Data Structures & Applications Exam Prep — UE25CS52A" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Data Structures & Applications Exam Prep — UE25CS52A
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dynamic Memory Functions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/imyash0722/SEM3-DSA-UE25CS52A-STUDY-MATERIAL" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  HOME
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../unit1_01_course_overview_adt/" class="md-tabs__link">
+          
+  
+  UNIT 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../unit2/theory/unit2_01_stack_array/" class="md-tabs__link">
+          
+  
+  UNIT 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../unit3/theory/unit3_01_trees_binary_trees/" class="md-tabs__link">
+          
+  
+  UNIT 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../unit4/theory/unit4_01_hashing/" class="md-tabs__link">
+          
+  
+  UNIT 4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Data Structures &amp; Applications Exam Prep — UE25CS52A" class="md-nav__button md-logo" aria-label="Data Structures & Applications Exam Prep — UE25CS52A" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    Data Structures & Applications Exam Prep — UE25CS52A
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/imyash0722/SEM3-DSA-UE25CS52A-STUDY-MATERIAL" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOME
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  UNIT 1
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  UNIT 1
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit1_01_course_overview_adt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Course Overview & ADT
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit1_02_memory_allocation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Memory Allocation
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dynamic Memory Functions
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dynamic Memory Functions
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-memory-functions-complete-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        🔧 Dynamic Memory Functions - Complete Reference
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Dynamic Memory Functions - Complete Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#malloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        malloc()
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        calloc()
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        realloc()
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#free" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        free()
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anchor-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        🎯 Anchor Programs
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Anchor Programs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#program-1-dynamic-memory-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Program 1: Dynamic Memory Demo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pointer-arithmetic-with-dynamic-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        🔗 Pointer Arithmetic with Dynamic Memory
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        📝 Key Takeaways
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Key Takeaways">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Best Practices:
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-test-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        🧪 Self-Test Questions
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit1_04_sll_node_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  SLL - Node Structure
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit1_05_sll_insertion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  SLL - Insertion
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit1_06_sll_deletion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  SLL - Deletion
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit1_07_doubly_linked_list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Doubly Linked List
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit1_08_circular_linked_list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Circular Linked List
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit1_09_anchor_programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anchor Programs
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  UNIT 2
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  UNIT 2
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit2/theory/unit2_01_stack_array/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Stack - Array
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit2/theory/unit2_02_stack_linked_list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Stack - Linked List
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit2/theory/unit2_03_stack_applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Stack Applications
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit2/theory/unit2_04_queue_linked_list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Queue - Linked List
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit2/theory/unit2_05_circular_array_queue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Circular Array Queue
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit2/theory/unit2_06_priority_queue_concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Priority Queue Concepts
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit2/theory/unit2_07_pq_unordered_list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  PQ - Unordered List
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit2/theory/unit2_08_pq_ordered_list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  PQ - Ordered List
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit2/theory/unit2_09_pq_unordered_array/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  PQ - Unordered Array
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit2/theory/unit2_10_pq_ordered_array/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  PQ - Ordered Array
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit2/theory/unit2_11_deque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Deque
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit2/theory/unit2_11_anchor_programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anchor Programs
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  UNIT 3
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  UNIT 3
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit3/theory/unit3_01_trees_binary_trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Trees & Binary Trees
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit3/theory/unit3_02_binary_trees_bst/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Binary Trees & BST
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit3/theory/unit3_03_bst_array_implementation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Array Implementation
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit3/theory/unit3_04_expression_trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Expression Trees
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit3/theory/unit3_05_threaded_binary_trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Threaded Binary Trees
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit3/theory/unit3_06_heaps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Heaps
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit3/theory/unit3_07_avl_trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  AVL Trees
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit3/theory/unit3_08_splay_trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Splay Trees
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit3/theory/unit3_09_graphs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Graphs
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit3/theory/unit3_10_anchor_programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anchor Programs
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  UNIT 4
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  UNIT 4
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit4/theory/unit4_01_hashing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Hashing
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit4/theory/unit4_02_collision_resolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Collision Resolution
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit4/theory/unit4_03_tries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tries
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit4/theory/unit4_04_suffix_trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Suffix Trees
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit4/theory/unit4_05_advanced_graph_algorithms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Advanced Graph Algorithms
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unit4/theory/unit4_06_anchor_programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anchor Programs
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-memory-functions-complete-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        🔧 Dynamic Memory Functions - Complete Reference
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Dynamic Memory Functions - Complete Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#malloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        malloc()
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        calloc()
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        realloc()
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#free" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        free()
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anchor-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        🎯 Anchor Programs
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Anchor Programs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#program-1-dynamic-memory-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Program 1: Dynamic Memory Demo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pointer-arithmetic-with-dynamic-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        🔗 Pointer Arithmetic with Dynamic Memory
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        📝 Key Takeaways
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Key Takeaways">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Best Practices:
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-test-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        🧪 Self-Test Questions
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+  
+  
+
+
+<h1 id="unit-1-dynamic-memory-functions-deep-dive-anchor-programs">Unit 1: Dynamic Memory Functions - Deep Dive &amp; Anchor Programs<a class="headerlink" href="#unit-1-dynamic-memory-functions-deep-dive-anchor-programs" title="Permanent link">&para;</a></h1>
+<h2 id="dynamic-memory-functions-complete-reference">🔧 Dynamic Memory Functions - Complete Reference<a class="headerlink" href="#dynamic-memory-functions-complete-reference" title="Permanent link">&para;</a></h2>
+<h3 id="malloc">malloc()<a class="headerlink" href="#malloc" title="Permanent link">&para;</a></h3>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="nf">malloc</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
+</span></code></pre></div>
+- Takes number of bytes to allocate
+- Use <code>sizeof</code> to determine size of a type
+- Returns <code>void*</code> (can be assigned to any pointer)
+- Returns <code>NULL</code> if no memory available</p>
+<p><strong>Example: Allocate space for 100 integers</strong>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"out of memory</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1">// Access as p[0], p[1], ..., p[99] or *p, *(p+1), ...</span>
+</span></code></pre></div></p>
+<h3 id="calloc">calloc()<a class="headerlink" href="#calloc" title="Permanent link">&para;</a></h3>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="nf">calloc</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">nitem</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
+</span></code></pre></div>
+- Allocates memory and <strong>initializes to zero</strong>
+- Requires two arguments: number of items and size of each item</p>
+<p><strong>Example:</strong>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">calloc</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span><span class="w"> </span><span class="c1">// 100 ints, all zeros</span>
+</span></code></pre></div></p>
+<h3 id="realloc">realloc()<a class="headerlink" href="#realloc" title="Permanent link">&para;</a></h3>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="nf">realloc</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">new_size</span><span class="p">);</span>
+</span></code></pre></div>
+- Resizes previously allocated block
+- Two arguments: pointer to existing block, new size</p>
+<p><strong>Example:</strong>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">ip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1">// ... later need twice as much ...</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">ip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">realloc</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span></code></pre></div></p>
+<h3 id="free">free()<a class="headerlink" href="#free" title="Permanent link">&para;</a></h3>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">free</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">);</span>
+</span></code></pre></div>
+- Deallocates memory allocated by malloc/calloc/realloc
+- Takes a pointer as argument</p>
+<hr />
+<h2 id="anchor-programs">🎯 Anchor Programs<a class="headerlink" href="#anchor-programs" title="Permanent link">&para;</a></h2>
+<h3 id="program-1-dynamic-memory-demo">Program 1: Dynamic Memory Demo<a class="headerlink" href="#program-1-dynamic-memory-demo" title="Permanent link">&para;</a></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// memory_demo.c - Dynamic Memory Allocation Demo</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"=== Dynamic Memory Demo ===</span><span class="se">\n\n</span><span class="s">"</span><span class="p">);</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="c1">// 1. malloc</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"1. malloc():</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="mi">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">"Failed</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Allocated 5 ints: "</span><span class="p">);</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">"%d "</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">    </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w">  </span><span class="c1">// Good practice: set to NULL after free</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">    </span><span class="c1">// 2. calloc (zero-initialized)</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">2. calloc():</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">calloc</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Zero-initialized: "</span><span class="p">);</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">"%d "</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="w">    </span><span class="c1">// 3. realloc</span>
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">3. realloc():</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a><span class="w">    </span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+</span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Before realloc: "</span><span class="p">);</span>
+</span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">"%d "</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span><span id="__span-7-34"><a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a><span class="w">    </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">realloc</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a><span class="w">    </span><span class="n">r</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">After realloc:  "</span><span class="p">);</span>
+</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">"%d "</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</span><span id="__span-7-39"><a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a><span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">r</span><span class="p">);</span>
+</span><span id="__span-7-40"><a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a>
+</span><span id="__span-7-41"><a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a><span class="w">    </span><span class="c1">// 4. Structure allocation</span>
+</span><span id="__span-7-42"><a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">4. Structure allocation:</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</span><span id="__span-7-43"><a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">student</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-44"><a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">name</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+</span><span id="__span-7-45"><a id="__codelineno-7-45" name="__codelineno-7-45" href="#__codelineno-7-45"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">roll</span><span class="p">;</span>
+</span><span id="__span-7-46"><a id="__codelineno-7-46" name="__codelineno-7-46" href="#__codelineno-7-46"></a><span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">marks</span><span class="p">;</span>
+</span><span id="__span-7-47"><a id="__codelineno-7-47" name="__codelineno-7-47" href="#__codelineno-7-47"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-7-48"><a id="__codelineno-7-48" name="__codelineno-7-48" href="#__codelineno-7-48"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">student</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">student</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">student</span><span class="p">));</span>
+</span><span id="__span-7-49"><a id="__codelineno-7-49" name="__codelineno-7-49" href="#__codelineno-7-49"></a><span class="w">    </span><span class="n">strcpy</span><span class="p">(</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">"Alice"</span><span class="p">);</span>
+</span><span id="__span-7-50"><a id="__codelineno-7-50" name="__codelineno-7-50" href="#__codelineno-7-50"></a><span class="w">    </span><span class="n">s</span><span class="o">-&gt;</span><span class="n">roll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">101</span><span class="p">;</span>
+</span><span id="__span-7-51"><a id="__codelineno-7-51" name="__codelineno-7-51" href="#__codelineno-7-51"></a><span class="w">    </span><span class="n">s</span><span class="o">-&gt;</span><span class="n">marks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">95.5</span><span class="p">;</span>
+</span><span id="__span-7-52"><a id="__codelineno-7-52" name="__codelineno-7-52" href="#__codelineno-7-52"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Student: %s, Roll: %d, Marks: %.1f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="o">-&gt;</span><span class="n">roll</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="o">-&gt;</span><span class="n">marks</span><span class="p">);</span>
+</span><span id="__span-7-53"><a id="__codelineno-7-53" name="__codelineno-7-53" href="#__codelineno-7-53"></a><span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</span><span id="__span-7-54"><a id="__codelineno-7-54" name="__codelineno-7-54" href="#__codelineno-7-54"></a>
+</span><span id="__span-7-55"><a id="__codelineno-7-55" name="__codelineno-7-55" href="#__codelineno-7-55"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">=== Dangling Pointer Demo ===</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</span><span id="__span-7-56"><a id="__codelineno-7-56" name="__codelineno-7-56" href="#__codelineno-7-56"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">dang</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span><span id="__span-7-57"><a id="__codelineno-7-57" name="__codelineno-7-57" href="#__codelineno-7-57"></a><span class="w">    </span><span class="o">*</span><span class="n">dang</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+</span><span id="__span-7-58"><a id="__codelineno-7-58" name="__codelineno-7-58" href="#__codelineno-7-58"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Before free: *dang = %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">dang</span><span class="p">);</span>
+</span><span id="__span-7-59"><a id="__codelineno-7-59" name="__codelineno-7-59" href="#__codelineno-7-59"></a><span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">dang</span><span class="p">);</span>
+</span><span id="__span-7-60"><a id="__codelineno-7-60" name="__codelineno-7-60" href="#__codelineno-7-60"></a><span class="w">    </span><span class="c1">// dang is now DANGLING - don't use it!</span>
+</span><span id="__span-7-61"><a id="__codelineno-7-61" name="__codelineno-7-61" href="#__codelineno-7-61"></a><span class="w">    </span><span class="n">dang</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w">  </span><span class="c1">// Always set to NULL after free</span>
+</span><span id="__span-7-62"><a id="__codelineno-7-62" name="__codelineno-7-62" href="#__codelineno-7-62"></a>
+</span><span id="__span-7-63"><a id="__codelineno-7-63" name="__codelineno-7-63" href="#__codelineno-7-63"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">=== Memory Leak Demo ===</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</span><span id="__span-7-64"><a id="__codelineno-7-64" name="__codelineno-7-64" href="#__codelineno-7-64"></a><span class="w">    </span><span class="c1">// BAD: memory leak</span>
+</span><span id="__span-7-65"><a id="__codelineno-7-65" name="__codelineno-7-65" href="#__codelineno-7-65"></a><span class="w">    </span><span class="c1">// int *leak = malloc(sizeof(int));</span>
+</span><span id="__span-7-66"><a id="__codelineno-7-66" name="__codelineno-7-66" href="#__codelineno-7-66"></a><span class="w">    </span><span class="c1">// leak = malloc(sizeof(int));  // First block lost!</span>
+</span><span id="__span-7-67"><a id="__codelineno-7-67" name="__codelineno-7-67" href="#__codelineno-7-67"></a>
+</span><span id="__span-7-68"><a id="__codelineno-7-68" name="__codelineno-7-68" href="#__codelineno-7-68"></a><span class="w">    </span><span class="c1">// GOOD: free before reassign</span>
+</span><span id="__span-7-69"><a id="__codelineno-7-69" name="__codelineno-7-69" href="#__codelineno-7-69"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">good</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span><span id="__span-7-70"><a id="__codelineno-7-70" name="__codelineno-7-70" href="#__codelineno-7-70"></a><span class="w">    </span><span class="o">*</span><span class="n">good</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span>
+</span><span id="__span-7-71"><a id="__codelineno-7-71" name="__codelineno-7-71" href="#__codelineno-7-71"></a><span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">good</span><span class="p">);</span>
+</span><span id="__span-7-72"><a id="__codelineno-7-72" name="__codelineno-7-72" href="#__codelineno-7-72"></a><span class="w">    </span><span class="n">good</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span><span id="__span-7-73"><a id="__codelineno-7-73" name="__codelineno-7-73" href="#__codelineno-7-73"></a><span class="w">    </span><span class="o">*</span><span class="n">good</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">84</span><span class="p">;</span>
+</span><span id="__span-7-74"><a id="__codelineno-7-74" name="__codelineno-7-74" href="#__codelineno-7-74"></a><span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">good</span><span class="p">);</span>
+</span><span id="__span-7-75"><a id="__codelineno-7-75" name="__codelineno-7-75" href="#__codelineno-7-75"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"No leaks!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</span><span id="__span-7-76"><a id="__codelineno-7-76" name="__codelineno-7-76" href="#__codelineno-7-76"></a>
+</span><span id="__span-7-77"><a id="__codelineno-7-77" name="__codelineno-7-77" href="#__codelineno-7-77"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-7-78"><a id="__codelineno-7-78" name="__codelineno-7-78" href="#__codelineno-7-78"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Output:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>=== Dynamic Memory Demo ===
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>1. malloc():
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>Allocated 5 ints: 10 20 30 40 50
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2. calloc():
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>Zero-initialized: 0 0 0 0 0
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>3. realloc():
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>Before realloc: 1 2 3
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>After realloc:  1 2 3 4 5 6
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>4. Structure allocation:
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>Student: Alice, Roll: 101, Marks: 95.5
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>=== Dangling Pointer Demo ===
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>Before free: *dang = 100
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>=== Memory Leak Demo ===
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>No leaks!
+</span></code></pre></div></p>
+<hr />
+<h2 id="pointer-arithmetic-with-dynamic-memory">🔗 Pointer Arithmetic with Dynamic Memory<a class="headerlink" href="#pointer-arithmetic-with-dynamic-memory" title="Permanent link">&para;</a></h2>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="mi">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="c1">// p[0] = 10; p[1] = 20; ...</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="c1">// Equivalent:</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">           </span><span class="c1">// p[0]</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="o">*</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w">     </span><span class="c1">// p[1]</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="o">*</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w">     </span><span class="c1">// p[2]</span>
+</span></code></pre></div>
+<hr />
+<h2 id="key-takeaways">📝 Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Use Case</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>malloc</code></td>
+<td>Uninitialized memory</td>
+<td><code>void*</code> or <code>NULL</code></td>
+</tr>
+<tr>
+<td><code>calloc</code></td>
+<td>Zero-initialized memory</td>
+<td><code>void*</code> or <code>NULL</code></td>
+</tr>
+<tr>
+<td><code>realloc</code></td>
+<td>Resize allocation</td>
+<td><code>void*</code> or <code>NULL</code></td>
+</tr>
+<tr>
+<td><code>free</code></td>
+<td>Release memory</td>
+<td><code>void</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="best-practices">Best Practices:<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Always check return value</strong> for NULL</li>
+<li><strong>Set pointer to NULL</strong> after free()</li>
+<li><strong>Free in reverse order</strong> of allocation</li>
+<li><strong>Use sizeof()</strong> for portability</li>
+<li><strong>Free before reassigning</strong> pointer</li>
+</ol>
+<hr />
+<h2 id="self-test-questions">🧪 Self-Test Questions<a class="headerlink" href="#self-test-questions" title="Permanent link">&para;</a></h2>
+<ol>
+<li>What is the difference between <code>malloc(10)</code> and <code>calloc(10, sizeof(int))</code>?</li>
+<li>If <code>realloc</code> fails, what happens to the original memory?</li>
+<li>Why is <code>free(NULL)</code> safe?</li>
+<li>How do you allocate a 2D array dynamically?</li>
+</ol>
+<hr />
+<p><em>Next: <a href=".././unit1_04_sll_node_structure/">Singly Linked List - Node Structure &amp; Creation →</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../unit1_02_memory_allocation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Memory Allocation">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Memory Allocation
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../unit1_04_sll_node_structure/" class="md-footer__link md-footer__link--next" aria-label="Next: SLL - Node Structure">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                SLL - Node Structure
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Data Structures & Applications (UE25CS52A) Study Guide | Based on Tenenbaum & Kruse
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/imyash0722" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.sections","navigation.expand","navigation.top","navigation.tracking","navigation.footer","search.highlight","search.share","content.code.copy","content.code.annotate","content.tabs.link","toc.follow","color.mode"],"redirect":null,"search":"../../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.77dd0ce9.min.js"></script>
+      
+        <script src="../../../assets/javascripts/theme-toggle.js"></script>
+      
+    
+  </body>
+</html>
