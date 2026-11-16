@@ -1,0 +1,24 @@
+trees
+1. Implement tree using an array of nodes. Provide a suitable 
+memory manager - which holds indices of all free nodes.
+On allocation, it pops an index.
+on deallocation, it pushes the index. 
+On this tree, support the following functions.
+a) count the # of nodes 
+b) count the # of leaves 
+c) compare two trees 
+d) copy a tree to anotherthe 
+e) provide different ways of traversal 
+
+also,
+f) thread such a tree 
+g) make it an expression tree 
+
+2. provide a level order display of a tree    
+   (for both the implementations)
+   
+3. check whether a given tree is a BST (challenging)
+4. create a binary tree (not a BST) where the insertion specifies the 
+   key of the parent and whether the new node should be to the left or 
+   the right of the parent.
+   

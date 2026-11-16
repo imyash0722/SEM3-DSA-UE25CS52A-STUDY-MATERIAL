@@ -1,0 +1,403 @@
+
+
+===== Page 1 =====
+
+Introduction
+Doubly Linked List
+Data Structures and its Applications 
+(UE25CS52A)
+N S Kumar
+Professor
+Department of Computer Science & 
+Engineering (AI & ML)
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 2 » INTRODUCTION 
+AND REVISION » CLASS 11/11
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 6
+
+----------------------------------------
+
+===== Page 2 =====
+
+Doubly Linked List
+Quiz : Doubly Linked List
+1.  In a non-circular doubly linked list, the prev pointer of the first node contains:
+a)
+Pointer to the last node
+b)
+Pointer to the second node
+c) NULL
+d)
+Pointer to itself
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 3 =====
+
+Doubly Linked List
+Quiz : Doubly Linked List
+1.  In a non-circular doubly linked list, the prev pointer of the first node contains:
+a)
+Pointer to the last node
+b)
+Pointer to the second node
+c) NULL
+d)
+Pointer to itself
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 4 =====
+
+Doubly Linked List
+Quiz : Doubly Linked List
+2. Suppose p is a pointer to a node in the middle of the list and we want to insert new node 
+pointed to by temp immediately after p. Which sequence is right with respect to p?
+a)
+ p->next_ = temp->next_; p->prev_ = temp->prev_;
+b)
+ temp->next_ = p->next_; temp->prev_ = p->prev_;
+c) temp->next_ = p->next_; temp->prev_ = p;
+d)
+ temp->next_ = p; temp->prev_ = p->prev_;
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 5 =====
+
+Doubly Linked List
+Quiz : Doubly Linked List
+2. Suppose p is a pointer to a node in the middle of the list and we want to insert new node 
+pointed to by temp immediately after p. Which sequence is right with respect to p?
+a)
+ p->next_ = temp->next_; p->prev_ = temp->prev_;
+b)
+ temp->next_ = p->next_; temp->prev_ = p->prev_;
+c) temp->next_ = p->next_; temp->prev_ = p;
+d)
+ temp->next_ = p; temp->prev_ = p->prev_;
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 6 =====
+
+Doubly Linked List
+Quiz : Doubly Linked List
+3. When a new node is added to an empty list,
+a)
+ neither head_  not tail_ of the DLL will change
+b)
+  both head_  and tail_ of the DLL could change
+c) only head_ of the DLL would change
+d)
+Only tail_ of the DLL would change
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 7 =====
+
+Doubly Linked List
+Quiz : Doubly Linked List
+3. When a new node is added to an empty list,
+a)
+ neither head_  not tail_ of the DLL will change
+b)
+  both head_  and tail_ of the DLL could change
+c) only head_ of the DLL would change
+d)
+Only tail_ of the DLL would change
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 8 =====
+
+Doubly Linked List
+Quiz : Doubly Linked List
+4. temp->next_ = p->next_; temp->prev_ = p; p->next_ = temp;
+While inserting a new node temp not at the end of the list, which statement is 
+missing?
+a) p->next_->prev_ = temp;
+b) p->prev_ = temp;
+c) p->next_ = NULL;
+d) p->next_ = NULL;
+   
+© 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 9 =====
+
+Doubly Linked List
+Quiz : Doubly Linked List
+4. temp->next = p->next; temp->prev = p; p->next = temp;
+While inserting a new node temp not at the end of the list, which statement is 
+missing?
+a) p->next_->prev_ = temp;
+b) p->prev_ = temp;
+c) p->next_ = NULL;
+d) p->next_ = NULL;
+   
+© 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 10 =====
+
+Doubly Linked List
+Quiz : Doubly Linked List
+5. p->prev->next = p->next;p->next->prev = p->prev; 
+a) Deletes the node to which p points to  and handles memory correctly
+b) Deletes the node to which p points to, but results in memory leak
+c) Breaks the list and part of the list is lost
+d) Deletes the node in the beginning, or at the end or the middle
+   
+© 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 11 =====
+
+Doubly Linked List
+Quiz : Doubly Linked List
+5. p->prev->next = p->next;p->next->prev = p->prev; 
+a) Deletes the node to which p points to  and handles memory correctly
+b) Deletes the node to which p points to, but results in memory leak
+c) Breaks the list and part of the list is lost
+d) Deletes the node in the beginning, or at the end or the middle
+   
+© 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 12 =====
+
+Doubly Linked List
+Doubly Linked List : a few points
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Each node allows movement to the previous previous and the nodes
+•
+Normally called prev_ and next_ standing for previous and next
+•
+The list node has two pointers – one to the first node and one to the last node 
+•
+Normally called head_ and tail_
+•
+Allows for traversal in both the directions forward and backward
+
+----------------------------------------
+
+===== Page 13 =====
+
+Doubly Linked List
+Doubly Linked List : interface
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Initialize / Deinitialize the list
+•
+Insert anywhere in the list
+•
+Delete anywhere in the list
+•
+Traverse forward or backward
+•
+Search for a designated key
+
+----------------------------------------
+
+===== Page 14 =====
+
+Doubly Linked List
+Doubly Linked List : key structure
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+struct node {
+    int key_;
+    struct node *prev_;
+    struct node *next_;
+};
+typedef struct node node_t;
+struct DLL {
+node_t *head_;
+node_t *tail_;
+};
+typedef struct DLL dll_t;
+
+----------------------------------------
+
+===== Page 15 =====
+
+Doubly Linked List
+Doubly Linked List : implementation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Initialize / Deinitialize the list
+•
+Initialize : Ground both head_ and tail_
+•
+Deinitialize : traverse and free the nodes. Reinitialize the list
+•
+Insert anywhere in the list
+•
+Take care of the following cases
+•
+Empty list : both head_ and tail_ should change
+•
+Add in the beginning : head_ should change
+•
+Add at the end : tail_ should change 
+•
+Add in the middle 
+•
+Observe there will be 4 changes to the pointers
+
+----------------------------------------
+
+===== Page 16 =====
+
+Doubly Linked List
+Doubly Linked List : implementation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Delete anywhere in the list
+•
+In the beginning : head_ should change
+•
+At the end : tail_ should change 
+•
+Anywhere in the middle
+•
+Deleting the only node : both head_ and tail_ should change
+•
+Traverse forward or backward
+•
+Search for a designated key
+
+----------------------------------------
+
+===== Page 17 =====
+
+Doubly Linked List
+Singly vs. Doubly Linked Lists
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+Worst-Case Operation (n nodes)
+Singly Linked List
+Doubly Linked List
+Move Forward
+1 step
+1 step
+Move Backward
+n steps (Requires re-traversal)
+1 step (Instant fallback)
+Insert Before a Node
+n steps (Find predecessor)
+1 step (Using prev_ link)
+Delete a Designated Node
+n steps (Find predecessor)
+1 step (Local isolation)
+Searching for a Key
+n steps
+n steps
+
+----------------------------------------
+
+===== Page 18 =====
+
+Doubly Linked List
+Doubly Linked List : Advantages
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+1. Bidirectional traversal
+2. Easy deletion
+3. Easy insertion before or after a known node
+4. Natural representation of navigation
+
+----------------------------------------
+
+===== Page 19 =====
+
+Doubly Linked List
+Doubly Linked List : Disadvantages
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+1. Extra memory
+2. More pointer manipulation
+3. More opportunities for bugs
+4. Still has linear search
+
+----------------------------------------
+
+===== Page 20 =====
+
+Doubly Linked List
+Doubly Linked List : Applications
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+1. Browser History
+2. Music Player Playlist
+3. Undo and Redo
+4. LRU cache
+
+----------------------------------------
+
+===== Page 21 =====
+
+THANK YOU
+N S Kumar
+Professor
+Department of Computer Science & Engineering (AI & ML)

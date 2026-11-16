@@ -1,0 +1,301 @@
+
+
+===== Page 1 =====
+
+Stack Application
+Data Structures and its Applications
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK APPLICATION » CLASS 9/11
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 17
+Department of Computer Science & 
+Engineering (AI & ML)
+N S Kumar
+Professor
+
+----------------------------------------
+
+===== Page 2 =====
+
+Stack Application
+How do we make out that (())) is not well formed in our algorithm?
+a) By counting and comparing the number of left and the number of right parentheses
+b) By encountering popping from an empty stack
+c) By having a non-empty stack when the input string has been completed processed
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 17
+Quiz 1: Stack Application
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK APPLICATION » CLASS 9/11
+
+----------------------------------------
+
+===== Page 3 =====
+
+Stack Application
+Quiz 1: Stack Application
+How do we make out that (())) is not well formed in our algorithm?
+a) By counting and comparing the number of left and the number of right parentheses
+b) By encountering popping from an empty stack
+c) By having a non-empty stack when the input string has been completed processed
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+3 / 17
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK APPLICATION » CLASS 9/11
+
+----------------------------------------
+
+===== Page 4 =====
+
+Stack Application
+Quiz 2: Stack Application
+How do we make out that ((()) is not well formed in our algorithm?
+a) By counting and comparing the number of left and the number of right parentheses
+b) By encountering popping from an empty stack
+c) By having a non-empty stack when the input string has been completed processed
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+4 / 17
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK APPLICATION » CLASS 9/11
+
+----------------------------------------
+
+===== Page 5 =====
+
+Stack Application
+Quiz 2: Stack Application
+How do we make out that ((()) is not well formed in our algorithm?
+a) By counting and comparing the number of left and the number of right parentheses
+b) By encountering popping from an empty stack
+c) By having a non-empty stack when the input string has been completed processed
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+5 / 17
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK APPLICATION » CLASS 9/11
+
+----------------------------------------
+
+===== Page 6 =====
+
+Stack Application
+Quiz 3: Stack Application
+On encountering a left parenthesis,
+a) Pop the top element from the stack
+b) Push some marker onto the stack
+c) Should push ) only on the stack
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+6 / 17
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK APPLICATION » CLASS 9/11
+
+----------------------------------------
+
+===== Page 7 =====
+
+Stack Application
+Quiz 3: Stack Application
+On encountering a left parenthesis,
+a) Pop the top element from the stack
+b) Push some marker onto the stack
+c) Should push ) only on the stack
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+7 / 17
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK APPLICATION » CLASS 9/11
+
+----------------------------------------
+
+===== Page 8 =====
+
+Stack Application
+Quiz 4: Stack Application
+When an expression with 3 different type of brackets is to be checked for well 
+formedness,
+a) We require 6 different types of symbols to put on the stack
+b) We require one symbol to put on the stack
+c) We require 3 different types of symbols to put on the stack
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+8 / 17
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK APPLICATION » CLASS 9/11
+
+----------------------------------------
+
+===== Page 9 =====
+
+Stack Application
+Quiz 4: Stack Application
+When an expression with 3 different type of brackets is to be checked for well 
+formedness,
+a) We require 6 different types of symbols to put on the stack
+b) We require one symbol to put on the stack
+c) We require 3 different types of symbols to put on the stack
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+9 / 17
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK APPLICATION » CLASS 9/11
+
+----------------------------------------
+
+===== Page 10 =====
+
+Stack Application
+Quiz 5: Stack Application
+If at some point in processing a bracketed expression, if the stack is empty
+a) It means the expression is not well formed
+b) It means the expression has had no parentheses until this point
+c) It definitely means the expression is well formed no matter what follows.
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+10 / 17
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK APPLICATION » CLASS 9/11
+
+----------------------------------------
+
+===== Page 11 =====
+
+Stack Application
+Quiz 5: Stack Application
+If at some point in processing a bracketed expression, if the stack is empty
+a) It means the expression is not well formed
+b) It means the expression has had no parentheses until this point
+c) It definitely means the expression is well formed no matter what follows.
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+11 / 17
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK APPLICATION » CLASS 9/11
+
+----------------------------------------
+
+===== Page 12 =====
+
+Stack Application
+Stack : Applications
+stack
+•
+All stack operations happen at the stack top.
+•
+Push adds an element to the top.
+•
+Pop removes the top element.
+•
+Peek inspects the top element.
+•
+The implementation may use an array or a linked list
+•
+The interface is what the user needs to know.
+© Confidential Information of PES University. All Rights Reserved - 2026 
+12 / 17
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK APPLICATION » CLASS 9/11
+
+----------------------------------------
+
+===== Page 13 =====
+
+Stack Application
+Stack : Applications
+Stack : Well formed parentheses
+•
+Why Counting Parentheses Is Not Enough
+•
+Examples: (3 + 4) and ((5 + 6) * (7 + 8)) are well formed.
+•
+Ignoring other characters gives () and (()()).
+•
+Equal numbers of '(' and ')' are necessary, but not sufficient.
+•
+Example: )( is invalid because a right parenthesis occurs before a left one.
+•
+Example: ())(()) is also invalid
+© Confidential Information of PES University. All Rights Reserved - 2026 
+13 / 17
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK APPLICATION » CLASS 9/11
+
+----------------------------------------
+
+===== Page 14 =====
+
+Stack Application
+Stack : Applications
+Algorithm: Well-Formed Parentheses
+1. Initialize the stack.
+2. Read the expression as a string and scan character by character.
+3. If the character is '(', push a placeholder.
+4. If the character is ')', pop; if the stack is empty, the expression is invalid.
+5. After processing the expression, the stack must be empty.
+© Confidential Information of PES University. All Rights Reserved - 2026 
+14 / 17
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK APPLICATION » CLASS 9/11
+
+----------------------------------------
+
+===== Page 15 =====
+
+Stack Application
+Example: Checking (()())
+Final stack is empty → Well formed
+© Confidential Information of PES University. All Rights Reserved - 2026 
+15 / 17
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK APPLICATION » CLASS 9/11
+
+[Embedded Image / Diagram OCR Text]:
+Stack contents after each character
+( ( ) ( ) ) END
+TOP TOP TOP TOP TOP TOP TOP
+
+----------------------------------------
+
+===== Page 16 =====
+
+Stack Application
+Algorithm: Well-Formed Parentheses : C Code
+int is_valid = 1;
+char ch; char *s = str;
+while (is_valid && (ch = *s++) != '\0') {
+    if (ch == '(')
+        push(&mystack, 'x');
+    else if (ch == ')') {
+        if (!is_empty(&mystack))
+            pop(&mystack);
+        else
+            is_valid = 0;
+    }
+}
+if (is_valid && is_empty(&mystack))
+    printf("Well formed expression");
+else
+    printf("not well formed expression");
+© Confidential Information of PES University. All Rights Reserved - 2026 
+16 / 17
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK APPLICATION » CLASS 9/11
+
+----------------------------------------
+
+===== Page 17 =====
+
+Stack Application
+Stack : Applications
+Algorithm: Well-Formed Brackets: (), [], {}
+•
+With multiple bracket types, a generic placeholder is not enough.
+•
+For '(' push ')'; for '[' push ']'; for '{' push '}'.
+•
+When a closing bracket is encountered, the stack must not be empty.
+•
+The closing bracket must match the character at the top of the stack.
+•
+Well formed: (){}[], ([]{}) and ([{}]).
+•
+Not well formed: ([)], ([]]) and (][).
+© Confidential Information of PES University. All Rights Reserved - 2026 
+17 / 17
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK APPLICATION » CLASS 9/11
+
+----------------------------------------
+
+===== Page 18 =====
+
+THANK YOU
+Department of Computer Science & Engineering (AI & ML)
+N S Kumar
+Professor

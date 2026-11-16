@@ -1,0 +1,285 @@
+
+
+===== Page 1 =====
+
+Introduction
+Queue using a linked list
+Data Structures and its Applications 
+(UE25CS52A)
+N S Kumar
+Professor
+Department of Computer Science & 
+Engineering (AI & ML)
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 2 » INTRODUCTION 
+AND REVISION » CLASS 11/11
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 6
+
+----------------------------------------
+
+===== Page 2 =====
+
+Queue
+Quiz : Queue
+1. On dequeue
+a) Only head of the queue  is changed
+b) Only tail of the queue is changed
+c) Both head and tail could change
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 3 =====
+
+Queue
+Quiz : Queue
+1. On dequeue
+a) Only head of the queue  is changed
+b) Only tail of the queue is changed
+c) Both head and tail could change
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 4 =====
+
+Queue
+Quiz : Queue
+2. To make both enqueue and dequeue efficient, 
+a) The pointer of each node will point to the node which joined the queue later
+b) The pointer of each node will point to the node which joined the queue earlier
+c) The pointer can point to either node before or node after
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 5 =====
+
+Queue
+Quiz : Queue
+2. To make both enqueue and dequeue efficient, 
+a) The pointer of each node will point to the node which joined the queue later
+b) The pointer of each node will point to the node which joined the queue earlier
+c) The pointer can point to either node before or node after
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 6 =====
+
+Queue
+Quiz : Queue
+3. Enqueue will change, 
+a) Only the head
+b) Only the tail
+c) Could change both the head and the tail
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 7 =====
+
+Queue
+Quiz : Queue
+3. Enqueue will change, 
+a) Only the head
+b) Only the tail
+c) Could change both the head and the tail
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 8 =====
+
+Queue
+Quiz : Queue
+4. If both the front and the rear are equal, 
+a) Implies that definitely the queue is empty
+b) Implies that definitely the queue has one node
+c) Implies either empty queue or one node queue
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 9 =====
+
+Queue
+Quiz : Queue
+4. If both the front and the rear are equal, 
+a) Implies that definitely the queue is empty
+b) Implies that definitely the queue has one node
+c) Implies either empty queue or one node queue
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 10 =====
+
+Queue
+Quiz : Queue
+5. Calling free on the front of a non empty queue,
+a) Removes the first node and the rest of the queue is accessible
+b) Remove the whole queue
+c) Front automatically will point to the next node in the queue
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 11 =====
+
+Queue
+Quiz : Queue
+5. Calling free on the front of a non empty queue,
+a) Removes the first node and the rest of the queue is accessible
+b) Remove the whole queue
+c) Front automatically will point to the next node in the queue
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 12 =====
+
+Queue
+Queue: interface
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Initialize / Deinitialize the queue
+•
+enqueue
+•
+dequeue
+•
+Is_empty
+•
+Is_full
+
+----------------------------------------
+
+===== Page 13 =====
+
+queue
+queue: structure
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+struct node
+{
+int key_;
+struct node* next_;
+};
+typedef struct node node_t;
+struct queue 
+{
+node_t* front_;
+node_t* rear_;
+};
+typedef struct queue queue_t;
+
+----------------------------------------
+
+===== Page 14 =====
+
+Queue
+Queue: implementation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Initialize / Deinitialize the queue
+•
+Initialize : make front and rear NULL
+•
+Deinitialize : deque all the nodes. make head and tail NULL
+•
+Enqueue
+•
+Add at the rear
+•
+Modify rear
+•
+First node => modify front
+•
+Deque
+•
+Remove the front
+•
+Modify front
+•
+Only node => modify rear
+
+----------------------------------------
+
+===== Page 15 =====
+
+Queue
+Queue: Applications
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+CPU scheduling : processes in batch processing usually wait in a queue
+•
+Printer Spooler : collects the jobs for printing in a queue
+•
+Breadth First search : Looking for a key in a tree structure 
+•
+Simulation models : queues to simulate random events in queueing theory
+•
+Message queues : sharing information in operating systems
+•
+Toll booth : waiting of vehicles to pass through a toll booth
+
+----------------------------------------
+
+===== Page 16 =====
+
+THANK YOU
+N S Kumar
+Professor
+Department of Computer Science & Engineering (AI & ML)

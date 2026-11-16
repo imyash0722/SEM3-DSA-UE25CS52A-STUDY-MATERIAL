@@ -1,0 +1,150 @@
+
+
+===== Page 1 =====
+
+Introduction
+Introduction and Revision: Data Structures 
+and its Applications (UE25CS52A)
+N S Kumar
+Professor
+Department of Computer Science & 
+Engineering (AI & ML)
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » INTRODUCTION 
+AND REVISION » CLASS 1/12
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 6
+
+----------------------------------------
+
+===== Page 2 =====
+
+Introduction
+Introduction and Revision
+Core Course: 
+4 hours of lecture + 2 hours of laboratory
+5 Credits
+One of the most important courses in the curricula
+Pre-requisites:
+1.
+Programming in C
+2.
+Good knowledge of pointers, arrays and structures
+Text Book:
+"Data Structures using C / C++", Langsum Yedidyah, Moshe J Augenstein, Aaron M Tenenbaum Pearson 
+Education Inc, 2nd edition, 2015.
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » INTRODUCTION 
+AND REVISION » CLASS 1/12
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 6
+
+----------------------------------------
+
+===== Page 3 =====
+
+Introduction
+Introduction and Revision
+Reference Book:
+"Data Structures and Program Design in C", Robert Kruse, Bruce Leung, C.L Tondo, Shashi Mogalla, 
+Pearson, 2nd Edition, 2019
+Anchor for this Course:
+N S Kumar
+M.Tech (Computer Science IIT Madras ), BE (Mech) UVCE
+•
+Over 40 years of teaching experience
+•
+Corporate trainer
+•
+Visiting Faculty PESU for over 13 years
+Ph: 98450 66845
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » INTRODUCTION 
+AND REVISION » CLASS 1/12
+© Confidential Information of PES University. All Rights Reserved - 2026 
+3 / 6
+
+----------------------------------------
+
+===== Page 4 =====
+
+Introduction
+Assessment Scheme
+ISA1:
+1.
+After Unit 1 and Unit 2
+2.
+40 marks reduced to 20 marks
+3.
+All objective questions
+4.
+10 one markers and 5 two markers per unit
+ISA2:
+1.
+After Unit 3 and Unit 4
+2.
+40 marks reduced to 20 marks
+3.
+All objective questions
+4.
+10 one markers and 5 two markers per unit
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » INTRODUCTION 
+AND REVISION » CLASS 1/12
+© Confidential Information of PES University. All Rights Reserved - 2026 
+4 / 6
+
+----------------------------------------
+
+===== Page 5 =====
+
+Introduction
+Assessment Scheme
+ESA:
+1.
+100 marks reduced to 50 marks
+2.
+20 marks objective questions
+3.
+10 one markers and 5 two markers
+4.
+80 marks subjective questions; 20 marks from each unit
+Project:
+1.
+10 marks
+2.
+shall be conducted in the last week of the semester
+3.
+6 marks for active participation and submission
+3.
+4 marks for correctness
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » INTRODUCTION 
+AND REVISION » CLASS 1/12
+© Confidential Information of PES University. All Rights Reserved - 2026 
+5 / 6
+
+----------------------------------------
+
+===== Page 6 =====
+
+Introduction
+Laboratory
+1.
+One practice assignment
+2.
+Ten programming assignments on various topics
+3.
+Shall synchronize with theory
+4.
+A few assignments in reading/debugging programs
+5.
+Last week activity is part of project associated with theory
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » INTRODUCTION 
+AND REVISION » CLASS 1/12
+© Confidential Information of PES University. All Rights Reserved - 2026 
+6 / 6
+
+----------------------------------------
+
+===== Page 7 =====
+
+THANK YOU
+N S Kumar
+Professor
+Department of Computer Science & Engineering (AI & ML)

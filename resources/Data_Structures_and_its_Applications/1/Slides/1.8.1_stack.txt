@@ -1,0 +1,243 @@
+
+
+===== Page 1 =====
+
+Stack
+Data Structures and its Applications
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK » CLASS 8/11
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 14
+Department of Computer Science & 
+Engineering (AI & ML)
+N S Kumar
+Professor
+
+----------------------------------------
+
+===== Page 2 =====
+
+Stack
+Quiz 1: Stack
+A stack is a data structure which does not support the following function
+a) push
+b) pop
+c) Is_empty
+d) indexing
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 14
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK » CLASS 8/11
+
+----------------------------------------
+
+===== Page 3 =====
+
+Stack
+Quiz 1: Stack
+A stack is a data structure which does not support the following function
+a) push
+b) pop
+c) Is_empty
+d) indexing
+© Confidential Information of PES University. All Rights Reserved - 2026 
+3 / 14
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK » CLASS 8/11
+
+----------------------------------------
+
+===== Page 4 =====
+
+Stack
+Quiz 2: Stack
+If a string is of the form wcwᴿ, where w is a string of characters not having c and wᴿ is 
+the reverse of W, then it is a palindrome. To check for a such a palindrome, the size of 
+the stack should be at least
+a) The length of w
+b) The length of wcwᴿ
+c) The length of wc
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+4 / 14
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK » CLASS 8/11
+
+----------------------------------------
+
+===== Page 5 =====
+
+Stack
+Quiz 2: Stack
+If a string is of the form wcwᴿ, where w is a string of characters not having c and wᴿ is 
+the reverse of W, then it is a palindrome. To check for a such a palindrome, the size of 
+the stack should be at least
+a) The length of w
+b) The length of wcwᴿ
+c) The length of wc
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+5 / 14
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK » CLASS 8/11
+
+----------------------------------------
+
+===== Page 6 =====
+
+Stack
+Quiz 3: Stack
+To check whether a given string is of the form aⁿb²ⁿ, some number of a followed by 
+twice the number of b, each time we get a
+a) push a symbol into the stack
+b) Push 2 symbols into the stack
+c) Pop a symbol from the stack
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+6 / 14
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK » CLASS 8/11
+
+----------------------------------------
+
+===== Page 7 =====
+
+Stack
+Quiz 3: Stack
+To check whether a given string is of the form aⁿb²ⁿ, some number of a followed by 
+twice the number of b, each time we get a
+a) push a symbol into the stack
+b) Push 2 symbols into the stack
+c) Pop a symbol from the stack
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+7 / 14
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK » CLASS 8/11
+
+----------------------------------------
+
+===== Page 8 =====
+
+Stack
+Quiz 4: Stack
+In an array implementation of the stack, push should
+a) Increment top and then use that the index
+b) Use top as the index and then increase top
+c) Use top and should not change it
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+8 / 14
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK » CLASS 8/11
+
+----------------------------------------
+
+===== Page 9 =====
+
+Stack
+Quiz 4: Stack
+In an array implementation of the stack, push should
+a) Increment top and then use that the index
+b) Use top as the index and then increase top
+c) Use top and should not change it
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+9 / 14
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK » CLASS 8/11
+
+----------------------------------------
+
+===== Page 10 =====
+
+Stack
+Quiz 5: Stack
+In an array implementation of the stack, if is_full returns true
+a) The program should be aborted
+b) The top element should be popped off
+c) The stack should be reset
+d) The user should decide what is the best action
+© Confidential Information of PES University. All Rights Reserved - 2026 
+10 / 14
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK » CLASS 8/11
+
+----------------------------------------
+
+===== Page 11 =====
+
+Stack
+Quiz 5: Stack
+In an array implementation of the stack, if is_full returns true
+a) The program should be aborted
+b) The top element should be popped off
+c) The stack should be reset
+d) The user should decide what is the best action
+© Confidential Information of PES University. All Rights Reserved - 2026 
+11 / 14
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK » CLASS 8/11
+
+----------------------------------------
+
+===== Page 12 =====
+
+Stack
+Stack : Abstract Data Type
+stack
+•
+Is a data structure
+•
+Has zero or more components
+•
+Can operate at only one end – normally called the stack top
+•
+Supports LIFO : Last In First Out
+•
+What goes in last, comes out first
+•
+Does not support the concept of traversal
+© Confidential Information of PES University. All Rights Reserved - 2026 
+12 / 14
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK » CLASS 8/11
+
+----------------------------------------
+
+===== Page 13 =====
+
+Stack
+Stack : Interface
+stack
+•
+Create
+•
+Destroy
+•
+Push : add an element at the top
+•
+Pop : remove an element at the top
+•
+Peek : check the top element without removing it
+•
+Is_empty : check whether the stack is empty
+•
+Is_full : check whether the stack is full
+© Confidential Information of PES University. All Rights Reserved - 2026 
+13 / 14
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK » CLASS 8/11
+
+----------------------------------------
+
+===== Page 14 =====
+
+Stack
+Stack : Implementation
+stack
+•
+using
+•
+A linked list
+•
+An Array
+© Confidential Information of PES University. All Rights Reserved - 2026 
+14 / 14
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » STACK » CLASS 8/11
+
+----------------------------------------
+
+===== Page 15 =====
+
+THANK YOU
+Department of Computer Science & Engineering (AI & ML)
+N S Kumar
+Professor

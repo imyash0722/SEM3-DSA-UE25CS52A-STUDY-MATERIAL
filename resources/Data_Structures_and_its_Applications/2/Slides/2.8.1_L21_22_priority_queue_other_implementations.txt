@@ -1,0 +1,497 @@
+
+
+===== Page 1 =====
+
+Introduction
+Priority Queue : using other implementations
+Data Structures and its Applications 
+(UE25CS52A)
+N S Kumar
+Professor
+Department of Computer Science & 
+Engineering (AI & ML)
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 2 » INTRODUCTION 
+AND REVISION » CLASS 11/11
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 6
+
+----------------------------------------
+
+===== Page 2 =====
+
+Priority Queue : using other implementations
+Quiz : Priority Queue : using other implementations
+1. Which statement best describes enque in a priority queue implemented using an 
+unordered array?
+a) Can add in the beginning; would require a few operations independent of the 
+number of elements in the array
+b) Can add at the end; would require a few operations independent of the number of 
+elements in the array
+c) Should insert in the middle
+d) Should depend on the priority
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 3 =====
+
+Priority Queue : using other implementations
+Quiz : Priority Queue : using other implementations
+1. Which statement best describes enque in a priority queue implemented using an 
+unordered array?
+a) Can add in the beginning; would require a few operations independent of the 
+number of elements in the array
+b) Can add at the end; would require a few operations independent of the number of 
+elements in the array
+c) Should insert in the middle
+d) Should depend on the priority
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 4 =====
+
+Priority Queue : using other implementations
+Quiz : Priority Queue : using other implementations
+2. Which statement best describes enque in a priority queue implemented using an 
+ordered array?
+a) Can add in the beginning; would require a few operations independent of the 
+number of elements in the array
+b) Can add at the end; would require a few operations independent of the number of 
+elements in the array
+c) Should insert in the middle
+d) Should depend on the priority
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 5 =====
+
+Priority Queue : using other implementations
+Quiz : Priority Queue : using other implementations
+2. Which statement best describes enque in a priority queue implemented using an 
+ordered array?
+a) Can add in the beginning; would require a few operations independent of the 
+number of elements in the array
+b) Can add at the end; would require a few operations independent of the number of 
+elements in the array
+c) Should insert in the middle
+d) Should depend on the priority
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 6 =====
+
+Priority Queue : using other implementations
+Quiz : Priority Queue : using other implementations
+3. Which statement best describes enque and deque in a priority queue implemented 
+using an ordered list?
+a) Both require operations proportional to the number of elements in the priority 
+queue
+b) Both require a few operations independent of the number of elements in the 
+priority queue
+c) Enque would require more operations than deque
+d) Deque would require more operations than enque
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 7 =====
+
+Priority Queue : using other implementations
+Quiz : Priority Queue : using other implementations
+3. Which statement best describes enque and deque in a priority queue implemented 
+using an ordered list?
+a) Both require operations proportional to the number of elements in the priority 
+queue
+b) Both require a few operations independent of the number of elements in the 
+priority queue
+c) Enque would require more operations than deque
+d) Deque would require more operations than enque
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 8 =====
+
+Priority Queue : using other implementations
+Quiz : Priority Queue : using other implementations
+4. Deinitializing  a priority queue requires
+a) A Few operations in an array implementation
+b) A few operations in a list implementation
+c) A number of operations proportional to the number of elements in an array 
+implementation
+d) Freeing of resources in array implementation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 9 =====
+
+Priority Queue : using other implementations
+Quiz : Priority Queue : using other implementations
+4. Deinitializing  a priority queue requires
+a) A Few operations in an array implementation
+b) A few operations in a list implementation
+c) A number of operations proportional to the number of elements in an array 
+implementation
+d) Freeing of resources in array implementation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 10 =====
+
+Priority Queue : using other implementations
+Quiz : Priority Queue : using other implementations
+5. Deque in an unordered array implementation of priority queue requires
+a) Shifting the elements from right to left
+b) Shifting the elements from left to right
+c) Just a single assignment – no shifting
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 11 =====
+
+Priority Queue : using other implementations
+Quiz : Priority Queue : using other implementations
+5. Deque in our unordered array implementation of priority queue requires
+a) Shifting the elements from right to left
+b) Shifting the elements from left to right
+c) Just a single assignment – no shifting
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 12 =====
+
+----------------------------------------
+
+===== Page 13 =====
+
+Priority Queue
+Priority Queue: concept
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+A priority queue is an abstract data type in which each element is associated 
+with a priority.
+•
+A priority queue removes the component with the highest priority first.
+•
+A priority is a number associated with each element
+•
+Higher the numeric value, could mean higher the priority. 
+•
+Or lower the numeric value, could mean higher priority
+
+----------------------------------------
+
+===== Page 14 =====
+
+Priority Queue
+Priority Queue: some examples
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Patient treatment
+•
+Scheduling of processes
+
+----------------------------------------
+
+===== Page 15 =====
+
+Priority Queue
+Priority Queue: interface
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+initialize()
+deinitialize() 
+Create an empty queue 
+Make the queue empty
+enqueue(x) 
+Insert x 
+We may add in number of ways. This in 
+turn would affect dequeue
+dequeue() 
+Remove the element with the highest 
+priority. This in turn depends how 
+enqueue operation was done 
+isEmpty() 
+Check whether the queue is empty 
+isFull() 
+Check whether the queue is full
+I
+
+----------------------------------------
+
+===== Page 16 =====
+
+Priority Queue
+Priority Queue: Possible Implementations
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Unodered list 
+•
+Ordered list : ordered based on priority 
+•
+Unordered array 
+•
+Ordered array : ordered based on priority
+•
+Heap tree
+
+----------------------------------------
+
+===== Page 17 =====
+
+Priority Queue
+Priority Queue: ordered list
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Implemented using queue implementation
+•
+Could also implement using a list
+
+----------------------------------------
+
+===== Page 18 =====
+
+Priority Queue
+Priority Queue: ordered list implementation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Initialize : make the front and the rear NULL 
+•
+Deinitialize : deallocate the nodes and then 
+make the front and the rear NULL
+•
+Is_empty : check front is NULL
+•
+Is_full : check whether memory allocation 
+fails
+
+----------------------------------------
+
+===== Page 19 =====
+
+Priority Queue
+Priority Queue: ordered list implementation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Enque :
+•
+Make a node 
+•
+Populate
+•
+Find the position to insert
+•
+Change front if required 
+•
+Numer of operations depends on the number of elements in the priority queue
+•
+Deque :
+•
+Copy the job to return
+•
+Change the front
+•
+Release the node
+•
+Suitably adjust front and then rear if required
+
+----------------------------------------
+
+===== Page 20 =====
+
+Priority Queue
+Priority Queue: unordered array implementation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Initialize : make the number of elements in the array 0
+•
+Deinitialize : same as initialize!
+•
+Is_empty : check if the number of elements is 0
+•
+Is_full : check if the number of elements equal to the size of the array
+
+----------------------------------------
+
+===== Page 21 =====
+
+Priority Queue
+Priority Queue: unordered array implementation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Enque :
+•
+Check if full
+•
+Add at the end
+•
+Increase the size
+•
+Only a few operations
+•
+Deque : 
+•
+Traverse from the beginning
+•
+Find the leftmost position of the node with the highest priority
+•
+Copy the job
+•
+Shift right to left from this position till the end
+•
+Decrease the size
+•
+Return the job
+
+----------------------------------------
+
+===== Page 22 =====
+
+Priority Queue
+Priority Queue: ordered array implementation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Initialize : make the number of elements in the array 0
+•
+Deinitialize : same as initialize!
+•
+Is_empty : check if the number of elements is 0
+•
+Is_full : check if the number of elements equal to the size of the array
+
+----------------------------------------
+
+===== Page 23 =====
+
+Priority Queue
+Priority Queue: ordered array implementation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Enque :
+•
+Check if full
+•
+Traverse right to left; shift; find the position to insert
+•
+insert
+•
+Increase the size
+•
+Number of operations proportional to the number of elements
+•
+Deque : 
+•
+Check if empty
+•
+Find the rightmost element
+•
+Decrement the size 
+•
+Return the job of the rightmost element before changing size
+
+----------------------------------------
+
+===== Page 24 =====
+
+Priority Queue
+Priority Queue: Applications of priority queue :
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+CPU Scheduling of processes
+•
+Hospital Emergency Services
+•
+Printer Scheduling
+•
+Network Packet Scheduling
+•
+Dijkstra's Shortest Path Algorithm 
+•
+Prim's Minimum Spanning Tree Algorithm
+•
+Event-Driven Simulation
+•
+Huffman Coding
+
+----------------------------------------
+
+===== Page 25 =====
+
+THANK YOU
+N S Kumar
+Professor
+Department of Computer Science & Engineering (AI & ML)

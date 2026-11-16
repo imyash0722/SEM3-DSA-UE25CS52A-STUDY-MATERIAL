@@ -1,0 +1,267 @@
+
+
+===== Page 1 =====
+
+Priority Queue
+So far, we have learnt the data structures list, stack, circular list and queue. We have observed that 
+these are all abstract data types supporting a well-defined interface. We have also observed that each of 
+these abstract data types could have different implementations. These data structures are found to be 
+useful in different applications based on their interfaces.
+A priority queue is an abstract data type in which each element is associated with a priority.
+Unlike an ordinary queue, where elements are removed according to FIFO (First-In, First-Out) order, a 
+priority queue removes the component with the highest priority first.
+A priority is a number associated with each component. Higher the numeric value, could mean higher 
+the priority. Or lower the numeric value could mean higher priority. In Unix, the latter concept is 
+followed. You may know that there is a command called nice using which you can reduce the priority of 
+your process – you can be nice to others!
+In our examples, we will assume that higher the numeric value, higher the priority.
+What is the rationale behind this? Let us consider a couple of examples.
+The patients wait in a queue to consult a doctor. But what if a patient becomes critically ill? Should not 
+that patient get immediate attention?
+Several processes could be running on an operating system. A few of them may have to respond in real 
+time. Should not these get preference over others?
+
+[Embedded Image / Diagram OCR Text]:
+¥ ® Review Slides Mistakes X @ L19_priority_queve - Google D X | [§ L19_priority_queve.docx-Goc: X | [ Untitled document - Google D X | + 4 Ask Gemini = X
+€ 5 C 2% chatgptcom/c/6a943cde-0a80-83ee-82ee-fedcach239a3 [SER SN I
+a2 £ Al Bookmaris
+® X Priority Queue Study Guide Infographic [
+© @ Comment Remove BG & Erase O Resize 7%~
+( )
+Q 1. WHAT IS A PRIORITY QUEUE? 3. JOB STRUCTURE
+o) A priority queue is an ADT in which each element is associated with a priority. We represent each element as a job with a unique number and a priority.
+« Unlike an ordinary queue (FIFO),  priority queue removes the
+N riority : Numeric priority
+S g s s e s . o [ ooy | P e
+5 l ¥ Example: priority 50 > priority 20
+£ —ﬁ e ‘ [Example Jobs
+e [ 'ORDINARY QUFW (FIFO) PRIORITV. QU.EUE Job (jobNo) ‘ Priori [ Job (jobNo) ‘ Pri
+= Removal by arrival order Removal by priority (higher first) _—\
+| ) 103 10
+| e 5 ) (o) e IE=t s =
+102 50 104 30
+t t —_—
+‘ Front Rear  —— ' Higher priority number means higher priority. |
+"% Example: priority 50 > priority 20
+Dequeue — A (first inserted) Dequeue — B (highest priority) 3 o "
+—_—m e s Wan
+| 4. WAYS TO IMPLEMENT PRIORITY QUEUE 6. EQUAL PRIORITIES - WHAT HAPPENS?
+LUrondred | 2.0vdered (4 Describe edits @ Think & S |
+[ ‘ | Gy priority e Se—— [
+[ [l] | [eI= 2 ot [RRYRAIrABR AT RY rAl
+Dl - - = 941pM
+& O Typeheretosearch . Hi T @ 0 o @ B 26°C Mostiycoudy A~ B & @B N gavans ‘
+
+----------------------------------------
+
+===== Page 2 =====
+
+Our temples have an unusual way of implementing the priority queue. If you ready to pay more, you will 
+get more priority!
+Interface of the priority queue:
+The interface of a priority queue is same as that of queue. Component x would have a priority associated 
+with it.
+initialize()
+deinitialize()
+Create an empty queue
+Make the queue empty
+enqueue(x)
+Insert x
+We may add in number of ways. This in 
+turn would affect dequeue
+dequeue()
+Remove the element with the highest 
+priority. This in turn depends how 
+enqueue operation was done
+isEmpty()
+Check whether the queue is empty
+isFull()
+Check whether the queue is full
+Implementation of priority queue:
+A priority queue is a collection of elements in which every element has an associated priority, and 
+deletion returns an element having the appropriate extreme priority.
+A priority is an abstract data type. As we know, an Abstract Data Type (ADT) specifies what operations 
+are supported and what they mean, without specifying how those operations are implemented.
+A priority queue can be implemented using any suitable underlying data structure. We will discuss the 
+first 4 of the 5 listed below. The last one shall be discussed later in this course.
+
+----------------------------------------
+
+===== Page 3 =====
+
+Different ways in which we may implement the priority queue:
+1. Unodered list 
+2. Ordered list : ordered based on priority 
+3. Unordered array 
+4. Ordered array : ordered based on priority
+5. Heap tree 
+Please note that these are not the only ways of implementing the ADT priority queue.
+We will discuss the first 4 ways of implementing the priority queue in detail in the next few sections.
+Applications of priority queue :
+
+CPU Scheduling of processes
+
+Hospital Emergency Services
+
+Printer Scheduling
+
+Network Packet Scheduling
+
+Dijkstra's Shortest Path Algorithm 
+
+Prim's Minimum Spanning Tree Algorithm
+
+Event-Driven Simulation
+
+Huffman Coding
+
+[Embedded Image / Diagram OCR Text]:
+¥ @ Review Slides Mistakes X @ L19_priority_queve - Google D X | [§ L19_priority_queve.docx-Goc: X | [ Untitled document - Google D X | + 4 Ask Gemini = X
+€ > C % chatgptcom/c/6a943cde-0a80-83ee-82ee-fedcech239a3 ® F 4 ®
+] [ AllBookmarks
+® X Priority Queue Study Guide Infographic [
+T | I |
+Front Rear _ ~umber means higher priorty.
+© @ Comment Remove BG & Erase O Resize 450> priority 20 & 5% v
+Doqueue -+ A (first inserted) Dequeue -+ B (higness prioriys
+Q = = | e
+o 4. WAYS TO IMPLEMENT PRIORITY QUEUE 6. EQUAL PRIORITIES - WHAT HAPPENS?
+1.Unordered | 2. Ordered 3. Unordered 4. Ordered 5. Heap 1 two or more elements have the same priorty, =
+List List Array Array (Tree) any one of them may be removed fist. b i
+by priorty) (y prority) J— [E——
+, [s0]-] ©) ‘Gommen sirstsgles T.H-‘.)-—}‘T-. 7.‘,—{.1.H?.
+P + FIFO among equas (ealer nserted first CLl -
+2 = 0 G0 0
+2 e [s]-] EY' el & © * LIFO among equals (ater inserted first) it
+EEEE St sl e ekt e
+L (=[] & e L0 among equt ater st )
+R ol ® ©
+= - Remenst dor
+< [0 e
+= 1 m- \A\-Hs-]-c\-—» C\N—-{l‘-HA:-
+iy e e 630 0 e |
+ter inthe course —_—
+(ny order) | (Nghest priorty
+| | @ Examet: e b .8 o aveprity 0. Deparng o the sty th rmovalarcermay b
+| Wo wil discuss the first 4 methods n detail n this unit. Ll ool Loadil o
++  Describe edits @ Think Q@
+= > _; - 7 = NG 945PM)
+Bl © ez 4. D e O ne B 2 Mostycoury A B & A O oM 0 |
+
+----------------------------------------
+
+===== Page 4 =====
+
+Comparison of queue and priority queue:
+Priority Queue vs Ordinary Queue
+Feature
+Ordinary Queue Priority Queue
+Ordering principle
+FIFO
+Priority
+Important attribute
+Arrival time
+Priority
+Insert
+Usually at rear
+Huffman Coding
+Delete
+From front
+Highest/lowest priority
+Example
+Printer jobs
+CPU scheduling
+Typical implementation Array / linked list Heap / ordered or unordered list
+Comparison of various implementations:
+We will discuss these again after all 4 ways of implementation are completed.
+Implementation Insert
+Delete priority item
+Unordered list
+A few operations
+Number of operations
+Proportional to  number of  elements
+Ordered list
+Number of operations
+Proportional to  number of  elements
+A few operations
+Unordered Array A few operations
+Number of operations
+Proportional to  number of  elements
+Ordered Array
+Number of operations
+Proportional to  number of  elements
+A few operations
+Binary heap
+Number of operations proportional to
+Log to base 2 of number of elements
+Number of operations proportional to
+Log to base 2 of number of elements
+
+----------------------------------------
+
+===== Page 5 =====
+
+Implementation:
+We shall discuss in this section whatever is common to all the four implementations. Implementation 
+specific to a particular selected data structure shall be discussed separately.
+Job : We have called each component of the priority queue as a job – a term commonly used in 
+operating systems. The job structure has a unique number to identify the job and a priority to indicate 
+how it should be handled. We are assuming that higher this number, higher the priority.
+Each new job is given the job number in an increasing order. This job number will help us make out in 
+which order the jobs have been services.
+struct job 
+{
+int job_no_;
+int priority_;
+};
+typedef struct job job_t;
+This ADT job supports setting a job, displaying  the job and return the priority of a job when queried.
+void set_job(job_t* ptr_job, int job_no, int priority);
+void disp_job(job_t* ptr_job);
+int get_priority(job_t* ptr_job);
+The following is the implementation of this interface. The code is self explanatory.
+void set_job(job_t* ptr_job, int job_no, int priority)
+{
+ptr_job->job_no_ = job_no;
+ptr_job->priority_ = priority;
+
+----------------------------------------
+
+===== Page 6 =====
+
+}
+void disp_job(job_t* ptr_job)
+{
+printf("job # : %d priority : %d\n", 
+ptr_job->job_no_, ptr_job->priority_);
+}
+int get_priority(job_t* ptr_job)
+{
+return ptr_job->priority_;
+}
+Client : 
+The client code is menu driven. It reads an option before a loop is entered and an option again at the 
+end of the loop. This is a characteristic of menu driven programs.
+We support options for enque, deque and exiting the loop.
+
+----------------------------------------
+
+===== Page 7 =====
+
+enque: This code takes the priority as input, increments the job number and calls enque of the 
+underlying data structure. If the priority queue is full, the program is exited.
+case 1 : 
+scanf("%d", &priority);
+ set_job(&jobx, job_no++, priority);
+ printf("Adding : ");
+ disp_job(&jobx);
+ enque(&q, &jobx);
+ break;
+deque: This code gets the job with the highest priority from the priority queue and then displays 
+its contents. If the queue is empty, the program is exited.
+case 2 : 
+jobx = deque(&q);
+ printf("removing : ");
+ disp_job(&jobx);
+ break;
+The job and the client will not change when we select different implementations of the priority queue.

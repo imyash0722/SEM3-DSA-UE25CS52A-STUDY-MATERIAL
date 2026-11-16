@@ -1,0 +1,26 @@
+Assignments 1 : Week 1 
+1. Write a function to fill a 2D matrix spirally.
+   Write a function to display such a matrix.
+   
+   ex:
+   4 X 5 
+    1  2  3  4  5
+   14 15 16 17  6
+   13 20 19 18  7
+   12 11 10  9  8
+   
+2. Given an array with elements -not all distinct - in ascending order,
+   write a function to remove the duplicates. Do not use another array.
+
+3. Write a program to generate Pascal Triangle - coefficients of 
+   binomial expansion.
+   if n = 5, output should be 
+            1
+          1   1
+        1   2  1
+       1  3  3  1
+	  1 4  6  4  1
+    1  5 10 10  5  1
+	
+4. check whether a given square of numbers is a magic square 
+

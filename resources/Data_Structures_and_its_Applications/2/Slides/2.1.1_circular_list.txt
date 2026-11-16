@@ -1,0 +1,402 @@
+
+
+===== Page 1 =====
+
+Introduction
+Circular List
+Data Structures and its Applications 
+(UE25CS52A)
+N S Kumar
+Professor
+Department of Computer Science & 
+Engineering (AI & ML)
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 2 » INTRODUCTION 
+AND REVISION » CLASS 11/11
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 6
+
+----------------------------------------
+
+===== Page 2 =====
+
+Circular List
+Quiz : Circular List
+1. What is a common way to detect the end of traversal in a circular linked list?
+a) Check current == NULL 
+b) Check current->next_ == NULL 
+c) Check whether current has returned to the starting node
+d) Check whether current->key_ == 0
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 3 =====
+
+Circular List
+Quiz : Circular List
+1. What is a common way to detect the end of traversal in a circular linked list?
+a) Check current == NULL 
+b) Check current->next_ == NULL 
+c) Check whether current has returned to the starting node
+d) Check whether current->key_ == 0
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 4 =====
+
+Circular List
+Quiz : Circular List
+2. while (temp != NULL) {    
+// some other code
+temp = temp->next_; 
+ } 
+temp is a pointer to one of the nodes. Comment.
+a) Will become infinite loop
+b) Will traverse all the nodes and exit the loop
+c) Will traverse all but one node and exit the loop
+d) Will result in undefined behaviour
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 5 =====
+
+Circular List
+Quiz : Circular List
+2. while (temp != NULL) {    
+// some other code
+temp = temp->next_; 
+ } 
+temp is a pointer to one of the nodes. Comment.
+a) Will become infinite loop
+b) Will traverse all the nodes and exit the loop
+c) Will traverse all but one node and exit the loop
+d) Will result in undefined behaviour
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 6 =====
+
+Circular List
+Quiz : Circular List
+3. node_t* temp = ptr_clist->head_; node_t* temp2 = ptr_clist->head_; 
+ do {    
+temp = temp->next_; 
+temp2 = temp2->next_->next_;
+ 
+} while (temp2 != ptr_clist->head_); 
+Comment.
+a) temp2 will always point to a node half way across from the head
+b) Both temp and temp2 may be at the head when the loop terminates
+c) This may result in an infinite loop if the number of nodes is even
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 7 =====
+
+Circular List
+Quiz : Circular List
+3. node_t* temp = ptr_clist->head_; node_t* temp2 = ptr_clist->head_; 
+ do {    
+temp = temp->next_; 
+temp2 = temp2->next_->next_;
+ 
+} while (temp2 != ptr_clist->head_); 
+Comment.
+a) temp2 will always point to a node half way across from the head
+b) Both temp and temp2 may be at the head when the loop terminates
+c) This may result in an infinite loop if the number of nodes is even
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 8 =====
+
+Circular List
+Quiz : Circular List
+4. Consider a circular list containing only one node. 
+Which of the following is true?
+a) ptr_list->head_ == NULL
+b) ptr_list->head_->next_ == NULL
+c) ptr_list->head_ == ptr_list->head_->next_
+d) ptr_list->head_ may point to any node
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 9 =====
+
+Circular List
+Quiz : Circular List
+4. Consider a circular list containing only one node. 
+Which of the following is true?
+a) ptr_list->head_ == NULL
+b) ptr_list->head_->next_ == NULL
+c) ptr_list->head_ == ptr_list->head_->next_
+d) ptr_list->head_ may point to any node
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 10 =====
+
+Circular List
+Quiz : Circular List
+5. In a circular linked list with head_ referring a node in the list, what happens when 
+the only node is deleted?
+a) head_ remains unchanged
+b) head_ becomes NULL
+c) head_ ->next_ becomes NULL 
+d) A new node must be created
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 11 =====
+
+Circular List
+Quiz : Circular List
+5. In a circular linked list with head_ referring a node in the list, what happens when 
+the only node is deleted?
+a) head_ remains unchanged
+b) head_ becomes NULL
+c) head_ ->next_ becomes NULL 
+d) A new node must be created
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 12 =====
+
+Circular List
+Circular List : concept 
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+This is a list 
+•
+The last node points to the first 
+•
+Have a pointer to one of the nodes
+•
+first and last are not very meaningful
+•
+When the elements form a cycle or need to be processed repeatedly, 
+the last element should naturally lead back to the first.
+
+----------------------------------------
+
+===== Page 13 =====
+
+Circular List
+Circular List: interface
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Initialize / Deinitialize the list
+•
+Insert anywhere in the list
+•
+Delete anywhere in the list
+•
+Traverse forward
+•
+Search for a designated key
+
+----------------------------------------
+
+===== Page 14 =====
+
+Circular List
+Circular List: structure
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+//Same as that of a singly linked list
+struct node
+{
+int key_;
+struct node *next_;
+};
+typedef struct node node_t;
+struct clist
+{
+node_t *head_;
+};
+typedef struct clist clist_t;
+
+----------------------------------------
+
+===== Page 15 =====
+
+Circular List
+Circular List: implementation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Initialize / Deinitialize the list
+•
+Initialize : Make head_ NULL
+•
+Deinitialize : Traverse and remove nodes until back to the first node;
+Remove that node; ground the head_.
+•
+Insert after/before the first node
+•
+Insertion is exactly the same
+•
+Modify the head_ suitably
+•
+Delete after the first node
+•
+Traverse
+•
+Prefer a do…while loop
+•
+Stop when the first node is reached again
+•
+Search for a designated key
+
+----------------------------------------
+
+===== Page 16 =====
+
+Circular List
+Circular List: Applications
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Multiplayer Turn Management
+•
+Music Playlist – repeat continuously
+•
+Image Slideshow - repeat continuously
+•
+Token Passing - ring-based algorithms
+
+----------------------------------------
+
+===== Page 17 =====
+
+Circular List
+Circular List: Josephus problem : problem statement
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+Josephus Problem:
+1. Find the last remaining survivor from n people standing in a circle. 
+2. Counting begins at a specific person
+3. Moves around the circle in a fixed direction
+4. In each step, k-1 people are skipped, and the k-th person is removed. 
+5. The process repeats until only one person is left. 
+6. Find that person.
+
+----------------------------------------
+
+===== Page 18 =====
+
+Circular List
+Circular List: Josephus problem : algorithm
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+The steps involved in solving this problem are:
+1. n people are numbered from 1 to n in order and are placed in a circle
+2. Starting from a designated start point, we count to kth person.
+3. The kth person is eliminated
+4. Counting and elimination steps are repeated until a single person is left
+5. Original number of that person is the solution.
+
+----------------------------------------
+
+===== Page 19 =====
+
+Circular List
+Circular List: Josephus problem : Example
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+Step
+     Counting
+           Eliminated
+1
+    1 → 2 → 3
+             3
+2  
+    4 → 5 → 6
+             6
+3
+    7 → 1 → 2
+             2
+4
+    4 → 5 → 7
+             7
+5
+    1 → 4 → 5
+             5
+6
+    1 → 4 → 1
+             1
+   
+             
+
+n = 7 people 
+
+k = 3 → eliminate every 3rd person
+4 is the survivor
+
+----------------------------------------
+
+===== Page 20 =====
+
+THANK YOU
+N S Kumar
+Professor
+Department of Computer Science & Engineering (AI & ML)

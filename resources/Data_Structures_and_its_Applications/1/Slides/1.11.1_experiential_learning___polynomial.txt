@@ -1,0 +1,114 @@
+
+
+===== Page 1 =====
+
+Experiential Learning
+polynomial
+Department of Computer Science & 
+Engineering (AI & ML)
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 20
+N S Kumar
+Professor
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 2 =====
+
+Experiential Learning
+Polynomial : create a polynomial
+•
+Task 1
+•
+Input : ordered list of integer – both interface and implementation
+•
+ToDo :
+•
+Create a type called Term : term_t
+•
+Has coefficient and exponent
+•
+Develop set and display functions
+•
+Develop function to compare the terms based on the exponent
+•
+Modify the list of int to list of terms in the decreasing order of exponent
+© Confidential Information of PES University. All Rights Reserved - 2026 
+12 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 3 =====
+
+Experiential Learning
+Polynomial : Evaluate a polynomial
+•
+Task 2
+•
+Input : ordered list of terms – both interface and implementation
+•
+ToDo :
+•
+Add a function to evaluate the polynomial given the value of the variable
+© Confidential Information of PES University. All Rights Reserved - 2026 
+12 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 4 =====
+
+Experiential Learning
+Polynomial : copy the polynomial
+•
+Task 3
+•
+Input : ordered list of terms – both interface and implementation
+•
+ToDo :
+•
+Create a source list 
+•
+Populate it
+•
+Create a destination list 
+•
+Write a function to copy the source list to the destination list
+© Confidential Information of PES University. All Rights Reserved - 2026 
+12 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 5 =====
+
+Experiential Learning
+Polynomial : differentiate the polynomial
+•
+Task 4
+•
+Input : ordered list of terms – both interface and implementation
+•
+ToDo :
+•
+Create a source list 
+•
+Populate it
+•
+Create a destination list 
+•
+Differentiate the terms in the source list and add them to the destination 
+list
+© Confidential Information of PES University. All Rights Reserved - 2026 
+12 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 6 =====
+
+THANK YOU
+Professor
+Department of Computer Science & Engineering (AI & ML)

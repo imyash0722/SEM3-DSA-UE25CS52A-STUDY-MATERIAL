@@ -1,0 +1,173 @@
+
+
+===== Page 1 =====
+
+Introduction
+Deque
+Data Structures and its Applications 
+(UE25CS52A)
+N S Kumar
+Professor
+Department of Computer Science & 
+Engineering (AI & ML)
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 2 » INTRODUCTION 
+AND REVISION » CLASS 11/11
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 6
+
+----------------------------------------
+
+===== Page 2 =====
+
+deque
+Definition and Properties
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+A deque
+•
+Is a data structure
+•
+Supports add and delete 
+•
+At both the ends
+•
+Pronounced as deck
+
+----------------------------------------
+
+===== Page 3 =====
+
+deque
+Implementation of stack using deque
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Achieved by composition
+•
+Also called embedding|layering|containment
+•
+Is a reuse mechanism
+•
+Avoids reinventing the wheel
+
+----------------------------------------
+
+===== Page 4 =====
+
+deque
+Implementation of stack using deque
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Deque interface:
+•
+void init(dll_t* ptr_dlist);
+•
+void disp_forward(dll_t* ptr_dlist);
+•
+void disp_backward(dll_t* ptr_dlist);
+•
+void add_in_begin(dll_t* ptr_dlist, int key);
+•
+void add_at_end(dll_t* ptr_dlist, int key);
+•
+int remove_in_begin(dll_t* ptr_dlist);
+•
+int remove_at_end(dll_t* ptr_dlist);
+•
+int is_empty(dll_t *ptr_dlist);
+•
+int is_full(dll_t *ptr_dlist);
+•
+void deinit(dll_t* ptr_dlist);
+
+----------------------------------------
+
+===== Page 5 =====
+
+deque
+Implementation of stack using deque
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Stack interface:
+•
+void push(stack_t* ptr_stack, int key);
+•
+int pop(stack_t* ptr_stack);
+•
+int is_empty_stack(stack_t* ptr_stack);
+•
+int is_full_stack(stack_t* ptr_stack);
+•
+void init_stack(stack_t* ptr_stack);
+•
+void deinit_stack(stack_t* ptr_stack);
+
+----------------------------------------
+
+===== Page 6 =====
+
+deque
+Implementation of stack using deque
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Deque  interface mapping for stack interface
+•
+void push(stack_t* ptr_stack, int key);    
+=> void add_in_begin(dll_t* ptr_dlist, int key);
+•
+ int pop(stack_t* ptr_stack); 
+=> void add_in_begin(dll_t* ptr_dlist, int key);
+•
+int is_empty_stack(stack_t* ptr_stack);
+=> int is_empty(dll_t *ptr_dlist);
+•
+int is_full_stack(stack_t* ptr_stack);
+=> int is_full(dll_t *ptr_dlist);
+•
+void init_stack(stack_t* ptr_stack); 
+=> void init(dll_t* ptr_dlist);
+•
+void deinit_stack(stack_t* ptr_stack);
+=> void deinit(dll_t* ptr_dlist);
+
+----------------------------------------
+
+===== Page 7 =====
+
+deque
+Stack functions delegate to the deque functions
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+void push(stack_t* ptr_stack, int key)
+{
+add_in_begin(&ptr_stack->list_, key);
+}
+int pop(stack_t* ptr_stack)
+{
+return remove_in_begin(&ptr_stack->list_);
+}
+
+----------------------------------------
+
+===== Page 8 =====
+
+THANK YOU
+N S Kumar
+Professor
+Department of Computer Science & Engineering (AI & ML)

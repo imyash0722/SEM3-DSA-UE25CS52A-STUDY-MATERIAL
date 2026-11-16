@@ -1,0 +1,327 @@
+
+
+===== Page 1 =====
+
+List with Header Node
+List with Header Node
+Department of Computer Science & 
+Engineering (AI & ML)
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 20
+N S Kumar
+Professor
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 2 =====
+
+List with Header Node
+Quiz 1: List
+The list_t has a field called count_ which tracks the number of components in the list. 
+This implies:
+a) This field should be updated on insertion into and deletion of a component from 
+the list
+b) The # of operations to find the number of components will still require traversal of 
+the whole list 
+c) This change is not allowed as it affect the client.
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 3 =====
+
+List with Header Node
+Quiz 1: List
+The list_t has a field called count_ which tracks the number of components in the list. 
+This implies:
+a) This field should be updated on insertion into and deletion of a component from 
+the list
+b) The # of operations to find the number of components will still require traversal of 
+the whole list 
+c) This change is not allowed as it affects the client.
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 4 =====
+
+List with Header Node
+Quiz 2: List
+Adding at the end of the list 
+a) May require a few operations not proportional to the length of the list
+b) Always requires a number of operations proportional to the length of 
+the list
+c) Can never support such an operation
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 5 =====
+
+List with Header Node
+Quiz 2: List
+Adding at the end of the list 
+a) May require a few operations not proportional to the length of the list
+b) Always requires a number of operations proportional to the length of 
+the list
+c) Can never support such an operation
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 6 =====
+
+List with Header Node
+Quiz 3: List
+void what(list_t *ptr_list) { free(ptr_list->head_); } 
+a) This will free all the nodes in the list
+b) This will free all but the first node in the list
+c) This will free the first node; rest of the list is accessible
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 7 =====
+
+List with Header Node
+Quiz 3: List
+void what(list_t *ptr_list) { free(ptr_list->head_); } 
+a) This will free all the nodes in the list
+b) This will free all but the first node in the list
+c) This will free the first node; rest of the list is accessible
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 8 =====
+
+List with Header Node
+Quiz 4: List
+The header node is a dummy node added in the beginning of the list.
+a) This makes insertion simpler
+b) This makes deletion simpler
+c) This makes searching simpler
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 9 =====
+
+List with Header Node
+Quiz 4: List
+The header node is a dummy node added in the beginning of the list.
+a) This makes insertion simpler
+b) This makes deletion simpler
+c) This makes searching simpler
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 10 =====
+
+List with Header Node
+Quiz 5: List
+The tailer node is a dummy node added at the end of the list.
+a) This makes insertion simpler
+b) This makes deletion simpler
+c) This makes searching simpler
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 11 =====
+
+List with Header Node
+Quiz 5: List
+The tailer node is a dummy node added at the end of the list.
+a) This makes insertion simpler
+b) This makes deletion simpler
+c) This makes searching simpler
+d) None of these
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 12 =====
+
+List with Header Node
+List
+•
+Is a data structure
+•
+Is an abstract data type
+•
+Has components at an ordinal position
+•
+Two points to note
+•
+Sequential access
+•
+Insertion / deletion requires a few operations
+•
+Can implement a list 
+•
+Using linked list
+•
+Using an array – not discussed
+•
+List can be ordered based on some key
+© Confidential Information of PES University. All Rights Reserved - 2026 
+12 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 13 =====
+
+List with Header Node
+List
+•
+Can we change the list implementation without changing the list interface?
+•
+Can we modify the list without affecting the client?
+•
+Add a dummy node in the beginning
+•
+Called the header node
+•
+Will make the insertion simple
+© Confidential Information of PES University. All Rights Reserved - 2026 
+13 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 14 =====
+
+List with Header Node
+List
+•
+Initially the head of the list will point to a dummy node 
+•
+What should be the value of the key_?
+© Confidential Information of PES University. All Rights Reserved - 2026 
+14 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 15 =====
+
+List with Header Node
+List
+•
+Display function will skip over the first and then display the remaining nodes
+© Confidential Information of PES University. All Rights Reserved - 2026 
+15 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 16 =====
+
+List with Header Node
+List
+•
+Freeing the list will remove all but the first node
+© Confidential Information of PES University. All Rights Reserved - 2026 
+16 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 17 =====
+
+List with Header Node
+List
+•
+Insertion based on the key
+•
+No empty list ; head_ does not have to change
+© Confidential Information of PES University. All Rights Reserved - 2026 
+17 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 18 =====
+
+List with Header Node
+List
+•
+Insertion based on the key
+•
+No insertion in the beginning; head_ does not have to change
+© Confidential Information of PES University. All Rights Reserved - 2026 
+18 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 19 =====
+
+List with Header Node
+List
+•
+Insertion based on the key
+•
+Insertion in the middle or the end have exactly the same code
+•
+No selection required once position found
+© Confidential Information of PES University. All Rights Reserved - 2026 
+19 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 20 =====
+
+List with Header Node
+List
+•
+With the header node, insertion code has become simpler
+•
+Client is not affected
+•
+Implementation changed independent of the client
+© Confidential Information of PES University. All Rights Reserved - 2026 
+20 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 21 =====
+
+THANK YOU
+Professor
+Department of Computer Science & Engineering (AI & ML)

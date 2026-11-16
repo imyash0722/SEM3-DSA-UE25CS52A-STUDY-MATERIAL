@@ -1,0 +1,360 @@
+
+
+===== Page 1 =====
+
+Introduction
+Queue using a circular list using an array
+Data Structures and its Applications 
+(UE25CS52A)
+N S Kumar
+Professor
+Department of Computer Science & 
+Engineering (AI & ML)
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 2 » INTRODUCTION 
+AND REVISION » CLASS 11/11
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 6
+
+----------------------------------------
+
+===== Page 2 =====
+
+Queue
+Quiz : Queue
+1. In our implementation, on initialization
+a) Front and rear should be -1
+b) Front and rear should be 0
+c) Front and rear could be any valid index
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 3 =====
+
+Queue
+Quiz : Queue
+1. In our implementation, on initialization
+a) Front and rear should be -1
+b) Front and rear should be 0
+c) Front and rear could be any valid index
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 4 =====
+
+Queue
+Quiz : Queue
+2. On deque, queue is empty if
+a) Front and rear are equal after incrementing front
+b) Front and rear are equal after incrementing rear
+c) Front and rear are equal before incrementing rear
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 5 =====
+
+Queue
+Quiz : Queue
+2. On deque, queue is empty if
+a) Front and rear are equal after incrementing front
+b) Front and rear are equal after incrementing rear
+c) Front and rear are equal before incrementing rear
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 6 =====
+
+Queue
+Quiz : Queue
+3. deque need not consider this as a special case
+a) Empty queue
+b) Queue with one node
+c) Queue with number of nodes
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 7 =====
+
+Queue
+Quiz : Queue
+3. deque need not consider this as a special case
+a) Empty queue
+b) Queue with one node
+c) Queue with number of nodes
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 8 =====
+
+Queue
+Quiz : Queue
+4. To support different type of component in the queue,
+a) The type of front should change
+b) The type of rear should change
+c) The type of key should change
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 9 =====
+
+Queue
+Quiz : Queue
+4. To support different type of component in the queue,
+a) The type of front should change
+b) The type of rear should change
+c) The type of key should change
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 10 =====
+
+Queue
+Quiz : Queue
+5. Deinitialize the queue
+a) Requires number of operations as the number of components in the queue
+b) Requires a few operations; does not depend on the number of components in the 
+queue
+c) Requires a looping structure
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 11 =====
+
+Queue
+Quiz : Queue
+5. Deinitialize the queue
+a) Requires number of operations as the number of components in the queue
+b) Requires a few operations; does not depend on the number of components in the 
+queue
+c) Requires a looping structure
+d) None of these
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B. SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+
+----------------------------------------
+
+===== Page 12 =====
+
+queue
+queue: structure
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+#define MAXSIZE 5
+struct queue 
+{
+int key_[MAXSIZE];
+int front_;
+int rear_;
+};
+typedef struct queue queue_t;
+
+----------------------------------------
+
+===== Page 13 =====
+
+Queue
+Queue: implementation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Initialize / Deinitialize the queue
+•
+Initialize : make head and tail 0
+•
+Deinitialize : make head and tail 0
+•
+Enqueue
+•
+Add at the rear
+•
+Increment and check whether queue is full
+•
+First node => modify front
+•
+Deque
+•
+Check whether the queue is empty
+•
+If not increment front
+•
+Remove the front
+•
+Modify front
+
+----------------------------------------
+
+===== Page 14 =====
+
+Queue
+Queue: implementation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+Initialize / Deinitialize the queue
+•
+Initialize : make head and tail 0
+•
+Deinitialize : make head and tail 0
+void init_queue(queue_t *ptr_queue)
+{
+// could be any valid index in the array
+ptr_queue->rear_ = ptr_queue->front_ = 0; 
+}
+void deinit_queue(queue_t *ptr_queue) // NO LOOP!
+{
+ptr_queue->rear_ = ptr_queue->front_ = 0;
+}
+
+----------------------------------------
+
+===== Page 15 =====
+
+Queue
+Queue: implementation
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+// to be called before deque before incrementing
+int is_empty(queue_t *ptr_queue)
+{
+return ptr_queue->front_ == ptr_queue->rear_;
+}
+// to be called in enque after incrementing
+int is_full(queue_t *ptr_queue)
+{
+return ptr_queue->front_ == ptr_queue->rear_;
+}
+•
+is_full and is_empty : same code!!
+
+----------------------------------------
+
+===== Page 16 =====
+
+Queue
+Queue: implementation : enque and deque
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+void enque(queue_t *ptr_queue, int key)
+{
+int temp;
+temp = ++ptr_queue->rear_ % MAXSIZE;
+ptr_queue->rear_ = temp;
+if(! is_full(ptr_queue))  {
+ptr_queue->key_[temp] = key;
+}
+else {
+ptr_queue->rear_ = (ptr_queue->rear_ - 1) % MAXSIZE;
+printf("queue full; cannot push\n");
+}
+}
+
+----------------------------------------
+
+===== Page 17 =====
+
+Queue
+Queue: implementation : enque and deque
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+int deque(queue_t *ptr_queue)
+{
+if(! is_empty(ptr_queue)) {
+int key;  int temp = ++ptr_queue->front_ % MAXSIZE;
+key = ptr_queue->key_[temp];
+ptr_queue->front_ = temp;
+return key;
+} else {
+printf("queue empty; cannot pop\n");
+return '\0';
+}
+}
+
+----------------------------------------
+
+===== Page 18 =====
+
+Queue
+Queue: Applications
+   
+© Confidential Information of PES University. All Rights Reserved - 2026 
+2 / 9
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » ARRAYS » CLASS 3/12
+•
+CPU scheduling : processes in batch processing usually wait in a queue
+•
+Printer Spooler : collects the jobs for printing in a queue
+•
+Breadth First search : Looking for a key in a tree structure 
+•
+Simulation models : queues to simulate random events in queueing theory
+•
+Message queues : sharing information in operating systems
+•
+Toll booth : waiting of vehicles to pass through a toll booth
+
+----------------------------------------
+
+===== Page 19 =====
+
+THANK YOU
+N S Kumar
+Professor
+Department of Computer Science & Engineering (AI & ML)

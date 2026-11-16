@@ -1,0 +1,96 @@
+
+
+===== Page 1 =====
+
+Experiential Learning : unit 2
+Round Robin Scheduling
+Department of Computer Science & 
+Engineering (AI & ML)
+© Confidential Information of PES University. All Rights Reserved - 2026 
+1 / 20
+N S Kumar
+Professor
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 2 =====
+
+Experiential Learning
+Round Robin Scheduling
+•
+Task 1 : Create a circular doubly linked list
+•
+Input : Doubly linked list – both the header and the implementation
+•
+Output : Make this doubly linked list Circular
+•
+ToDo :
+•
+Support adding a node before the current position
+•
+Removing a node at the current position
+•
+Modify display routines suitably
+•
+Develop a menu driven client code
+© Confidential Information of PES University. All Rights Reserved - 2026 
+12 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 3 =====
+
+Experiential Learning
+Round Robin Scheduling
+•
+Task 2 : change the key field from int to a job
+•
+Input : circular doubly linked list : header and implementation
+•
+ToDo :
+•
+Create a type called job 
+•
+Provide interfaces for setting and displaying a job 
+•
+Change the key field in the node structure to job 
+•
+Modify the client code suitably
+© Confidential Information of PES University. All Rights Reserved - 2026 
+12 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 4 =====
+
+Experiential Learning
+Round Robin Scheduling
+•
+Task 3 : Implement scheduling
+•
+Input : circular doubly linked list of jobs
+•
+ToDo :
+•
+Each job shall have time for completion and time allotted so far
+•
+In the client, support adding a job and processing a job 
+•
+On processing a job, update the time allotted for the job by the time slice
+•
+If the time allotted exceeds the time for completion, remove the job 
+from the data structure
+© Confidential Information of PES University. All Rights Reserved - 2026 
+12 / 20
+B.TECH » DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING (AI & ML) » DATA STRUCTURES AND ITS APPLICATIONS » UE25CS252A » UNIT 1 » LIST WITH HEADER NODE » CLASS 8/12
+
+----------------------------------------
+
+===== Page 5 =====
+
+THANK YOU
+Professor
+Department of Computer Science & Engineering (AI & ML)
