@@ -30,39 +30,33 @@ python -m pip install --upgrade pip
 pip install zensical
 ```
 
-### Local Development
+### Local Development & Offline Viewing
 ```bash
-# Clone repo
-git clone https://github.com/imyash0722/SEM3-DSA-UE25CS52A-STUDY-MATERIAL.git
-cd SEM3-DSA-UE25CS52A-STUDY-MATERIAL
+# Easy One-Click Offline Launcher (Windows / Linux / macOS):
+cd site
+./launch_offline.sh    # On Linux / macOS
+launch_offline.bat     # On Windows (or double click in File Explorer)
 
-# Install dependencies
+# Or manual build:
+cd site
 pip install -r requirements.txt
-
-# Build site
 zensical build --config-file zensical.yml
-
-# Serve locally
-cd site && python -m http.server 8000
-# Open http://localhost:8000
 ```
 
 ### Project Structure
 ```
-├── .github/workflows/deploy.yml    # GitHub Actions workflow
-├── zensical.yml                    # Zensical configuration
-├── docs/                           # Source markdown files (built by Zensical)
-│   ├── index.md                    # Home page
-│   ├── INDEX.md                    # Quick reference
-│   ├── unit1_*.md                  # Unit 1 content
-│   ├── unit2_*.md                  # Unit 2 content
-│   ├── unit3_*.md                  # Unit 3 content
-│   └── unit4_*.md                  # Unit 4 content
-├── notes/                          # Authoring folder (source of truth)
-├── overrides/                      # Theme overrides
-│   └── assets/javascripts/theme-toggle.js  # Dark/light toggle
-├── requirements.txt                # Python dependencies
-└── site/                           # Built site (generated, deployed to gh-pages)
+├── site/                           # Self-contained website folder
+│   ├── dist/                       # Built static site (HTML/CSS/JS, deployed to gh-pages)
+│   ├── docs/                       # Markdown source documentation
+│   ├── overrides/                  # Theme overrides (dark/light toggle, custom layout)
+│   ├── zensical.yml                # Zensical site configuration
+│   ├── requirements.txt            # Python dependencies (zensical)
+│   ├── launch_offline.py/.sh/.bat  # One-click offline server launchers
+│   └── scripts/                    # Deployment scripts
+├── model/                          # Local AI model benchmarks (Qwen 2.5 Coder)
+├── organized/                      # Semester 3 DSA Course materials & labs
+├── .github/workflows/deploy.yml    # GitHub Actions deployment workflow
+└── README.md
 ```
 
 ## 📝 Adding Content

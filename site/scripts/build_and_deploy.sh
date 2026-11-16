@@ -5,14 +5,16 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-ROOT_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
+SITE_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
+REPO_DIR="$(cd "${SITE_DIR}/.." && pwd)"
 
-cd "${ROOT_DIR}"
+cd "${REPO_DIR}"
 
 echo "🚀 [1/4] Ensuring Git configuration for large payloads..."
 git config http.postBuffer 524288000
 
 echo "🔨 [2/4] Building static site with Zensical..."
+cd "${SITE_DIR}"
 if command -v zensical &> /dev/null; then
     zensical build --config-file zensical.yml
 elif [ -f "${HOME}/.local/bin/zensical" ]; then
@@ -22,7 +24,8 @@ else
     exit 1
 fi
 
-touch site/.nojekyll
+touch dist/.nojekyll
+cd "${REPO_DIR}"
 
 COMMIT_MSG="${1:-Update study site content and build artifacts}"
 
@@ -38,10 +41,9 @@ echo "🌐 [4/4] Pushing changes to remote and deploying to gh-pages..."
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 if git remote get-url origin &> /dev/null; then
     git push origin "${CURRENT_BRANCH}"
-    echo "  Deploying 'site' folder to gh-pages branch..."
-    git subtree push --prefix site origin gh-pages
+    echo "  Deploying 'site/dist' folder to gh-pages branch..."
+    git subtree push --prefix site/dist origin gh-pages
     echo "✅ Successfully built and deployed to GitHub Pages!"
 else
-    echo "⚠️ Remote 'origin' is not configured yet. Site built locally in './site/'."
-    echo "  Run 'gh repo create' or 'git remote add origin <url>' to enable remote push."
+    echo "⚠️ Remote 'origin' is not configured yet. Site built locally in './site/dist/'."
 fi

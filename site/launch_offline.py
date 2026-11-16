@@ -21,7 +21,7 @@ import webbrowser
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-SITE_DIR = os.path.join(BASE_DIR, "site")
+SITE_DIR = os.path.join(BASE_DIR, "dist") if os.path.exists(os.path.join(BASE_DIR, "dist")) else BASE_DIR
 CONFIG_FILE = os.path.join(BASE_DIR, "zensical.yml")
 REQ_FILE = os.path.join(BASE_DIR, "requirements.txt")
 VENV_DIR = os.path.join(BASE_DIR, ".venv")
