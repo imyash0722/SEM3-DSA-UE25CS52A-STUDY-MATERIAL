@@ -72,8 +72,18 @@ nav:
       - "Circular Linked List": unit1/theory/unit1_08_circular_linked_list.md
       - "Anchor Programs": unit1/theory/unit1_09_anchor_programs.md
   - UNIT 2:
-      - "Detailed Walkthrough": unit2_walkthrough.md
-      - "Example Programs": unit2/unit2_complete_walkthrough.md
+      - "Stack - Array": unit2/theory/unit2_01_stack_array.md
+      - "Stack - Linked List": unit2/theory/unit2_02_stack_linked_list.md
+      - "Stack Applications": unit2/theory/unit2_03_stack_applications.md
+      - "Queue - Linked List": unit2/theory/unit2_04_queue_linked_list.md
+      - "Circular Array Queue": unit2/theory/unit2_05_circular_array_queue.md
+      - "Priority Queue Concepts": unit2/theory/unit2_06_priority_queue_concepts.md
+      - "PQ - Unordered List": unit2/theory/unit2_07_pq_unordered_list.md
+      - "PQ - Ordered List": unit2/theory/unit2_08_pq_ordered_list.md
+      - "PQ - Unordered Array": unit2/theory/unit2_09_pq_unordered_array.md
+      - "PQ - Ordered Array": unit2/theory/unit2_10_pq_ordered_array.md
+      - "Deque": unit2/theory/unit2_11_deque.md
+      - "Anchor Programs": unit2/theory/unit2_11_anchor_programs.md
   - UNIT 3:
       - "Detailed Walkthrough": unit3_walkthrough.md
       - "Example Programs": unit3/unit3_complete_walkthrough.md
