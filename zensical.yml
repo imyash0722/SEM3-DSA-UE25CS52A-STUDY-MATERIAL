@@ -60,20 +60,20 @@ markdown_extensions:
   - footnotes
 
 nav:
-  - Home: index.md
-  - "Unit 1: Foundations, Lists, Stacks, ADTs":
-      - "Unit 1 Overview": unit1_01_functions_and_pointers.md
-      - "Example Programs": unit1_02_example_programs.md
-  - "Unit 2: Circular Lists, Queues, Priority Queues":
-      - "Unit 2 Overview": unit2_circular_dll_queue_pq.md
-      - "Example Programs": unit2_example_programs.md
-  - "Unit 3: Trees, Heaps, Balanced Trees, Graphs":
-      - "Unit 3 Overview": unit3_trees_heaps_avl_splay_graphs.md
-      - "Example Programs": unit3_example_programs.md
-  - "Unit 4: Graphs, Hashing, Tries, Suffix Trees":
-      - "Unit 4 Overview": unit4_graphs_hashing_tries.md
-      - "Example Programs": unit4_example_programs.md
-  - "Quick Reference": INDEX.md
+  - HOME: index.md
+  - UNIT 1:
+      - Overview: unit1_01_functions_and_pointers.md
+      - Examples: unit1_02_example_programs.md
+  - UNIT 2:
+      - Overview: unit2_circular_dll_queue_pq.md
+      - Examples: unit2_example_programs.md
+  - UNIT 3:
+      - Overview: unit3_trees_heaps_avl_splay_graphs.md
+      - Examples: unit3_example_programs.md
+  - UNIT 4:
+      - Overview: unit4_graphs_hashing_tries.md
+      - Examples: unit4_example_programs.md
+  - REF: INDEX.md
 
 copyright: "Data Structures & Applications (UE25CS52A) Study Guide | Based on Tenenbaum & Kruse"
 
