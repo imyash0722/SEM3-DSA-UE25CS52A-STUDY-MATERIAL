@@ -1,0 +1,31 @@
+{
+  "tests": [
+    {
+      "id": "q1_sorted_linked_list",
+      "title": "Singly Linked List - Sorted Insertion",
+      "description": "Insert a new integer into an existing singly linked list such that ascending sorted order is preserved.",
+      "prefix": "#include <stdio.h>\n#include <stdlib.h>\n#include <assert.h>\n\ntypedef struct Node {\n    int data;\n    struct Node* next;\n} Node;\n\n// Create a new node helper\nNode* create_node(int val) {\n    Node* n = (Node*)malloc(sizeof(Node));\n    n->data = val;\n    n->next = NULL;\n    return n;\n}\n\n",
+      "signature": "void insert_sorted(Node** head, int val)",
+      "prompt": "Complete the C function 'void insert_sorted(Node** head, int val)' that inserts 'val' into the singly linked list whose head pointer is '*head', maintaining ascending sorted order. Handle inserting into an empty list, at the head, in the middle, and at the end. Only return the function definition.",
+      "suffix": "\nint main() {\n    Node* head = NULL;\n    insert_sorted(&head, 30);\n    insert_sorted(&head, 10);\n    insert_sorted(&head, 20);\n    insert_sorted(&head, 50);\n    insert_sorted(&head, 40);\n    \n    // Verify: 10 -> 20 -> 30 -> 40 -> 50\n    int expected[] = {10, 20, 30, 40, 50};\n    Node* curr = head;\n    for (int i = 0; i < 5; i++) {\n        assert(curr != NULL);\n        assert(curr->data == expected[i]);\n        Node* tmp = curr;\n        curr = curr->next;\n        free(tmp);\n    }\n    assert(curr == NULL);\n    printf(\"Q1 PASS: Sorted linked list insertion successful!\\n\");\n    return 0;\n}\n"
+    },
+    {
+      "id": "q2_max_heapify",
+      "title": "Binary Max-Heap - Sift-Down Heapify",
+      "description": "Restore the max-heap property for a 0-indexed binary heap array at index i.",
+      "prefix": "#include <stdio.h>\n#include <stdlib.h>\n#include <assert.h>\n\nstatic inline void swap(int* a, int* b) {\n    int t = *a;\n    *a = *b;\n    *b = t;\n}\n\n",
+      "signature": "void max_heapify(int arr[], int n, int i)",
+      "prompt": "Complete the C function 'void max_heapify(int arr[], int n, int i)' that restores the max-heap property for the subtree rooted at index 'i' in a 0-indexed array 'arr' of size 'n'. Use standard 0-indexed heap formulas (left = 2*i + 1, right = 2*i + 2). Only return the function definition.",
+      "suffix": "\nint main() {\n    // Array violating max-heap at index 0 (root=4, left=14, right=7)\n    int heap[] = {4, 14, 7, 2, 8, 1};\n    int n = sizeof(heap) / sizeof(heap[0]);\n    max_heapify(heap, n, 0);\n    \n    // After max_heapify at 0: root should be 14, left child 8, right child 7\n    assert(heap[0] == 14);\n    assert(heap[1] == 8);\n    assert(heap[2] == 7);\n    assert(heap[3] == 2);\n    assert(heap[4] == 4);\n    assert(heap[5] == 1);\n    \n    printf(\"Q2 PASS: Max-heapify sift-down successful!\\n\");\n    return 0;\n}\n"
+    },
+    {
+      "id": "q3_bst_delete",
+      "title": "Binary Search Tree - Node Deletion",
+      "description": "Delete a key from a Binary Search Tree and return the updated root pointer.",
+      "prefix": "#include <stdio.h>\n#include <stdlib.h>\n#include <assert.h>\n\ntypedef struct Node {\n    int key;\n    struct Node* left;\n    struct Node* right;\n} Node;\n\nNode* create_node(int k) {\n    Node* n = (Node*)malloc(sizeof(Node));\n    n->key = k;\n    n->left = n->right = NULL;\n    return n;\n}\n\nNode* bst_insert(Node* root, int k) {\n    if (!root) return create_node(k);\n    if (k < root->key) root->left = bst_insert(root->left, k);\n    else if (k > root->key) root->right = bst_insert(root->right, k);\n    return root;\n}\n\nstatic Node* find_min(Node* root) {\n    while (root && root->left) root = root->left;\n    return root;\n}\n\n",
+      "signature": "Node* delete_node(Node* root, int key)",
+      "prompt": "Complete the C function 'Node* delete_node(Node* root, int key)' that deletes the node with value 'key' from the BST rooted at 'root'. Handle leaf nodes, 1-child nodes, and 2-child nodes (replace with inorder successor). Return the updated root pointer. Properly free() the deleted node. Only return the function definition.",
+      "suffix": "\nint main() {\n    Node* root = NULL;\n    int vals[] = {50, 30, 70, 20, 40, 60, 80};\n    for (int i = 0; i < 7; i++) root = bst_insert(root, vals[i]);\n    \n    // Case 1: Delete leaf node (20)\n    root = delete_node(root, 20);\n    assert(root->left->left == NULL);\n    \n    // Case 2: Delete node with 1 child (30 has child 40)\n    root = delete_node(root, 30);\n    assert(root->left->key == 40);\n    \n    // Case 3: Delete root node with 2 children (50)\n    root = delete_node(root, 50);\n    assert(root->key == 60);\n    assert(root->right->left == NULL);\n    \n    printf(\"Q3 PASS: BST deletion successful!\\n\");\n    return 0;\n}\n"
+    }
+  ]
+}
