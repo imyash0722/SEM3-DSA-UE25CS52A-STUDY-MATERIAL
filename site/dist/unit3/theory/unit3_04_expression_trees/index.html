@@ -1281,6 +1281,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#expression-tree-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Expression Tree Example
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#build-from-postfix" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1292,10 +1303,32 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#build-process-visualization-postfix-3-4-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Build Process Visualization (Postfix: 3 4 + 5 *)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#evaluate-expression-tree" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
         Evaluate Expression Tree
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-visualization-postorder-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Evaluation Visualization (Postorder Traversal)
       </span>
     </span>
   </a>
@@ -1784,6 +1817,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#expression-tree-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Expression Tree Example
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#build-from-postfix" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1795,10 +1839,32 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#build-process-visualization-postfix-3-4-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Build Process Visualization (Postfix: 3 4 + 5 *)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#evaluate-expression-tree" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
         Evaluate Expression Tree
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-visualization-postorder-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Evaluation Visualization (Postorder Traversal)
       </span>
     </span>
   </a>
@@ -1851,6 +1917,22 @@
 <li><strong>Postorder</strong> = Postfix expression</li>
 <li><strong>Preorder</strong> = Prefix expression</li>
 </ul>
+<h3 id="expression-tree-example">Expression Tree Example<a class="headerlink" href="#expression-tree-example" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph TD
+    A[*] --&gt; B[+]
+    A --&gt; C[5]
+    B --&gt; D[3]
+    B --&gt; E[4]
+
+    style A fill:#ffebee,stroke:#c62828,stroke-width:3px
+    style B fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style C fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style D fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style E fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+
+    Infix[Infix: (3+4)*5] -.-&gt; A
+    Postfix[Postfix: 3 4 + 5 *] -.-&gt; A
+    Prefix[Prefix: * + 3 4 5] -.-&gt; A</code></pre>
 <h3 id="build-from-postfix">Build from Postfix<a class="headerlink" href="#build-from-postfix" title="Permanent link">&para;</a></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">node_t</span><span class="o">*</span><span class="w"> </span><span class="nf">build_expression_tree</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">postfix</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">node_t</span><span class="w"> </span><span class="o">*</span><span class="n">stack</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
@@ -1875,6 +1957,36 @@
 </span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">];</span><span class="w">  </span><span class="c1">// Root</span>
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="p">}</span>
 </span></code></pre></div>
+<h3 id="build-process-visualization-postfix-3-4-5">Build Process Visualization (Postfix: 3 4 + 5 *)<a class="headerlink" href="#build-process-visualization-postfix-3-4-5" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    subgraph Step1[Step 1: Push 3]
+        S1[Stack: [3]]
+    end
+
+    subgraph Step2[Step 2: Push 4]
+        S2[Stack: [3, 4]]
+    end
+
+    subgraph Step3[Step 3: Operator +]
+        S3[Pop 4, Pop 3] --&gt; Create1[Create '+' node]
+        Create1 --&gt; Push1[Push '+' node]
+        S3Result[Stack: [+]]
+    end
+
+    subgraph Step4[Step 4: Push 5]
+        S4[Stack: [+, 5]]
+    end
+
+    subgraph Step5[Step 5: Operator *]
+        S5[Pop 5, Pop +] --&gt; Create2[Create '*' node]
+        Create2 --&gt; Push2[Push '*' node]
+        S5Result[Stack: [*] = ROOT]
+    end
+
+    Step1 --&gt; Step2 --&gt; Step3 --&gt; Step4 --&gt; Step5
+
+    style S3Result fill:#fff3e0,stroke:#e65100
+    style S5Result fill:#e8f5e9,stroke:#2e7d32,stroke-width:3px</code></pre>
 <h3 id="evaluate-expression-tree">Evaluate Expression Tree<a class="headerlink" href="#evaluate-expression-tree" title="Permanent link">&para;</a></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">eval</span><span class="p">(</span><span class="n">node_t</span><span class="w"> </span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)</span><span class="w">  </span><span class="c1">// Leaf = operand</span>
@@ -1892,6 +2004,23 @@
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
 </span></code></pre></div>
+<h3 id="evaluation-visualization-postorder-traversal">Evaluation Visualization (Postorder Traversal)<a class="headerlink" href="#evaluation-visualization-postorder-traversal" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph TD
+    Root[*] --&gt; Left[+]
+    Root --&gt; Right[5]
+    Left --&gt; L1[3]
+    Left --&gt; R1[4]
+
+    %% Evaluation order
+    L1 -.-&gt;|1: eval 3| E1[3]
+    R1 -.-&gt;|2: eval 4| E2[4]
+    Left -.-&gt;|3: 3+4=7| E3[7]
+    Right -.-&gt;|4: eval 5| E4[5]
+    Root -.-&gt;|5: 7*5=35| E5[35]
+
+    style Root fill:#ffebee,stroke:#c62828,stroke-width:3px
+    style Left fill:#fff3e0,stroke:#e65100
+    style E5 fill:#e8f5e9,stroke:#2e7d32,stroke-width:3px</code></pre>
 <hr />
 <h2 id="key-takeaways">📝 Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
 <table>
@@ -2042,6 +2171,8 @@
       <script src="../../../assets/javascripts/bundle.77dd0ce9.min.js"></script>
       
         <script src="../../../assets/javascripts/theme-toggle.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
       
     
   </body>

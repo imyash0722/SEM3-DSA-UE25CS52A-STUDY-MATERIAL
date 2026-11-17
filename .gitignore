@@ -3,3 +3,5 @@ graphify-out/
 *.o
 *.exe
 model/
+resources/archives/
+

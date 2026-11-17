@@ -1254,6 +1254,28 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#array-vs-pointer-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Array vs Pointer Comparison
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-representation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Array Representation Example
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#key-differences-from-dynamic-version" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1269,6 +1291,17 @@
     <span class="md-ellipsis">
       <span class="md-typeset">
         Insert
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert-flow-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Insert Flow Visualization
       </span>
     </span>
   </a>
@@ -1784,6 +1817,28 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#array-vs-pointer-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Array vs Pointer Comparison
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-representation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Array Representation Example
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#key-differences-from-dynamic-version" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1799,6 +1854,17 @@
     <span class="md-ellipsis">
       <span class="md-typeset">
         Insert
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert-flow-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Insert Flow Visualization
       </span>
     </span>
   </a>
@@ -1860,6 +1926,49 @@
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">};</span>
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">tree</span><span class="w"> </span><span class="n">tree_t</span><span class="p">;</span>
 </span></code></pre></div>
+<h3 id="array-vs-pointer-comparison">Array vs Pointer Comparison<a class="headerlink" href="#array-vs-pointer-comparison" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph LR
+    subgraph Pointer[Pointer-Based BST]
+        P1[Node*] --&gt; P2[Node*]
+        P1 --&gt; P3[Node*]
+        style P1 fill:#e3f2fd,stroke:#1565c0
+        style P2 fill:#e3f2fd,stroke:#1565c0
+        style P3 fill:#e3f2fd,stroke:#1565c0
+    end
+
+    subgraph Array[Array-Based BST]
+        A1[Index 0] --&gt; A2[Index 1]
+        A1 --&gt; A3[Index 3]
+        A2 --&gt; A4[Index 2]
+        A2 -.-&gt;|empty| A5[Index -1]
+        style A1 fill:#fff3e0,stroke:#e65100
+        style A2 fill:#fff3e0,stroke:#e65100
+        style A3 fill:#fff3e0,stroke:#e65100
+        style A4 fill:#fff3e0,stroke:#e65100
+        style A5 fill:#ffcdd2,stroke:#c62828
+    end</code></pre>
+<h3 id="array-representation-example">Array Representation Example<a class="headerlink" href="#array-representation-example" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph TD
+    subgraph Array[elem[] Array]
+        I0[Index 0: key=50&lt;br/&gt;left=1, right=2]
+        I1[Index 1: key=30&lt;br/&gt;left=3, right=4]
+        I2[Index 2: key=70&lt;br/&gt;left=5, right=6]
+        I3[Index 3: key=20&lt;br/&gt;left=-1, right=-1]
+        I4[Index 4: key=40&lt;br/&gt;left=-1, right=-1]
+        I5[Index 5: key=60&lt;br/&gt;left=-1, right=-1]
+        I6[Index 6: key=80&lt;br/&gt;left=-1, right=-1]
+    end
+
+    Root[root=0] --&gt; I0
+    I0 --&gt; I1
+    I0 --&gt; I2
+    I1 --&gt; I3
+    I1 --&gt; I4
+    I2 --&gt; I5
+    I2 --&gt; I6
+
+    style Root fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style I0 fill:#fff3e0,stroke:#e65100</code></pre>
 <h3 id="key-differences-from-dynamic-version">Key Differences from Dynamic Version<a class="headerlink" href="#key-differences-from-dynamic-version" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Uses <strong>indices</strong> instead of pointers</li>
@@ -1884,6 +1993,21 @@
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="n">t</span><span class="o">-&gt;</span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">insert_rec</span><span class="p">(</span><span class="n">t</span><span class="o">-&gt;</span><span class="n">elem</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="o">-&gt;</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="n">idx</span><span class="p">);</span>
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
 </span></code></pre></div>
+<h3 id="insert-flow-visualization">Insert Flow Visualization<a class="headerlink" href="#insert-flow-visualization" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    Start([Start: Insert Key]) --&gt; CheckEmpty{Root == -1?}
+    CheckEmpty -- Yes --&gt; SetRoot[Root = new_idx]
+    CheckEmpty -- No --&gt; Compare{Key &gt; Current?}
+    Compare -- Yes --&gt; GoRight[Go Right: insert_rec(right, new_idx)]
+    Compare -- No --&gt; GoLeft[Go Left: insert_rec(left, new_idx)]
+    GoRight --&gt; Recurse[Recursive Call]
+    GoLeft --&gt; Recurse
+    Recurse --&gt; CheckEmpty
+    SetRoot --&gt; End([End])
+
+    style Start fill:#e8f5e9,stroke:#2e7d32
+    style End fill:#ffebee,stroke:#c62828
+    style SetRoot fill:#e3f2fd,stroke:#1565c0</code></pre>
 <hr />
 <h2 id="key-takeaways">📝 Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
 <table>
@@ -2038,6 +2162,8 @@
       <script src="../../../assets/javascripts/bundle.77dd0ce9.min.js"></script>
       
         <script src="../../../assets/javascripts/theme-toggle.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
       
     
   </body>

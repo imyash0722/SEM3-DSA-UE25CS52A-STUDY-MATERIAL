@@ -1531,6 +1531,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#hashing-process-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Hashing Process Visualization
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#why-hashing" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1581,6 +1592,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#division-method-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Division Method Visualization
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2-multiplication-method" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1618,6 +1640,17 @@
     <span class="md-ellipsis">
       <span class="md-typeset">
         String Hashing
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash-function-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Hash Function Comparison
       </span>
     </span>
   </a>
@@ -1856,6 +1889,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#hashing-process-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Hashing Process Visualization
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#why-hashing" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1906,6 +1950,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#division-method-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Division Method Visualization
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2-multiplication-method" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1943,6 +1998,17 @@
     <span class="md-ellipsis">
       <span class="md-typeset">
         String Hashing
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash-function-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Hash Function Comparison
       </span>
     </span>
   </a>
@@ -1993,6 +2059,16 @@
 - Goal: O(1) average case for insert, search, delete
 - Key → Hash Function → Index (0 to TABLESIZE-1)</p>
 </blockquote>
+<h3 id="hashing-process-visualization">Hashing Process Visualization<a class="headerlink" href="#hashing-process-visualization" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    Key[Key] --&gt; Hash[Hash Function]
+    Hash --&gt; Index[Array Index]
+    Index --&gt; Table[Hash Table]
+
+    style Key fill:#e3f2fd,stroke:#1565c0
+    style Hash fill:#fff3e0,stroke:#e65100
+    style Index fill:#e8f5e9,stroke:#2e7d32
+    style Table fill:#f3e5f5,stroke:#7b1fa2</code></pre>
 <h3 id="why-hashing">Why Hashing?<a class="headerlink" href="#why-hashing" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -2062,6 +2138,20 @@
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">TABLESIZE</span><span class="p">;</span><span class="w">  </span><span class="c1">// TABLESIZE = 19 (prime)</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
 </span></code></pre></div>
+<h3 id="division-method-visualization">Division Method Visualization<a class="headerlink" href="#division-method-visualization" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    K[Key: 40] --&gt; Mod[Modulo 19]
+    Mod --&gt; R[Result: 2]
+    R --&gt; Table[(Index 2)]
+
+    K2[Key: 59] --&gt; Mod2
+    Mod2 --&gt; R2[Result: 2]
+    R2 --&gt; Table2[(Index 2)]
+
+    Table -.-&gt;|COLLISION!| Table2
+
+    style K fill:#e3f2fd,stroke:#1565c0
+    style Table fill:#ffcdd2,stroke:#c62828</code></pre>
 <h3 id="2-multiplication-method">2. Multiplication Method<a class="headerlink" href="#2-multiplication-method" title="Permanent link">&para;</a></h3>
 <p><div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">h</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">floor</span><span class="p">(</span><span class="n">TABLESIZE</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">frac</span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">A</span><span class="p">))</span>
 </span></code></pre></div>
@@ -2082,6 +2172,28 @@
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">TABLESIZE</span><span class="p">;</span>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">}</span>
 </span></code></pre></div>
+<h3 id="hash-function-comparison">Hash Function Comparison<a class="headerlink" href="#hash-function-comparison" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph TD
+    HF[Hash Functions] --&gt; Div[Division Method]
+    HF --&gt; Mult[Multiplication Method]
+    HF --&gt; Mid[Mid-Square]
+    HF --&gt; Fold[Folding]
+    HF --&gt; String[String Hash]
+
+    Div --&gt; DivPros[Simple, fast]
+    Div --&gt; DivCons[Clustering if not prime]
+    Mult --&gt; MultPros[Good distribution]
+    Mult --&gt; MultCons[Complex]
+    Mid --&gt; MidPros[Simple]
+    Mid --&gt; MidCons[Not uniform]
+    Fold --&gt; FoldPros[Good for strings]
+    Fold --&gt; FoldCons[Complex]
+
+    style HF fill:#e3f2fd,stroke:#1565c0
+    style Div fill:#e8f5e9,stroke:#2e7d32
+    style Mult fill:#fff3e0,stroke:#e65100
+    style Mid fill:#fce4ec,stroke:#c2185b
+    style String fill:#f3e5f5,stroke:#7b1fa2</code></pre>
 <hr />
 <h2 id="key-takeaways">📝 Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
 <table>
@@ -2232,6 +2344,8 @@
       <script src="../../../assets/javascripts/bundle.77dd0ce9.min.js"></script>
       
         <script src="../../../assets/javascripts/theme-toggle.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
       
     
   </body>

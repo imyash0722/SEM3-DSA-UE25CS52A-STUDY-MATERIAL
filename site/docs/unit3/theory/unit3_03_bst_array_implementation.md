@@ -21,6 +21,55 @@ struct tree {
 typedef struct tree tree_t;
 ```
 
+### Array vs Pointer Comparison
+```mermaid
+graph LR
+    subgraph Pointer[Pointer-Based BST]
+        P1[Node*] --> P2[Node*]
+        P1 --> P3[Node*]
+        style P1 fill:#e3f2fd,stroke:#1565c0
+        style P2 fill:#e3f2fd,stroke:#1565c0
+        style P3 fill:#e3f2fd,stroke:#1565c0
+    end
+    
+    subgraph Array[Array-Based BST]
+        A1[Index 0] --> A2[Index 1]
+        A1 --> A3[Index 3]
+        A2 --> A4[Index 2]
+        A2 -.->|empty| A5[Index -1]
+        style A1 fill:#fff3e0,stroke:#e65100
+        style A2 fill:#fff3e0,stroke:#e65100
+        style A3 fill:#fff3e0,stroke:#e65100
+        style A4 fill:#fff3e0,stroke:#e65100
+        style A5 fill:#ffcdd2,stroke:#c62828
+    end
+```
+
+### Array Representation Example
+```mermaid
+graph TD
+    subgraph Array[elem[] Array]
+        I0[Index 0: key=50<br/>left=1, right=2]
+        I1[Index 1: key=30<br/>left=3, right=4]
+        I2[Index 2: key=70<br/>left=5, right=6]
+        I3[Index 3: key=20<br/>left=-1, right=-1]
+        I4[Index 4: key=40<br/>left=-1, right=-1]
+        I5[Index 5: key=60<br/>left=-1, right=-1]
+        I6[Index 6: key=80<br/>left=-1, right=-1]
+    end
+    
+    Root[root=0] --> I0
+    I0 --> I1
+    I0 --> I2
+    I1 --> I3
+    I1 --> I4
+    I2 --> I5
+    I2 --> I6
+    
+    style Root fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style I0 fill:#fff3e0,stroke:#e65100
+```
+
 ### Key Differences from Dynamic Version
 - Uses **indices** instead of pointers
 - `left`/`right` store array indices (-1 = null)
@@ -44,6 +93,24 @@ void insert(tree_t *t, int key) {
     t->elem[idx].left = t->elem[idx].right = -1;
     t->root = insert_rec(t->elem, t->root, idx);
 }
+```
+
+### Insert Flow Visualization
+```mermaid
+flowchart TD
+    Start([Start: Insert Key]) --> CheckEmpty{Root == -1?}
+    CheckEmpty -- Yes --> SetRoot[Root = new_idx]
+    CheckEmpty -- No --> Compare{Key > Current?}
+    Compare -- Yes --> GoRight[Go Right: insert_rec(right, new_idx)]
+    Compare -- No --> GoLeft[Go Left: insert_rec(left, new_idx)]
+    GoRight --> Recurse[Recursive Call]
+    GoLeft --> Recurse
+    Recurse --> CheckEmpty
+    SetRoot --> End([End])
+    
+    style Start fill:#e8f5e9,stroke:#2e7d32
+    style End fill:#ffebee,stroke:#c62828
+    style SetRoot fill:#e3f2fd,stroke:#1565c0
 ```
 
 ---

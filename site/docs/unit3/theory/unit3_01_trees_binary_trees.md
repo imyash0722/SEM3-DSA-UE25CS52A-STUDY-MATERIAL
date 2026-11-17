@@ -26,6 +26,25 @@
 - Removing edge → disconnects tree
 - Exactly one path between any two nodes
 
+### Tree Visualization
+```mermaid
+graph TD
+    A[Root<br/>Level 0] --> B[Left Child<br/>Level 1]
+    A --> C[Right Child<br/>Level 1]
+    B --> D[Left Grandchild<br/>Level 2]
+    B --> E[Right Grandchild<br/>Level 2]
+    C --> F[Left Grandchild<br/>Level 2]
+    C --> G[Right Grandchild<br/>Level 2]
+    D --> H[Leaf<br/>Level 3]
+    D --> I[Leaf<br/>Level 3]
+    
+    style A fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style B fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    style C fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    style H fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style I fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+```
+
 ---
 
 ## 🌲 Binary Trees
@@ -36,6 +55,21 @@
 **Recursive Definition:**
 - Empty tree, OR
 - Root + left subtree (binary tree) + right subtree (binary tree)
+
+### Binary Tree Structure
+```mermaid
+graph TD
+    Root[Root Node] --> Left[Left Subtree]
+    Root --> Right[Right Subtree]
+    Left --> LL[Left-Left]
+    Left --> LR[Left-Right]
+    Right --> RL[Right-Left]
+    Right --> RR[Right-Right]
+    
+    style Root fill:#ffebee,stroke:#c62828,stroke-width:3px
+    style Left fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style Right fill:#fff3e0,stroke:#e65100,stroke-width:2px
+```
 
 ### Node Structure
 ```c

@@ -1330,10 +1330,43 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#threaded-tree-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Threaded Tree Visualization
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread-types-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Thread Types Visualization
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#inorder-traversal-iterative-no-recursion" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
         Inorder Traversal (Iterative - No Recursion!)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inorder-traversal-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Inorder Traversal Flow
       </span>
     </span>
   </a>
@@ -1817,10 +1850,43 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#threaded-tree-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Threaded Tree Visualization
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread-types-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Thread Types Visualization
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#inorder-traversal-iterative-no-recursion" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
         Inorder Traversal (Iterative - No Recursion!)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inorder-traversal-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Inorder Traversal Flow
       </span>
     </span>
   </a>
@@ -1883,6 +1949,45 @@
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">lthread</span><span class="p">,</span><span class="w"> </span><span class="n">rthread</span><span class="p">;</span><span class="w">  </span><span class="c1">// 1 = thread, 0 = structural</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">};</span>
 </span></code></pre></div>
+<h3 id="threaded-tree-visualization">Threaded Tree Visualization<a class="headerlink" href="#threaded-tree-visualization" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph TD
+    A[40] --&gt; B[20]
+    A --&gt; C[60]
+    B --&gt; D[10]
+    B --&gt; E[30]
+    C --&gt; F[50]
+    C --&gt; G[70]
+
+    %% Threads (dashed lines)
+    D -.-&gt;|Thread| B
+    E -.-&gt;|Thread| A
+    F -.-&gt;|Thread| B
+    G -.-&gt;|Thread| C
+    D -.-&gt;|Thread| E
+    E -.-&gt;|Thread| B
+    F -.-&gt;|Thread| A
+    G -.-&gt;|Thread| C
+
+    style A fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style B fill:#fff3e0,stroke:#e65100
+    style C fill:#fff3e0,stroke:#e65100</code></pre>
+<h3 id="thread-types-visualization">Thread Types Visualization<a class="headerlink" href="#thread-types-visualization" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph LR
+    subgraph Structural[Structural Pointers]
+        S1[Node] --&gt; S2[Left Child]
+        S1 --&gt; S3[Right Child]
+        style S1 fill:#e3f2fd,stroke:#1565c0
+        style S2 fill:#e3f2fd,stroke:#1565c0
+        style S3 fill:#e3f2fd,stroke:#1565c0
+    end
+
+    subgraph Threads[Thread Pointers]
+        T1[Node] -.-&gt; T2[Inorder Predecessor]
+        T1 -.-&gt; T3[Inorder Successor]
+        style T1 fill:#fff3e0,stroke:#e65100
+        style T2 fill:#fff3e0,stroke:#e65100
+        style T3 fill:#fff3e0,stroke:#e65100
+    end</code></pre>
 <h3 id="inorder-traversal-iterative-no-recursion">Inorder Traversal (Iterative - No Recursion!)<a class="headerlink" href="#inorder-traversal-iterative-no-recursion" title="Permanent link">&para;</a></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">node_t</span><span class="o">*</span><span class="w"> </span><span class="nf">leftmost</span><span class="p">(</span><span class="n">node_t</span><span class="w"> </span><span class="o">*</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
@@ -1901,6 +2006,20 @@
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p">}</span>
 </span></code></pre></div>
+<h3 id="inorder-traversal-flow">Inorder Traversal Flow<a class="headerlink" href="#inorder-traversal-flow" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    Start([Start]) --&gt; LM[leftmost(root)]
+    LM --&gt; Loop{Current != NULL?}
+    Loop -- No --&gt; End([End])
+    Loop -- Yes --&gt; Print[Print curr-&gt;key]
+    Print --&gt; Check{curr-&gt;rthread == 1?}
+    Check -- Yes --&gt; Thread[curr = curr-&gt;right]
+    Check -- No --&gt; Structural[curr = leftmost(curr-&gt;right)]
+    Thread --&gt; Loop
+    Structural --&gt; Loop
+
+    style Start fill:#e8f5e9,stroke:#2e7d32
+    style End fill:#ffebee,stroke:#c62828</code></pre>
 <hr />
 <h2 id="key-takeaways">📝 Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
 <table>
@@ -2051,6 +2170,8 @@
       <script src="../../../assets/javascripts/bundle.77dd0ce9.min.js"></script>
       
         <script src="../../../assets/javascripts/theme-toggle.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
       
     
   </body>

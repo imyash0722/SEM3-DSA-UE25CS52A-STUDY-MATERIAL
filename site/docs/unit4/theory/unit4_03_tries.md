@@ -9,6 +9,33 @@
 > - Path from root = prefix
 > - `is_word_end` flag marks complete words
 
+### Trie Structure Visualization
+```mermaid
+graph TD
+    Root[Root<br/>(empty)] --> A[a]
+    A --> T[t]
+    T --> C1[c]
+    C1 --> E1[e]
+    
+    Root --> B[b]
+    B --> A1[a]
+    A1 --> T1[t]
+    
+    Root --> C[c]
+    C --> A2[a]
+    A2 --> T2[t]
+    
+    Root --> R[r]
+    R --> A3[a]
+    A3 --> T3[t]
+    
+    style Root fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style A fill:#e8f5e9,stroke:#2e7d32
+    style B fill:#fff3e0,stroke:#e65100
+    style C fill:#f3e5f5,stroke:#7b1fa2
+    style R fill:#fff8e1,stroke:#f57f17
+```
+
 ### Structure
 ```c
 #define ALPHABET_SIZE 256  // Extended ASCII
@@ -48,6 +75,35 @@ void insert(trie_t *t, char *word) {
 }
 ```
 
+### Insert Visualization (Inserting "cat", "car", "card")
+```mermaid
+graph TD
+    subgraph Step1[Insert "cat"]
+        R1[Root] --> C1[c]
+        C1 --> A1[a]
+        A1 --> T1[t<br/>is_word_end=1]
+    end
+    
+    subgraph Step2[Insert "car"]
+        R2[Root] --> C2[c]
+        C2 --> A2[a]
+        A2 --> T2[t<br/>is_word_end=1]
+        A2 --> R1[r<br/>is_word_end=1]
+    end
+    
+    subgraph Step3[Insert "card"]
+        R3[Root] --> C3[c]
+        C3 --> A3[a]
+        A3 --> R2[r<br/>is_word_end=1]
+        R2 --> D[d<br/>is_word_end=1]
+    end
+    
+    style R1 fill:#e3f2fd,stroke:#1565c0
+    style A1 fill:#e8f5e9,stroke:#2e7d32
+    style T1 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style R1 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+```
+
 #### Search
 ```c
 int search(trie_t *t, char *word) {
@@ -59,6 +115,25 @@ int search(trie_t *t, char *word) {
     }
     return curr->is_word_end;
 }
+```
+
+### Search Visualization
+```mermaid
+flowchart TD
+    Start([Search "car"]) --> Root[Start at Root]
+    Root --> C{c}
+    C --> FoundC{Exists?}
+    FoundC -- Yes --> A{a}
+    A --> FoundA{Exists?}
+    FoundA -- Yes --> R{r}
+    R --> FoundR{Exists?}
+    FoundR -- Yes --> CheckEnd{is_word_end?}
+    CheckEnd -- Yes --> Found[FOUND]
+    CheckEnd -- No --> NotFound[NOT FOUND]
+    
+    style Start fill:#e8f5e9,stroke:#2e7d32
+    style Found fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style NotFound fill:#ffcdd2,stroke:#c62828
 ```
 
 #### Delete
@@ -95,6 +170,23 @@ void delete_word(trie_t *t, char *word) {
 }
 ```
 
+### Delete Visualization
+```mermaid
+flowchart TD
+    Start([Delete "car"]) --> R1[Root: c]
+    R1 --> A1[a]
+    A1 --> R1b[r]
+    R1b --> CheckEnd{is_word_end=1?}
+    CheckEnd -- Yes --> Unset[Unset is_word_end]
+    Unset --> CheckChildren{Children?}
+    CheckChildren -- Yes (d) --> Keep[Keep Node]
+    CheckChildren -- No --> Free[Free Node]
+    
+    style Start fill:#e8f5e9,stroke:#2e7d32
+    style Keep fill:#e8f5e9,stroke:#2e7d32
+    style Free fill:#ffcdd2,stroke:#c62828
+```
+
 #### Display All Words
 ```c
 void display_from(node_t *curr, char *prefix, int len) {
@@ -129,6 +221,27 @@ void autocomplete(trie_t *t, char *prefix) {
     strcpy(full_prefix, prefix);
     display_from(curr, full_prefix, strlen(prefix));
 }
+```
+
+### Autocomplete Visualization
+```mermaid
+graph TD
+    Root[Root] --> C[c]
+    C --> A[a]
+    A --> T[t<br/>word_end]
+    A --> R[r<br/>word_end]
+    R --> D[d<br/>word_end]
+    A --> T2[t<br/>word_end]
+    
+    Search[Search prefix "ca"] --> C
+    C --> A
+    A --> Results{Results from here}
+    Results --> T[t]
+    Results --> R[r]
+    R --> D[d]
+    
+    style Root fill:#e3f2fd,stroke:#1565c0
+    style Results fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
 ```
 
 ---

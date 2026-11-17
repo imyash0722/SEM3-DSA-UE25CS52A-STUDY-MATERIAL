@@ -3,6 +3,26 @@
 ## 🎯 Anchor Programs for Unit 4
 
 ### Program 1: Hash Table - All 4 Methods
+
+### Hash Table Comparison Flow
+```mermaid
+flowchart TD
+    Start([Insert Keys: 40,59,78,97...]) --> Hash[Hash: key % 19]
+    Hash --> Collide{Collision at 2?}
+    Collide -- Separate Chaining --> Chain[Add to linked list]
+    Collide -- Linear Probing --> Linear[Try idx+1, idx+2...]
+    Collide -- Quadratic Probing --> Quad[Try +1², +2², +3²...]
+    Collide -- Double Hashing --> Double[Use 2nd hash function]
+    
+    Chain --> ChainDisplay[Display: Lists at each index]
+    Linear --> LinearDisplay[Display: Array with gaps]
+    Quad --> QuadDisplay[Display: Quadratic spread]
+    Double --> DoubleDisplay[Display: Double hash spread]
+    
+    style Start fill:#e8f5e9,stroke:#2e7d32
+    style Collide fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+```
+
 ```c
 // hash_all_methods.c - Complete Hash Table Implementations
 #include <stdio.h>
@@ -193,9 +213,59 @@ int main() {
 }
 ```
 
+### Hash Methods Comparison Visualization
+```mermaid
+graph TD
+    Keys[Keys: 40,59,78,97,15,34,53] --> Hash[Hash: key % 19]
+    Hash --> AllCollide[All collide at Index 2]
+    
+    AllCollide --> SC[Separate Chaining<br/>Linked List at Index 2]
+    AllCollide --> LP[Linear Probing<br/>Indices: 2,3,4,5...]
+    AllCollide --> QP[Quadratic Probing<br/>+1²,+2²,+3²... = 3,6,11...]
+    AllCollide --> DH[Double Hashing<br/>h2=7-(key%7) = 5,4,3...]
+    
+    SC --> SCDisp[Index 2: 40→59→78→97]
+    LP --> LPDisp[Index 2,3,4,5: 40,59,78,97]
+    QP --> QPDisp[Index 2,3,6,11...]
+    DH --> DHDisp[Spread across table]
+    
+    style AllCollide fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+```
+
 ---
 
 ### Program 2: Trie with Autocomplete
+
+### Trie Operations Flow
+```mermaid
+flowchart TD
+    subgraph Insert["Insert: cat, car, card"]
+        I1[Root] --> I2[c]
+        I2 --> I3[a]
+        I3 --> I4[t] 
+        I3 --> I5[r]
+        I5 --> I6[d]
+    end
+    
+    subgraph Search["Search 'car'"]
+        S1[Root] --> S2[c] --> S3[a] --> S4[r]
+        S4 --> CheckEnd{is_word_end?}
+        CheckEnd -- Yes --> Found[FOUND]
+        CheckEnd -- No --> NotFound[NOT FOUND]
+    end
+    
+    subgraph Autocomplete["Autocomplete 'ca'"]
+        AC1[Root] --> AC2[c] --> AC3[a]
+        AC3 --> AC4[t]
+        AC3 --> AC5[r]
+        AC5 --> AC6[d]
+    end
+    
+    style Insert fill:#e3f2fd,stroke:#1565c0
+    style Search fill:#fff3e0,stroke:#e65100
+    style Autocomplete fill:#e8f5e9,stroke:#2e7d32
+```
+
 ```c
 // trie_demo.c - Trie with Autocomplete
 #include <stdio.h>
@@ -314,9 +384,48 @@ int main() {
 }
 ```
 
+### Trie Autocomplete Visualization
+```mermaid
+graph TD
+    Root[Root] --> C[c]
+    C --> A[a]
+    A --> T[t<br/>word_end]
+    A --> R[r<br/>word_end]
+    R --> D[d<br/>word_end]
+    A --> T2[t<br/>word_end]
+    
+    Search[Search "ca"] --> C
+    C --> A
+    A --> Results{Results}
+    Results --> T[t]
+    Results --> R[r]
+    R --> D[d]
+    
+    style Root fill:#e3f2fd,stroke:#1565c0
+    style Results fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+```
+
 ---
 
 ### Program 3: Dijkstra's Algorithm
+
+### Dijkstra's Algorithm Flow
+```mermaid
+flowchart TD
+    Start[Start: Source=0] --> Init[dist[0]=0, others=∞]
+    Init --> PQ[Min-Heap: (0,0)]
+    PQ --> Extract[Extract Min: u]
+    Extract --> Relax{Relax edges<br/>from u}
+    Relax -- Update --> Update[Update dist[v],<br/>decrease-key in heap]
+    Update --> Extract
+    Extract --> Done{Heap Empty?}
+    Done -- No --> Extract
+    Done -- Yes --> Result[Shortest Paths]
+    
+    style Start fill:#e8f5e9,stroke:#2e7d32
+    style Result fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+```
+
 ```c
 // dijkstra_demo.c - Dijkstra's Shortest Path
 #include <stdio.h>
@@ -418,6 +527,23 @@ int main() {
     
     return 0;
 }
+```
+
+### Dijkstra's Example Graph
+```mermaid
+graph TD
+    S[Source: 0] -->|4| A[A: 4]
+    S -->|2| B[B: 2]
+    A -->|1| C[C: 5]
+    A -->|5| D[D: 9]
+    B -->|1| C
+    B -->|3| E[E: 5]
+    C -->|2| F[F: 7]
+    D -->|2| F
+    E -->|2| F
+    
+    style S fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style F fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
 ```
 
 ---

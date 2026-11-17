@@ -9,6 +9,23 @@
 | **Open Hashing** (Separate Chaining) | Linked lists at each index | Simple, no overflow, easy delete | Extra memory for pointers, cache misses |
 | **Closed Hashing** (Open Addressing) | Find next free slot in array | Better cache, no pointers | Clustering, hard delete, fixed size |
 
+### Collision Visualization
+```mermaid
+graph TD
+    K1[Key 40] --> H[Hash Function]
+    K2[Key 59] --> H
+    H --> I1[Index 2]
+    H --> I2[Index 2]
+    I1 --> C1[Collision!]
+    I2 --> C1
+    C1 --> Resolve[Resolve with...]
+    Resolve --> Chaining[Separate Chaining]
+    Resolve --> Probing[Open Addressing]
+    
+    style K1 fill:#e3f2fd,stroke:#1565c0
+    style C1 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+```
+
 ---
 
 ## 🔗 Method 1: Separate Chaining (Open Hashing)
@@ -29,6 +46,26 @@ struct hash_table {
     node_t *head[TABLESIZE];
 };
 typedef struct hash_table hash_table_t;
+```
+
+### Separate Chaining Visualization
+```mermaid
+graph TD
+    Table[Hash Table] --> I0[Index 0: NULL]
+    Table --> I1[Index 1: NULL]
+    Table --> I2[Index 2]
+    Table --> I3[Index 3: NULL]
+    
+    I2 --> N1[(40, "forty")]
+    N1 --> N2[(59, "fifty-nine")]
+    N2 --> N3[(78, "seventy-eight")]
+    N3 --> N4[(97, "ninety-seven")]
+    
+    style Table fill:#e3f2fd,stroke:#1565c0
+    style N1 fill:#e8f5e9,stroke:#2e7d32
+    style N2 fill:#e8f5e9,stroke:#2e7d32
+    style N3 fill:#e8f5e9,stroke:#2e7d32
+    style N4 fill:#e8f5e9,stroke:#2e7d32
 ```
 
 ### Operations
@@ -53,6 +90,19 @@ void insert(hash_table_t *h, int key, char *word) {
 }
 ```
 
+### Separate Chaining Insert Flow
+```mermaid
+flowchart TD
+    Start([Insert]) --> Hash[Compute Hash]
+    Hash --> Front[Insert at Front]
+    Front --> Link[new->next = head[idx]]
+    Link --> Update[head[idx] = new]
+    Update --> Done[Done]
+    
+    style Start fill:#e8f5e9,stroke:#2e7d32
+    style Done fill:#ffebee,stroke:#c62828
+```
+
 #### Search
 ```c
 char* search(hash_table_t *h, int key) {
@@ -61,6 +111,23 @@ char* search(hash_table_t *h, int key) {
         if (p->key == key) return p->word;
     return "";
 }
+```
+
+### Separate Chaining Search Flow
+```mermaid
+flowchart TD
+    Start([Search]) --> Hash[Compute Hash]
+    Hash --> Traverse[Traverse List]
+    Traverse --> Match{Key Match?}
+    Match -- Yes --> Return[Return Value]
+    Match -- No --> Next[Next Node]
+    Next --> End{End of List?}
+    End -- No --> Traverse
+    End -- Yes --> NotFound[Return ""]
+    
+    style Start fill:#e8f5e9,stroke:#2e7d32
+    style Return fill:#e8f5e9,stroke:#2e7d32
+    style NotFound fill:#ffcdd2,stroke:#c62828
 ```
 
 #### Delete
@@ -115,6 +182,28 @@ struct hash_table {
 typedef struct hash_table hash_table_t;
 ```
 
+### Linear Probing Visualization
+```mermaid
+graph LR
+    subgraph Table[Hash Table - TABLESIZE=7]
+        I0[0: empty]
+        I1[1: 10]
+        I2[2: 20]
+        I3[3: 30]
+        I4[4: 40]
+        I5[5: empty]
+        I6[6: empty]
+    end
+    
+    Insert[Insert 50] --> Probe{Index 1 occupied?}
+    Probe -- Yes --> Next[Try Index 2]
+    Next --> Probe2{Index 2 occupied?}
+    Probe2 -- Yes --> Next2[Try Index 3]
+    Probe2 -- No --> Place[Place at Index 3]
+    
+    style Table fill:#e3f2fd,stroke:#1565c0
+```
+
 ### Operations
 
 #### Initialize
@@ -141,37 +230,18 @@ void insert(hash_table_t *h, int key, char *word) {
 }
 ```
 
-#### Search
-```c
-char* search(hash_table_t *h, int key) {
-    int idx = key % TABLESIZE, checked = 0;
-    while (checked < h->count) {
-        if (h->elem[idx].in_use) {
-            checked++;
-            if (h->elem[idx].key == key) return h->elem[idx].word;
-        }
-        idx = (idx + 1) % TABLESIZE;
-    }
-    return "";
-}
-```
-
-#### Delete (Lazy Deletion)
-```c
-void delete_key(hash_table_t *h, int key) {
-    int idx = key % TABLESIZE, checked = 0;
-    while (checked < h->count) {
-        if (h->elem[idx].in_use) {
-            checked++;
-            if (h->elem[idx].key == key) {
-                h->elem[idx].in_use = 0;  // Mark free (lazy delete)
-                h->count--;
-                return;
-            }
-        }
-        idx = (idx + 1) % TABLESIZE;
-    }
-}
+### Linear Probing Flow
+```mermaid
+flowchart TD
+    Start([Insert]) --> Hash[Hash: idx = key % SIZE]
+    Hash --> Check{Slot Empty?}
+    Check -- Yes --> Place[Place Here]
+    Check -- No --> Probe[idx = (idx + 1) % SIZE]
+    Probe --> Check
+    Place --> Done
+    
+    style Start fill:#e8f5e9,stroke:#2e7d32
+    style Done fill:#ffebee,stroke:#c62828
 ```
 
 ---
@@ -181,6 +251,33 @@ void delete_key(hash_table_t *h, int key) {
 ### Probe Sequence
 ```c
 idx = (init_idx + i*i) % TABLESIZE  // i = 0, 1, 2, ...
+```
+
+### Quadratic Probing Visualization
+```mermaid
+graph LR
+    subgraph Table[Table Size: 11]
+        I0[0]
+        I1[1: X]
+        I2[2]
+        I3[3]
+        I4[4]
+        I5[5]
+        I6[6]
+        I7[7]
+        I8[8]
+        I9[9]
+        I10[10]
+    end
+    
+    Insert[Insert: hash=1] --> Try0[i=0: Index 1]
+    Try0 --> Occupied{Occupied?}
+    Occupied -- Yes --> Try1[i=1: +1²=2]
+    Try1 --> Check2{Index 2 empty?}
+    Check2 -- Yes --> Place[Place at 2]
+    Occupied -- No --> Place
+    
+    style Table fill:#e3f2fd,stroke:#1565c0
 ```
 
 ### Insert (Only Change from Linear)
@@ -204,6 +301,20 @@ void insert(hash_table_t *h, int key, char *word) {
 }
 ```
 
+### Probe Sequence Comparison
+```mermaid
+graph TD
+    Start[Initial Index: 1] --> LP[Linear: +1, +2, +3...]
+    Start --> QP[Quadratic: +1, +4, +9, +16...]
+    Start --> DH[Double Hash: +h2, +2h2, +3h2...]
+    
+    LP --> LPSeq[1, 2, 3, 4, 5...]
+    QP --> QPSeq[1, 4, 9, 16, 25...]
+    DH --> DHSeq[h2, 2h2, 3h2...]
+    
+    style Start fill:#e3f2fd,stroke:#1565c0
+```
+
 ---
 
 ## 🔄 Method 4: Double Hashing
@@ -213,6 +324,20 @@ void insert(hash_table_t *h, int key, char *word) {
 int hash2(int key) {
     return 7 - (key % 7);  // Returns 1..7 (prime < TABLESIZE)
 }
+```
+
+### Double Hashing Visualization
+```mermaid
+graph TD
+    Start[Hash: idx = key % 11] --> Probe{Collision?}
+    Probe -- No --> Place[Place]
+    Probe -- Yes --> DH[Double Hash: h2 = 7 - (key % 7)]
+    DH --> Step[Step = hash2(key)]
+    Step --> Probe2{Next slot free?}
+    Probe2 -- Yes --> Place
+    Probe2 -- No --> AddStep[idx = (idx + step) % SIZE]
+    
+    style Start fill:#e3f2fd,stroke:#1565c0
 ```
 
 ### Structure with Function Pointer
@@ -258,6 +383,23 @@ void insert(hash_table_t *h, int key, char *word) {
 }
 ```
 
+### Probe Sequence Comparison
+```mermaid
+graph TD
+    Start[Initial Index: 1] --> LP[Linear: +1, +2, +3...]
+    Start --> QP[Quadratic: +1, +4, +9, +16...]
+    Start --> DH[Double Hash: +h2, +2h2, +3h2...]
+    
+    LP --> LPSeq[1, 2, 3, 4, 5...]
+    QP --> QPSeq[1, 4, 9, 16, 25...]
+    DH --> DHSeq[h2, 2h2, 3h2...]
+    
+    style Start fill:#e3f2fd,stroke:#1565c0
+    style LPSeq fill:#e8f5e9,stroke:#2e7d32
+    style QPSeq fill:#fff3e0,stroke:#e65100
+    style DHSeq fill:#f3e5f5,stroke:#7b1fa2
+```
+
 ---
 
 ## 📊 Collision Resolution Comparison
@@ -270,6 +412,29 @@ void insert(hash_table_t *h, int key, char *word) {
 | Double Hashing | Closed | O(1)* | O(1)* | Lazy | Minimal | Good |
 
 *Average case, assuming good hash function and load factor < 0.7
+
+### Comparison Visualization
+```mermaid
+graph LR
+    subgraph Clustering[Clustering Tendency]
+        C1[Separate Chaining: None]
+        C2[Double Hashing: Minimal]
+        C3[Quadratic: Secondary]
+        C4[Linear: Primary]
+    end
+    
+    subgraph Cache[Cache Performance]
+        CA1[Linear: Best]
+        CA2[Quadratic: Good]
+        CA3[Double Hash: Good]
+        CA4[Chaining: Poor]
+    end
+    
+    style C1 fill:#e8f5e9,stroke:#2e7d32
+    style C2 fill:#e8f5e9,stroke:#2e7d32
+    style C3 fill:#fff3e0,stroke:#e65100
+    style C4 fill:#ffcdd2,stroke:#c62828
+```
 
 ---
 

@@ -1400,6 +1400,50 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#zig-case-node-is-child-of-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Zig Case (Node is child of root)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zig-zig-case-node-parent-same-side-both-left" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Zig-Zig Case (Node &amp; parent same side - both left)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zig-zag-case-node-parent-opposite-sides" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Zig-Zag Case (Node &amp; parent opposite sides)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splaying-decision-flowchart" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Splaying Decision Flowchart
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#applications" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1795,6 +1839,50 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#zig-case-node-is-child-of-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Zig Case (Node is child of root)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zig-zig-case-node-parent-same-side-both-left" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Zig-Zig Case (Node &amp; parent same side - both left)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zig-zag-case-node-parent-opposite-sides" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Zig-Zag Case (Node &amp; parent opposite sides)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splaying-decision-flowchart" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Splaying Decision Flowchart
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#applications" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1855,6 +1943,89 @@
 <li><strong>Zig-Zig</strong>: Node &amp; parent same side → two same-direction rotations</li>
 <li><strong>Zig-Zag</strong>: Node &amp; parent opposite sides → two opposite rotations</li>
 </ol>
+<h3 id="zig-case-node-is-child-of-root">Zig Case (Node is child of root)<a class="headerlink" href="#zig-case-node-is-child-of-root" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph TD
+    subgraph Before[Before: Zig]
+        P[Parent/Root] --&gt; X[Node]
+    end
+
+    ArrowZig -.-&gt;|Rotate| AfterZig
+
+    subgraph After[After: Node at Root]
+        X2[X: Root] --&gt; P2[Parent]
+    end
+
+    Before -.-&gt;|Single Rotation| After
+
+    style X fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style X2 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+<h3 id="zig-zig-case-node-parent-same-side-both-left">Zig-Zig Case (Node &amp; parent same side - both left)<a class="headerlink" href="#zig-zig-case-node-parent-same-side-both-left" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph TD
+    subgraph ZigZigBefore[Before: Zig-Zig]
+        G[Grandparent] --&gt; P[Parent]
+        P --&gt; X[Node]
+    end
+
+    ZigZigStep1 -.-&gt;|1st Rotation: Grandparent| ZigZigMid
+
+    subgraph ZigZigMid[After 1st Rotation]
+        P2[Parent] --&gt; X2[Node]
+        P2 --&gt; G2[Grandparent]
+    end
+
+    ZigZigStep2 -.-&gt;|2nd Rotation: Parent| ZigZigAfter
+
+    subgraph ZigZigAfter[After: Node at Root]
+        X3[X: Root] --&gt; P3[Parent]
+        P3 --&gt; G3[Grandparent]
+    end
+
+    ZigZigBefore -.-&gt;|Step 1| ZigZigMid -.-&gt;|Step 2| ZigZigAfter
+
+    style X fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style X3 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+<h3 id="zig-zag-case-node-parent-opposite-sides">Zig-Zag Case (Node &amp; parent opposite sides)<a class="headerlink" href="#zig-zag-case-node-parent-opposite-sides" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph TD
+    subgraph ZigZagBefore[Before: Zig-Zag]
+        G[Grandparent] --&gt; P[Parent]
+        P --&gt; X[Node]
+    end
+
+    ZigZagStep1 -.-&gt;|1st Rotation: Parent| ZigZagMid
+
+    subgraph ZigZagMid[After 1st Rotation]
+        G2[Grandparent] --&gt; X2[Node]
+        X2 --&gt; P2[Parent]
+    end
+
+    ZigZagStep2 -.-&gt;|2nd Rotation: Grandparent| ZigZagAfter
+
+    subgraph ZigZagAfter[After: Node at Root]
+        X3[X: Root] --&gt; G3[Grandparent]
+        G3 --&gt; P3[Parent]
+    end
+
+    ZigZagBefore -.-&gt;|Step 1| ZigZagMid -.-&gt;|Step 2| ZigZagAfter
+
+    style X fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style X3 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+<h3 id="splaying-decision-flowchart">Splaying Decision Flowchart<a class="headerlink" href="#splaying-decision-flowchart" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    Start([Access Node]) --&gt; AtRoot{Node is Root?}
+    AtRoot -- Yes --&gt; Done[Done]
+    AtRoot -- No --&gt; ParentOfRoot{Parent is Root?}
+    ParentOfRoot -- Yes --&gt; Zig[Zig: Single Rotation]
+    ParentOfRoot -- No --&gt; CheckSides{Same Side?}
+    CheckSides -- Yes --&gt; ZigZig[Zig-Zig: Two Same Rotations]
+    CheckSides -- No --&gt; ZigZag[Zig-Zag: Two Opposite Rotations]
+
+    Zig --&gt; Done2[Done]
+    ZigZig --&gt; Done2
+    ZigZag --&gt; Done2
+    Done2 --&gt; Done
+
+    style Start fill:#e8f5e9,stroke:#2e7d32
+    style Done fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
 <h3 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Caches (recently accessed → root)</li>
@@ -2011,6 +2182,8 @@
       <script src="../../../assets/javascripts/bundle.77dd0ce9.min.js"></script>
       
         <script src="../../../assets/javascripts/theme-toggle.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
       
     
   </body>

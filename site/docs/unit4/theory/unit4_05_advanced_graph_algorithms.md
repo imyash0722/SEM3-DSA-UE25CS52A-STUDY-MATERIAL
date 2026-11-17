@@ -30,6 +30,42 @@ void dijkstra(int V, int src) {
 }
 ```
 
+### Dijkstra's Algorithm Visualization
+```mermaid
+flowchart TD
+    Start[Start: Source=0] --> Init[dist[0]=0, others=∞]
+    Init --> PQ[Min-Heap: (0,0)]
+    PQ --> Extract[Extract Min: u]
+    Extract --> Relax{Relax edges<br/>from u}
+    Relax -- Update --> Update[Update dist[v],<br/>decrease-key in heap]
+    Update --> Extract
+    Extract --> Done{Heap Empty?}
+    Done -- No --> Extract
+    Done -- Yes --> Result[Shortest Paths]
+    
+    style Start fill:#e8f5e9,stroke:#2e7d32
+    style Result fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+```
+
+### Dijkstra's Example
+```mermaid
+graph TD
+    S[Source: 0] -->|4| A[A: 4]
+    S -->|2| B[B: 2]
+    A -->|1| C[C: 5]
+    A -->|5| D[D: 9]
+    B -->|1| C
+    B -->|3| E[E: 5]
+    C -->|2| F[F: 7]
+    D -->|2| F
+    E -->|2| F
+    
+    style S fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style F fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+```
+
+---
+
 ### Prim's Minimum Spanning Tree
 - **MST**: Connect all vertices with minimum total edge weight
 - Uses **Min-Heap Priority Queue**
@@ -55,6 +91,41 @@ void prim(int V, int start) {
         }
     }
 }
+```
+
+### Prim's MST Visualization
+```mermaid
+flowchart TD
+    Start[Start: Any Vertex] --> MST[MST Set: {start}]
+    MST --> Edges[All edges from MST]
+    Edges --> MinEdge[Min weight edge<br/>to outside vertex]
+    MinEdge --> Add[Add vertex<br/>to MST]
+    Add --> MST
+    Add --> Done{All vertices<br/>in MST?}
+    Done -- No --> Edges
+    Done -- Yes --> Result[MST Complete]
+    
+    style Start fill:#e3f2fd,stroke:#1565c0
+    style Result fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+```
+
+### Prim's MST Example
+```mermaid
+graph LR
+    A[A] ---|1| B[B]
+    A ---|4| C[C]
+    B ---|2| C
+    B ---|5| D[D]
+    C ---|3| D
+    D ---|6| E[E]
+    
+    style A fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style B fill:#e8f5e9,stroke:#2e7d32
+    style C fill:#e8f5e9,stroke:#2e7d32
+    style D fill:#e8f5e9,stroke:#2e7d32
+    style E fill:#e8f5e9,stroke:#2e7d32
+    
+    MST[MST: A-B(1), B-C(2), C-D(3), D-E(6)<br/>Total=12]
 ```
 
 ---
