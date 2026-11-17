@@ -38,7 +38,11 @@ theme:
 
 extra_javascript:
   - assets/javascripts/theme-toggle.js
+  - assets/javascripts/mermaid-init.js
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
+
+extra_css:
+  - assets/stylesheets/mermaid-theme.css
 
 markdown_extensions:
   - admonition
