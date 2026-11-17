@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   if (typeof mermaid !== 'undefined') {
+    // Use default theme - we handle dark/light via CSS variables
     mermaid.initialize({
       startOnLoad: true,
       theme: 'default',

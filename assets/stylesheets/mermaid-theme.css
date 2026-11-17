@@ -1,0 +1,289 @@
+/* Theme-aware Mermaid diagram colors */
+:root {
+  /* Light theme (default) */
+  --mermaid-bg: #ffffff;
+  --mermaid-text: #1a1a2e;
+  --mermaid-primary: #1565c0;
+  --mermaid-primary-light: #e3f2fd;
+  --mermaid-secondary: #e65100;
+  --mermaid-secondary-light: #fff3e0;
+  --mermaid-success: #2e7d32;
+  --mermaid-success-light: #e8f5e9;
+  --mermaid-danger: #c62828;
+  --mermaid-danger-light: #ffcdd2;
+  --mermaid-warning: #f57f17;
+  --mermaid-warning-light: #fff8e1;
+  --mermaid-purple: #7b1fa2;
+  --mermaid-purple-light: #f3e5f5;
+  --mermaid-orange: #f57f17;
+  --mermaid-orange-light: #fff8e1;
+  --mermaid-border: #333333;
+  --mermaid-arrow: #333333;
+  --mermaid-dashed: #666666;
+}
+
+[data-md-color-scheme="slate"] {
+  /* Dark theme (slate) */
+  --mermaid-bg: #1e1e1e;
+  --mermaid-text: #e0e0e0;
+  --mermaid-primary: #64b5f6;
+  --mermaid-primary-light: #1a237e;
+  --mermaid-secondary: #ffb74d;
+  --mermaid-secondary-light: #e65100;
+  --mermaid-success: #81c784;
+  --mermaid-success-light: #1b5e20;
+  --mermaid-danger: #ef5350;
+  --mermaid-danger-light: #b71c1c;
+  --mermaid-warning: #ffb74d;
+  --mermaid-warning-light: #e65100;
+  --mermaid-purple: #ce93d8;
+  --mermaid-purple-light: #4a148c;
+  --mermaid-orange: #ffb74d;
+  --mermaid-orange-light: #e65100;
+  --mermaid-border: #90a4ae;
+  --mermaid-arrow: #90a4ae;
+  --mermaid-dashed: #78909c;
+}
+
+/* Apply to mermaid SVG elements */
+.mermaid svg {
+  background-color: var(--mermaid-bg) !important;
+}
+
+.mermaid svg text {
+  fill: var(--mermaid-text) !important;
+}
+
+/* Override mermaid default styles for theme awareness */
+.mermaid .node rect,
+.mermaid svg .node rect,
+.mermaid .node circle,
+.mermaid svg .node circle,
+.mermaid .node ellipse,
+.mermaid svg .node ellipse,
+.mermaid .node polygon,
+.mermaid svg .node polygon {
+  fill: var(--mermaid-primary-light) !important;
+  stroke: var(--mermaid-primary) !important;
+  stroke-width: 2px;
+}
+
+.mermaid .node text,
+.mermaid svg .node text {
+  fill: var(--mermaid-text) !important;
+}
+
+.mermaid .edgePath .path,
+.mermaid .edgePath path,
+.mermaid .edgePath .marker,
+.mermaid .edgePath .marker-end {
+  stroke: var(--mermaid-arrow) !important;
+  fill: var(--mermaid-arrow) !important;
+}
+
+.mermaid .edgeLabel rect,
+.mermaid .edgeLabel rect {
+  fill: var(--mermaid-warning-light) !important;
+  stroke: var(--mermaid-warning) !important;
+}
+
+.mermaid .edgeLabel text {
+  fill: var(--mermaid-text) !important;
+}
+
+.mermaid .cluster rect {
+  fill: var(--mermaid-primary-light) !important;
+  stroke: var(--mermaid-primary) !important;
+  stroke-dasharray: 5 5;
+}
+
+.mermaid .cluster text {
+  fill: var(--mermaid-text) !important;
+}
+
+/* Specific node type overrides for dark mode */
+[data-md-color-scheme="slate"] .mermaid .node.root rect,
+[data-md-color-scheme="slate"] .mermaid .node.root circle {
+  fill: var(--mermaid-primary-light) !important;
+  stroke: var(--mermaid-primary) !important;
+  stroke-width: 3px;
+}
+
+[data-md-color-scheme="slate"] .mermaid .node.highlight rect,
+[data-md-color-scheme="slate"] .mermaid .node.highlight circle {
+  fill: var(--mermaid-success-light) !important;
+  stroke: var(--mermaid-success) !important;
+  stroke-width: 3px;
+}
+
+[data-md-color-scheme="slate"] .mermaid .node.danger rect,
+[data-md-color-scheme="slate"] .mermaid .node.danger circle {
+  fill: var(--mermaid-danger-light) !important;
+  stroke: var(--mermaid-danger) !important;
+  stroke-width: 2px;
+}
+
+[data-md-color-scheme="slate"] .mermaid .node.warning rect,
+[data-md-color-scheme="slate"] .mermaid .node.warning circle {
+  fill: var(--mermaid-warning-light) !important;
+  stroke: var(--mermaid-warning) !important;
+  stroke-width: 2px;
+}
+
+[data-md-color-scheme="slate"] .mermaid .node.leaf rect,
+[data-md-color-scheme="slate"] .mermaid .node.leaf circle {
+  fill: var(--mermaid-success-light) !important;
+  stroke: var(--mermaid-success) !important;
+  stroke-width: 2px;
+}
+
+/* Dashed/thread edges */
+.mermaid .edgePath .path.dashed,
+.mermaid .edgePath .path[stroke-dasharray] {
+  stroke: var(--mermaid-dashed) !important;
+  stroke-dasharray: 5 5;
+}
+
+/* Clickable/highlighted elements */
+.mermaid .clickable:hover,
+.mermaid .clickable:hover rect,
+.mermaid .clickable:hover circle {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* Flowchart specific */
+.mermaid .flowchart-link {
+  stroke: var(--mermaid-arrow) !important;
+}
+
+/* Sequence diagram */
+.mermaid .actor-line,
+.mermaid .messageLine0,
+.mermaid .messageLine1 {
+  stroke: var(--mermaid-arrow) !important;
+}
+
+.mermaid .actor text,
+.mermaid .signal text {
+  fill: var(--mermaid-text) !important;
+}
+
+.mermaid .actor rect,
+.mermaid .actor circle {
+  fill: var(--mermaid-primary-light) !important;
+  stroke: var(--mermaid-primary) !important;
+}
+
+.mermaid .messageBox {
+  fill: var(--mermaid-primary-light) !important;
+  stroke: var(--mermaid-primary) !important;
+}
+
+.mermaid .messageText {
+  fill: var(--mermaid-text) !important;
+}
+
+/* Class diagram */
+.mermaid .classTitle {
+  fill: var(--mermaid-primary) !important;
+  stroke: var(--mermaid-primary) !important;
+}
+
+.mermaid .classText {
+  fill: var(--mermaid-text) !important;
+}
+
+/* State diagram */
+.mermaid .state rect,
+.mermaid .state circle {
+  fill: var(--mermaid-primary-light) !important;
+  stroke: var(--mermaid-primary) !important;
+}
+
+.mermaid .stateStart,
+.mermaid .stateEnd {
+  fill: var(--mermaid-success) !important;
+  stroke: var(--mermaid-success) !important;
+}
+
+/* Pie chart */
+.mermaid .pieSlice {
+  stroke: var(--mermaid-bg) !important;
+  stroke-width: 2px;
+}
+
+/* Gantt chart */
+.mermaid .grid .tick line {
+  stroke: var(--mermaid-border) !important;
+}
+
+.mermaid .task rect {
+  fill: var(--mermaid-primary-light) !important;
+  stroke: var(--mermaid-primary) !important;
+}
+
+.mermaid .taskText {
+  fill: var(--mermaid-text) !important;
+}
+
+/* Git graph */
+.mermaid .commitTag {
+  fill: var(--mermaid-primary-light) !important;
+  stroke: var(--mermaid-primary) !important;
+}
+
+.mermaid .branchName {
+  fill: var(--mermaid-text) !important;
+}
+
+/* ER diagram */
+.mermaid .entityBox rect {
+  fill: var(--mermaid-primary-light) !important;
+  stroke: var(--mermaid-primary) !important;
+}
+
+.mermaid .relationType {
+  fill: var(--mermaid-warning-light) !important;
+  stroke: var(--mermaid-warning) !important;
+}
+
+/* User journey */
+.mermaid .journeySection {
+  fill: var(--mermaid-primary-light) !important;
+  stroke: var(--mermaid-primary) !important;
+}
+
+.mermaid .journeyTask {
+  fill: var(--mermaid-primary-light) !important;
+  stroke: var(--mermaid-primary) !important;
+}
+
+/* Requirement diagram */
+.mermaid .reqBox rect {
+  fill: var(--mermaid-primary-light) !important;
+  stroke: var(--mermaid-primary) !important;
+}
+
+/* Mindmap */
+.mermaid .mindmapNode rect,
+.mermaid .mindmapNode circle {
+  fill: var(--mermaid-primary-light) !important;
+  stroke: var(--mermaid-primary) !important;
+}
+
+/* Timeline */
+.mermaid .timelineEvent rect {
+  fill: var(--mermaid-primary-light) !important;
+  stroke: var(--mermaid-primary) !important;
+}
+
+/* Sankey diagram */
+.mermaid .sankeyLink {
+  fill: var(--mermaid-primary-light) !important;
+  opacity: 0.5;
+}
+
+.mermaid .sankeyNode rect {
+  fill: var(--mermaid-primary) !important;
+}
