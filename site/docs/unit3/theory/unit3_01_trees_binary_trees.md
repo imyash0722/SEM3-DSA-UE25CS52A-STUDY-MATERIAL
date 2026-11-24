@@ -29,14 +29,14 @@
 ### Tree Visualization
 ```mermaid
 graph TD
-    A[Root<br/>Level 0] --> B[Left Child<br/>Level 1]
-    A --> C[Right Child<br/>Level 1]
-    B --> D[Left Grandchild<br/>Level 2]
-    B --> E[Right Grandchild<br/>Level 2]
-    C --> F[Left Grandchild<br/>Level 2]
-    C --> G[Right Grandchild<br/>Level 2]
-    D --> H[Leaf<br/>Level 3]
-    D --> I[Leaf<br/>Level 3]
+    A["Root (Level 0)"] --> B["Left Child (Level 1)"]
+    A --> C["Right Child (Level 1)"]
+    B --> D["Left Grandchild (Level 2)"]
+    B --> E["Right Grandchild (Level 2)"]
+    C --> F["Left Grandchild (Level 2)"]
+    C --> G["Right Grandchild (Level 2)"]
+    D --> H["Leaf (Level 3)"]
+    D --> I["Leaf (Level 3)"]
     
     style A fill:#e1f5fe,stroke:#01579b,stroke-width:2px
     style B fill:#f3e5f5,stroke:#4a148c,stroke-width:2px

@@ -1939,33 +1939,33 @@
 </span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="dijkstras-algorithm-visualization">Dijkstra's Algorithm Visualization<a class="headerlink" href="#dijkstras-algorithm-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart TD
-    Start[Start: Source=0] --&gt; Init[dist[0]=0, others=∞]
-    Init --&gt; PQ[Min-Heap: (0,0)]
-    PQ --&gt; Extract[Extract Min: u]
-    Extract --&gt; Relax{Relax edges&lt;br/&gt;from u}
-    Relax -- Update --&gt; Update[Update dist[v],&lt;br/&gt;decrease-key in heap]
+<div class="mermaid">flowchart TD
+    Start["Start: Source=0"] --&gt; Init["dist[0]=0, others=∞"]
+    Init --&gt; PQ["Min-Heap: (0,0)"]
+    PQ --&gt; Extract["Extract Min: u"]
+    Extract --&gt; Relax{"Relax edges from u"}
+    Relax -- Update --&gt; Update["Update dist[v], decrease-key in heap"]
     Update --&gt; Extract
-    Extract --&gt; Done{Heap Empty?}
+    Extract --&gt; Done{"Heap Empty?"}
     Done -- No --&gt; Extract
-    Done -- Yes --&gt; Result[Shortest Paths]
+    Done -- Yes --&gt; Result["Shortest Paths"]
 
     style Start fill:#e8f5e9,stroke:#2e7d32
-    style Result fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style Result fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <h3 id="dijkstras-example">Dijkstra's Example<a class="headerlink" href="#dijkstras-example" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
+<div class="mermaid">graph TD
     S[Source: 0] --&gt;|4| A[A: 4]
     S --&gt;|2| B[B: 2]
     A --&gt;|1| C[C: 5]
     A --&gt;|5| D[D: 9]
-    B --&gt;|1| C
+    B --&gt;|4| C
     B --&gt;|3| E[E: 5]
     C --&gt;|2| F[F: 7]
     D --&gt;|2| F
     E --&gt;|2| F
 
     style S fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style F fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style F fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <hr />
 <h3 id="prims-minimum-spanning-tree">Prim's Minimum Spanning Tree<a class="headerlink" href="#prims-minimum-spanning-tree" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1994,20 +1994,20 @@
 </span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="prims-mst-visualization">Prim's MST Visualization<a class="headerlink" href="#prims-mst-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart TD
-    Start[Start: Any Vertex] --&gt; MST[MST Set: {start}]
-    MST --&gt; Edges[All edges from MST]
-    Edges --&gt; MinEdge[Min weight edge&lt;br/&gt;to outside vertex]
-    MinEdge --&gt; Add[Add vertex&lt;br/&gt;to MST]
+<div class="mermaid">flowchart TD
+    Start["Start: Any Vertex"] --&gt; MST["MST Set: {start}"]
+    MST --&gt; Edges["All edges from MST"]
+    Edges --&gt; MinEdge["Min weight edge to outside vertex"]
+    MinEdge --&gt; Add["Add vertex to MST"]
     Add --&gt; MST
-    Add --&gt; Done{All vertices&lt;br/&gt;in MST?}
+    Add --&gt; Done{"All vertices in MST?"}
     Done -- No --&gt; Edges
-    Done -- Yes --&gt; Result[MST Complete]
+    Done -- Yes --&gt; Result["MST Complete"]
 
     style Start fill:#e3f2fd,stroke:#1565c0
-    style Result fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style Result fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <h3 id="prims-mst-example">Prim's MST Example<a class="headerlink" href="#prims-mst-example" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph LR
+<div class="mermaid">graph LR
     A[A] ---|1| B[B]
     A ---|4| C[C]
     B ---|2| C
@@ -2021,7 +2021,7 @@
     style D fill:#e8f5e9,stroke:#2e7d32
     style E fill:#e8f5e9,stroke:#2e7d32
 
-    MST[MST: A-B(1), B-C(2), C-D(3), D-E(6)&lt;br/&gt;Total=12]</code></pre>
+    MST["MST: A-B(1), B-C(2), C-D(3), D-E(6) Total=12"]</div>
 <hr />
 <h2 id="key-takeaways">📝 Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
 <table>
@@ -2169,9 +2169,9 @@
       
         <script src="../../../assets/javascripts/theme-toggle.js"></script>
       
-        <script src="../../../assets/javascripts/mermaid-init.js"></script>
+        <script src="../../../assets/javascripts/mermaid.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+        <script src="../../../assets/javascripts/mermaid-init.js"></script>
       
     
   </body>

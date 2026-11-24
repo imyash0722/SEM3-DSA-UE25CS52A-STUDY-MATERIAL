@@ -41,13 +41,14 @@ Enqueue 20:  rear = (1+1)%5 = 2, data[2]=20
            ↑     ↑
           f=0   r=2
 
-... continue until r=4
-    [50][10][20][30][40]
-     ↑            ↑
-    f=0          r=4
+... continue until r=4:
+    [ ][10][20][30][40]
+     ↑               ↑
+    f=0             r=4
 
-Enqueue 50: rear = (4+1)%5 = 0
-    rear == front? → FULL! (wasted one slot)
+Attempt to enqueue 50:
+    (rear + 1) % 5 = (4 + 1) % 5 = 0 == front (f=0)
+    Queue is FULL! 50 cannot be inserted (slot 0 is preserved as the empty slot).
 ```
 
 ### Operations

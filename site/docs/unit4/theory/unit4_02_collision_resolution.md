@@ -51,15 +51,15 @@ typedef struct hash_table hash_table_t;
 ### Separate Chaining Visualization
 ```mermaid
 graph TD
-    Table[Hash Table] --> I0[Index 0: NULL]
-    Table --> I1[Index 1: NULL]
-    Table --> I2[Index 2]
-    Table --> I3[Index 3: NULL]
+    Table["Hash Table"] --> I0["Index 0: NULL"]
+    Table --> I1["Index 1: NULL"]
+    Table --> I2["Index 2"]
+    Table --> I3["Index 3: NULL"]
     
-    I2 --> N1[(40, "forty")]
-    N1 --> N2[(59, "fifty-nine")]
-    N2 --> N3[(78, "seventy-eight")]
-    N3 --> N4[(97, "ninety-seven")]
+    I2 --> N1["(40, 'forty')"]
+    N1 --> N2["(59, 'fifty-nine')"]
+    N2 --> N3["(78, 'seventy-eight')"]
+    N3 --> N4["(97, 'ninety-seven')"]
     
     style Table fill:#e3f2fd,stroke:#1565c0
     style N1 fill:#e8f5e9,stroke:#2e7d32
@@ -93,11 +93,11 @@ void insert(hash_table_t *h, int key, char *word) {
 ### Separate Chaining Insert Flow
 ```mermaid
 flowchart TD
-    Start([Insert]) --> Hash[Compute Hash]
-    Hash --> Front[Insert at Front]
-    Front --> Link[new->next = head[idx]]
-    Link --> Update[head[idx] = new]
-    Update --> Done[Done]
+    Start(["Insert"]) --> Hash["Compute Hash"]
+    Front["Insert at Front"]
+    Front --> Link["new->next = head[idx]"]
+    Link --> Update["head[idx] = new"]
+    Update --> Done["Done"]
     
     style Start fill:#e8f5e9,stroke:#2e7d32
     style Done fill:#ffebee,stroke:#c62828
@@ -195,13 +195,15 @@ graph LR
         I6[6: empty]
     end
     
-    Insert[Insert 50] --> Probe{Index 1 occupied?}
-    Probe -- Yes --> Next[Try Index 2]
-    Next --> Probe2{Index 2 occupied?}
-    Probe2 -- Yes --> Next2[Try Index 3]
-    Probe2 -- No --> Place[Place at Index 3]
+    Insert["Insert 50 (50%7=1)"] --> P1{"Index 1 occupied?"}
+    P1 -- "Yes (10)" --> P2{"Index 2 occupied?"}
+    P2 -- "Yes (20)" --> P3{"Index 3 occupied?"}
+    P3 -- "Yes (30)" --> P4{"Index 4 occupied?"}
+    P4 -- "Yes (40)" --> P5{"Index 5 occupied?"}
+    P5 -- "No (Empty)" --> Place["Place 50 at Index 5"]
     
     style Table fill:#e3f2fd,stroke:#1565c0
+    style Place fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
 ```
 
 ### Operations
@@ -233,12 +235,12 @@ void insert(hash_table_t *h, int key, char *word) {
 ### Linear Probing Flow
 ```mermaid
 flowchart TD
-    Start([Insert]) --> Hash[Hash: idx = key % SIZE]
-    Hash --> Check{Slot Empty?}
-    Check -- Yes --> Place[Place Here]
-    Check -- No --> Probe[idx = (idx + 1) % SIZE]
+    Start(["Insert"]) --> Hash["Hash: idx = key % SIZE"]
+    Hash --> Check{"Slot Empty?"}
+    Check -- Yes --> Place["Place Here"]
+    Check -- No --> Probe["idx = (idx + 1) % SIZE"]
     Probe --> Check
-    Place --> Done
+    Place --> Done["Done"]
     
     style Start fill:#e8f5e9,stroke:#2e7d32
     style Done fill:#ffebee,stroke:#c62828
@@ -304,15 +306,18 @@ void insert(hash_table_t *h, int key, char *word) {
 ### Probe Sequence Comparison
 ```mermaid
 graph TD
-    Start[Initial Index: 1] --> LP[Linear: +1, +2, +3...]
-    Start --> QP[Quadratic: +1, +4, +9, +16...]
-    Start --> DH[Double Hash: +h2, +2h2, +3h2...]
+    Start["Initial Index: 1"] --> LP["Linear: +1, +2, +3..."]
+    Start --> QP["Quadratic: +1², +2², +3²... (+1, +4, +9...)"]
+    Start --> DH["Double Hash: +1·h2, +2·h2, +3·h2..."]
     
-    LP --> LPSeq[1, 2, 3, 4, 5...]
-    QP --> QPSeq[1, 4, 9, 16, 25...]
-    DH --> DHSeq[h2, 2h2, 3h2...]
+    LP --> LPSeq["Indices: 1, 2, 3, 4, 5..."]
+    QP --> QPSeq["Indices: 1, 2, 5, 10, 17... (mod M)"]
+    DH --> DHSeq["Indices: 1, 1+h2, 1+2h2, 1+3h2... (mod M)"]
     
     style Start fill:#e3f2fd,stroke:#1565c0
+    style LPSeq fill:#e8f5e9,stroke:#2e7d32
+    style QPSeq fill:#fff3e0,stroke:#e65100
+    style DHSeq fill:#f3e5f5,stroke:#7b1fa2
 ```
 
 ---
@@ -329,13 +334,13 @@ int hash2(int key) {
 ### Double Hashing Visualization
 ```mermaid
 graph TD
-    Start[Hash: idx = key % 11] --> Probe{Collision?}
-    Probe -- No --> Place[Place]
-    Probe -- Yes --> DH[Double Hash: h2 = 7 - (key % 7)]
-    DH --> Step[Step = hash2(key)]
-    Step --> Probe2{Next slot free?}
+    Start["Hash: idx = key % 11"] --> Probe{"Collision?"}
+    Probe -- No --> Place["Place"]
+    Probe -- Yes --> DH["Double Hash: h2 = 7 - (key % 7)"]
+    DH --> Step["Step = hash2(key)"]
+    Step --> Probe2{"Next slot free?"}
     Probe2 -- Yes --> Place
-    Probe2 -- No --> AddStep[idx = (idx + step) % SIZE]
+    Probe2 -- No --> AddStep["idx = (idx + step) % SIZE"]
     
     style Start fill:#e3f2fd,stroke:#1565c0
 ```
@@ -386,13 +391,13 @@ void insert(hash_table_t *h, int key, char *word) {
 ### Probe Sequence Comparison
 ```mermaid
 graph TD
-    Start[Initial Index: 1] --> LP[Linear: +1, +2, +3...]
-    Start --> QP[Quadratic: +1, +4, +9, +16...]
-    Start --> DH[Double Hash: +h2, +2h2, +3h2...]
+    Start["Initial Index: 1"] --> LP["Linear: +1, +2, +3..."]
+    Start --> QP["Quadratic: +1², +2², +3²... (+1, +4, +9...)"]
+    Start --> DH["Double Hash: +1·h2, +2·h2, +3·h2..."]
     
-    LP --> LPSeq[1, 2, 3, 4, 5...]
-    QP --> QPSeq[1, 4, 9, 16, 25...]
-    DH --> DHSeq[h2, 2h2, 3h2...]
+    LP --> LPSeq["Indices: 1, 2, 3, 4, 5..."]
+    QP --> QPSeq["Indices: 1, 2, 5, 10, 17... (mod M)"]
+    DH --> DHSeq["Indices: 1, 1+h2, 1+2h2, 1+3h2... (mod M)"]
     
     style Start fill:#e3f2fd,stroke:#1565c0
     style LPSeq fill:#e8f5e9,stroke:#2e7d32

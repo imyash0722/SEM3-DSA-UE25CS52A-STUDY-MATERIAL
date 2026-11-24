@@ -20,7 +20,6 @@ adj[u][v] = w;  // Weight (weighted)
 ```mermaid
 graph TD
     subgraph Matrix[Adjacency Matrix: 8x8]
-        direction LR
         direction TB
         A[A] -->|1| B[B]
         A -->|1| C[C]
@@ -40,7 +39,6 @@ graph TD
         F -->|1| G
         F -->|1| H[H]
         G[G] -->|1| E
-        F -.->|1| F
         G -->|1| H
         H[H] -->|1| F
         H -->|1| G
@@ -72,38 +70,27 @@ node_t *adj[MAXV];  // Array of linked lists
 
 ### Adjacency List Visualization
 ```mermaid
-graph TD
-    A[A] --> B[B]
-    A --> C[C]
-    B[B] --> A
-    B --> C
-    B --> D[D]
-    C[C] --> A
-    C --> B
-    C --> E[E]
-    D[D] --> B
-    D --> E
-    D --> F[F]
-    E[E] --> C
-    E --> D
-    E --> G[G]
-    F[F] --> D
-    F --> G
-    F --> H[H]
-    G[G] --> E
-    G --> F
-    G --> H
-    H[H] --> F
-    H --> G
+graph LR
+    subgraph AdjList["Adjacency List: Vertex -> Neighbors"]
+        direction TB
+        HeadA["A"] --> A_B["B"] --> A_C["C"] --> A_NULL["NULL"]
+        HeadB["B"] --> B_A["A"] --> B_C["C"] --> B_D["D"] --> B_NULL["NULL"]
+        HeadC["C"] --> C_A["A"] --> C_B["B"] --> C_E["E"] --> C_NULL["NULL"]
+        HeadD["D"] --> D_B["B"] --> D_E["E"] --> D_F["F"] --> D_NULL["NULL"]
+        HeadE["E"] --> E_C["C"] --> E_D["D"] --> E_G["G"] --> E_NULL["NULL"]
+        HeadF["F"] --> F_D["D"] --> F_G["G"] --> F_H["H"] --> F_NULL["NULL"]
+        HeadG["G"] --> G_E["E"] --> G_F["F"] --> G_H["H"] --> G_NULL["NULL"]
+        HeadH["H"] --> H_F["F"] --> H_G["G"] --> H_NULL["NULL"]
+    end
     
-    style A fill:#e3f2fd,stroke:#1565c0
-    style B fill:#e3f2fd,stroke:#1565c0
-    style C fill:#e3f2fd,stroke:#1565c0
-    style D fill:#e3f2fd,stroke:#1565c0
-    style E fill:#e3f2fd,stroke:#1565c0
-    style F fill:#e3f2fd,stroke:#1565c0
-    style G fill:#e3f2fd,stroke:#1565c0
-    style H fill:#e3f2fd,stroke:#1565c0
+    style HeadA fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style HeadB fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style HeadC fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style HeadD fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style HeadE fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style HeadF fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style HeadG fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style HeadH fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
 ```
 
 ### Example Graph Visualization
@@ -155,20 +142,26 @@ void bfs(int start) {
 ### BFS Visualization
 ```mermaid
 graph TD
-    Start[Start: A] --> Q1[Queue: A]
-    Q1 --> V1[Visit A]
-    V1 --> Q2[Queue: B, C]
-    Q2 --> V2[Visit B]
-    V2 --> Q3[Queue: C, D]
-    Q3 --> V3[Visit C]
-    V3 --> Q4[Queue: D, E]
-    Q4 --> V4[Visit D]
-    V4 --> Q5[Queue: E, F]
-    Q4 --> V5[Visit E]
-    V5 --> Q5[Queue: F, G]
+    Start["Start: A"] --> Q1["Queue: [A]"]
+    Q1 --> V1["Visit A, Enqueue B, C"]
+    V1 --> Q2["Queue: [B, C]"]
+    Q2 --> V2["Visit B, Enqueue D"]
+    V2 --> Q3["Queue: [C, D]"]
+    Q3 --> V3["Visit C, Enqueue E"]
+    V3 --> Q4["Queue: [D, E]"]
+    Q4 --> V4["Visit D, Enqueue F"]
+    V4 --> Q5["Queue: [E, F]"]
+    Q5 --> V5["Visit E, Enqueue G"]
+    V5 --> Q6["Queue: [F, G]"]
+    Q6 --> V6["Visit F, Enqueue H"]
+    V6 --> Q7["Queue: [G, H]"]
+    Q7 --> V7["Visit G"]
+    V7 --> Q8["Queue: [H]"]
+    Q8 --> V8["Visit H"]
+    V8 --> Done["Done - Order: A, B, C, D, E, F, G, H"]
     
     style Start fill:#e8f5e9,stroke:#2e7d32
-    style End fill:#ffebee,stroke:#c62828
+    style Done fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
 ```
 
 #### DFS (Depth-First Search) - Uses Stack
@@ -193,35 +186,44 @@ void dfs(int start) {
 ### DFS Visualization
 ```mermaid
 graph TD
-    Start[Start: A] --> S1[Stack: A]
-    S1 --> V1[Visit A]
-    V1 --> S2[Stack: B, C]
-    S2 --> V2[Visit B]
-    V2 --> S3[Stack: C, D]
-    S3 --> V3[Visit D]
-    V3 --> S4[Stack: C, E, F]
-    S4 --> V4[Visit F]
-    V4 --> S5[Stack: C, E, G, H]
+    Start["Start: A"] --> S1["Stack: [A]"]
+    S1 --> V1["Visit A, Push C, B"]
+    V1 --> S2["Stack: [C, B]"]
+    S2 --> V2["Pop B, Visit B, Push D"]
+    V2 --> S3["Stack: [C, D]"]
+    S3 --> V3["Pop D, Visit D, Push E, F"]
+    V3 --> S4["Stack: [C, E, F]"]
+    S4 --> V4["Pop F, Visit F, Push G, H"]
+    V4 --> S5["Stack: [C, E, G, H]"]
+    S5 --> V5["Pop H, Visit H"]
+    V5 --> S6["Stack: [C, E, G]"]
+    S6 --> V6["Pop G, Visit G"]
+    V6 --> S7["Stack: [C, E]"]
+    S7 --> V7["Pop E, Visit E"]
+    V7 --> S8["Stack: [C]"]
+    S8 --> V8["Pop C, Visit C"]
+    V8 --> Done["Stack Empty - Traversal: A, B, D, F, H, G, E, C"]
     
     style Start fill:#e8f5e9,stroke:#2e7d32
+    style Done fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
 ```
 
 ### BFS vs DFS Comparison
 ```mermaid
 graph LR
-    subgraph BFS[BFS - Breadth First Search]
-        BF1[Uses Queue]
-        BF2[Level by Level]
-        BF3[Shortest Path<br/>(Unweighted)]
-        BF4[More Memory]
+    subgraph BFS["BFS - Breadth First Search"]
+        BF1["Uses Queue"]
+        BF2["Level by Level"]
+        BF3["Shortest Path (Unweighted)"]
+        BF4["More Memory"]
     end
     
-    subgraph DFS[DFS - Depth First Search]
-        DF1[Uses Stack]
-        DF2[Deep First]
-        DF2[Topological Sort]
-        DF3[Cycle Detection]
-        DF4[Less Memory]
+    subgraph DFS["DFS - Depth First Search"]
+        DF1["Uses Stack"]
+        DF2["Deep First"]
+        DF3["Topological Sort"]
+        DF4["Cycle Detection"]
+        DF5["Less Memory"]
     end
     
     style BFS fill:#e3f2fd,stroke:#1565c0
@@ -237,15 +239,15 @@ graph LR
 ### Dijkstra's Algorithm Visualization
 ```mermaid
 graph TD
-    Start[Start: Source=0] --> Init[dist[0]=0, others=∞]
-    Init --> PQ[Min-Heap: (0,0)]
-    PQ --> Extract[Extract Min: u]
-    Extract --> Relax{Relax edges<br/>from u}
-    Relax -- Update --> Update[Update dist[v],<br/>decrease-key in heap]
+    Start["Start: Source=0"] --> Init["dist[0]=0, others=∞"]
+    Init --> PQ["Min-Heap: (0,0)"]
+    PQ --> Extract["Extract Min: u"]
+    Extract --> Relax{"Relax edges from u"}
+    Relax -- Update --> Update["Update dist[v], decrease-key in heap"]
     Update --> Extract
-    Extract --> Done{Heap Empty?}
+    Extract --> Done{"Heap Empty?"}
     Done -- No --> Extract
-    Done -- Yes --> Result[Shortest Paths]
+    Done -- Yes --> Result["Shortest Paths"]
     
     style Start fill:#e8f5e9,stroke:#2e7d32
     style Result fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
@@ -258,14 +260,14 @@ graph TD
 ### Prim's MST Visualization
 ```mermaid
 graph TD
-    Start[Start: Any Vertex] --> MST[MST Set: {start}]
-    MST --> Edges[All edges from MST]
-    Edges --> MinEdge[Min weight edge<br/>to outside vertex]
-    MinEdge --> Add[Add vertex<br/>to MST]
+    Start["Start: Any Vertex"] --> MST["MST Set: {start}"]
+    MST --> Edges["All edges from MST"]
+    Edges --> MinEdge["Min weight edge to outside vertex"]
+    MinEdge --> Add["Add vertex to MST"]
     Add --> MST
-    Add --> Done{All vertices<br/>in MST?}
+    Add --> Done{"All vertices in MST?"}
     Done -- No --> Edges
-    Done -- Yes --> Result[MST Complete]
+    Done -- Yes --> Result["MST Complete"]
     
     style Start fill:#e3f2fd,stroke:#1565c0
     style Result fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
@@ -287,7 +289,7 @@ graph LR
     style D fill:#e8f5e9,stroke:#2e7d32
     style E fill:#e8f5e9,stroke:#2e7d32
     
-    MST[MST: A-B(1), B-C(2), C-D(3), D-E(6)<br/>Total=12]
+    MST["MST: A-B(1), B-C(2), C-D(3), D-E(6) Total=12"]
 ```
 
 ---

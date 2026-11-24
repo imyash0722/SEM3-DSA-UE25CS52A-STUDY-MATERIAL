@@ -2,6 +2,10 @@ graphify-out/
 .cache/
 *.o
 *.exe
+*.dat
+file_io_demo
+test_results.json
+site/test_results.json
+.~lock.*#
 model/
 resources/archives/
-

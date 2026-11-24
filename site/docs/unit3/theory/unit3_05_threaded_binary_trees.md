@@ -30,15 +30,15 @@ graph TD
     C --> F[50]
     C --> G[70]
     
-    %% Threads (dashed lines)
-    D -.->|Thread| B
-    E -.->|Thread| A
-    F -.->|Thread| B
-    G -.->|Thread| C
-    D -.->|Thread| E
-    E -.->|Thread| B
-    F -.->|Thread| A
-    G -.->|Thread| C
+    %% Right Threads (Inorder Successors: 10->20, 30->40, 50->60)
+    D -.->|Right Thread| B
+    E -.->|Right Thread| A
+    F -.->|Right Thread| C
+    
+    %% Left Threads (Inorder Predecessors: 30<-20, 50<-40, 70<-60)
+    E -.->|Left Thread| B
+    F -.->|Left Thread| A
+    G -.->|Left Thread| C
     
     style A fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
     style B fill:#fff3e0,stroke:#e65100
@@ -88,13 +88,13 @@ void inorder(node_t *root) {
 ### Inorder Traversal Flow
 ```mermaid
 flowchart TD
-    Start([Start]) --> LM[leftmost(root)]
-    LM --> Loop{Current != NULL?}
-    Loop -- No --> End([End])
-    Loop -- Yes --> Print[Print curr->key]
-    Print --> Check{curr->rthread == 1?}
-    Check -- Yes --> Thread[curr = curr->right]
-    Check -- No --> Structural[curr = leftmost(curr->right)]
+    Start(["Start"]) --> LM["leftmost(root)"]
+    LM --> Loop{"Current != NULL?"}
+    Loop -- No --> End(["End"])
+    Loop -- Yes --> Print["Print curr->key"]
+    Print --> Check{"curr->rthread == 1?"}
+    Check -- Yes --> Thread["curr = curr->right"]
+    Check -- No --> Structural["curr = leftmost(curr->right)"]
     Thread --> Loop
     Structural --> Loop
     

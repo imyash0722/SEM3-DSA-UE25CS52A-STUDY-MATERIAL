@@ -63,14 +63,20 @@ flowchart LR
     Mod --> R[Result: 2]
     R --> Table[(Index 2)]
     
-    K2[Key: 59] --> Mod2
+    K2[Key: 59] --> Mod2[Modulo 19]
     Mod2 --> R2[Result: 2]
     R2 --> Table2[(Index 2)]
     
     Table -.->|COLLISION!| Table2
     
     style K fill:#e3f2fd,stroke:#1565c0
+    style K2 fill:#e3f2fd,stroke:#1565c0
+    style Mod fill:#fff3e0,stroke:#e65100
+    style Mod2 fill:#fff3e0,stroke:#e65100
+    style R fill:#e8f5e9,stroke:#2e7d32
+    style R2 fill:#e8f5e9,stroke:#2e7d32
     style Table fill:#ffcdd2,stroke:#c62828
+    style Table2 fill:#ffcdd2,stroke:#c62828
 ```
 
 ### 2. Multiplication Method

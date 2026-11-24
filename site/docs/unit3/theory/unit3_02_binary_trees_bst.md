@@ -72,9 +72,17 @@ graph TD
     B --> E[40]
     C --> F[60]
     C --> G[80]
+    D --> H[10]
+    D --> I[25]
+    E --> J[35]
+    E --> K[45]
+    F --> L[55]
+    F --> M[65]
+    G --> N[75]
+    G --> O[85]
     
     %% Traversal order annotations
-    D -.->|1st| Order1[1: 10]
+    H -.->|1st| Order1[1: 10]
     D -.->|2nd| Order2[2: 20]
     I -.->|3rd| Order3[3: 25]
     B -.->|4th| Order4[4: 30]
@@ -165,11 +173,11 @@ graph TD
     
     classDef lessThan fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
     classDef greaterThan fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
-    classDef node fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef rootNode fill:#fff3e0,stroke:#e65100,stroke-width:2px
     
     class B,D,E lessThan
     class C,F,G greaterThan
-    class A node
+    class A rootNode
     
     Less[All < 50] -.-> B
     Greater[All > 50] -.-> C
@@ -212,9 +220,10 @@ graph TD
     C --> F[60]
     C --> G[80]
     
-    %% Insert 25
+    %% Insert 25 (25 < 50, 25 < 30, 25 > 20 -> right child of 20)
     D -.->|Insert 25| New[25]
-    D -.->|Insert 55| New2[55]
+    %% Insert 55 (55 > 50, 55 < 70, 55 < 60 -> left child of 60)
+    F -.->|Insert 55| New2[55]
     
     style A fill:#fff3e0,stroke:#e65100,stroke-width:2px
     style New fill:#e8f5e9,stroke:#2e7d32,stroke-width:3px,stroke-dasharray: 5 5
@@ -258,29 +267,29 @@ node_t* delete(node_t *root, int key) {
 ### BST Delete Cases Visualization
 ```mermaid
 graph TD
-    subgraph Case1[Case 1: Leaf Node]
-        C1A[Parent] --> C1B[Leaf to Delete]
+    subgraph Case1["Case 1: Leaf Node"]
+        C1A["Parent"] --> C1B["Leaf to Delete"]
         style C1B fill:#ffcdd2,stroke:#c62828,stroke-width:2px
     end
     
-    subgraph Case2[Case 2: One Child (Right)]
-        C2A[Parent] --> C2B[Node to Delete]
-        C2B --> C2C[Child]
+    subgraph Case2["Case 2: One Child (Right)"]
+        C2A["Parent"] --> C2B["Node to Delete"]
+        C2B --> C2C["Child"]
         style C2B fill:#ffcdd2,stroke:#c62828,stroke-width:2px
         C2A -.->|Replace| C2C
     end
     
-    subgraph Case3[Case 3: One Child (Left)]
-        C3A[Parent] --> C3B[Node to Delete]
-        C3B --> C3C[Child]
+    subgraph Case3["Case 3: One Child (Left)"]
+        C3A["Parent"] --> C3B["Node to Delete"]
+        C3B --> C3C["Child"]
         style C3B fill:#ffcdd2,stroke:#c62828,stroke-width:2px
         C3A -.->|Replace| C3C
     end
     
-    subgraph Case4[Case 4: Two Children]
-        C4A[Node to Delete] --> C4B[Left Child]
-        C4A --> C4C[Right Child]
-        C4C --> C4D[Inorder Successor<br/>(Min of Right Subtree)]
+    subgraph Case4["Case 4: Two Children"]
+        C4A["Node to Delete"] --> C4B["Left Child"]
+        C4A --> C4C["Right Child"]
+        C4C --> C4D["Inorder Successor (Min of Right Subtree)"]
         C4A -.->|Replace with| C4D
         C4C -.->|Remove| C4D
         style C4A fill:#ffcdd2,stroke:#c62828,stroke-width:2px

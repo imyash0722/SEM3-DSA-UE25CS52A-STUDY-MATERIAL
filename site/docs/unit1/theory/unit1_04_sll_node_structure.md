@@ -21,10 +21,10 @@ head → [10|•] → [20|•] → [30|•] → NULL
 ### Mermaid Diagram
 ```mermaid
 graph LR
-    head[head] --> node1[10|•]
-    node1 --> node2[20|•]
-    node2 --> node3[30|•]
-    node3 --> null[NULL]
+    head["head"] --> node1["10 | •"]
+    node1 --> node2["20 | •"]
+    node2 --> node3["30 | •"]
+    node3 --> null["NULL"]
     
     style head fill:#f9f,stroke:#333
     style node1 fill:#bbf,stroke:#333

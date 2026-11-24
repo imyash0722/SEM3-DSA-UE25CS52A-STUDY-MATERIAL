@@ -2196,7 +2196,7 @@
 2. <strong>Parental Dominance</strong>: Parent ≥ Children (recursively)</p>
 </blockquote>
 <h3 id="heap-visualization">Heap Visualization<a class="headerlink" href="#heap-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
+<div class="mermaid">graph TD
     A[100] --&gt; B[80]
     A --&gt; C[90]
     B --&gt; D[50]
@@ -2214,10 +2214,10 @@
     style D fill:#e8f5e9,stroke:#2e7d32
     style E fill:#e8f5e9,stroke:#2e7d32
     style F fill:#e8f5e9,stroke:#2e7d32
-    style G fill:#e8f5e9,stroke:#2e7d32</code></pre>
+    style G fill:#e8f5e9,stroke:#2e7d32</div>
 <h3 id="array-representation-1-indexed">Array Representation (1-indexed)<a class="headerlink" href="#array-representation-1-indexed" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph LR
-    subgraph Array[key[] Array - 1-indexed]
+<div class="mermaid">graph LR
+    subgraph Array["key[] Array - 1-indexed"]
         I1[1: 100]
         I2[2: 80]
         I3[3: 90]
@@ -2233,7 +2233,6 @@
 
     Root[Root=1] --&gt; I1
     I1 --&gt; I2
-    I1 --&gt; I2
     I1 --&gt; I3
     I2 --&gt; I4
     I2 --&gt; I5
@@ -2244,9 +2243,9 @@
     I5 --&gt; I10
     I5 --&gt; I11
 
-    style I1 fill:#ffebee,stroke:#c62828,stroke-width:3px</code></pre>
+    style I1 fill:#ffebee,stroke:#c62828,stroke-width:3px</div>
 <h3 id="array-index-formulas">Array Index Formulas<a class="headerlink" href="#array-index-formulas" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
+<div class="mermaid">graph TD
     Parent[Parent: i] --&gt; Left[Left Child: 2*i]
     Parent --&gt; Right[Right Child: 2*i+1]
     Left -.-&gt;|Parent = i/2| Parent
@@ -2254,7 +2253,7 @@
 
     style Parent fill:#ffebee,stroke:#c62828,stroke-width:2px
     style Left fill:#e8f5e9,stroke:#2e7d32
-    style Right fill:#e3f2fd,stroke:#1565c0</code></pre>
+    style Right fill:#e3f2fd,stroke:#1565c0</div>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Left(i) = 2*i, Right(i) = 2*i+1, Parent(i) = i/2
 </span></code></pre></div>
 <h3 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h3>
@@ -2281,17 +2280,17 @@
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="heapify-visualization">Heapify Visualization<a class="headerlink" href="#heapify-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart TD
-    Start([Start: heapify(i)]) --&gt; FindLargest[Find Largest among i, left, right]
-    FindLargest --&gt; Compare{Largest != i?}
-    Compare -- Yes --&gt; Swap[Swap a[i] and a[largest]]
-    Swap --&gt; Recurse[heapify(largest)]
-    Compare -- No --&gt; Done[Done]
+<div class="mermaid">flowchart TD
+    Start(["Start: heapify(i)"]) --&gt; FindLargest["Find Largest among i, left, right"]
+    FindLargest --&gt; Compare{"Largest != i?"}
+    Compare -- Yes --&gt; Swap["Swap a[i] and a[largest]"]
+    Swap --&gt; Recurse["heapify(largest)"]
+    Compare -- No --&gt; Done["Done"]
     Recurse --&gt; Compare
-    Done --&gt; End([End])
+    Done --&gt; End(["End"])
 
     style Start fill:#e8f5e9,stroke:#2e7d32
-    style End fill:#ffebee,stroke:#c62828</code></pre>
+    style End fill:#ffebee,stroke:#c62828</div>
 <h3 id="build-heap-on">Build Heap (O(n))<a class="headerlink" href="#build-heap-on" title="Permanent link">&para;</a></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">build_heap</span><span class="p">(</span><span class="n">heap_t</span><span class="w"> </span><span class="o">*</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
@@ -2301,12 +2300,12 @@
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="build-heap-visualization">Build Heap Visualization<a class="headerlink" href="#build-heap-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
+<div class="mermaid">graph TD
     A[Array: 10,20,30,40,50,60] --&gt; Build[Build Heap]
     Build --&gt; Heapify[Heapify from n/2 down to 1]
     Heapify --&gt; Result[Max Heap: 60,50,30,40,20,10]
 
-    style Result fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style Result fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <h4 id="insert-olog-n">Insert (O(log n))<a class="headerlink" href="#insert-olog-n" title="Permanent link">&para;</a></h4>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="n">heap_t</span><span class="w"> </span><span class="o">*</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">h</span><span class="o">-&gt;</span><span class="n">n</span><span class="p">;</span>
@@ -2319,16 +2318,16 @@
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="insert-visualization-bubble-up">Insert Visualization (Bubble Up)<a class="headerlink" href="#insert-visualization-bubble-up" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
-    A[Insert 95] --&gt; B[Add at end: i=7]
-    B --&gt; C{key[i] &gt; key[i/2]?}
-    C -- Yes --&gt; D[Swap with parent]
-    D --&gt; E[i = i/2]
+<div class="mermaid">graph TD
+    A["Insert 95"] --&gt; B["Add at end: i=7"]
+    B --&gt; C{"key[i] &gt; key[i/2]?"}
+    C -- Yes --&gt; D["Swap with parent"]
+    D --&gt; E["i = i/2"]
     E --&gt; C
-    C -- No --&gt; F[Done]
+    C -- No --&gt; F["Done"]
 
     style A fill:#e8f5e9,stroke:#2e7d32
-    style F fill:#ffebee,stroke:#c62828</code></pre>
+    style F fill:#ffebee,stroke:#c62828</div>
 <h4 id="delete-max-olog-n">Delete Max (O(log n))<a class="headerlink" href="#delete-max-olog-n" title="Permanent link">&para;</a></h4>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">delete_max</span><span class="p">(</span><span class="n">heap_t</span><span class="w"> </span><span class="o">*</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">key</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
@@ -2338,7 +2337,7 @@
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="delete-max-visualization">Delete Max Visualization<a class="headerlink" href="#delete-max-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
+<div class="mermaid">graph TD
     A[Delete Max] --&gt; B[Save root: 100]
     B --&gt; C[Move last to root: 30]
     C --&gt; D{Heapify down}
@@ -2347,7 +2346,7 @@
     F --&gt; G[Repeat down]
 
     style A fill:#ffebee,stroke:#c62828
-    style G fill:#e8f5e9,stroke:#2e7d32</code></pre>
+    style G fill:#e8f5e9,stroke:#2e7d32</div>
 <h3 id="heapsort-on-log-n">Heapsort (O(n log n))<a class="headerlink" href="#heapsort-on-log-n" title="Permanent link">&para;</a></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">heapsort</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">heap_t</span><span class="w"> </span><span class="n">h</span><span class="p">;</span><span class="w"> </span><span class="n">build_heap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
@@ -2356,7 +2355,7 @@
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="heapsort-visualization">Heapsort Visualization<a class="headerlink" href="#heapsort-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph LR
+<div class="mermaid">graph LR
     A[Build Max Heap] --&gt; B[Swap root with last]
     B --&gt; C[Reduce heap size]
     C --&gt; D[Heapify root]
@@ -2365,7 +2364,7 @@
     E -- No --&gt; F[Sorted Array]
 
     style A fill:#e3f2fd,stroke:#1565c0
-    style F fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style F fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <h3 id="priority-queue-using-heap">Priority Queue using Heap<a class="headerlink" href="#priority-queue-using-heap" title="Permanent link">&para;</a></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">pqueue</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">heap_t</span><span class="w"> </span><span class="n">h</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">pq_enqueue</span><span class="p">(</span><span class="n">pqueue_t</span><span class="w"> </span><span class="o">*</span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">insert</span><span class="p">(</span><span class="o">&amp;</span><span class="n">q</span><span class="o">-&gt;</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
@@ -2535,9 +2534,9 @@
       
         <script src="../../../assets/javascripts/theme-toggle.js"></script>
       
-        <script src="../../../assets/javascripts/mermaid-init.js"></script>
+        <script src="../../../assets/javascripts/mermaid.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+        <script src="../../../assets/javascripts/mermaid-init.js"></script>
       
     
   </body>

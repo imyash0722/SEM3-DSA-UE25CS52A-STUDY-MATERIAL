@@ -2683,7 +2683,7 @@
 </tbody>
 </table>
 <h3 id="collision-visualization">Collision Visualization<a class="headerlink" href="#collision-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
+<div class="mermaid">graph TD
     K1[Key 40] --&gt; H[Hash Function]
     K2[Key 59] --&gt; H
     H --&gt; I1[Index 2]
@@ -2695,7 +2695,7 @@
     Resolve --&gt; Probing[Open Addressing]
 
     style K1 fill:#e3f2fd,stroke:#1565c0
-    style C1 fill:#ffcdd2,stroke:#c62828,stroke-width:2px</code></pre>
+    style C1 fill:#ffcdd2,stroke:#c62828,stroke-width:2px</div>
 <hr />
 <h2 id="method-1-separate-chaining-open-hashing">🔗 Method 1: Separate Chaining (Open Hashing)<a class="headerlink" href="#method-1-separate-chaining-open-hashing" title="Permanent link">&para;</a></h2>
 <h3 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h3>
@@ -2715,22 +2715,22 @@
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">hash_table</span><span class="w"> </span><span class="n">hash_table_t</span><span class="p">;</span>
 </span></code></pre></div>
 <h3 id="separate-chaining-visualization">Separate Chaining Visualization<a class="headerlink" href="#separate-chaining-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
-    Table[Hash Table] --&gt; I0[Index 0: NULL]
-    Table --&gt; I1[Index 1: NULL]
-    Table --&gt; I2[Index 2]
-    Table --&gt; I3[Index 3: NULL]
+<div class="mermaid">graph TD
+    Table["Hash Table"] --&gt; I0["Index 0: NULL"]
+    Table --&gt; I1["Index 1: NULL"]
+    Table --&gt; I2["Index 2"]
+    Table --&gt; I3["Index 3: NULL"]
 
-    I2 --&gt; N1[(40, "forty")]
-    N1 --&gt; N2[(59, "fifty-nine")]
-    N2 --&gt; N3[(78, "seventy-eight")]
-    N3 --&gt; N4[(97, "ninety-seven")]
+    I2 --&gt; N1["(40, 'forty')"]
+    N1 --&gt; N2["(59, 'fifty-nine')"]
+    N2 --&gt; N3["(78, 'seventy-eight')"]
+    N3 --&gt; N4["(97, 'ninety-seven')"]
 
     style Table fill:#e3f2fd,stroke:#1565c0
     style N1 fill:#e8f5e9,stroke:#2e7d32
     style N2 fill:#e8f5e9,stroke:#2e7d32
     style N3 fill:#e8f5e9,stroke:#2e7d32
-    style N4 fill:#e8f5e9,stroke:#2e7d32</code></pre>
+    style N4 fill:#e8f5e9,stroke:#2e7d32</div>
 <h3 id="operations">Operations<a class="headerlink" href="#operations" title="Permanent link">&para;</a></h3>
 <h4 id="initialize">Initialize<a class="headerlink" href="#initialize" title="Permanent link">&para;</a></h4>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">init_hash</span><span class="p">(</span><span class="n">hash_table_t</span><span class="w"> </span><span class="o">*</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2749,15 +2749,15 @@
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="separate-chaining-insert-flow">Separate Chaining Insert Flow<a class="headerlink" href="#separate-chaining-insert-flow" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart TD
-    Start([Insert]) --&gt; Hash[Compute Hash]
-    Hash --&gt; Front[Insert at Front]
-    Front --&gt; Link[new-&gt;next = head[idx]]
-    Link --&gt; Update[head[idx] = new]
-    Update --&gt; Done[Done]
+<div class="mermaid">flowchart TD
+    Start(["Insert"]) --&gt; Hash["Compute Hash"]
+    Front["Insert at Front"]
+    Front --&gt; Link["new-&gt;next = head[idx]"]
+    Link --&gt; Update["head[idx] = new"]
+    Update --&gt; Done["Done"]
 
     style Start fill:#e8f5e9,stroke:#2e7d32
-    style Done fill:#ffebee,stroke:#c62828</code></pre>
+    style Done fill:#ffebee,stroke:#c62828</div>
 <h4 id="search">Search<a class="headerlink" href="#search" title="Permanent link">&para;</a></h4>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">search</span><span class="p">(</span><span class="n">hash_table_t</span><span class="w"> </span><span class="o">*</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">TABLESIZE</span><span class="p">;</span>
@@ -2767,7 +2767,7 @@
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="separate-chaining-search-flow">Separate Chaining Search Flow<a class="headerlink" href="#separate-chaining-search-flow" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart TD
+<div class="mermaid">flowchart TD
     Start([Search]) --&gt; Hash[Compute Hash]
     Hash --&gt; Traverse[Traverse List]
     Traverse --&gt; Match{Key Match?}
@@ -2779,7 +2779,7 @@
 
     style Start fill:#e8f5e9,stroke:#2e7d32
     style Return fill:#e8f5e9,stroke:#2e7d32
-    style NotFound fill:#ffcdd2,stroke:#c62828</code></pre>
+    style NotFound fill:#ffcdd2,stroke:#c62828</div>
 <h4 id="delete">Delete<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h4>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">delete_key</span><span class="p">(</span><span class="n">hash_table_t</span><span class="w"> </span><span class="o">*</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">TABLESIZE</span><span class="p">;</span>
@@ -2825,7 +2825,7 @@
 </span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">hash_table</span><span class="w"> </span><span class="n">hash_table_t</span><span class="p">;</span>
 </span></code></pre></div>
 <h3 id="linear-probing-visualization">Linear Probing Visualization<a class="headerlink" href="#linear-probing-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph LR
+<div class="mermaid">graph LR
     subgraph Table[Hash Table - TABLESIZE=7]
         I0[0: empty]
         I1[1: 10]
@@ -2836,13 +2836,15 @@
         I6[6: empty]
     end
 
-    Insert[Insert 50] --&gt; Probe{Index 1 occupied?}
-    Probe -- Yes --&gt; Next[Try Index 2]
-    Next --&gt; Probe2{Index 2 occupied?}
-    Probe2 -- Yes --&gt; Next2[Try Index 3]
-    Probe2 -- No --&gt; Place[Place at Index 3]
+    Insert["Insert 50 (50%7=1)"] --&gt; P1{"Index 1 occupied?"}
+    P1 -- "Yes (10)" --&gt; P2{"Index 2 occupied?"}
+    P2 -- "Yes (20)" --&gt; P3{"Index 3 occupied?"}
+    P3 -- "Yes (30)" --&gt; P4{"Index 4 occupied?"}
+    P4 -- "Yes (40)" --&gt; P5{"Index 5 occupied?"}
+    P5 -- "No (Empty)" --&gt; Place["Place 50 at Index 5"]
 
-    style Table fill:#e3f2fd,stroke:#1565c0</code></pre>
+    style Table fill:#e3f2fd,stroke:#1565c0
+    style Place fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <h3 id="operations_1">Operations<a class="headerlink" href="#operations_1" title="Permanent link">&para;</a></h3>
 <h4 id="initialize_1">Initialize<a class="headerlink" href="#initialize_1" title="Permanent link">&para;</a></h4>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">init_hash</span><span class="p">(</span><span class="n">hash_table_t</span><span class="w"> </span><span class="o">*</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2865,23 +2867,23 @@
 </span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="linear-probing-flow">Linear Probing Flow<a class="headerlink" href="#linear-probing-flow" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart TD
-    Start([Insert]) --&gt; Hash[Hash: idx = key % SIZE]
-    Hash --&gt; Check{Slot Empty?}
-    Check -- Yes --&gt; Place[Place Here]
-    Check -- No --&gt; Probe[idx = (idx + 1) % SIZE]
+<div class="mermaid">flowchart TD
+    Start(["Insert"]) --&gt; Hash["Hash: idx = key % SIZE"]
+    Hash --&gt; Check{"Slot Empty?"}
+    Check -- Yes --&gt; Place["Place Here"]
+    Check -- No --&gt; Probe["idx = (idx + 1) % SIZE"]
     Probe --&gt; Check
-    Place --&gt; Done
+    Place --&gt; Done["Done"]
 
     style Start fill:#e8f5e9,stroke:#2e7d32
-    style Done fill:#ffebee,stroke:#c62828</code></pre>
+    style Done fill:#ffebee,stroke:#c62828</div>
 <hr />
 <h2 id="method-3-quadratic-probing">📐 Method 3: Quadratic Probing<a class="headerlink" href="#method-3-quadratic-probing" title="Permanent link">&para;</a></h2>
 <h3 id="probe-sequence">Probe Sequence<a class="headerlink" href="#probe-sequence" title="Permanent link">&para;</a></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">init_idx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">TABLESIZE</span><span class="w">  </span><span class="c1">// i = 0, 1, 2, ...</span>
 </span></code></pre></div>
 <h3 id="quadratic-probing-visualization">Quadratic Probing Visualization<a class="headerlink" href="#quadratic-probing-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph LR
+<div class="mermaid">graph LR
     subgraph Table[Table Size: 11]
         I0[0]
         I1[1: X]
@@ -2903,7 +2905,7 @@
     Check2 -- Yes --&gt; Place[Place at 2]
     Occupied -- No --&gt; Place
 
-    style Table fill:#e3f2fd,stroke:#1565c0</code></pre>
+    style Table fill:#e3f2fd,stroke:#1565c0</div>
 <h3 id="insert-only-change-from-linear">Insert (Only Change from Linear)<a class="headerlink" href="#insert-only-change-from-linear" title="Permanent link">&para;</a></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="n">hash_table_t</span><span class="w"> </span><span class="o">*</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">word</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">h</span><span class="o">-&gt;</span><span class="n">count</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">TABLESIZE</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
@@ -2924,16 +2926,19 @@
 </span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="probe-sequence-comparison">Probe Sequence Comparison<a class="headerlink" href="#probe-sequence-comparison" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
-    Start[Initial Index: 1] --&gt; LP[Linear: +1, +2, +3...]
-    Start --&gt; QP[Quadratic: +1, +4, +9, +16...]
-    Start --&gt; DH[Double Hash: +h2, +2h2, +3h2...]
+<div class="mermaid">graph TD
+    Start["Initial Index: 1"] --&gt; LP["Linear: +1, +2, +3..."]
+    Start --&gt; QP["Quadratic: +1², +2², +3²... (+1, +4, +9...)"]
+    Start --&gt; DH["Double Hash: +1·h2, +2·h2, +3·h2..."]
 
-    LP --&gt; LPSeq[1, 2, 3, 4, 5...]
-    QP --&gt; QPSeq[1, 4, 9, 16, 25...]
-    DH --&gt; DHSeq[h2, 2h2, 3h2...]
+    LP --&gt; LPSeq["Indices: 1, 2, 3, 4, 5..."]
+    QP --&gt; QPSeq["Indices: 1, 2, 5, 10, 17... (mod M)"]
+    DH --&gt; DHSeq["Indices: 1, 1+h2, 1+2h2, 1+3h2... (mod M)"]
 
-    style Start fill:#e3f2fd,stroke:#1565c0</code></pre>
+    style Start fill:#e3f2fd,stroke:#1565c0
+    style LPSeq fill:#e8f5e9,stroke:#2e7d32
+    style QPSeq fill:#fff3e0,stroke:#e65100
+    style DHSeq fill:#f3e5f5,stroke:#7b1fa2</div>
 <hr />
 <h2 id="method-4-double-hashing">🔄 Method 4: Double Hashing<a class="headerlink" href="#method-4-double-hashing" title="Permanent link">&para;</a></h2>
 <h3 id="second-hash-function">Second Hash Function<a class="headerlink" href="#second-hash-function" title="Permanent link">&para;</a></h3>
@@ -2942,16 +2947,16 @@
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="double-hashing-visualization">Double Hashing Visualization<a class="headerlink" href="#double-hashing-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
-    Start[Hash: idx = key % 11] --&gt; Probe{Collision?}
-    Probe -- No --&gt; Place[Place]
-    Probe -- Yes --&gt; DH[Double Hash: h2 = 7 - (key % 7)]
-    DH --&gt; Step[Step = hash2(key)]
-    Step --&gt; Probe2{Next slot free?}
+<div class="mermaid">graph TD
+    Start["Hash: idx = key % 11"] --&gt; Probe{"Collision?"}
+    Probe -- No --&gt; Place["Place"]
+    Probe -- Yes --&gt; DH["Double Hash: h2 = 7 - (key % 7)"]
+    DH --&gt; Step["Step = hash2(key)"]
+    Step --&gt; Probe2{"Next slot free?"}
     Probe2 -- Yes --&gt; Place
-    Probe2 -- No --&gt; AddStep[idx = (idx + step) % SIZE]
+    Probe2 -- No --&gt; AddStep["idx = (idx + step) % SIZE"]
 
-    style Start fill:#e3f2fd,stroke:#1565c0</code></pre>
+    style Start fill:#e3f2fd,stroke:#1565c0</div>
 <h3 id="structure-with-function-pointer">Structure with Function Pointer<a class="headerlink" href="#structure-with-function-pointer" title="Permanent link">&para;</a></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">hash_table</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">node_t</span><span class="w"> </span><span class="n">elem</span><span class="p">[</span><span class="n">TABLESIZE</span><span class="p">];</span>
@@ -2988,19 +2993,19 @@
 </span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="probe-sequence-comparison_1">Probe Sequence Comparison<a class="headerlink" href="#probe-sequence-comparison_1" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
-    Start[Initial Index: 1] --&gt; LP[Linear: +1, +2, +3...]
-    Start --&gt; QP[Quadratic: +1, +4, +9, +16...]
-    Start --&gt; DH[Double Hash: +h2, +2h2, +3h2...]
+<div class="mermaid">graph TD
+    Start["Initial Index: 1"] --&gt; LP["Linear: +1, +2, +3..."]
+    Start --&gt; QP["Quadratic: +1², +2², +3²... (+1, +4, +9...)"]
+    Start --&gt; DH["Double Hash: +1·h2, +2·h2, +3·h2..."]
 
-    LP --&gt; LPSeq[1, 2, 3, 4, 5...]
-    QP --&gt; QPSeq[1, 4, 9, 16, 25...]
-    DH --&gt; DHSeq[h2, 2h2, 3h2...]
+    LP --&gt; LPSeq["Indices: 1, 2, 3, 4, 5..."]
+    QP --&gt; QPSeq["Indices: 1, 2, 5, 10, 17... (mod M)"]
+    DH --&gt; DHSeq["Indices: 1, 1+h2, 1+2h2, 1+3h2... (mod M)"]
 
     style Start fill:#e3f2fd,stroke:#1565c0
     style LPSeq fill:#e8f5e9,stroke:#2e7d32
     style QPSeq fill:#fff3e0,stroke:#e65100
-    style DHSeq fill:#f3e5f5,stroke:#7b1fa2</code></pre>
+    style DHSeq fill:#f3e5f5,stroke:#7b1fa2</div>
 <hr />
 <h2 id="collision-resolution-comparison">📊 Collision Resolution Comparison<a class="headerlink" href="#collision-resolution-comparison" title="Permanent link">&para;</a></h2>
 <table>
@@ -3056,7 +3061,7 @@
 </table>
 <p>*Average case, assuming good hash function and load factor &lt; 0.7</p>
 <h3 id="comparison-visualization">Comparison Visualization<a class="headerlink" href="#comparison-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph LR
+<div class="mermaid">graph LR
     subgraph Clustering[Clustering Tendency]
         C1[Separate Chaining: None]
         C2[Double Hashing: Minimal]
@@ -3074,7 +3079,7 @@
     style C1 fill:#e8f5e9,stroke:#2e7d32
     style C2 fill:#e8f5e9,stroke:#2e7d32
     style C3 fill:#fff3e0,stroke:#e65100
-    style C4 fill:#ffcdd2,stroke:#c62828</code></pre>
+    style C4 fill:#ffcdd2,stroke:#c62828</div>
 <hr />
 <h2 id="key-takeaways">📝 Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
 <table>
@@ -3234,9 +3239,9 @@
       
         <script src="../../../assets/javascripts/theme-toggle.js"></script>
       
-        <script src="../../../assets/javascripts/mermaid-init.js"></script>
+        <script src="../../../assets/javascripts/mermaid.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+        <script src="../../../assets/javascripts/mermaid-init.js"></script>
       
     
   </body>

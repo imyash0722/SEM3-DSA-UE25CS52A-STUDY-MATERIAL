@@ -1977,7 +1977,7 @@
 <h2 id="anchor-programs-for-unit-4">🎯 Anchor Programs for Unit 4<a class="headerlink" href="#anchor-programs-for-unit-4" title="Permanent link">&para;</a></h2>
 <h3 id="program-1-hash-table-all-4-methods">Program 1: Hash Table - All 4 Methods<a class="headerlink" href="#program-1-hash-table-all-4-methods" title="Permanent link">&para;</a></h3>
 <h3 id="hash-table-comparison-flow">Hash Table Comparison Flow<a class="headerlink" href="#hash-table-comparison-flow" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart TD
+<div class="mermaid">flowchart TD
     Start([Insert Keys: 40,59,78,97...]) --&gt; Hash[Hash: key % 19]
     Hash --&gt; Collide{Collision at 2?}
     Collide -- Separate Chaining --&gt; Chain[Add to linked list]
@@ -1991,7 +1991,7 @@
     Double --&gt; DoubleDisplay[Display: Double hash spread]
 
     style Start fill:#e8f5e9,stroke:#2e7d32
-    style Collide fill:#ffcdd2,stroke:#c62828,stroke-width:2px</code></pre>
+    style Collide fill:#ffcdd2,stroke:#c62828,stroke-width:2px</div>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// hash_all_methods.c - Complete Hash Table Implementations</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
@@ -2181,25 +2181,25 @@
 </span><span id="__span-0-187"><a id="__codelineno-0-187" name="__codelineno-0-187" href="#__codelineno-0-187"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="hash-methods-comparison-visualization">Hash Methods Comparison Visualization<a class="headerlink" href="#hash-methods-comparison-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
-    Keys[Keys: 40,59,78,97,15,34,53] --&gt; Hash[Hash: key % 19]
-    Hash --&gt; AllCollide[All collide at Index 2]
+<div class="mermaid">graph TD
+    Keys["Keys: 40,59,78,97,15,34,53"] --&gt; Hash["Hash: key % 19"]
+    Hash --&gt; AllCollide["All collide at Index 2"]
 
-    AllCollide --&gt; SC[Separate Chaining&lt;br/&gt;Linked List at Index 2]
-    AllCollide --&gt; LP[Linear Probing&lt;br/&gt;Indices: 2,3,4,5...]
-    AllCollide --&gt; QP[Quadratic Probing&lt;br/&gt;+1²,+2²,+3²... = 3,6,11...]
-    AllCollide --&gt; DH[Double Hashing&lt;br/&gt;h2=7-(key%7) = 5,4,3...]
+    AllCollide --&gt; SC["Separate Chaining - Linked List at Index 2"]
+    AllCollide --&gt; LP["Linear Probing - Indices: 2,3,4,5..."]
+    AllCollide --&gt; QP["Quadratic Probing - +1²,+2²,+3²... = 3,6,11..."]
+    AllCollide --&gt; DH["Double Hashing - h2=7-(key%7) = 5,4,3..."]
 
-    SC --&gt; SCDisp[Index 2: 40→59→78→97]
-    LP --&gt; LPDisp[Index 2,3,4,5: 40,59,78,97]
-    QP --&gt; QPDisp[Index 2,3,6,11...]
-    DH --&gt; DHDisp[Spread across table]
+    SC --&gt; SCDisp["Index 2: 40→59→78→97"]
+    LP --&gt; LPDisp["Index 2,3,4,5: 40,59,78,97"]
+    QP --&gt; QPDisp["Index 2,3,6,11..."]
+    DH --&gt; DHDisp["Spread across table"]
 
-    style AllCollide fill:#ffcdd2,stroke:#c62828,stroke-width:2px</code></pre>
+    style AllCollide fill:#ffcdd2,stroke:#c62828,stroke-width:2px</div>
 <hr />
 <h3 id="program-2-trie-with-autocomplete">Program 2: Trie with Autocomplete<a class="headerlink" href="#program-2-trie-with-autocomplete" title="Permanent link">&para;</a></h3>
 <h3 id="trie-operations-flow">Trie Operations Flow<a class="headerlink" href="#trie-operations-flow" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart TD
+<div class="mermaid">flowchart TD
     subgraph Insert["Insert: cat, car, card"]
         I1[Root] --&gt; I2[c]
         I2 --&gt; I3[a]
@@ -2224,7 +2224,7 @@
 
     style Insert fill:#e3f2fd,stroke:#1565c0
     style Search fill:#fff3e0,stroke:#e65100
-    style Autocomplete fill:#e8f5e9,stroke:#2e7d32</code></pre>
+    style Autocomplete fill:#e8f5e9,stroke:#2e7d32</div>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// trie_demo.c - Trie with Autocomplete</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
@@ -2342,39 +2342,38 @@
 </span><span id="__span-1-115"><a id="__codelineno-1-115" name="__codelineno-1-115" href="#__codelineno-1-115"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="trie-autocomplete-visualization">Trie Autocomplete Visualization<a class="headerlink" href="#trie-autocomplete-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
+<div class="mermaid">graph TD
     Root[Root] --&gt; C[c]
     C --&gt; A[a]
-    A --&gt; T[t&lt;br/&gt;word_end]
-    A --&gt; R[r&lt;br/&gt;word_end]
-    R --&gt; D[d&lt;br/&gt;word_end]
-    A --&gt; T2[t&lt;br/&gt;word_end]
+    A --&gt; T["t: word_end"]
+    A --&gt; R["r: word_end"]
+    R --&gt; D["d: word_end"]
 
-    Search[Search "ca"] --&gt; C
+    Search["Search 'ca'"] --&gt; C
     C --&gt; A
-    A --&gt; Results{Results}
-    Results --&gt; T[t]
-    Results --&gt; R[r]
-    R --&gt; D[d]
+    A --&gt; Results{"Results"}
+    Results --&gt; T
+    Results --&gt; R
+    R --&gt; D
 
     style Root fill:#e3f2fd,stroke:#1565c0
-    style Results fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style Results fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <hr />
 <h3 id="program-3-dijkstras-algorithm">Program 3: Dijkstra's Algorithm<a class="headerlink" href="#program-3-dijkstras-algorithm" title="Permanent link">&para;</a></h3>
 <h3 id="dijkstras-algorithm-flow">Dijkstra's Algorithm Flow<a class="headerlink" href="#dijkstras-algorithm-flow" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart TD
-    Start[Start: Source=0] --&gt; Init[dist[0]=0, others=∞]
-    Init --&gt; PQ[Min-Heap: (0,0)]
-    PQ --&gt; Extract[Extract Min: u]
-    Extract --&gt; Relax{Relax edges&lt;br/&gt;from u}
-    Relax -- Update --&gt; Update[Update dist[v],&lt;br/&gt;decrease-key in heap]
+<div class="mermaid">flowchart TD
+    Start["Start: Source=0"] --&gt; Init["dist[0]=0, others=∞"]
+    Init --&gt; PQ["Min-Heap: (0,0)"]
+    PQ --&gt; Extract["Extract Min: u"]
+    Extract --&gt; Relax{"Relax edges from u"}
+    Relax -- Update --&gt; Update["Update dist[v], decrease-key in heap"]
     Update --&gt; Extract
-    Extract --&gt; Done{Heap Empty?}
+    Extract --&gt; Done{"Heap Empty?"}
     Done -- No --&gt; Extract
-    Done -- Yes --&gt; Result[Shortest Paths]
+    Done -- Yes --&gt; Result["Shortest Paths"]
 
     style Start fill:#e8f5e9,stroke:#2e7d32
-    style Result fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style Result fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// dijkstra_demo.c - Dijkstra's Shortest Path</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
@@ -2477,19 +2476,19 @@
 </span><span id="__span-2-100"><a id="__codelineno-2-100" name="__codelineno-2-100" href="#__codelineno-2-100"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="dijkstras-example-graph">Dijkstra's Example Graph<a class="headerlink" href="#dijkstras-example-graph" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
+<div class="mermaid">graph TD
     S[Source: 0] --&gt;|4| A[A: 4]
     S --&gt;|2| B[B: 2]
     A --&gt;|1| C[C: 5]
     A --&gt;|5| D[D: 9]
-    B --&gt;|1| C
+    B --&gt;|4| C
     B --&gt;|3| E[E: 5]
     C --&gt;|2| F[F: 7]
     D --&gt;|2| F
     E --&gt;|2| F
 
     style S fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style F fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style F fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <hr />
 <h2 id="key-programs-summary">📝 Key Programs Summary<a class="headerlink" href="#key-programs-summary" title="Permanent link">&para;</a></h2>
 <table>
@@ -2627,9 +2626,9 @@
       
         <script src="../../../assets/javascripts/theme-toggle.js"></script>
       
-        <script src="../../../assets/javascripts/mermaid-init.js"></script>
+        <script src="../../../assets/javascripts/mermaid.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+        <script src="../../../assets/javascripts/mermaid-init.js"></script>
       
     
   </body>

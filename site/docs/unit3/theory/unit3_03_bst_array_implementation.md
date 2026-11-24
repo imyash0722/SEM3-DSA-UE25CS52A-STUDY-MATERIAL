@@ -48,17 +48,17 @@ graph LR
 ### Array Representation Example
 ```mermaid
 graph TD
-    subgraph Array[elem[] Array]
-        I0[Index 0: key=50<br/>left=1, right=2]
-        I1[Index 1: key=30<br/>left=3, right=4]
-        I2[Index 2: key=70<br/>left=5, right=6]
-        I3[Index 3: key=20<br/>left=-1, right=-1]
-        I4[Index 4: key=40<br/>left=-1, right=-1]
-        I5[Index 5: key=60<br/>left=-1, right=-1]
-        I6[Index 6: key=80<br/>left=-1, right=-1]
+    subgraph Array["elem[] Array"]
+        I0["Index 0: key=50, left=1, right=2"]
+        I1["Index 1: key=30, left=3, right=4"]
+        I2["Index 2: key=70, left=5, right=6"]
+        I3["Index 3: key=20, left=-1, right=-1"]
+        I4["Index 4: key=40, left=-1, right=-1"]
+        I5["Index 5: key=60, left=-1, right=-1"]
+        I6["Index 6: key=80, left=-1, right=-1"]
     end
     
-    Root[root=0] --> I0
+    Root["root=0"] --> I0
     I0 --> I1
     I0 --> I2
     I1 --> I3
@@ -98,15 +98,15 @@ void insert(tree_t *t, int key) {
 ### Insert Flow Visualization
 ```mermaid
 flowchart TD
-    Start([Start: Insert Key]) --> CheckEmpty{Root == -1?}
-    CheckEmpty -- Yes --> SetRoot[Root = new_idx]
-    CheckEmpty -- No --> Compare{Key > Current?}
-    Compare -- Yes --> GoRight[Go Right: insert_rec(right, new_idx)]
-    Compare -- No --> GoLeft[Go Left: insert_rec(left, new_idx)]
-    GoRight --> Recurse[Recursive Call]
+    Start(["Start: Insert Key"]) --> CheckEmpty{"Root == -1?"}
+    CheckEmpty -- Yes --> SetRoot["Root = new_idx"]
+    CheckEmpty -- No --> Compare{"Key > Current?"}
+    Compare -- Yes --> GoRight["Go Right: insert_rec(right, new_idx)"]
+    Compare -- No --> GoLeft["Go Left: insert_rec(left, new_idx)"]
+    GoRight --> Recurse["Recursive Call"]
     GoLeft --> Recurse
     Recurse --> CheckEmpty
-    SetRoot --> End([End])
+    SetRoot --> End(["End"])
     
     style Start fill:#e8f5e9,stroke:#2e7d32
     style End fill:#ffebee,stroke:#c62828

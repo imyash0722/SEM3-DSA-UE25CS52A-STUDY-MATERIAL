@@ -33,7 +33,7 @@ graph TD
 ### Array Representation (1-indexed)
 ```mermaid
 graph LR
-    subgraph Array[key[] Array - 1-indexed]
+    subgraph Array["key[] Array - 1-indexed"]
         I1[1: 100]
         I2[2: 80]
         I3[3: 90]
@@ -48,7 +48,6 @@ graph LR
     end
     
     Root[Root=1] --> I1
-    I1 --> I2
     I1 --> I2
     I1 --> I3
     I2 --> I4
@@ -111,13 +110,13 @@ void heapify(int a[], int n, int i) {
 ### Heapify Visualization
 ```mermaid
 flowchart TD
-    Start([Start: heapify(i)]) --> FindLargest[Find Largest among i, left, right]
-    FindLargest --> Compare{Largest != i?}
-    Compare -- Yes --> Swap[Swap a[i] and a[largest]]
-    Swap --> Recurse[heapify(largest)]
-    Compare -- No --> Done[Done]
+    Start(["Start: heapify(i)"]) --> FindLargest["Find Largest among i, left, right"]
+    FindLargest --> Compare{"Largest != i?"}
+    Compare -- Yes --> Swap["Swap a[i] and a[largest]"]
+    Swap --> Recurse["heapify(largest)"]
+    Compare -- No --> Done["Done"]
     Recurse --> Compare
-    Done --> End([End])
+    Done --> End(["End"])
     
     style Start fill:#e8f5e9,stroke:#2e7d32
     style End fill:#ffebee,stroke:#c62828
@@ -159,12 +158,12 @@ void insert(heap_t *h, int key) {
 ### Insert Visualization (Bubble Up)
 ```mermaid
 graph TD
-    A[Insert 95] --> B[Add at end: i=7]
-    B --> C{key[i] > key[i/2]?}
-    C -- Yes --> D[Swap with parent]
-    D --> E[i = i/2]
+    A["Insert 95"] --> B["Add at end: i=7"]
+    B --> C{"key[i] > key[i/2]?"}
+    C -- Yes --> D["Swap with parent"]
+    D --> E["i = i/2"]
     E --> C
-    C -- No --> F[Done]
+    C -- No --> F["Done"]
     
     style A fill:#e8f5e9,stroke:#2e7d32
     style F fill:#ffebee,stroke:#c62828

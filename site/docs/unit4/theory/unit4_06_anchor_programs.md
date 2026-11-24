@@ -216,18 +216,18 @@ int main() {
 ### Hash Methods Comparison Visualization
 ```mermaid
 graph TD
-    Keys[Keys: 40,59,78,97,15,34,53] --> Hash[Hash: key % 19]
-    Hash --> AllCollide[All collide at Index 2]
+    Keys["Keys: 40,59,78,97,15,34,53"] --> Hash["Hash: key % 19"]
+    Hash --> AllCollide["All collide at Index 2"]
     
-    AllCollide --> SC[Separate Chaining<br/>Linked List at Index 2]
-    AllCollide --> LP[Linear Probing<br/>Indices: 2,3,4,5...]
-    AllCollide --> QP[Quadratic Probing<br/>+1²,+2²,+3²... = 3,6,11...]
-    AllCollide --> DH[Double Hashing<br/>h2=7-(key%7) = 5,4,3...]
+    AllCollide --> SC["Separate Chaining - Linked List at Index 2"]
+    AllCollide --> LP["Linear Probing - Indices: 2,3,4,5..."]
+    AllCollide --> QP["Quadratic Probing - +1²,+2²,+3²... = 3,6,11..."]
+    AllCollide --> DH["Double Hashing - h2=7-(key%7) = 5,4,3..."]
     
-    SC --> SCDisp[Index 2: 40→59→78→97]
-    LP --> LPDisp[Index 2,3,4,5: 40,59,78,97]
-    QP --> QPDisp[Index 2,3,6,11...]
-    DH --> DHDisp[Spread across table]
+    SC --> SCDisp["Index 2: 40→59→78→97"]
+    LP --> LPDisp["Index 2,3,4,5: 40,59,78,97"]
+    QP --> QPDisp["Index 2,3,6,11..."]
+    DH --> DHDisp["Spread across table"]
     
     style AllCollide fill:#ffcdd2,stroke:#c62828,stroke-width:2px
 ```
@@ -389,17 +389,16 @@ int main() {
 graph TD
     Root[Root] --> C[c]
     C --> A[a]
-    A --> T[t<br/>word_end]
-    A --> R[r<br/>word_end]
-    R --> D[d<br/>word_end]
-    A --> T2[t<br/>word_end]
+    A --> T["t: word_end"]
+    A --> R["r: word_end"]
+    R --> D["d: word_end"]
     
-    Search[Search "ca"] --> C
+    Search["Search 'ca'"] --> C
     C --> A
-    A --> Results{Results}
-    Results --> T[t]
-    Results --> R[r]
-    R --> D[d]
+    A --> Results{"Results"}
+    Results --> T
+    Results --> R
+    R --> D
     
     style Root fill:#e3f2fd,stroke:#1565c0
     style Results fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
@@ -412,15 +411,15 @@ graph TD
 ### Dijkstra's Algorithm Flow
 ```mermaid
 flowchart TD
-    Start[Start: Source=0] --> Init[dist[0]=0, others=∞]
-    Init --> PQ[Min-Heap: (0,0)]
-    PQ --> Extract[Extract Min: u]
-    Extract --> Relax{Relax edges<br/>from u}
-    Relax -- Update --> Update[Update dist[v],<br/>decrease-key in heap]
+    Start["Start: Source=0"] --> Init["dist[0]=0, others=∞"]
+    Init --> PQ["Min-Heap: (0,0)"]
+    PQ --> Extract["Extract Min: u"]
+    Extract --> Relax{"Relax edges from u"}
+    Relax -- Update --> Update["Update dist[v], decrease-key in heap"]
     Update --> Extract
-    Extract --> Done{Heap Empty?}
+    Extract --> Done{"Heap Empty?"}
     Done -- No --> Extract
-    Done -- Yes --> Result[Shortest Paths]
+    Done -- Yes --> Result["Shortest Paths"]
     
     style Start fill:#e8f5e9,stroke:#2e7d32
     style Result fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
@@ -536,7 +535,7 @@ graph TD
     S -->|2| B[B: 2]
     A -->|1| C[C: 5]
     A -->|5| D[D: 9]
-    B -->|1| C
+    B -->|4| C
     B -->|3| E[E: 5]
     C -->|2| F[F: 7]
     D -->|2| F

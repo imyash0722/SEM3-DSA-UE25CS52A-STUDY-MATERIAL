@@ -21,26 +21,30 @@ graph TD
     N1 --> A2[a]
     A2 --> N2[n]
     N2 --> A3[a]
-    A3 --> $[
+    A3 --> Dollar1["$"]
     
     Root --> A1s[a]
     A1s --> N1s[n]
     N1s --> A2s[a]
     A2s --> N2s[n]
-    A2s --> $[ 
+    N2s --> Dollar2["$"] 
     
     Root --> N1ss[n]
     N1ss --> A1ss[a]
     A1ss --> N2ss[n]
-    A2ss --> A3ss[a]
-    A3ss --> $[ 
+    N2ss --> A3ss[a]
+    A3ss --> Dollar3["$"] 
     
     Root --> A1sss[a]
-    A1sss --> $[ 
-    Root --> $[ 
+    A1sss --> Dollar4["$"] 
+    Root --> Dollar5["$"] 
     
     style Root fill:#e3f2fd,stroke:#1565c0
-    style $ fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style Dollar1 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style Dollar2 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style Dollar3 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style Dollar4 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style Dollar5 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
 ```
 
 #### Patricia Trie (Compressed Trie)
@@ -50,31 +54,32 @@ graph TD
 
 ### Patricia Trie Compression
 ```mermaid
-graph TD
-    subgraph Before[Before Compression]
+graph LR
+    subgraph Before["Before Compression (Suffix Trie)"]
         R[Root] --> B[b]
         B --> A1[a]
         A1 --> N1[n]
         N1 --> A2[a]
         A2 --> N2[n]
         N2 --> A3[a]
-        A3 --> $[ 
+        A3 --> D1["$"]
     end
     
-    Arrow1 -.->|Compress| After
-    
-    subgraph After[After Compression]
-        R2[Root] --> E1[banana$]
-        R2 --> E2[anana$]
-        R2 --> E3[nana$]
-        R2 --> E4[ana$]
-        R2 --> E5[na$]
-        R2 --> E6[a$]
-        R2 --> E7[$]
+    subgraph After["After Compression (Patricia Trie)"]
+        R2[Root] --> E1["banana$"]
+        R2 --> E2["anana$"]
+        R2 --> E3["nana$"]
+        R2 --> E4["ana$"]
+        R2 --> E5["na$"]
+        R2 --> E6["a$"]
+        R2 --> E7["$"]
     end
+    
+    R -.->|"Compress"| R2
     
     style R fill:#e3f2fd,stroke:#1565c0
-    style After fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style R2 fill:#e3f2fd,stroke:#1565c0
+    style D1 fill:#ffcdd2,stroke:#c62828
 ```
 
 #### Suffix Tree
@@ -86,22 +91,30 @@ graph TD
 ### Suffix Tree for "banana$"
 ```mermaid
 graph TD
-    Root[Root] --> Edge1[banana$]
-    Root --> Edge2[anana$]
-    Root --> Edge3[nana$]
-    Root --> Edge4[ana$]
-    Root --> Edge5[na$]
-    Root --> Edge5b[a$]
-    Root --> Edge6[$]
+    Root["Root"] -->|banana$| L0["[0] banana$"]
+    Root -->|$| L6["[6] $"]
+    
+    Root -->|a| NA1["Node 'a'"]
+    NA1 -->|$| L5["[5] a$"]
+    NA1 -->|na| NANA["Node 'ana'"]
+    NANA -->|na$| L1["[1] anana$"]
+    NANA -->|$| L3["[3] ana$"]
+    
+    Root -->|na| NNA["Node 'na'"]
+    NNA -->|na$| L2["[2] nana$"]
+    NNA -->|$| L4["[4] na$"]
     
     style Root fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
-    style Edge1 fill:#e8f5e9,stroke:#2e7d32
-    style Edge2 fill:#e8f5e9,stroke:#2e7d32
-    style Edge3 fill:#e8f5e9,stroke:#2e7d32
-    style Edge4 fill:#e8f5e9,stroke:#2e7d32
-    style Edge5 fill:#e8f5e9,stroke:#2e7d32
-    style Edge5b fill:#e8f5e9,stroke:#2e7d32
-    style Edge6 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style NA1 fill:#fff3e0,stroke:#e65100
+    style NANA fill:#fff3e0,stroke:#e65100
+    style NNA fill:#fff3e0,stroke:#e65100
+    style L0 fill:#e8f5e9,stroke:#2e7d32
+    style L1 fill:#e8f5e9,stroke:#2e7d32
+    style L2 fill:#e8f5e9,stroke:#2e7d32
+    style L3 fill:#e8f5e9,stroke:#2e7d32
+    style L4 fill:#e8f5e9,stroke:#2e7d32
+    style L5 fill:#e8f5e9,stroke:#2e7d32
+    style L6 fill:#ffcdd2,stroke:#c62828
 ```
 
 ### Search in Suffix Tree (Pattern "ana")
@@ -110,7 +123,7 @@ graph TD
     Root[Root] --> Match1["Match 'a'"]
     Match1 --> Match2["Match 'n'"]
     Match2 --> Match3["Match 'a'"]
-    Match3 --> Found[Found!<br/>Positions: 1, 3]
+    Match3 --> Found["Found! Positions: 1, 3"]
     
     style Found fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
 ```

@@ -17,10 +17,10 @@
 ### AVL Balance Factor Visualization
 ```mermaid
 graph TD
-    Balanced[BF = 0<br/>Balanced] --> LeftHeavy[BF = +1<br/>Left Heavy]
-    Balanced --> RightHeavy[BF = -1<br/>Right Heavy]
-    LeftHeavy --> LeftHeavy2[BF = +2<br/>Unbalanced!]
-    RightHeavy --> RightHeavy2[BF = -2<br/>Unbalanced!]
+    Balanced["BF = 0 (Balanced)"] --> LeftHeavy["BF = +1 (Left Heavy)"]
+    Balanced --> RightHeavy["BF = -1 (Right Heavy)"]
+    LeftHeavy --> LeftHeavy2["BF = +2 (Unbalanced!)"]
+    RightHeavy --> RightHeavy2["BF = -2 (Unbalanced!)"]
     
     style Balanced fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
     style LeftHeavy fill:#fff3e0,stroke:#e65100
@@ -109,10 +109,10 @@ graph TD
     subgraph LRMid[After Left Rotate]
         X2[X: BF=+2] --> Z2[Z: BF=+1]
         X2 --> T42[T4]
-        Z2 --> T22[T2]
-        Z2 --> T32[T3]
         Z2 --> Y2[Y: BF=0]
+        Z2 --> T32[T3]
         Y2 --> T12[T1]
+        Y2 --> T22[T2]
     end
     
     ArrowLR2 -.->|Right Rotate on X| LRAfter
@@ -136,23 +136,23 @@ graph TD
 ```mermaid
 graph TD
     subgraph RLBefore[Before: RL Case]
-        X1[X: BF=-2] --> Y1[Y: BF=+1]
-        Y1 --> T11[T1]
+        X1[X: BF=-2] --> T11[T1]
+        X1 --> Y1[Y: BF=+1]
         Y1 --> Z1[Z: BF=0]
+        Y1 --> T41[T4]
         Z1 --> T21[T2]
         Z1 --> T31[T3]
-        X1 --> T41[T4]
     end
     
     ArrowRL1 -.->|Right Rotate on Y| RLMid
     
     subgraph RLMid[After Right Rotate]
-        X2[X: BF=-2] --> Z2[Z: BF=-1]
-        X2 --> T42[T4]
+        X2[X: BF=-2] --> T12[T1]
+        X2 --> Z2[Z: BF=-1]
         Z2 --> T22[T2]
-        Z2 --> T32[T3]
         Z2 --> Y2[Y: BF=0]
-        Y2 --> T12[T1]
+        Y2 --> T32[T3]
+        Y2 --> T42[T4]
     end
     
     ArrowRL2 -.->|Left Rotate on X| RLAfter

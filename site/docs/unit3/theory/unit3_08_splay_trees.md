@@ -77,8 +77,8 @@ graph TD
     ZigZagStep2 -.->|2nd Rotation: Grandparent| ZigZagAfter
     
     subgraph ZigZagAfter[After: Node at Root]
-        X3[X: Root] --> G3[Grandparent]
-        G3 --> P3[Parent]
+        X3[X: Root] --> P3[Parent]
+        X3 --> G3[Grandparent]
     end
     
     ZigZagBefore -.->|Step 1| ZigZagMid -.->|Step 2| ZigZagAfter
