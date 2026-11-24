@@ -216,20 +216,24 @@ int main() {
 ### Hash Methods Comparison Visualization
 ```mermaid
 graph TD
-    Keys["Keys: 40,59,78,97,15,34,53"] --> Hash["Hash: key % 19"]
-    Hash --> AllCollide["All collide at Index 2"]
+    Keys["Colliding Keys: 40, 59, 78, 97"] --> Hash["Hash: key % 19"]
+    Hash --> AllCollide["All 4 keys collide at Initial Index 2"]
     
-    AllCollide --> SC["Separate Chaining - Linked List at Index 2"]
-    AllCollide --> LP["Linear Probing - Indices: 2,3,4,5..."]
-    AllCollide --> QP["Quadratic Probing - +1²,+2²,+3²... = 3,6,11..."]
-    AllCollide --> DH["Double Hashing - h2=7-(key%7) = 5,4,3..."]
+    AllCollide --> SC["Separate Chaining: Linked List at Index 2"]
+    AllCollide --> LP["Linear Probing: Step +1"]
+    AllCollide --> QP["Quadratic Probing: Step +i²"]
+    AllCollide --> DH["Double Hashing: Step = 7 - (key % 7)"]
     
-    SC --> SCDisp["Index 2: 40→59→78→97"]
-    LP --> LPDisp["Index 2,3,4,5: 40,59,78,97"]
-    QP --> QPDisp["Index 2,3,6,11..."]
-    DH --> DHDisp["Spread across table"]
+    SC --> SCDisp["Slot 2 List: 97 -> 78 -> 59 -> 40"]
+    LP --> LPDisp["Consecutive Slots: 2, 3, 4, 5 (Clustered)"]
+    QP --> QPDisp["Quadratic Slots: 2, 3, 6, 11"]
+    DH --> DHDisp["Dispersed Slots: 2, 6, 8, 3 (h2 steps: 4, 6, 1)"]
     
     style AllCollide fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style SCDisp fill:#e8f5e9,stroke:#2e7d32
+    style LPDisp fill:#fff3e0,stroke:#e65100
+    style QPDisp fill:#e3f2fd,stroke:#1565c0
+    style DHDisp fill:#f3e5f5,stroke:#7b1fa2
 ```
 
 ---

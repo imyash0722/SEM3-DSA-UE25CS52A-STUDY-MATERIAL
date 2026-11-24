@@ -97,8 +97,10 @@ graph TD
     subgraph Step3["Insert 'card'"]
         R3[Root] --> C3[c]
         C3 --> A3[a]
+        T3["t: is_word_end=1"]
         R3b["r: is_word_end=1"]
         D3["d: is_word_end=1"]
+        A3 --> T3
         A3 --> R3b
         R3b --> D3
     end

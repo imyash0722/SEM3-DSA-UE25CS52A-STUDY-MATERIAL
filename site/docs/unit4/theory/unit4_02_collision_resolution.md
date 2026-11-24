@@ -93,11 +93,11 @@ void insert(hash_table_t *h, int key, char *word) {
 ### Separate Chaining Insert Flow
 ```mermaid
 flowchart TD
-    Start(["Insert"]) --> Hash["Compute Hash"]
-    Front["Insert at Front"]
-    Front --> Link["new->next = head[idx]"]
-    Link --> Update["head[idx] = new"]
-    Update --> Done["Done"]
+    Start(["Insert (key, word)"]) --> Hash["Compute idx = key % TABLESIZE"]
+    Hash --> Alloc["Allocate node n: n->key = key, strcpy(n->word, word)"]
+    Alloc --> Link["n->next = head[idx]"]
+    Link --> Update["head[idx] = n (Insert at front)"]
+    Update --> Done(["Done"])
     
     style Start fill:#e8f5e9,stroke:#2e7d32
     style Done fill:#ffebee,stroke:#c62828
@@ -258,28 +258,29 @@ idx = (init_idx + i*i) % TABLESIZE  // i = 0, 1, 2, ...
 ### Quadratic Probing Visualization
 ```mermaid
 graph LR
-    subgraph Table[Table Size: 11]
-        I0[0]
-        I1[1: X]
-        I2[2]
-        I3[3]
-        I4[4]
-        I5[5]
-        I6[6]
-        I7[7]
-        I8[8]
-        I9[9]
-        I10[10]
+    subgraph Table["Table (Size: 11)"]
+        I0["0"]
+        I1["1: X (Occupied)"]
+        I2["2: X (Occupied)"]
+        I3["3"]
+        I4["4"]
+        I5["5: Free"]
+        I6["6"]
+        I7["7"]
+        I8["8"]
+        I9["9"]
+        I10["10"]
     end
     
-    Insert[Insert: hash=1] --> Try0[i=0: Index 1]
-    Try0 --> Occupied{Occupied?}
-    Occupied -- Yes --> Try1[i=1: +1²=2]
-    Try1 --> Check2{Index 2 empty?}
-    Check2 -- Yes --> Place[Place at 2]
-    Occupied -- No --> Place
+    Insert["Insert key (Hash=1)"] --> Try0["i=0: idx = 1 (Occupied)"]
+    Try0 --> Try1["i=1: idx = (1 + 1²) % 11 = 2 (Occupied)"]
+    Try1 --> Try2["i=2: idx = (1 + 2²) % 11 = 5 (Free)"]
+    Try2 --> Place["Place key at Index 5"]
     
     style Table fill:#e3f2fd,stroke:#1565c0
+    style Try0 fill:#ffcdd2,stroke:#c62828
+    style Try1 fill:#ffcdd2,stroke:#c62828
+    style Place fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
 ```
 
 ### Insert (Only Change from Linear)
@@ -331,18 +332,29 @@ int hash2(int key) {
 }
 ```
 
-### Double Hashing Visualization
+### Double Hashing Flowchart
 ```mermaid
-graph TD
-    Start["Hash: idx = key % 11"] --> Probe{"Collision?"}
-    Probe -- No --> Place["Place"]
-    Probe -- Yes --> DH["Double Hash: h2 = 7 - (key % 7)"]
-    DH --> Step["Step = hash2(key)"]
-    Step --> Probe2{"Next slot free?"}
-    Probe2 -- Yes --> Place
-    Probe2 -- No --> AddStep["idx = (idx + step) % SIZE"]
+flowchart TD
+    Start(["Insert (key, word)"]) --> Hash["Compute initial probe: idx = key % TABLESIZE, i = 0"]
+    Hash --> CheckInit{"elem[idx].in_use?"}
     
-    style Start fill:#e3f2fd,stroke:#1565c0
+    CheckInit -- "No (Slot Free)" --> Place["elem[idx] = (key, word); in_use = 1; count++"]
+    Place --> Done(["Done"])
+    
+    CheckInit -- "Yes (Collision)" --> CalcStep["Compute step size: step = 7 - (key % 7)"]
+    CalcStep --> CheckFull{"i < TABLESIZE?"}
+    
+    CheckFull -- "Yes" --> NextProbe["i = i + 1; idx = (init_idx + i * step) % TABLESIZE"]
+    NextProbe --> CheckSlot{"elem[idx].in_use?"}
+    
+    CheckSlot -- "No (Slot Free)" --> Place
+    CheckSlot -- "Yes (Collision)" --> CheckFull
+    
+    CheckFull -- "No" --> Full["Error: Hash Table Full / Max Probes Reached"]
+    
+    style Start fill:#e8f5e9,stroke:#2e7d32
+    style Done fill:#e8f5e9,stroke:#2e7d32
+    style Full fill:#ffebee,stroke:#c62828
 ```
 
 ### Structure with Function Pointer
@@ -388,21 +400,39 @@ void insert(hash_table_t *h, int key, char *word) {
 }
 ```
 
-### Probe Sequence Comparison
+### Double Hashing Trace Walkthrough
+*Example: Table Size $M = 11$, Primary Hash $h_1(key) = key \pmod{11}$, Secondary Hash $h_2(key) = 7 - (key \pmod 7)$.*
+*All three keys below initially collide at Index 3 ($25 \pmod{11} = 47 \pmod{11} = 69 \pmod{11} = 3$), but Double Hashing assigns distinct step sizes, dispersing them across the table without clustering:*
+
 ```mermaid
-graph TD
-    Start["Initial Index: 1"] --> LP["Linear: +1, +2, +3..."]
-    Start --> QP["Quadratic: +1², +2², +3²... (+1, +4, +9...)"]
-    Start --> DH["Double Hash: +1·h2, +2·h2, +3·h2..."]
-    
-    LP --> LPSeq["Indices: 1, 2, 3, 4, 5..."]
-    QP --> QPSeq["Indices: 1, 2, 5, 10, 17... (mod M)"]
-    DH --> DHSeq["Indices: 1, 1+h2, 1+2h2, 1+3h2... (mod M)"]
-    
-    style Start fill:#e3f2fd,stroke:#1565c0
-    style LPSeq fill:#e8f5e9,stroke:#2e7d32
-    style QPSeq fill:#fff3e0,stroke:#e65100
-    style DHSeq fill:#f3e5f5,stroke:#7b1fa2
+flowchart TD
+    subgraph Collisions["Colliding Keys at Initial Index 3 (mod 11)"]
+        K1["Key 25: 25 % 11 = 3"]
+        K2["Key 47: 47 % 11 = 3 (Collision)"]
+        K3["Key 69: 69 % 11 = 3 (Collision)"]
+    end
+
+    subgraph Steps["Secondary Hash: step = 7 - (key % 7)"]
+        S2["47: step = 7 - (47 % 7) = 2"]
+        S3["69: step = 7 - (69 % 7) = 1"]
+    end
+
+    subgraph Placements["Dispersed Slot Placements in Table (M=11)"]
+        P1["Slot 3: Key 25 (Placed at Initial Index, i=0)"]
+        P2["Slot 5: Key 47 ((3 + 1*2) % 11, i=1)"]
+        P3["Slot 4: Key 69 ((3 + 1*1) % 11, i=1)"]
+    end
+
+    K1 --> P1
+    K2 --> S2 --> P2
+    K3 --> S3 --> P3
+
+    style K1 fill:#e3f2fd,stroke:#1565c0
+    style K2 fill:#fff3e0,stroke:#e65100
+    style K3 fill:#f3e5f5,stroke:#7b1fa2
+    style P1 fill:#e8f5e9,stroke:#2e7d32
+    style P2 fill:#e8f5e9,stroke:#2e7d32
+    style P3 fill:#e8f5e9,stroke:#2e7d32
 ```
 
 ---
