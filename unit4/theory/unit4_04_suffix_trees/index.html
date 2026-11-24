@@ -2069,33 +2069,37 @@
 <li>Space: O(n²) - impractical!</li>
 </ul>
 <h3 id="suffix-trie-visualization-for-banana">Suffix Trie Visualization (for "banana$")<a class="headerlink" href="#suffix-trie-visualization-for-banana" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
+<div class="mermaid">graph TD
     Root[Root] --&gt; B[b]
     B --&gt; A1[a]
     A1 --&gt; N1[n]
     N1 --&gt; A2[a]
     A2 --&gt; N2[n]
     N2 --&gt; A3[a]
-    A3 --&gt; $[
+    A3 --&gt; Dollar1["$"]
 
     Root --&gt; A1s[a]
     A1s --&gt; N1s[n]
     N1s --&gt; A2s[a]
     A2s --&gt; N2s[n]
-    A2s --&gt; $[ 
+    N2s --&gt; Dollar2["$"] 
 
     Root --&gt; N1ss[n]
     N1ss --&gt; A1ss[a]
     A1ss --&gt; N2ss[n]
-    A2ss --&gt; A3ss[a]
-    A3ss --&gt; $[ 
+    N2ss --&gt; A3ss[a]
+    A3ss --&gt; Dollar3["$"] 
 
     Root --&gt; A1sss[a]
-    A1sss --&gt; $[ 
-    Root --&gt; $[ 
+    A1sss --&gt; Dollar4["$"] 
+    Root --&gt; Dollar5["$"] 
 
     style Root fill:#e3f2fd,stroke:#1565c0
-    style $ fill:#ffcdd2,stroke:#c62828,stroke-width:2px</code></pre>
+    style Dollar1 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style Dollar2 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style Dollar3 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style Dollar4 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style Dollar5 fill:#ffcdd2,stroke:#c62828,stroke-width:2px</div>
 <h4 id="patricia-trie-compressed-trie">Patricia Trie (Compressed Trie)<a class="headerlink" href="#patricia-trie-compressed-trie" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Merge "silly nodes" (single child)</li>
@@ -2103,31 +2107,32 @@
 <li>Space: O(n)</li>
 </ul>
 <h3 id="patricia-trie-compression">Patricia Trie Compression<a class="headerlink" href="#patricia-trie-compression" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
-    subgraph Before[Before Compression]
+<div class="mermaid">graph LR
+    subgraph Before["Before Compression (Suffix Trie)"]
         R[Root] --&gt; B[b]
         B --&gt; A1[a]
         A1 --&gt; N1[n]
         N1 --&gt; A2[a]
         A2 --&gt; N2[n]
         N2 --&gt; A3[a]
-        A3 --&gt; $[ 
+        A3 --&gt; D1["$"]
     end
 
-    Arrow1 -.-&gt;|Compress| After
-
-    subgraph After[After Compression]
-        R2[Root] --&gt; E1[banana$]
-        R2 --&gt; E2[anana$]
-        R2 --&gt; E3[nana$]
-        R2 --&gt; E4[ana$]
-        R2 --&gt; E5[na$]
-        R2 --&gt; E6[a$]
-        R2 --&gt; E7[$]
+    subgraph After["After Compression (Patricia Trie)"]
+        R2[Root] --&gt; E1["banana$"]
+        R2 --&gt; E2["anana$"]
+        R2 --&gt; E3["nana$"]
+        R2 --&gt; E4["ana$"]
+        R2 --&gt; E5["na$"]
+        R2 --&gt; E6["a$"]
+        R2 --&gt; E7["$"]
     end
+
+    R -.-&gt;|"Compress"| R2
 
     style R fill:#e3f2fd,stroke:#1565c0
-    style After fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style R2 fill:#e3f2fd,stroke:#1565c0
+    style D1 fill:#ffcdd2,stroke:#c62828</div>
 <h4 id="suffix-tree">Suffix Tree<a class="headerlink" href="#suffix-tree" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Patricia Trie of all suffixes of T$ ($ = unique terminator)</li>
@@ -2136,31 +2141,39 @@
 <li>Search: O(m) where m = pattern length</li>
 </ul>
 <h3 id="suffix-tree-for-banana">Suffix Tree for "banana$"<a class="headerlink" href="#suffix-tree-for-banana" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
-    Root[Root] --&gt; Edge1[banana$]
-    Root --&gt; Edge2[anana$]
-    Root --&gt; Edge3[nana$]
-    Root --&gt; Edge4[ana$]
-    Root --&gt; Edge5[na$]
-    Root --&gt; Edge5b[a$]
-    Root --&gt; Edge6[$]
+<div class="mermaid">graph TD
+    Root["Root"] --&gt;|banana$| L0["[0] banana$"]
+    Root --&gt;|$| L6["[6] $"]
+
+    Root --&gt;|a| NA1["Node 'a'"]
+    NA1 --&gt;|$| L5["[5] a$"]
+    NA1 --&gt;|na| NANA["Node 'ana'"]
+    NANA --&gt;|na$| L1["[1] anana$"]
+    NANA --&gt;|$| L3["[3] ana$"]
+
+    Root --&gt;|na| NNA["Node 'na'"]
+    NNA --&gt;|na$| L2["[2] nana$"]
+    NNA --&gt;|$| L4["[4] na$"]
 
     style Root fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
-    style Edge1 fill:#e8f5e9,stroke:#2e7d32
-    style Edge2 fill:#e8f5e9,stroke:#2e7d32
-    style Edge3 fill:#e8f5e9,stroke:#2e7d32
-    style Edge4 fill:#e8f5e9,stroke:#2e7d32
-    style Edge5 fill:#e8f5e9,stroke:#2e7d32
-    style Edge5b fill:#e8f5e9,stroke:#2e7d32
-    style Edge6 fill:#ffcdd2,stroke:#c62828,stroke-width:2px</code></pre>
+    style NA1 fill:#fff3e0,stroke:#e65100
+    style NANA fill:#fff3e0,stroke:#e65100
+    style NNA fill:#fff3e0,stroke:#e65100
+    style L0 fill:#e8f5e9,stroke:#2e7d32
+    style L1 fill:#e8f5e9,stroke:#2e7d32
+    style L2 fill:#e8f5e9,stroke:#2e7d32
+    style L3 fill:#e8f5e9,stroke:#2e7d32
+    style L4 fill:#e8f5e9,stroke:#2e7d32
+    style L5 fill:#e8f5e9,stroke:#2e7d32
+    style L6 fill:#ffcdd2,stroke:#c62828</div>
 <h3 id="search-in-suffix-tree-pattern-ana">Search in Suffix Tree (Pattern "ana")<a class="headerlink" href="#search-in-suffix-tree-pattern-ana" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
+<div class="mermaid">graph TD
     Root[Root] --&gt; Match1["Match 'a'"]
     Match1 --&gt; Match2["Match 'n'"]
     Match2 --&gt; Match3["Match 'a'"]
-    Match3 --&gt; Found[Found!&lt;br/&gt;Positions: 1, 3]
+    Match3 --&gt; Found["Found! Positions: 1, 3"]
 
-    style Found fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style Found fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <h3 id="example-banana">Example: "banana$"<a class="headerlink" href="#example-banana" title="Permanent link">&para;</a></h3>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Suffixes: banana$, anana$, nana$, ana$, na$, a$, $
 </span></code></pre></div>
@@ -2319,9 +2332,9 @@ Compressed → Suffix Tree with edges labeled by string indices</p>
       
         <script src="../../../assets/javascripts/theme-toggle.js"></script>
       
-        <script src="../../../assets/javascripts/mermaid-init.js"></script>
+        <script src="../../../assets/javascripts/mermaid.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+        <script src="../../../assets/javascripts/mermaid-init.js"></script>
       
     
   </body>

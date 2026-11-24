@@ -1,7 +1,7 @@
 /* Theme-aware Mermaid diagram colors */
 :root {
   /* Light theme (default) */
-  --mermaid-bg: #ffffff;
+  --mermaid-bg: transparent;
   --mermaid-text: #1a1a2e;
   --mermaid-primary: #1565c0;
   --mermaid-primary-light: #e3f2fd;
@@ -18,94 +18,267 @@
   --mermaid-orange: #f57f17;
   --mermaid-orange-light: #fff8e1;
   --mermaid-border: #333333;
-  --mermaid-arrow: #333333;
+  --mermaid-arrow: #424242;
   --mermaid-dashed: #666666;
 }
 
 [data-md-color-scheme="slate"] {
   /* Dark theme (slate) */
-  --mermaid-bg: #1e1e1e;
-  --mermaid-text: #e0e0e0;
+  --mermaid-bg: transparent;
+  --mermaid-text: #f0f0f0;
   --mermaid-primary: #64b5f6;
   --mermaid-primary-light: #1a237e;
   --mermaid-secondary: #ffb74d;
-  --mermaid-secondary-light: #e65100;
+  --mermaid-secondary-light: #4a2c00;
   --mermaid-success: #81c784;
   --mermaid-success-light: #1b5e20;
   --mermaid-danger: #ef5350;
-  --mermaid-danger-light: #b71c1c;
-  --mermaid-warning: #ffb74d;
-  --mermaid-warning-light: #e65100;
+  --mermaid-danger-light: #5c1d1d;
+  --mermaid-warning: #ffd54f;
+  --mermaid-warning-light: #4a3800;
   --mermaid-purple: #ce93d8;
   --mermaid-purple-light: #4a148c;
   --mermaid-orange: #ffb74d;
-  --mermaid-orange-light: #e65100;
+  --mermaid-orange-light: #5d2e00;
   --mermaid-border: #90a4ae;
   --mermaid-arrow: #90a4ae;
   --mermaid-dashed: #78909c;
 }
 
-/* Apply to mermaid SVG elements */
-.mermaid svg {
+/* Base Mermaid SVG styles */
+.mermaid svg,
+svg[id^="mermaid-"] {
   background-color: var(--mermaid-bg) !important;
+  font-family: inherit;
 }
 
-.mermaid svg text {
+/* Light Mode Text Defaults */
+:root:not([data-md-color-scheme="slate"]) .mermaid svg text,
+:root:not([data-md-color-scheme="slate"]) svg[id^="mermaid-"] text,
+:root:not([data-md-color-scheme="slate"]) .mermaid .nodeLabel,
+:root:not([data-md-color-scheme="slate"]) svg[id^="mermaid-"] .nodeLabel,
+:root:not([data-md-color-scheme="slate"]) .mermaid .edgeLabel,
+:root:not([data-md-color-scheme="slate"]) svg[id^="mermaid-"] .edgeLabel {
   fill: var(--mermaid-text) !important;
+  color: var(--mermaid-text) !important;
 }
 
-/* Override mermaid default styles for theme awareness */
-.mermaid .node rect,
-.mermaid svg .node rect,
-.mermaid .node circle,
-.mermaid svg .node circle,
-.mermaid .node ellipse,
-.mermaid svg .node ellipse,
-.mermaid .node polygon,
-.mermaid svg .node polygon {
+/* Dark Mode Text Defaults */
+[data-md-color-scheme="slate"] .mermaid svg text,
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] text,
+[data-md-color-scheme="slate"] .mermaid .nodeLabel,
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .nodeLabel,
+[data-md-color-scheme="slate"] .mermaid .node span,
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node span,
+[data-md-color-scheme="slate"] .mermaid .edgeLabel,
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .edgeLabel {
+  fill: var(--mermaid-text) !important;
+  color: var(--mermaid-text) !important;
+}
+
+/* Default unstyled node styling */
+.mermaid .node:not([style*="fill"]) rect,
+.mermaid svg .node:not([style*="fill"]) rect,
+svg[id^="mermaid-"] .node:not([style*="fill"]) rect,
+.mermaid .node:not([style*="fill"]) circle,
+.mermaid svg .node:not([style*="fill"]) circle,
+svg[id^="mermaid-"] .node:not([style*="fill"]) circle,
+.mermaid .node:not([style*="fill"]) ellipse,
+.mermaid svg .node:not([style*="fill"]) ellipse,
+svg[id^="mermaid-"] .node:not([style*="fill"]) ellipse,
+.mermaid .node:not([style*="fill"]) polygon,
+.mermaid svg .node:not([style*="fill"]) polygon,
+svg[id^="mermaid-"] .node:not([style*="fill"]) polygon,
+.mermaid .node:not([style*="fill"]) path,
+.mermaid svg .node:not([style*="fill"]) path,
+svg[id^="mermaid-"] .node:not([style*="fill"]) path {
   fill: var(--mermaid-primary-light) !important;
   stroke: var(--mermaid-primary) !important;
   stroke-width: 2px;
 }
 
-.mermaid .node text,
-.mermaid svg .node text {
-  fill: var(--mermaid-text) !important;
+/* Explicit classDef support in Dark Mode */
+[data-md-color-scheme="slate"] .mermaid .rootNode > *,
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .rootNode > *,
+[data-md-color-scheme="slate"] .mermaid g.rootNode > * {
+  fill: #4a2c00 !important;
+  stroke: #ffb74d !important;
 }
 
+[data-md-color-scheme="slate"] .mermaid .lessThan > *,
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .lessThan > *,
+[data-md-color-scheme="slate"] .mermaid g.lessThan > * {
+  fill: #1b5e20 !important;
+  stroke: #81c784 !important;
+}
+
+[data-md-color-scheme="slate"] .mermaid .greaterThan > *,
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .greaterThan > *,
+[data-md-color-scheme="slate"] .mermaid g.greaterThan > * {
+  fill: #1a237e !important;
+  stroke: #64b5f6 !important;
+}
+
+/* ==========================================================================
+   Dark Mode Adaptive Color Mapping for Nodes (High Contrast & Semantic)
+   ========================================================================== */
+
+/* Orange / Amber / Cream (Root, Highlights) -> Dark Warm Amber with Light Text */
+[data-md-color-scheme="slate"] .mermaid .node [style*="#fff3e0" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="#fff3e0" i],
+[data-md-color-scheme="slate"] .mermaid .node [style*="#fff8e1" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="#fff8e1" i],
+[data-md-color-scheme="slate"] .mermaid .node [style*="#ffe0b2" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="#ffe0b2" i],
+[data-md-color-scheme="slate"] .mermaid .node [style*="255, 243, 224" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="255, 243, 224" i] {
+  fill: #4a2c00 !important;
+  stroke: #ffb74d !important;
+}
+
+/* Green (Insert, Success, Leaves, Match) -> Dark Forest Green with Light Text */
+[data-md-color-scheme="slate"] .mermaid .node [style*="#e8f5e9" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="#e8f5e9" i],
+[data-md-color-scheme="slate"] .mermaid .node [style*="#c8e6c9" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="#c8e6c9" i],
+[data-md-color-scheme="slate"] .mermaid .node [style*="#dcedc8" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="#dcedc8" i],
+[data-md-color-scheme="slate"] .mermaid .node [style*="232, 245, 233" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="232, 245, 233" i],
+[data-md-color-scheme="slate"] .mermaid .node [style*="200, 230, 201" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="200, 230, 201" i] {
+  fill: #1b5e20 !important;
+  stroke: #81c784 !important;
+}
+
+/* Red / Pink (Delete, Unbalanced, Danger, Error) -> Dark Wine Red with Light Text */
+[data-md-color-scheme="slate"] .mermaid .node [style*="#ffebee" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="#ffebee" i],
+[data-md-color-scheme="slate"] .mermaid .node [style*="#ffcdd2" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="#ffcdd2" i],
+[data-md-color-scheme="slate"] .mermaid .node [style*="#fce4ec" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="#fce4ec" i],
+[data-md-color-scheme="slate"] .mermaid .node [style*="255, 235, 238" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="255, 235, 238" i],
+[data-md-color-scheme="slate"] .mermaid .node [style*="255, 205, 210" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="255, 205, 210" i] {
+  fill: #5c1d1d !important;
+  stroke: #ef5350 !important;
+}
+
+/* Blue (Greater than, Secondary, Table) -> Deep Navy Blue with Light Text */
+[data-md-color-scheme="slate"] .mermaid .node [style*="#e3f2fd" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="#e3f2fd" i],
+[data-md-color-scheme="slate"] .mermaid .node [style*="#e1f5fe" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="#e1f5fe" i],
+[data-md-color-scheme="slate"] .mermaid .node [style*="#bbf" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="#bbf" i],
+[data-md-color-scheme="slate"] .mermaid .node [style*="227, 242, 253" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="227, 242, 253" i] {
+  fill: #1a237e !important;
+  stroke: #64b5f6 !important;
+}
+
+/* Purple (Trie, Special) -> Deep Dark Purple with Light Text */
+[data-md-color-scheme="slate"] .mermaid .node [style*="#f3e5f5" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="#f3e5f5" i],
+[data-md-color-scheme="slate"] .mermaid .node [style*="#f9f" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="#f9f" i],
+[data-md-color-scheme="slate"] .mermaid .node [style*="243, 229, 245" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="243, 229, 245" i] {
+  fill: #4a148c !important;
+  stroke: #ce93d8 !important;
+}
+
+/* Coral / Orange */
+[data-md-color-scheme="slate"] .mermaid .node [style*="#f96" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="#f96" i] {
+  fill: #5d2e00 !important;
+  stroke: #ff9800 !important;
+}
+
+/* White background nodes in dark mode */
+[data-md-color-scheme="slate"] .mermaid .node [style*="#ffffff" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="#ffffff" i],
+[data-md-color-scheme="slate"] .mermaid .node [style*="#fff;" i],
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .node [style*="#fff;" i] {
+  fill: #263238 !important;
+  stroke: #90a4ae !important;
+}
+
+/* Edge paths and arrows */
 .mermaid .edgePath .path,
+svg[id^="mermaid-"] .edgePath .path,
 .mermaid .edgePath path,
+svg[id^="mermaid-"] .edgePath path {
+  stroke: var(--mermaid-arrow) !important;
+}
+
 .mermaid .edgePath .marker,
-.mermaid .edgePath .marker-end {
+svg[id^="mermaid-"] .edgePath .marker,
+.mermaid .edgePath .marker-end,
+svg[id^="mermaid-"] .edgePath .marker-end,
+.mermaid svg marker path,
+svg[id^="mermaid-"] marker path {
   stroke: var(--mermaid-arrow) !important;
   fill: var(--mermaid-arrow) !important;
 }
 
+/* Edge labels */
+.mermaid .edgeLabel,
+svg[id^="mermaid-"] .edgeLabel {
+  background-color: transparent !important;
+}
+
 .mermaid .edgeLabel rect,
-.mermaid .edgeLabel rect {
+svg[id^="mermaid-"] .edgeLabel rect {
   fill: var(--mermaid-warning-light) !important;
   stroke: var(--mermaid-warning) !important;
 }
 
-.mermaid .edgeLabel text {
-  fill: var(--mermaid-text) !important;
+[data-md-color-scheme="slate"] .mermaid .edgeLabel rect,
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .edgeLabel rect {
+  fill: #263238 !important;
+  stroke: #546e7a !important;
 }
 
-.mermaid .cluster rect {
+[data-md-color-scheme="slate"] .mermaid .edgeLabel span,
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .edgeLabel span,
+[data-md-color-scheme="slate"] .mermaid .edgeLabel text,
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .edgeLabel text {
+  color: #eceff1 !important;
+  fill: #eceff1 !important;
+}
+
+/* Clusters / Subgraphs */
+.mermaid .cluster rect,
+svg[id^="mermaid-"] .cluster rect {
   fill: var(--mermaid-primary-light) !important;
   stroke: var(--mermaid-primary) !important;
   stroke-dasharray: 5 5;
 }
 
-.mermaid .cluster text {
-  fill: var(--mermaid-text) !important;
+[data-md-color-scheme="slate"] .mermaid .cluster rect,
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .cluster rect {
+  fill: rgba(255, 255, 255, 0.03) !important;
+  stroke: #546e7a !important;
+  stroke-dasharray: 5 5;
 }
 
-/* Specific node type overrides for dark mode */
+[data-md-color-scheme="slate"] .mermaid .cluster span,
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .cluster span,
+[data-md-color-scheme="slate"] .mermaid .cluster text,
+[data-md-color-scheme="slate"] svg[id^="mermaid-"] .cluster text {
+  color: #eceff1 !important;
+  fill: #eceff1 !important;
+  font-weight: 600;
+}
+
+/* Specific node type classes for dark mode */
 [data-md-color-scheme="slate"] .mermaid .node.root rect,
 [data-md-color-scheme="slate"] .mermaid .node.root circle {
-  fill: var(--mermaid-primary-light) !important;
-  stroke: var(--mermaid-primary) !important;
+  fill: var(--mermaid-secondary-light) !important;
+  stroke: var(--mermaid-secondary) !important;
   stroke-width: 3px;
 }
 
@@ -139,151 +312,87 @@
 
 /* Dashed/thread edges */
 .mermaid .edgePath .path.dashed,
-.mermaid .edgePath .path[stroke-dasharray] {
+svg[id^="mermaid-"] .edgePath .path.dashed,
+.mermaid .edgePath .path[stroke-dasharray],
+svg[id^="mermaid-"] .edgePath .path[stroke-dasharray] {
   stroke: var(--mermaid-dashed) !important;
   stroke-dasharray: 5 5;
 }
 
 /* Clickable/highlighted elements */
 .mermaid .clickable:hover,
-.mermaid .clickable:hover rect,
-.mermaid .clickable:hover circle {
+svg[id^="mermaid-"] .clickable:hover {
   opacity: 0.8;
   cursor: pointer;
 }
 
 /* Flowchart specific */
-.mermaid .flowchart-link {
+.mermaid .flowchart-link,
+svg[id^="mermaid-"] .flowchart-link {
   stroke: var(--mermaid-arrow) !important;
 }
 
 /* Sequence diagram */
 .mermaid .actor-line,
+svg[id^="mermaid-"] .actor-line,
 .mermaid .messageLine0,
-.mermaid .messageLine1 {
+svg[id^="mermaid-"] .messageLine0,
+.mermaid .messageLine1,
+svg[id^="mermaid-"] .messageLine1 {
   stroke: var(--mermaid-arrow) !important;
 }
 
 .mermaid .actor text,
-.mermaid .signal text {
+svg[id^="mermaid-"] .actor text,
+.mermaid .signal text,
+svg[id^="mermaid-"] .signal text {
   fill: var(--mermaid-text) !important;
 }
 
 .mermaid .actor rect,
-.mermaid .actor circle {
+svg[id^="mermaid-"] .actor rect,
+.mermaid .actor circle,
+svg[id^="mermaid-"] .actor circle {
   fill: var(--mermaid-primary-light) !important;
   stroke: var(--mermaid-primary) !important;
 }
 
-.mermaid .messageBox {
+.mermaid .messageBox,
+svg[id^="mermaid-"] .messageBox {
   fill: var(--mermaid-primary-light) !important;
   stroke: var(--mermaid-primary) !important;
 }
 
-.mermaid .messageText {
-  fill: var(--mermaid-text) !important;
-}
-
-/* Class diagram */
-.mermaid .classTitle {
-  fill: var(--mermaid-primary) !important;
-  stroke: var(--mermaid-primary) !important;
-}
-
-.mermaid .classText {
+.mermaid .messageText,
+svg[id^="mermaid-"] .messageText {
   fill: var(--mermaid-text) !important;
 }
 
 /* State diagram */
 .mermaid .state rect,
-.mermaid .state circle {
+svg[id^="mermaid-"] .state rect,
+.mermaid .state circle,
+svg[id^="mermaid-"] .state circle {
   fill: var(--mermaid-primary-light) !important;
   stroke: var(--mermaid-primary) !important;
 }
 
 .mermaid .stateStart,
-.mermaid .stateEnd {
+svg[id^="mermaid-"] .stateStart,
+.mermaid .stateEnd,
+svg[id^="mermaid-"] .stateEnd {
   fill: var(--mermaid-success) !important;
   stroke: var(--mermaid-success) !important;
 }
 
-/* Pie chart */
-.mermaid .pieSlice {
-  stroke: var(--mermaid-bg) !important;
-  stroke-width: 2px;
-}
-
-/* Gantt chart */
-.mermaid .grid .tick line {
-  stroke: var(--mermaid-border) !important;
-}
-
-.mermaid .task rect {
-  fill: var(--mermaid-primary-light) !important;
-  stroke: var(--mermaid-primary) !important;
-}
-
-.mermaid .taskText {
-  fill: var(--mermaid-text) !important;
-}
-
-/* Git graph */
-.mermaid .commitTag {
-  fill: var(--mermaid-primary-light) !important;
-  stroke: var(--mermaid-primary) !important;
-}
-
-.mermaid .branchName {
-  fill: var(--mermaid-text) !important;
-}
-
-/* ER diagram */
-.mermaid .entityBox rect {
-  fill: var(--mermaid-primary-light) !important;
-  stroke: var(--mermaid-primary) !important;
-}
-
-.mermaid .relationType {
-  fill: var(--mermaid-warning-light) !important;
-  stroke: var(--mermaid-warning) !important;
-}
-
-/* User journey */
-.mermaid .journeySection {
-  fill: var(--mermaid-primary-light) !important;
-  stroke: var(--mermaid-primary) !important;
-}
-
-.mermaid .journeyTask {
-  fill: var(--mermaid-primary-light) !important;
-  stroke: var(--mermaid-primary) !important;
-}
-
-/* Requirement diagram */
-.mermaid .reqBox rect {
-  fill: var(--mermaid-primary-light) !important;
-  stroke: var(--mermaid-primary) !important;
-}
-
-/* Mindmap */
-.mermaid .mindmapNode rect,
-.mermaid .mindmapNode circle {
-  fill: var(--mermaid-primary-light) !important;
-  stroke: var(--mermaid-primary) !important;
-}
-
-/* Timeline */
-.mermaid .timelineEvent rect {
-  fill: var(--mermaid-primary-light) !important;
-  stroke: var(--mermaid-primary) !important;
-}
-
-/* Sankey diagram */
-.mermaid .sankeyLink {
-  fill: var(--mermaid-primary-light) !important;
-  opacity: 0.5;
-}
-
-.mermaid .sankeyNode rect {
+/* Class diagram */
+.mermaid .classTitle,
+svg[id^="mermaid-"] .classTitle {
   fill: var(--mermaid-primary) !important;
+  stroke: var(--mermaid-primary) !important;
+}
+
+.mermaid .classText,
+svg[id^="mermaid-"] .classText {
+  fill: var(--mermaid-text) !important;
 }

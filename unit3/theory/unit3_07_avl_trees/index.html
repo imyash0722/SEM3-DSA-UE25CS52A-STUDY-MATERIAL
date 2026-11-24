@@ -2003,17 +2003,17 @@
 - BF = +2 → Left heavy
 - BF = -2 → Right heavy</p>
 <h3 id="avl-balance-factor-visualization">AVL Balance Factor Visualization<a class="headerlink" href="#avl-balance-factor-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
-    Balanced[BF = 0&lt;br/&gt;Balanced] --&gt; LeftHeavy[BF = +1&lt;br/&gt;Left Heavy]
-    Balanced --&gt; RightHeavy[BF = -1&lt;br/&gt;Right Heavy]
-    LeftHeavy --&gt; LeftHeavy2[BF = +2&lt;br/&gt;Unbalanced!]
-    RightHeavy --&gt; RightHeavy2[BF = -2&lt;br/&gt;Unbalanced!]
+<div class="mermaid">graph TD
+    Balanced["BF = 0 (Balanced)"] --&gt; LeftHeavy["BF = +1 (Left Heavy)"]
+    Balanced --&gt; RightHeavy["BF = -1 (Right Heavy)"]
+    LeftHeavy --&gt; LeftHeavy2["BF = +2 (Unbalanced!)"]
+    RightHeavy --&gt; RightHeavy2["BF = -2 (Unbalanced!)"]
 
     style Balanced fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
     style LeftHeavy fill:#fff3e0,stroke:#e65100
     style RightHeavy fill:#fff3e0,stroke:#e65100
     style LeftHeavy2 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
-    style RightHeavy2 fill:#ffcdd2,stroke:#c62828,stroke-width:2px</code></pre>
+    style RightHeavy2 fill:#ffcdd2,stroke:#c62828,stroke-width:2px</div>
 <hr />
 <h2 id="4-rotation-cases">🔄 4 Rotation Cases<a class="headerlink" href="#4-rotation-cases" title="Permanent link">&para;</a></h2>
 <table>
@@ -2049,7 +2049,7 @@
 </table>
 <p><strong>Memory Trick:</strong> Same direction → Single rotation; Opposite → Double rotation</p>
 <h3 id="ll-case-single-right-rotation">LL Case - Single Right Rotation<a class="headerlink" href="#ll-case-single-right-rotation" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
+<div class="mermaid">graph TD
     subgraph Before[Before: LL Case]
         X1[X: BF=+2] --&gt; Y1[Y: BF=+1]
         X1 --&gt; T41[T4]
@@ -2073,9 +2073,9 @@
     Before -.-&gt;|Right Rotate| After
 
     style X1 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
-    style Y2 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style Y2 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <h3 id="rr-case-single-left-rotation">RR Case - Single Left Rotation<a class="headerlink" href="#rr-case-single-left-rotation" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
+<div class="mermaid">graph TD
     subgraph BeforeRR[Before: RR Case]
         X1[X: BF=-2] --&gt; Y1[Y: BF=-1]
         Y1 --&gt; Z1[Z: BF=0]
@@ -2091,9 +2091,9 @@
     BeforeRR -.-&gt;|Left Rotate| AfterRR
 
     style X1 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
-    style Y2 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style Y2 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <h3 id="lr-case-double-rotation-left-then-right">LR Case - Double Rotation (Left then Right)<a class="headerlink" href="#lr-case-double-rotation-left-then-right" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
+<div class="mermaid">graph TD
     subgraph LRBefore[Before: LR Case]
         X1[X: BF=+2] --&gt; Y1[Y: BF=-1]
         X1 --&gt; T41[T4]
@@ -2108,10 +2108,10 @@
     subgraph LRMid[After Left Rotate]
         X2[X: BF=+2] --&gt; Z2[Z: BF=+1]
         X2 --&gt; T42[T4]
-        Z2 --&gt; T22[T2]
-        Z2 --&gt; T32[T3]
         Z2 --&gt; Y2[Y: BF=0]
+        Z2 --&gt; T32[T3]
         Y2 --&gt; T12[T1]
+        Y2 --&gt; T22[T2]
     end
 
     ArrowLR2 -.-&gt;|Right Rotate on X| LRAfter
@@ -2128,27 +2128,27 @@
     LRBefore -.-&gt;|Step 1: Left| LRMid -.-&gt;|Step 2: Right| LRAfter
 
     style X1 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
-    style Z3 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style Z3 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <h3 id="rl-case-double-rotation-right-then-left">RL Case - Double Rotation (Right then Left)<a class="headerlink" href="#rl-case-double-rotation-right-then-left" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
+<div class="mermaid">graph TD
     subgraph RLBefore[Before: RL Case]
-        X1[X: BF=-2] --&gt; Y1[Y: BF=+1]
-        Y1 --&gt; T11[T1]
+        X1[X: BF=-2] --&gt; T11[T1]
+        X1 --&gt; Y1[Y: BF=+1]
         Y1 --&gt; Z1[Z: BF=0]
+        Y1 --&gt; T41[T4]
         Z1 --&gt; T21[T2]
         Z1 --&gt; T31[T3]
-        X1 --&gt; T41[T4]
     end
 
     ArrowRL1 -.-&gt;|Right Rotate on Y| RLMid
 
     subgraph RLMid[After Right Rotate]
-        X2[X: BF=-2] --&gt; Z2[Z: BF=-1]
-        X2 --&gt; T42[T4]
+        X2[X: BF=-2] --&gt; T12[T1]
+        X2 --&gt; Z2[Z: BF=-1]
         Z2 --&gt; T22[T2]
-        Z2 --&gt; T32[T3]
         Z2 --&gt; Y2[Y: BF=0]
-        Y2 --&gt; T12[T1]
+        Y2 --&gt; T32[T3]
+        Y2 --&gt; T42[T4]
     end
 
     ArrowRL2 -.-&gt;|Left Rotate on X| RLAfter
@@ -2165,9 +2165,9 @@
     RLBefore -.-&gt;|Step 1: Right| RLMid -.-&gt;|Step 2: Left| RLAfter
 
     style X1 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
-    style Z3 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style Z3 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <h3 id="rotation-decision-flowchart">Rotation Decision Flowchart<a class="headerlink" href="#rotation-decision-flowchart" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart TD
+<div class="mermaid">flowchart TD
     Start([Node Unbalanced]) --&gt; CheckBF{BF of Unbalanced Node}
     CheckBF -- +2 (Left Heavy) --&gt; CheckChild{Child BF}
     CheckBF -- -2 (Right Heavy) --&gt; CheckChild2{Child BF}
@@ -2182,7 +2182,7 @@
     RL --&gt; Balanced
 
     style Start fill:#e8f5e9,stroke:#2e7d32
-    style Balanced fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style Balanced fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <hr />
 <h2 id="key-takeaways">📝 Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
 <table>
@@ -2334,9 +2334,9 @@
       
         <script src="../../../assets/javascripts/theme-toggle.js"></script>
       
-        <script src="../../../assets/javascripts/mermaid-init.js"></script>
+        <script src="../../../assets/javascripts/mermaid.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+        <script src="../../../assets/javascripts/mermaid-init.js"></script>
       
     
   </body>

@@ -2144,8 +2144,8 @@
 - <code>is_word_end</code> flag marks complete words</p>
 </blockquote>
 <h3 id="trie-structure-visualization">Trie Structure Visualization<a class="headerlink" href="#trie-structure-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
-    Root[Root&lt;br/&gt;(empty)] --&gt; A[a]
+<div class="mermaid">graph TD
+    Root["Root (empty)"] --&gt; A[a]
     A --&gt; T[t]
     T --&gt; C1[c]
     C1 --&gt; E1[e]
@@ -2166,7 +2166,7 @@
     style A fill:#e8f5e9,stroke:#2e7d32
     style B fill:#fff3e0,stroke:#e65100
     style C fill:#f3e5f5,stroke:#7b1fa2
-    style R fill:#fff8e1,stroke:#f57f17</code></pre>
+    style R fill:#fff8e1,stroke:#f57f17</div>
 <h3 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define ALPHABET_SIZE 256  </span><span class="c1">// Extended ASCII</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
@@ -2200,31 +2200,36 @@
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="insert-visualization-inserting-cat-car-card">Insert Visualization (Inserting "cat", "car", "card")<a class="headerlink" href="#insert-visualization-inserting-cat-car-card" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
-    subgraph Step1[Insert "cat"]
+<div class="mermaid">graph TD
+    subgraph Step1["Insert 'cat'"]
         R1[Root] --&gt; C1[c]
         C1 --&gt; A1[a]
-        A1 --&gt; T1[t&lt;br/&gt;is_word_end=1]
+        T1["t: is_word_end=1"]
+        A1 --&gt; T1
     end
 
-    subgraph Step2[Insert "car"]
+    subgraph Step2["Insert 'car'"]
         R2[Root] --&gt; C2[c]
         C2 --&gt; A2[a]
-        A2 --&gt; T2[t&lt;br/&gt;is_word_end=1]
-        A2 --&gt; R1[r&lt;br/&gt;is_word_end=1]
+        T2["t: is_word_end=1"]
+        R2b["r: is_word_end=1"]
+        A2 --&gt; T2
+        A2 --&gt; R2b
     end
 
-    subgraph Step3[Insert "card"]
+    subgraph Step3["Insert 'card'"]
         R3[Root] --&gt; C3[c]
         C3 --&gt; A3[a]
-        A3 --&gt; R2[r&lt;br/&gt;is_word_end=1]
-        R2 --&gt; D[d&lt;br/&gt;is_word_end=1]
+        R3b["r: is_word_end=1"]
+        D3["d: is_word_end=1"]
+        A3 --&gt; R3b
+        R3b --&gt; D3
     end
 
     style R1 fill:#e3f2fd,stroke:#1565c0
     style A1 fill:#e8f5e9,stroke:#2e7d32
     style T1 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style R1 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style R2b fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <h4 id="search">Search<a class="headerlink" href="#search" title="Permanent link">&para;</a></h4>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">search</span><span class="p">(</span><span class="n">trie_t</span><span class="w"> </span><span class="o">*</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">word</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">node_t</span><span class="w"> </span><span class="o">*</span><span class="n">curr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="o">-&gt;</span><span class="n">root</span><span class="p">;</span>
@@ -2237,21 +2242,21 @@
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="search-visualization">Search Visualization<a class="headerlink" href="#search-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart TD
-    Start([Search "car"]) --&gt; Root[Start at Root]
-    Root --&gt; C{c}
-    C --&gt; FoundC{Exists?}
-    FoundC -- Yes --&gt; A{a}
-    A --&gt; FoundA{Exists?}
-    FoundA -- Yes --&gt; R{r}
-    R --&gt; FoundR{Exists?}
-    FoundR -- Yes --&gt; CheckEnd{is_word_end?}
-    CheckEnd -- Yes --&gt; Found[FOUND]
-    CheckEnd -- No --&gt; NotFound[NOT FOUND]
+<div class="mermaid">flowchart TD
+    Start(["Search 'car'"]) --&gt; Root["Start at Root"]
+    Root --&gt; C{"c"}
+    C --&gt; FoundC{"Exists?"}
+    FoundC -- Yes --&gt; A{"a"}
+    A --&gt; FoundA{"Exists?"}
+    FoundA -- Yes --&gt; R{"r"}
+    R --&gt; FoundR{"Exists?"}
+    FoundR -- Yes --&gt; CheckEnd{"is_word_end?"}
+    CheckEnd -- Yes --&gt; Found["FOUND"]
+    CheckEnd -- No --&gt; NotFound["NOT FOUND"]
 
     style Start fill:#e8f5e9,stroke:#2e7d32
     style Found fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style NotFound fill:#ffcdd2,stroke:#c62828</code></pre>
+    style NotFound fill:#ffcdd2,stroke:#c62828</div>
 <h4 id="delete">Delete<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h4>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// Returns 1 if node can be freed</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">delete_rec</span><span class="p">(</span><span class="n">node_t</span><span class="w"> </span><span class="o">*</span><span class="n">curr</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">word</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">depth</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2285,19 +2290,19 @@
 </span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="delete-visualization">Delete Visualization<a class="headerlink" href="#delete-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart TD
-    Start([Delete "car"]) --&gt; R1[Root: c]
+<div class="mermaid">flowchart TD
+    Start(["Delete 'car'"]) --&gt; R1["Root: c"]
     R1 --&gt; A1[a]
     A1 --&gt; R1b[r]
-    R1b --&gt; CheckEnd{is_word_end=1?}
-    CheckEnd -- Yes --&gt; Unset[Unset is_word_end]
-    Unset --&gt; CheckChildren{Children?}
-    CheckChildren -- Yes (d) --&gt; Keep[Keep Node]
-    CheckChildren -- No --&gt; Free[Free Node]
+    R1b --&gt; CheckEnd{"is_word_end=1?"}
+    CheckEnd -- Yes --&gt; Unset["Unset is_word_end"]
+    Unset --&gt; CheckChildren{"Children?"}
+    CheckChildren -- "Yes (d)" --&gt; Keep["Keep Node"]
+    CheckChildren -- No --&gt; Free["Free Node"]
 
     style Start fill:#e8f5e9,stroke:#2e7d32
     style Keep fill:#e8f5e9,stroke:#2e7d32
-    style Free fill:#ffcdd2,stroke:#c62828</code></pre>
+    style Free fill:#ffcdd2,stroke:#c62828</div>
 <h4 id="display-all-words">Display All Words<a class="headerlink" href="#display-all-words" title="Permanent link">&para;</a></h4>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">display_from</span><span class="p">(</span><span class="n">node_t</span><span class="w"> </span><span class="o">*</span><span class="n">curr</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">is_word_end</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2331,23 +2336,22 @@
 </span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="autocomplete-visualization">Autocomplete Visualization<a class="headerlink" href="#autocomplete-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
+<div class="mermaid">graph TD
     Root[Root] --&gt; C[c]
     C --&gt; A[a]
-    A --&gt; T[t&lt;br/&gt;word_end]
-    A --&gt; R[r&lt;br/&gt;word_end]
-    R --&gt; D[d&lt;br/&gt;word_end]
-    A --&gt; T2[t&lt;br/&gt;word_end]
+    A --&gt; T["t: word_end"]
+    A --&gt; R["r: word_end"]
+    R --&gt; D["d: word_end"]
 
-    Search[Search prefix "ca"] --&gt; C
+    Search["Search prefix 'ca'"] --&gt; C
     C --&gt; A
-    A --&gt; Results{Results from here}
-    Results --&gt; T[t]
-    Results --&gt; R[r]
-    R --&gt; D[d]
+    A --&gt; Results{"Results from here"}
+    Results --&gt; T
+    Results --&gt; R
+    R --&gt; D
 
     style Root fill:#e3f2fd,stroke:#1565c0
-    style Results fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style Results fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <hr />
 <h2 id="key-takeaways">📝 Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
 <table>
@@ -2495,9 +2499,9 @@
       
         <script src="../../../assets/javascripts/theme-toggle.js"></script>
       
-        <script src="../../../assets/javascripts/mermaid-init.js"></script>
+        <script src="../../../assets/javascripts/mermaid.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+        <script src="../../../assets/javascripts/mermaid-init.js"></script>
       
     
   </body>

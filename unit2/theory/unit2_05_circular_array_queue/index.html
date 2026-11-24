@@ -1924,13 +1924,14 @@
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>           ↑     ↑
 </span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>          f=0   r=2
 </span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>... continue until r=4
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    [50][10][20][30][40]
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>     ↑            ↑
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    f=0          r=4
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>... continue until r=4:
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    [ ][10][20][30][40]
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>     ↑               ↑
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    f=0             r=4
 </span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>Enqueue 50: rear = (4+1)%5 = 0
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    rear == front? → FULL! (wasted one slot)
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>Attempt to enqueue 50:
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    (rear + 1) % 5 = (4 + 1) % 5 = 0 == front (f=0)
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    Queue is FULL! 50 cannot be inserted (slot 0 is preserved as the empty slot).
 </span></code></pre></div></p>
 <h3 id="operations">Operations<a class="headerlink" href="#operations" title="Permanent link">&para;</a></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">init_queue</span><span class="p">(</span><span class="n">queue_t</span><span class="w"> </span><span class="o">*</span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2118,9 +2119,9 @@
       
         <script src="../../../assets/javascripts/theme-toggle.js"></script>
       
-        <script src="../../../assets/javascripts/mermaid-init.js"></script>
+        <script src="../../../assets/javascripts/mermaid.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+        <script src="../../../assets/javascripts/mermaid-init.js"></script>
       
     
   </body>

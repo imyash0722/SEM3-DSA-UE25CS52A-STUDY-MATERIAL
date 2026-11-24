@@ -1929,7 +1929,7 @@
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">tree</span><span class="w"> </span><span class="n">tree_t</span><span class="p">;</span>
 </span></code></pre></div>
 <h3 id="array-vs-pointer-comparison">Array vs Pointer Comparison<a class="headerlink" href="#array-vs-pointer-comparison" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph LR
+<div class="mermaid">graph LR
     subgraph Pointer[Pointer-Based BST]
         P1[Node*] --&gt; P2[Node*]
         P1 --&gt; P3[Node*]
@@ -1948,20 +1948,20 @@
         style A3 fill:#fff3e0,stroke:#e65100
         style A4 fill:#fff3e0,stroke:#e65100
         style A5 fill:#ffcdd2,stroke:#c62828
-    end</code></pre>
+    end</div>
 <h3 id="array-representation-example">Array Representation Example<a class="headerlink" href="#array-representation-example" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
-    subgraph Array[elem[] Array]
-        I0[Index 0: key=50&lt;br/&gt;left=1, right=2]
-        I1[Index 1: key=30&lt;br/&gt;left=3, right=4]
-        I2[Index 2: key=70&lt;br/&gt;left=5, right=6]
-        I3[Index 3: key=20&lt;br/&gt;left=-1, right=-1]
-        I4[Index 4: key=40&lt;br/&gt;left=-1, right=-1]
-        I5[Index 5: key=60&lt;br/&gt;left=-1, right=-1]
-        I6[Index 6: key=80&lt;br/&gt;left=-1, right=-1]
+<div class="mermaid">graph TD
+    subgraph Array["elem[] Array"]
+        I0["Index 0: key=50, left=1, right=2"]
+        I1["Index 1: key=30, left=3, right=4"]
+        I2["Index 2: key=70, left=5, right=6"]
+        I3["Index 3: key=20, left=-1, right=-1"]
+        I4["Index 4: key=40, left=-1, right=-1"]
+        I5["Index 5: key=60, left=-1, right=-1"]
+        I6["Index 6: key=80, left=-1, right=-1"]
     end
 
-    Root[root=0] --&gt; I0
+    Root["root=0"] --&gt; I0
     I0 --&gt; I1
     I0 --&gt; I2
     I1 --&gt; I3
@@ -1970,7 +1970,7 @@
     I2 --&gt; I6
 
     style Root fill:#ffebee,stroke:#c62828,stroke-width:2px
-    style I0 fill:#fff3e0,stroke:#e65100</code></pre>
+    style I0 fill:#fff3e0,stroke:#e65100</div>
 <h3 id="key-differences-from-dynamic-version">Key Differences from Dynamic Version<a class="headerlink" href="#key-differences-from-dynamic-version" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Uses <strong>indices</strong> instead of pointers</li>
@@ -1996,20 +1996,20 @@
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="insert-flow-visualization">Insert Flow Visualization<a class="headerlink" href="#insert-flow-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart TD
-    Start([Start: Insert Key]) --&gt; CheckEmpty{Root == -1?}
-    CheckEmpty -- Yes --&gt; SetRoot[Root = new_idx]
-    CheckEmpty -- No --&gt; Compare{Key &gt; Current?}
-    Compare -- Yes --&gt; GoRight[Go Right: insert_rec(right, new_idx)]
-    Compare -- No --&gt; GoLeft[Go Left: insert_rec(left, new_idx)]
-    GoRight --&gt; Recurse[Recursive Call]
+<div class="mermaid">flowchart TD
+    Start(["Start: Insert Key"]) --&gt; CheckEmpty{"Root == -1?"}
+    CheckEmpty -- Yes --&gt; SetRoot["Root = new_idx"]
+    CheckEmpty -- No --&gt; Compare{"Key &gt; Current?"}
+    Compare -- Yes --&gt; GoRight["Go Right: insert_rec(right, new_idx)"]
+    Compare -- No --&gt; GoLeft["Go Left: insert_rec(left, new_idx)"]
+    GoRight --&gt; Recurse["Recursive Call"]
     GoLeft --&gt; Recurse
     Recurse --&gt; CheckEmpty
-    SetRoot --&gt; End([End])
+    SetRoot --&gt; End(["End"])
 
     style Start fill:#e8f5e9,stroke:#2e7d32
     style End fill:#ffebee,stroke:#c62828
-    style SetRoot fill:#e3f2fd,stroke:#1565c0</code></pre>
+    style SetRoot fill:#e3f2fd,stroke:#1565c0</div>
 <hr />
 <h2 id="key-takeaways">📝 Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
 <table>
@@ -2165,9 +2165,9 @@
       
         <script src="../../../assets/javascripts/theme-toggle.js"></script>
       
-        <script src="../../../assets/javascripts/mermaid-init.js"></script>
+        <script src="../../../assets/javascripts/mermaid.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+        <script src="../../../assets/javascripts/mermaid-init.js"></script>
       
     
   </body>

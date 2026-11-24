@@ -2028,21 +2028,21 @@
 <li>Exactly one path between any two nodes</li>
 </ul>
 <h3 id="tree-visualization">Tree Visualization<a class="headerlink" href="#tree-visualization" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
-    A[Root&lt;br/&gt;Level 0] --&gt; B[Left Child&lt;br/&gt;Level 1]
-    A --&gt; C[Right Child&lt;br/&gt;Level 1]
-    B --&gt; D[Left Grandchild&lt;br/&gt;Level 2]
-    B --&gt; E[Right Grandchild&lt;br/&gt;Level 2]
-    C --&gt; F[Left Grandchild&lt;br/&gt;Level 2]
-    C --&gt; G[Right Grandchild&lt;br/&gt;Level 2]
-    D --&gt; H[Leaf&lt;br/&gt;Level 3]
-    D --&gt; I[Leaf&lt;br/&gt;Level 3]
+<div class="mermaid">graph TD
+    A["Root (Level 0)"] --&gt; B["Left Child (Level 1)"]
+    A --&gt; C["Right Child (Level 1)"]
+    B --&gt; D["Left Grandchild (Level 2)"]
+    B --&gt; E["Right Grandchild (Level 2)"]
+    C --&gt; F["Left Grandchild (Level 2)"]
+    C --&gt; G["Right Grandchild (Level 2)"]
+    D --&gt; H["Leaf (Level 3)"]
+    D --&gt; I["Leaf (Level 3)"]
 
     style A fill:#e1f5fe,stroke:#01579b,stroke-width:2px
     style B fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
     style C fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
     style H fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style I fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</code></pre>
+    style I fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <hr />
 <h2 id="binary-trees">🌲 Binary Trees<a class="headerlink" href="#binary-trees" title="Permanent link">&para;</a></h2>
 <h3 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h3>
@@ -2053,7 +2053,7 @@
 - Empty tree, OR
 - Root + left subtree (binary tree) + right subtree (binary tree)</p>
 <h3 id="binary-tree-structure">Binary Tree Structure<a class="headerlink" href="#binary-tree-structure" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TD
+<div class="mermaid">graph TD
     Root[Root Node] --&gt; Left[Left Subtree]
     Root --&gt; Right[Right Subtree]
     Left --&gt; LL[Left-Left]
@@ -2063,7 +2063,7 @@
 
     style Root fill:#ffebee,stroke:#c62828,stroke-width:3px
     style Left fill:#fff3e0,stroke:#e65100,stroke-width:2px
-    style Right fill:#fff3e0,stroke:#e65100,stroke-width:2px</code></pre>
+    style Right fill:#fff3e0,stroke:#e65100,stroke-width:2px</div>
 <h3 id="node-structure">Node Structure<a class="headerlink" href="#node-structure" title="Permanent link">&para;</a></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">;</span>
@@ -2228,9 +2228,9 @@
       
         <script src="../../../assets/javascripts/theme-toggle.js"></script>
       
-        <script src="../../../assets/javascripts/mermaid-init.js"></script>
+        <script src="../../../assets/javascripts/mermaid.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+        <script src="../../../assets/javascripts/mermaid-init.js"></script>
       
     
   </body>
