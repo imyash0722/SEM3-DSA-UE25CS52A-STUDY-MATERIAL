@@ -1894,10 +1894,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#double-hashing-visualization" class="md-nav__link">
+  <a href="#double-hashing-flowchart" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Double Hashing Visualization
+        Double Hashing Flowchart
       </span>
     </span>
   </a>
@@ -1949,10 +1949,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#probe-sequence-comparison_1" class="md-nav__link">
+  <a href="#double-hashing-trace-walkthrough" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Probe Sequence Comparison
+        Double Hashing Trace Walkthrough
       </span>
     </span>
   </a>
@@ -2526,10 +2526,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#double-hashing-visualization" class="md-nav__link">
+  <a href="#double-hashing-flowchart" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Double Hashing Visualization
+        Double Hashing Flowchart
       </span>
     </span>
   </a>
@@ -2581,10 +2581,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#probe-sequence-comparison_1" class="md-nav__link">
+  <a href="#double-hashing-trace-walkthrough" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Probe Sequence Comparison
+        Double Hashing Trace Walkthrough
       </span>
     </span>
   </a>
@@ -2750,11 +2750,11 @@
 </span></code></pre></div>
 <h3 id="separate-chaining-insert-flow">Separate Chaining Insert Flow<a class="headerlink" href="#separate-chaining-insert-flow" title="Permanent link">&para;</a></h3>
 <div class="mermaid">flowchart TD
-    Start(["Insert"]) --&gt; Hash["Compute Hash"]
-    Front["Insert at Front"]
-    Front --&gt; Link["new-&gt;next = head[idx]"]
-    Link --&gt; Update["head[idx] = new"]
-    Update --&gt; Done["Done"]
+    Start(["Insert (key, word)"]) --&gt; Hash["Compute idx = key % TABLESIZE"]
+    Hash --&gt; Alloc["Allocate node n: n-&gt;key = key, strcpy(n-&gt;word, word)"]
+    Alloc --&gt; Link["n-&gt;next = head[idx]"]
+    Link --&gt; Update["head[idx] = n (Insert at front)"]
+    Update --&gt; Done(["Done"])
 
     style Start fill:#e8f5e9,stroke:#2e7d32
     style Done fill:#ffebee,stroke:#c62828</div>
@@ -2884,28 +2884,29 @@
 </span></code></pre></div>
 <h3 id="quadratic-probing-visualization">Quadratic Probing Visualization<a class="headerlink" href="#quadratic-probing-visualization" title="Permanent link">&para;</a></h3>
 <div class="mermaid">graph LR
-    subgraph Table[Table Size: 11]
-        I0[0]
-        I1[1: X]
-        I2[2]
-        I3[3]
-        I4[4]
-        I5[5]
-        I6[6]
-        I7[7]
-        I8[8]
-        I9[9]
-        I10[10]
+    subgraph Table["Table (Size: 11)"]
+        I0["0"]
+        I1["1: X (Occupied)"]
+        I2["2: X (Occupied)"]
+        I3["3"]
+        I4["4"]
+        I5["5: Free"]
+        I6["6"]
+        I7["7"]
+        I8["8"]
+        I9["9"]
+        I10["10"]
     end
 
-    Insert[Insert: hash=1] --&gt; Try0[i=0: Index 1]
-    Try0 --&gt; Occupied{Occupied?}
-    Occupied -- Yes --&gt; Try1[i=1: +1²=2]
-    Try1 --&gt; Check2{Index 2 empty?}
-    Check2 -- Yes --&gt; Place[Place at 2]
-    Occupied -- No --&gt; Place
+    Insert["Insert key (Hash=1)"] --&gt; Try0["i=0: idx = 1 (Occupied)"]
+    Try0 --&gt; Try1["i=1: idx = (1 + 1²) % 11 = 2 (Occupied)"]
+    Try1 --&gt; Try2["i=2: idx = (1 + 2²) % 11 = 5 (Free)"]
+    Try2 --&gt; Place["Place key at Index 5"]
 
-    style Table fill:#e3f2fd,stroke:#1565c0</div>
+    style Table fill:#e3f2fd,stroke:#1565c0
+    style Try0 fill:#ffcdd2,stroke:#c62828
+    style Try1 fill:#ffcdd2,stroke:#c62828
+    style Place fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px</div>
 <h3 id="insert-only-change-from-linear">Insert (Only Change from Linear)<a class="headerlink" href="#insert-only-change-from-linear" title="Permanent link">&para;</a></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="n">hash_table_t</span><span class="w"> </span><span class="o">*</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">word</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">h</span><span class="o">-&gt;</span><span class="n">count</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">TABLESIZE</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
@@ -2946,17 +2947,28 @@
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">key</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span><span class="w">  </span><span class="c1">// Returns 1..7 (prime &lt; TABLESIZE)</span>
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="double-hashing-visualization">Double Hashing Visualization<a class="headerlink" href="#double-hashing-visualization" title="Permanent link">&para;</a></h3>
-<div class="mermaid">graph TD
-    Start["Hash: idx = key % 11"] --&gt; Probe{"Collision?"}
-    Probe -- No --&gt; Place["Place"]
-    Probe -- Yes --&gt; DH["Double Hash: h2 = 7 - (key % 7)"]
-    DH --&gt; Step["Step = hash2(key)"]
-    Step --&gt; Probe2{"Next slot free?"}
-    Probe2 -- Yes --&gt; Place
-    Probe2 -- No --&gt; AddStep["idx = (idx + step) % SIZE"]
+<h3 id="double-hashing-flowchart">Double Hashing Flowchart<a class="headerlink" href="#double-hashing-flowchart" title="Permanent link">&para;</a></h3>
+<div class="mermaid">flowchart TD
+    Start(["Insert (key, word)"]) --&gt; Hash["Compute initial probe: idx = key % TABLESIZE, i = 0"]
+    Hash --&gt; CheckInit{"elem[idx].in_use?"}
 
-    style Start fill:#e3f2fd,stroke:#1565c0</div>
+    CheckInit -- "No (Slot Free)" --&gt; Place["elem[idx] = (key, word); in_use = 1; count++"]
+    Place --&gt; Done(["Done"])
+
+    CheckInit -- "Yes (Collision)" --&gt; CalcStep["Compute step size: step = 7 - (key % 7)"]
+    CalcStep --&gt; CheckFull{"i &lt; TABLESIZE?"}
+
+    CheckFull -- "Yes" --&gt; NextProbe["i = i + 1; idx = (init_idx + i * step) % TABLESIZE"]
+    NextProbe --&gt; CheckSlot{"elem[idx].in_use?"}
+
+    CheckSlot -- "No (Slot Free)" --&gt; Place
+    CheckSlot -- "Yes (Collision)" --&gt; CheckFull
+
+    CheckFull -- "No" --&gt; Full["Error: Hash Table Full / Max Probes Reached"]
+
+    style Start fill:#e8f5e9,stroke:#2e7d32
+    style Done fill:#e8f5e9,stroke:#2e7d32
+    style Full fill:#ffebee,stroke:#c62828</div>
 <h3 id="structure-with-function-pointer">Structure with Function Pointer<a class="headerlink" href="#structure-with-function-pointer" title="Permanent link">&para;</a></h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">hash_table</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">node_t</span><span class="w"> </span><span class="n">elem</span><span class="p">[</span><span class="n">TABLESIZE</span><span class="p">];</span>
@@ -2992,20 +3004,37 @@
 </span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="w">    </span><span class="n">h</span><span class="o">-&gt;</span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
 </span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="probe-sequence-comparison_1">Probe Sequence Comparison<a class="headerlink" href="#probe-sequence-comparison_1" title="Permanent link">&para;</a></h3>
-<div class="mermaid">graph TD
-    Start["Initial Index: 1"] --&gt; LP["Linear: +1, +2, +3..."]
-    Start --&gt; QP["Quadratic: +1², +2², +3²... (+1, +4, +9...)"]
-    Start --&gt; DH["Double Hash: +1·h2, +2·h2, +3·h2..."]
+<h3 id="double-hashing-trace-walkthrough">Double Hashing Trace Walkthrough<a class="headerlink" href="#double-hashing-trace-walkthrough" title="Permanent link">&para;</a></h3>
+<p><em>Example: Table Size $M = 11$, Primary Hash $h_1(key) = key \pmod{11}$, Secondary Hash $h_2(key) = 7 - (key \pmod 7)$.</em>
+<em>All three keys below initially collide at Index 3 ($25 \pmod{11} = 47 \pmod{11} = 69 \pmod{11} = 3$), but Double Hashing assigns distinct step sizes, dispersing them across the table without clustering:</em></p>
+<div class="mermaid">flowchart TD
+    subgraph Collisions["Colliding Keys at Initial Index 3 (mod 11)"]
+        K1["Key 25: 25 % 11 = 3"]
+        K2["Key 47: 47 % 11 = 3 (Collision)"]
+        K3["Key 69: 69 % 11 = 3 (Collision)"]
+    end
 
-    LP --&gt; LPSeq["Indices: 1, 2, 3, 4, 5..."]
-    QP --&gt; QPSeq["Indices: 1, 2, 5, 10, 17... (mod M)"]
-    DH --&gt; DHSeq["Indices: 1, 1+h2, 1+2h2, 1+3h2... (mod M)"]
+    subgraph Steps["Secondary Hash: step = 7 - (key % 7)"]
+        S2["47: step = 7 - (47 % 7) = 2"]
+        S3["69: step = 7 - (69 % 7) = 1"]
+    end
 
-    style Start fill:#e3f2fd,stroke:#1565c0
-    style LPSeq fill:#e8f5e9,stroke:#2e7d32
-    style QPSeq fill:#fff3e0,stroke:#e65100
-    style DHSeq fill:#f3e5f5,stroke:#7b1fa2</div>
+    subgraph Placements["Dispersed Slot Placements in Table (M=11)"]
+        P1["Slot 3: Key 25 (Placed at Initial Index, i=0)"]
+        P2["Slot 5: Key 47 ((3 + 1*2) % 11, i=1)"]
+        P3["Slot 4: Key 69 ((3 + 1*1) % 11, i=1)"]
+    end
+
+    K1 --&gt; P1
+    K2 --&gt; S2 --&gt; P2
+    K3 --&gt; S3 --&gt; P3
+
+    style K1 fill:#e3f2fd,stroke:#1565c0
+    style K2 fill:#fff3e0,stroke:#e65100
+    style K3 fill:#f3e5f5,stroke:#7b1fa2
+    style P1 fill:#e8f5e9,stroke:#2e7d32
+    style P2 fill:#e8f5e9,stroke:#2e7d32
+    style P3 fill:#e8f5e9,stroke:#2e7d32</div>
 <hr />
 <h2 id="collision-resolution-comparison">📊 Collision Resolution Comparison<a class="headerlink" href="#collision-resolution-comparison" title="Permanent link">&para;</a></h2>
 <table>

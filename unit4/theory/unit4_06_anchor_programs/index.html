@@ -2182,20 +2182,24 @@
 </span></code></pre></div>
 <h3 id="hash-methods-comparison-visualization">Hash Methods Comparison Visualization<a class="headerlink" href="#hash-methods-comparison-visualization" title="Permanent link">&para;</a></h3>
 <div class="mermaid">graph TD
-    Keys["Keys: 40,59,78,97,15,34,53"] --&gt; Hash["Hash: key % 19"]
-    Hash --&gt; AllCollide["All collide at Index 2"]
+    Keys["Colliding Keys: 40, 59, 78, 97"] --&gt; Hash["Hash: key % 19"]
+    Hash --&gt; AllCollide["All 4 keys collide at Initial Index 2"]
 
-    AllCollide --&gt; SC["Separate Chaining - Linked List at Index 2"]
-    AllCollide --&gt; LP["Linear Probing - Indices: 2,3,4,5..."]
-    AllCollide --&gt; QP["Quadratic Probing - +1²,+2²,+3²... = 3,6,11..."]
-    AllCollide --&gt; DH["Double Hashing - h2=7-(key%7) = 5,4,3..."]
+    AllCollide --&gt; SC["Separate Chaining: Linked List at Index 2"]
+    AllCollide --&gt; LP["Linear Probing: Step +1"]
+    AllCollide --&gt; QP["Quadratic Probing: Step +i²"]
+    AllCollide --&gt; DH["Double Hashing: Step = 7 - (key % 7)"]
 
-    SC --&gt; SCDisp["Index 2: 40→59→78→97"]
-    LP --&gt; LPDisp["Index 2,3,4,5: 40,59,78,97"]
-    QP --&gt; QPDisp["Index 2,3,6,11..."]
-    DH --&gt; DHDisp["Spread across table"]
+    SC --&gt; SCDisp["Slot 2 List: 97 -&gt; 78 -&gt; 59 -&gt; 40"]
+    LP --&gt; LPDisp["Consecutive Slots: 2, 3, 4, 5 (Clustered)"]
+    QP --&gt; QPDisp["Quadratic Slots: 2, 3, 6, 11"]
+    DH --&gt; DHDisp["Dispersed Slots: 2, 6, 8, 3 (h2 steps: 4, 6, 1)"]
 
-    style AllCollide fill:#ffcdd2,stroke:#c62828,stroke-width:2px</div>
+    style AllCollide fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style SCDisp fill:#e8f5e9,stroke:#2e7d32
+    style LPDisp fill:#fff3e0,stroke:#e65100
+    style QPDisp fill:#e3f2fd,stroke:#1565c0
+    style DHDisp fill:#f3e5f5,stroke:#7b1fa2</div>
 <hr />
 <h3 id="program-2-trie-with-autocomplete">Program 2: Trie with Autocomplete<a class="headerlink" href="#program-2-trie-with-autocomplete" title="Permanent link">&para;</a></h3>
 <h3 id="trie-operations-flow">Trie Operations Flow<a class="headerlink" href="#trie-operations-flow" title="Permanent link">&para;</a></h3>
